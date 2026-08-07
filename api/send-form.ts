@@ -3,7 +3,14 @@
 // tout fichier de /api comme une fonction serverless indépendante du build statique.
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Instancié à la première utilisation (pas au chargement du module) : le
+// constructeur de Resend lève une exception si la clé est absente, ce qui
+// ferait planter toute la fonction avant même d'entrer dans le handler.
+let resend: Resend | null = null;
+function getResend(): Resend {
+  if (!resend) resend = new Resend(process.env.RESEND_API_KEY);
+  return resend;
+}
 
 const NOTIFY_TO = "juliend@visionbds.com";
 const FROM = process.env.RESEND_FROM || "Vision <onboarding@resend.dev>";
@@ -37,6 +44,16 @@ function escapeHtml(value: string) {
 }
 
 export async function POST(request: Request) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error(
+      "send-form: RESEND_API_KEY manquante dans cet environnement Vercel."
+    );
+    return Response.json(
+      { error: "Configuration serveur manquante." },
+      { status: 500 }
+    );
+  }
+
   let body: Record<string, unknown>;
   try {
     body = await request.json();
@@ -78,7 +95,7 @@ export async function POST(request: Request) {
   `;
 
   try {
-    const { error } = await resend.emails.send({
+    const { error } = await getResend().emails.send({
       from: FROM,
       to: NOTIFY_TO,
       replyTo: data.email,
