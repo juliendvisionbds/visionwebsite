@@ -1,0 +1,189 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/#ce-quon-automatise">Ce qu'on automatise</a>
+      <a class="nl hide-m" href="/#pour-qui">Pour qui</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="#formulaire">Obtenir mon diagnostic gratuit</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="q-hero">
+  <div class="wrap">
+    <div class="q-hero-grid">
+      <div>
+        <span class="chip">Candidature rapide · 2 minutes</span>
+        <h1>Voir si vous êtes <span class="sq brand">éligible<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span></h1>
+        <p class="lede">Quelques détails sur votre entreprise. On lit chaque candidature nous-mêmes et on ne recontacte que si on pense pouvoir vraiment vous faire gagner des heures. Pas de pitch, pas de spam.</p>
+      </div>
+      <div class="art" style="text-align:center">
+        <span class="blip hop" style="width:min(230px,72%)" data-pose="carry" data-color="yellow"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE -->
+<section id="formulaire" style="padding-top:clamp(20px,3vw,36px)">
+  <div class="wrap">
+    <div class="qgrid">
+
+      <div id="formwrap">
+        <form class="formcard" id="qform" novalidate>
+          <div class="frow">
+            <div class="field">
+              <label for="f-name">Nom complet <span class="req">*</span></label>
+              <input id="f-name" name="name" type="text" placeholder="Jean Dupont" required>
+            </div>
+            <div class="field">
+              <label for="f-mail">Email professionnel <span class="req">*</span></label>
+              <input id="f-mail" name="email" type="email" placeholder="jean@votre-entreprise.fr" required>
+            </div>
+          </div>
+
+          <div class="frow">
+            <div class="field">
+              <label for="f-co">Nom de l'entreprise <span class="req">*</span></label>
+              <input id="f-co" name="company" type="text" placeholder="Votre entreprise" required>
+            </div>
+            <div class="field">
+              <label for="f-act">Votre activité <span class="req">*</span></label>
+              <select id="f-act" name="activity" required>
+                <option value="">Sélectionner</option>
+                <option>Entreprise générale / gros œuvre</option>
+                <option>Charpente, couverture, étanchéité</option>
+                <option>Second œuvre (élec, plomberie, plâtrerie, menuiserie…)</option>
+                <option>TCE / multi-lots</option>
+                <option>Travaux publics / VRD</option>
+                <option>Artisan ou TPE du bâtiment</option>
+                <option>Maîtrise d'œuvre, bureau d'études, promotion</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="frow">
+            <div class="field">
+              <label for="f-size">Taille de l'équipe <span class="req">*</span></label>
+              <select id="f-size" name="size" required>
+                <option value="">Sélectionner</option>
+                <option>Juste moi</option>
+                <option>2 à 5 personnes</option>
+                <option>6 à 20 personnes</option>
+                <option>21 à 50 personnes</option>
+                <option>Plus de 50 personnes</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-devis">Devis envoyés par mois <span class="req">*</span></label>
+              <select id="f-devis" name="quotes" required>
+                <option value="">Sélectionner</option>
+                <option>Moins de 10</option>
+                <option>10 à 30</option>
+                <option>30 à 80</option>
+                <option>Plus de 80</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-hours">Heures perdues en tâches manuelles, par semaine <span class="req">*</span></label>
+            <select id="f-hours" name="hours" required>
+              <option value="">Sélectionner</option>
+              <option>2 à 5 heures</option>
+              <option>5 à 10 heures</option>
+              <option>10 à 20 heures</option>
+              <option>Plus de 20 heures</option>
+            </select>
+            <div class="help">Une estimation au doigt mouillé suffit. C'est justement ce qu'on mesure pendant l'audit.</div>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Qu'est-ce qui vous mange le plus de temps en ce moment ? <span class="req">*</span></label>
+            <textarea id="f-msg" name="message" placeholder="Ex : on passe une demi-journée par mois sur les situations, et les devis repartent toujours de zéro parce qu'on ne retrouve pas nos anciens prix." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit">Obtenir mon diagnostic gratuit <span class="arw">→</span></button>
+          <div class="formnote">Sans engagement. On lit votre dossier et on vous répond sous 1 jour ouvré.</div>
+        </form>
+      </div>
+
+      <!-- CONFIRMATION -->
+      <div class="done" id="done">
+        <span class="blip" data-pose="wave" data-color="yellow"></span>
+        <h2>C'est envoyé.</h2>
+        <p>On lit votre candidature dans la journée et on revient vers vous sous 1 jour ouvré. Si on ne pense pas pouvoir vous faire gagner de temps, on vous le dira aussi.</p>
+      </div>
+
+      <!-- COLONNE DROITE -->
+      <aside class="side">
+        <div class="sidecard">
+          <h3>Ce qui se passe ensuite</h3>
+          <ul class="nextlist">
+            <li><span class="num">1</span><div><b>On lit votre dossier</b>Réponse sous 1 jour ouvré, par un des trois associés. Pas de séquence automatique.</div></li>
+            <li><span class="num">2</span><div><b>30 minutes au téléphone</b>Vous nous racontez une semaine type. On identifie les trois tâches les plus coûteuses.</div></li>
+            <li><span class="num">3</span><div><b>Vous repartez avec un plan</b>Ce qui est automatisable, en combien de temps, et les heures que ça libère. Que vous travailliez avec nous ou non.</div></li>
+          </ul>
+          <div class="reassure"><i></i> Audit gratuit — <span class="sticker" style="transform:rotate(-2deg);font-size:11px;padding:5px 10px;margin-left:4px">Plus que 2 places</span></div>
+        </div>
+
+        <div class="sidecard dark">
+          <blockquote>“On avait déjà chiffré ces ouvrages des centaines de fois. On ne les retrouvait jamais. <b>Aujourd'hui on répond le jour même.</b>”</blockquote>
+          <div class="who">
+            <!-- REMPLACER PAR LA PHOTO -->
+            <div class="qavatar" style="width:44px;height:44px;font-size:15px">JL</div>
+            <div>
+              <div class="nm">Jérôme Lecossois</div>
+              <div class="rl">Partenaire chez Sodobat</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:clamp(50px,6vw,90px)">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="blip b3" data-pose="look" data-color="orange"></span></div>
+      <h2>Avant de remplir</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="q"><button><span>Que se passe-t-il après l'envoi ?</span><span class="sign"></span></button><div class="ans"><p>Un des trois associés lit votre candidature et vous répond sous 1 jour ouvré. Si on pense pouvoir vous faire gagner des heures, on vous propose un créneau de 30 minutes. Sinon, on vous le dit franchement.</p></div></div>
+      <div class="q"><button><span>L'audit est-il vraiment gratuit ?</span><span class="sign"></span></button><div class="ans"><p>Oui, et vous repartez avec le plan même si vous ne travaillez pas avec nous. On le fait parce que c'est la seule façon honnête de savoir s'il y a quelque chose à automatiser chez vous.</p></div></div>
+      <div class="q"><button><span>Combien de temps dure l'appel ?</span><span class="sign"></span></button><div class="ans"><p>30 minutes, et on tient l'horaire. Vous nous décrivez une semaine type, on pose des questions sur les tâches qui reviennent. Pas de présentation d'entreprise.</p></div></div>
+      <div class="q"><button><span>Est-ce que je vais être poussé à signer ?</span><span class="sign"></span></button><div class="ans"><p>Non. On vous envoie le plan par écrit et vous en faites ce que vous voulez — y compris le faire réaliser ailleurs ou en interne.</p></div></div>
+      <div class="q"><button><span>Je suis artisan, c'est trop petit pour vous ?</span><span class="sign"></span></button><div class="ans"><p>Non. Une entreprise de trois personnes qui fait ses devis le soir a autant à gagner qu'une PME de 80 salariés — souvent plus vite, parce qu'il y a moins de monde à embarquer.</p></div></div>
+      <div class="q"><button><span>Vous avez besoin d'accéder à nos données ?</span><span class="sign"></span></button><div class="ans"><p>Pas pour l'audit. On regarde comment vous travaillez, pas vos fichiers. Les questions d'accès et de confidentialité se traitent plus tard, par écrit, si vous décidez d'avancer.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="/" class="mark">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+        <div class="fsub">Agence d'automatisation IA pour les entreprises du bâtiment.</div>
+        <div class="cast">
+          <span class="blip" data-pose="carry" data-color="yellow"></span>
+          <span class="blip b2" data-pose="default" data-color="orange"></span>
+          <span class="blip b3" data-pose="wave" data-color="amber"></span>
+        </div>
+      </div>
+      <div>
+        <div class="flinks">
+          <a href="https://www.visionbds.com/fr/pme-btp">PME du BTP</a>
+          <a href="https://www.visionbds.com/fr/artisans">Artisans</a>
+          <a href="/commencer">Obtenir mon diagnostic gratuit</a>
+        </div>
+        <div class="copy">© 2026 vision. Tous droits réservés.</div>
+      </div>
+    </div>
+  </div>
+</footer>
