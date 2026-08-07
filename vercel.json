@@ -1,4 +1,9 @@
 {
   "buildCommand": "next build",
-  "outputDirectory": "out"
+  "outputDirectory": "out",
+  "functions": {
+    "api/*.ts": {
+      "runtime": "nodejs22.x"
+    }
+  }
 }
