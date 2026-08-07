@@ -96,8 +96,6 @@ function blipSVG(pose,color){
 document.querySelectorAll('.blip').forEach(el=>{
   el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'brand');
 });
-document.querySelectorAll('.eyecheck').forEach(el=>{el.innerHTML=blipSVG('eyecheck','mint')});
-
 /* les yeux suivent le curseur */
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(!reduce && matchMedia('(pointer:fine)').matches){

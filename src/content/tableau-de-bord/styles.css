@@ -208,13 +208,13 @@ h1{font-size:clamp(44px,6.2vw,84px);margin:22px 0 24px;max-width:14ch;letter-spa
 .final{background:var(--brand);color:#fff;border-radius:28px;padding:clamp(34px,5vw,76px);position:relative;overflow:hidden}
 .final h2{font-size:clamp(30px,4.4vw,58px);max-width:16ch;letter-spacing:-.04em}
 .final p{margin-top:22px;max-width:52ch;color:rgba(255,255,255,.85);font-size:16.5px}
-.final .row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:34px}
+.final .row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:34px;position:relative}
 .final .btn-primary{background:#fff;color:var(--ink);box-shadow:0 5px 0 0 rgba(0,0,0,.35)}
 .final .btn-primary:hover{box-shadow:0 2px 0 0 rgba(0,0,0,.35)}
 .sticker{display:inline-flex;align-items:center;gap:8px;background:var(--honey);color:var(--ink);
   font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 15px;border-radius:8px;
   transform:rotate(-3.5deg);box-shadow:0 3px 0 0 rgba(0,0,0,.2)}
-.finalblip{position:absolute;right:clamp(16px,4vw,64px);bottom:-12px;width:clamp(96px,12vw,168px)}
+.finalblip{position:absolute;right:clamp(16px,4vw,64px);bottom:0;width:clamp(96px,12vw,168px)}
 @media(max-width:820px){.finalblip{display:none}}
 
 /* ————— faq ————— */
@@ -290,8 +290,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 /* l'engin du témoignage était coupé en bas à droite : il est maintenant posé dans le bloc */
 .qblip{right:clamp(18px,4vw,54px);bottom:22px;width:clamp(96px,12vw,150px)}
 @media(max-width:820px){.qblip{display:none}}
-/* la grue du CTA final ne perd plus ses roues */
-.finalblip{bottom:10px}
+/* la grue du CTA final : bas aligné avec le bas des boutons du CTA */
 
 /* photo témoignage : placeholder en attendant la vraie */
 .qavatar{width:56px;height:56px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);

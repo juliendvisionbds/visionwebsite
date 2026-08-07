@@ -1,2 +1,2 @@
-export const title = "Voir si vous êtes éligible — vision";
-export const description = "Parlez-nous de votre entreprise du bâtiment. On vous dit si on peut vraiment vous faire gagner des heures. Audit gratuit, réponse sous 1 jour ouvré.";
+export const title = "Obtenir mon diagnostic gratuit — vision";
+export const description = "Demandez votre diagnostic gratuit d'automatisation pour le BTP. En 2 minutes, on prépare un appel de 30 minutes pour identifier les tâches qui vous font perdre des heures. Réponse sous 1 jour ouvré.";

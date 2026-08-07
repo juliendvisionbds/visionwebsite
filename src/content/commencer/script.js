@@ -158,7 +158,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
     io.unobserve(e.target);
   }}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
-setTimeout(()=>document.querySelectorAll('.hero .sq').forEach(s=>s.classList.add('drawn')),700);
+setTimeout(()=>document.querySelectorAll('.q-hero .sq').forEach(s=>s.classList.add('drawn')),700);
 
 /* faq */
 document.querySelectorAll('.q button').forEach(b=>{
@@ -171,16 +171,40 @@ document.querySelectorAll('.q button').forEach(b=>{
 
 
 
-/* ——— formulaire : état de confirmation ——— */
+/* ——— formulaire : envoi + état de confirmation ——— */
 const form=document.getElementById('qform');
 if(form){
-  form.addEventListener('submit',e=>{
+  const errorBox=document.getElementById('f-error');
+  const submitBtn=form.querySelector('.submit');
+  const submitBtnHTML=submitBtn?submitBtn.innerHTML:'';
+
+  form.addEventListener('submit',async e=>{
     e.preventDefault();
-    document.getElementById('formwrap').style.display='none';
-    const d=document.getElementById('done');
-    d.style.display='block';
-    d.querySelectorAll('.blip').forEach(el=>{el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'yellow')});
-    d.scrollIntoView({behavior:'smooth',block:'center'});
+    if(errorBox){errorBox.hidden=true;errorBox.textContent='';}
+    if(submitBtn){submitBtn.disabled=true;submitBtn.innerHTML='Envoi en cours…';}
+
+    const payload=Object.fromEntries(new FormData(form).entries());
+
+    try{
+      const res=await fetch('/api/send-form',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      if(!res.ok) throw new Error('send-failed');
+
+      document.getElementById('formwrap').style.display='none';
+      const d=document.getElementById('done');
+      d.style.display='block';
+      d.querySelectorAll('.blip').forEach(el=>{el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'yellow')});
+      d.scrollIntoView({behavior:'smooth',block:'center'});
+    }catch(err){
+      if(errorBox){
+        errorBox.hidden=false;
+        errorBox.textContent="Une erreur est survenue lors de l'envoi. Réessayez, ou écrivez-nous directement.";
+      }
+      if(submitBtn){submitBtn.disabled=false;submitBtn.innerHTML=submitBtnHTML;}
+    }
   });
 }
 

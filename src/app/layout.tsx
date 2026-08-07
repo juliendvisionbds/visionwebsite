@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "vision — automatisation IA pour le BTP",
   description:
-    "Automatisation IA pour les entreprises du bâtiment. Première automatisation en 3 semaines. Audit gratuit.",
+    "Automatisation IA pour les entreprises du bâtiment. Première automatisation en 3 semaines. Diagnostic gratuit.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

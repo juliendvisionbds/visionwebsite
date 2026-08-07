@@ -9,26 +9,41 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="q-hero">
-  <div class="wrap">
-    <div class="q-hero-grid">
-      <div>
-        <span class="chip">Candidature rapide · 2 minutes</span>
-        <h1>Voir si vous êtes <span class="sq brand">éligible<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span></h1>
-        <p class="lede">Quelques détails sur votre entreprise. On lit chaque candidature nous-mêmes et on ne recontacte que si on pense pouvoir vraiment vous faire gagner des heures. Pas de pitch, pas de spam.</p>
-      </div>
-      <div class="art" style="text-align:center">
-        <span class="blip hop" style="width:min(230px,72%)" data-pose="carry" data-color="yellow"></span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FORMULAIRE -->
-<section id="formulaire" style="padding-top:clamp(20px,3vw,36px)">
+<section id="formulaire" class="q-hero">
   <div class="wrap">
     <div class="qgrid">
+
+      <!-- COLONNE DROITE (sticky, en haut) -->
+      <aside class="side">
+        <div class="sidecard">
+          <h3>Ce qui se passe ensuite</h3>
+          <ul class="nextlist">
+            <li><span class="num">1</span><div><b>On lit votre demande</b>Réponse sous 1 jour ouvré, par un des trois associés. Pas de séquence automatique.</div></li>
+            <li><span class="num">2</span><div><b>Diagnostic de 30 minutes</b>Vous nous racontez une semaine type. On identifie les trois tâches les plus coûteuses à automatiser.</div></li>
+            <li><span class="num">3</span><div><b>Vous repartez avec un plan</b>Ce qui est automatisable, en combien de temps, et les heures que ça libère. Que vous travailliez avec nous ou non.</div></li>
+          </ul>
+          <div class="reassure"><i></i> Diagnostic gratuit — <span class="sticker" style="transform:rotate(-2deg);font-size:11px;padding:5px 10px;margin-left:4px">Plus que 2 places</span></div>
+        </div>
+
+        <div class="sidecard dark">
+          <blockquote>“On avait déjà chiffré ces ouvrages des centaines de fois. On ne les retrouvait jamais. <b>Aujourd'hui on répond le jour même.</b>”</blockquote>
+          <div class="who">
+            <img src="/clients/jerome-lecossois.jpeg" alt="Jérôme Lecossois">
+            <div>
+              <div class="nm">Jérôme Lecossois</div>
+              <div class="rl">Partenaire chez Sodobat</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="qmain">
+        <div class="q-intro">
+          <span class="chip">Diagnostic gratuit · 2 minutes</span>
+          <h1>Obtenir votre diagnostic <span class="sq brand">gratuit<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span></h1>
+          <p class="lede">Quelques détails sur votre entreprise suffisent. On lit chaque demande nous-mêmes, on vous rappelle sous 1 jour ouvré, et on prépare un diagnostic de 30 minutes pour identifier ce qui peut disparaître de votre semaine. Pas de pitch, pas de spam.</p>
+        </div>
 
       <div id="formwrap">
         <form class="formcard" id="qform" novalidate>
@@ -97,7 +112,7 @@
               <option>10 à 20 heures</option>
               <option>Plus de 20 heures</option>
             </select>
-            <div class="help">Une estimation au doigt mouillé suffit. C'est justement ce qu'on mesure pendant l'audit.</div>
+            <div class="help">Une estimation au doigt mouillé suffit. C'est justement ce qu'on précise pendant le diagnostic.</div>
           </div>
 
           <div class="field">
@@ -106,7 +121,8 @@
           </div>
 
           <button type="submit" class="btn btn-primary submit">Obtenir mon diagnostic gratuit <span class="arw">→</span></button>
-          <div class="formnote">Sans engagement. On lit votre dossier et on vous répond sous 1 jour ouvré.</div>
+          <p class="form-error" id="f-error" role="alert" hidden></p>
+          <div class="formnote">Sans engagement. On lit votre demande et on vous propose un créneau sous 1 jour ouvré.</div>
         </form>
       </div>
 
@@ -114,33 +130,9 @@
       <div class="done" id="done">
         <span class="blip" data-pose="wave" data-color="yellow"></span>
         <h2>C'est envoyé.</h2>
-        <p>On lit votre candidature dans la journée et on revient vers vous sous 1 jour ouvré. Si on ne pense pas pouvoir vous faire gagner de temps, on vous le dira aussi.</p>
+        <p>On lit votre demande dans la journée et on vous propose un créneau de diagnostic sous 1 jour ouvré. Vous repartez avec un plan clair — que vous avanciez avec nous ou non.</p>
       </div>
-
-      <!-- COLONNE DROITE -->
-      <aside class="side">
-        <div class="sidecard">
-          <h3>Ce qui se passe ensuite</h3>
-          <ul class="nextlist">
-            <li><span class="num">1</span><div><b>On lit votre dossier</b>Réponse sous 1 jour ouvré, par un des trois associés. Pas de séquence automatique.</div></li>
-            <li><span class="num">2</span><div><b>30 minutes au téléphone</b>Vous nous racontez une semaine type. On identifie les trois tâches les plus coûteuses.</div></li>
-            <li><span class="num">3</span><div><b>Vous repartez avec un plan</b>Ce qui est automatisable, en combien de temps, et les heures que ça libère. Que vous travailliez avec nous ou non.</div></li>
-          </ul>
-          <div class="reassure"><i></i> Audit gratuit — <span class="sticker" style="transform:rotate(-2deg);font-size:11px;padding:5px 10px;margin-left:4px">Plus que 2 places</span></div>
-        </div>
-
-        <div class="sidecard dark">
-          <blockquote>“On avait déjà chiffré ces ouvrages des centaines de fois. On ne les retrouvait jamais. <b>Aujourd'hui on répond le jour même.</b>”</blockquote>
-          <div class="who">
-            <!-- REMPLACER PAR LA PHOTO -->
-            <div class="qavatar" style="width:44px;height:44px;font-size:15px">JL</div>
-            <div>
-              <div class="nm">Jérôme Lecossois</div>
-              <div class="rl">Partenaire chez Sodobat</div>
-            </div>
-          </div>
-        </div>
-      </aside>
+      </div>
 
     </div>
   </div>
@@ -151,15 +143,15 @@
   <div class="wrap">
     <div class="shead reveal">
       <div class="shead-row"><span class="blip b3" data-pose="look" data-color="orange"></span></div>
-      <h2>Avant de remplir</h2>
+      <h2>Avant de demander votre diagnostic</h2>
     </div>
     <div class="faq-wrap">
-      <div class="q"><button><span>Que se passe-t-il après l'envoi ?</span><span class="sign"></span></button><div class="ans"><p>Un des trois associés lit votre candidature et vous répond sous 1 jour ouvré. Si on pense pouvoir vous faire gagner des heures, on vous propose un créneau de 30 minutes. Sinon, on vous le dit franchement.</p></div></div>
-      <div class="q"><button><span>L'audit est-il vraiment gratuit ?</span><span class="sign"></span></button><div class="ans"><p>Oui, et vous repartez avec le plan même si vous ne travaillez pas avec nous. On le fait parce que c'est la seule façon honnête de savoir s'il y a quelque chose à automatiser chez vous.</p></div></div>
-      <div class="q"><button><span>Combien de temps dure l'appel ?</span><span class="sign"></span></button><div class="ans"><p>30 minutes, et on tient l'horaire. Vous nous décrivez une semaine type, on pose des questions sur les tâches qui reviennent. Pas de présentation d'entreprise.</p></div></div>
+      <div class="q"><button><span>Que se passe-t-il après l'envoi ?</span><span class="sign"></span></button><div class="ans"><p>Un des trois associés lit votre demande et vous propose un créneau sous 1 jour ouvré. Le diagnostic dure 30 minutes : on cartographie vos tâches répétitives et on vous dit ce qui peut être automatisé, en combien de temps, et ce que ça vous fait gagner.</p></div></div>
+      <div class="q"><button><span>Le diagnostic est-il vraiment gratuit ?</span><span class="sign"></span></button><div class="ans"><p>Oui. Vous repartez avec le plan même si vous ne travaillez pas avec nous. C'est la seule façon honnête de savoir ce qui vaut le coup d'être automatisé chez vous — avant d'engager quoi que ce soit.</p></div></div>
+      <div class="q"><button><span>Combien de temps dure le diagnostic ?</span><span class="sign"></span></button><div class="ans"><p>30 minutes, et on tient l'horaire. Vous nous décrivez une semaine type, on pose des questions sur les tâches qui reviennent. Pas de présentation d'entreprise.</p></div></div>
       <div class="q"><button><span>Est-ce que je vais être poussé à signer ?</span><span class="sign"></span></button><div class="ans"><p>Non. On vous envoie le plan par écrit et vous en faites ce que vous voulez — y compris le faire réaliser ailleurs ou en interne.</p></div></div>
       <div class="q"><button><span>Je suis artisan, c'est trop petit pour vous ?</span><span class="sign"></span></button><div class="ans"><p>Non. Une entreprise de trois personnes qui fait ses devis le soir a autant à gagner qu'une PME de 80 salariés — souvent plus vite, parce qu'il y a moins de monde à embarquer.</p></div></div>
-      <div class="q"><button><span>Vous avez besoin d'accéder à nos données ?</span><span class="sign"></span></button><div class="ans"><p>Pas pour l'audit. On regarde comment vous travaillez, pas vos fichiers. Les questions d'accès et de confidentialité se traitent plus tard, par écrit, si vous décidez d'avancer.</p></div></div>
+      <div class="q"><button><span>Vous avez besoin d'accéder à nos données ?</span><span class="sign"></span></button><div class="ans"><p>Pas pour le diagnostic. On regarde comment vous travaillez, pas vos fichiers. Les questions d'accès et de confidentialité se traitent plus tard, par écrit, si vous décidez d'avancer.</p></div></div>
     </div>
   </div>
 </section>
