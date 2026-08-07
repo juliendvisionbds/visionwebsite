@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:full": "vercel dev",
+    "dev:full": "tsx --env-file=.env.local scripts/dev-server.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -22,7 +22,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
-    "typescript": "^5",
-    "vercel": "^58.8.0"
+    "tsx": "^4.23.11",
+    "typescript": "^5"
   }
 }

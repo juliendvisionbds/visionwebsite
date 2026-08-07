@@ -191,7 +191,13 @@ if(form){
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(payload)
       });
-      if(!res.ok) throw new Error('send-failed');
+
+      if(!res.ok){
+        let detail='';
+        try{ detail=(await res.json()).error||''; }catch{}
+        console.error('send-form failed:',res.status,detail);
+        throw new Error(`HTTP ${res.status}${detail?': '+detail:''}`);
+      }
 
       document.getElementById('formwrap').style.display='none';
       const d=document.getElementById('done');
@@ -199,9 +205,10 @@ if(form){
       d.querySelectorAll('.blip').forEach(el=>{el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'yellow')});
       d.scrollIntoView({behavior:'smooth',block:'center'});
     }catch(err){
+      console.error('send-form error:',err);
       if(errorBox){
         errorBox.hidden=false;
-        errorBox.textContent="Une erreur est survenue lors de l'envoi. Réessayez, ou écrivez-nous directement.";
+        errorBox.textContent="Une erreur est survenue lors de l'envoi. Réessayez, ou écrivez-nous directement. ("+err.message+")";
       }
       if(submitBtn){submitBtn.disabled=false;submitBtn.innerHTML=submitBtnHTML;}
     }
