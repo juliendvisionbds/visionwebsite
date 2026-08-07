@@ -1,14 +1,20 @@
 // Vercel Function (Web Handler) — vit hors de l'app Next.js car le site est
 // exporté statiquement (output: "export"). Vercel déploie automatiquement
 // tout fichier de /api comme une fonction serverless indépendante du build statique.
-import { Resend } from "resend";
+//
+// `resend` est importé dynamiquement (pas de `import` statique en haut du
+// fichier) : un import statique provoquait un crash de la fonction à chaque
+// invocation (observé localement comme ERR_REQUIRE_CYCLE_MODULE), à cause
+// de la double publication ESM/CJS du package qui perturbe certains
+// bundlers de fonctions serverless.
+import type { Resend } from "resend";
 
-// Instancié à la première utilisation (pas au chargement du module) : le
-// constructeur de Resend lève une exception si la clé est absente, ce qui
-// ferait planter toute la fonction avant même d'entrer dans le handler.
 let resend: Resend | null = null;
-function getResend(): Resend {
-  if (!resend) resend = new Resend(process.env.RESEND_API_KEY);
+async function getResend(): Promise<Resend> {
+  if (!resend) {
+    const { Resend: ResendCtor } = await import("resend");
+    resend = new ResendCtor(process.env.RESEND_API_KEY);
+  }
   return resend;
 }
 
@@ -95,7 +101,8 @@ export async function POST(request: Request) {
   `;
 
   try {
-    const { error } = await getResend().emails.send({
+    const client = await getResend();
+    const { error } = await client.emails.send({
       from: FROM,
       to: NOTIFY_TO,
       replyTo: data.email,
