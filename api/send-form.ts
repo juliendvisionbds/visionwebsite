@@ -18,6 +18,16 @@ async function getResend(): Promise<Resend> {
   return resend;
 }
 
+// `Response.json(...)` (méthode statique) n'existe pas sur toutes les
+// versions/runtimes de Node — on construit la réponse "à la main" avec le
+// constructeur `Response`, disponible partout où `Request`/`Response` le sont.
+function json(body: unknown, status: number): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
 const NOTIFY_TO = "juliend@visionbds.com";
 const FROM = process.env.RESEND_FROM || "Vision <onboarding@resend.dev>";
 
@@ -54,26 +64,20 @@ export async function POST(request: Request) {
     console.error(
       "send-form: RESEND_API_KEY manquante dans cet environnement Vercel."
     );
-    return Response.json(
-      { error: "Configuration serveur manquante." },
-      { status: 500 }
-    );
+    return json({ error: "Configuration serveur manquante." }, 500);
   }
 
   let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
-    return Response.json({ error: "Requête invalide." }, { status: 400 });
+    return json({ error: "Requête invalide." }, 400);
   }
 
   for (const [key] of FIELDS) {
     const value = body[key];
     if (typeof value !== "string" || !value.trim()) {
-      return Response.json(
-        { error: `Le champ "${key}" est requis.` },
-        { status: 400 }
-      );
+      return json({ error: `Le champ "${key}" est requis.` }, 400);
     }
   }
 
@@ -112,18 +116,12 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", error);
-      return Response.json(
-        { error: "Échec de l'envoi de l'email." },
-        { status: 502 }
-      );
+      return json({ error: "Échec de l'envoi de l'email." }, 502);
     }
 
-    return Response.json({ ok: true });
+    return json({ ok: true }, 200);
   } catch (err) {
     console.error("send-form error:", err);
-    return Response.json(
-      { error: "Échec de l'envoi de l'email." },
-      { status: 500 }
-    );
+    return json({ error: "Échec de l'envoi de l'email." }, 500);
   }
 }
