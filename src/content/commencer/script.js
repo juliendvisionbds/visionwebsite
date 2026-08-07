@@ -186,7 +186,7 @@ if(form){
     const payload=Object.fromEntries(new FormData(form).entries());
 
     try{
-      const res=await fetch('/api/send-form',{
+      const res=await fetch('/api/send-form/',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(payload)

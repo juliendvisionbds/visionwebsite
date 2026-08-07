@@ -1,32 +1,6 @@
-// Vercel Function (Web Handler) — vit hors de l'app Next.js car le site est
-// exporté statiquement (output: "export"). Vercel déploie automatiquement
-// tout fichier de /api comme une fonction serverless indépendante du build statique.
-//
-// `resend` est importé dynamiquement (pas de `import` statique en haut du
-// fichier) : un import statique provoquait un crash de la fonction à chaque
-// invocation (observé localement comme ERR_REQUIRE_CYCLE_MODULE), à cause
-// de la double publication ESM/CJS du package qui perturbe certains
-// bundlers de fonctions serverless.
-import type { Resend } from "resend";
+import { Resend } from "resend";
 
-let resend: Resend | null = null;
-async function getResend(): Promise<Resend> {
-  if (!resend) {
-    const { Resend: ResendCtor } = await import("resend");
-    resend = new ResendCtor(process.env.RESEND_API_KEY);
-  }
-  return resend;
-}
-
-// `Response.json(...)` (méthode statique) n'existe pas sur toutes les
-// versions/runtimes de Node — on construit la réponse "à la main" avec le
-// constructeur `Response`, disponible partout où `Request`/`Response` le sont.
-function json(body: unknown, status: number): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { "Content-Type": "application/json" },
-  });
-}
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const NOTIFY_TO = "juliend@visionbds.com";
 const FROM = process.env.RESEND_FROM || "Vision <onboarding@resend.dev>";
@@ -64,20 +38,26 @@ export async function POST(request: Request) {
     console.error(
       "send-form: RESEND_API_KEY manquante dans cet environnement Vercel."
     );
-    return json({ error: "Configuration serveur manquante." }, 500);
+    return Response.json(
+      { error: "Configuration serveur manquante." },
+      { status: 500 }
+    );
   }
 
   let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
-    return json({ error: "Requête invalide." }, 400);
+    return Response.json({ error: "Requête invalide." }, { status: 400 });
   }
 
   for (const [key] of FIELDS) {
     const value = body[key];
     if (typeof value !== "string" || !value.trim()) {
-      return json({ error: `Le champ "${key}" est requis.` }, 400);
+      return Response.json(
+        { error: `Le champ "${key}" est requis.` },
+        { status: 400 }
+      );
     }
   }
 
@@ -105,8 +85,7 @@ export async function POST(request: Request) {
   `;
 
   try {
-    const client = await getResend();
-    const { error } = await client.emails.send({
+    const { error } = await resend.emails.send({
       from: FROM,
       to: NOTIFY_TO,
       replyTo: data.email,
@@ -116,12 +95,18 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", error);
-      return json({ error: "Échec de l'envoi de l'email." }, 502);
+      return Response.json(
+        { error: "Échec de l'envoi de l'email." },
+        { status: 502 }
+      );
     }
 
-    return json({ ok: true }, 200);
+    return Response.json({ ok: true });
   } catch (err) {
     console.error("send-form error:", err);
-    return json({ error: "Échec de l'envoi de l'email." }, 500);
+    return Response.json(
+      { error: "Échec de l'envoi de l'email." },
+      { status: 500 }
+    );
   }
 }
