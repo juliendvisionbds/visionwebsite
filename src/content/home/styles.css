@@ -66,7 +66,7 @@ section{padding:clamp(66px,8.5vw,124px) 0;position:relative}
 /* ————— header ————— */
 header{position:sticky;top:0;z-index:70;background:rgba(250,249,246,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
-.mark{font-family:Gabarito;font-weight:800;font-size:25px;letter-spacing:-.05em;display:inline-flex;align-items:center}
+.mark{font-family:Gabarito;font-weight:800;font-size:34px;letter-spacing:-.05em;display:inline-flex;align-items:center}
 .mark .eye{width:.62em;height:.62em;margin:0 .02em;position:relative;top:.02em}
 nav{display:flex;align-items:center;gap:26px}
 nav .nl{font-size:14.5px;font-weight:500;color:var(--muted);transition:.2s}
@@ -139,11 +139,13 @@ h1{font-size:clamp(44px,6.2vw,84px);margin:22px 0 24px;max-width:14ch;letter-spa
 @media(max-width:640px){.grid3{grid-template-columns:1fr}}
 .tcard{background:var(--paper-2);border:1px solid var(--line);border-radius:20px;padding:26px;transition:.28s cubic-bezier(.2,.7,.3,1);position:relative;overflow:hidden}
 .tcard:hover{transform:translateY(-4px);border-color:var(--ink);box-shadow:0 14px 0 -8px var(--tint)}
+.tcard .before-label{display:block;color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px;opacity:.7}
 .tcard .before{color:var(--muted);font-size:15.5px;position:relative;display:inline}
 .tcard .before::after{content:"";position:absolute;left:0;right:0;top:52%;height:2px;background:var(--honey);
   transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.6,0,.3,1)}
 .tcard:hover .before::after,.tcard.on .before::after{transform:scaleX(1)}
 .tcard .sep{display:flex;align-items:center;gap:10px;margin:18px 0;color:var(--brand);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.tcard .sep .blip{width:26px;flex:none}
 .tcard .sep::after{content:"";flex:1;height:1px;background:var(--line-soft)}
 .tcard .after{font-family:Gabarito;font-weight:600;font-size:18px;line-height:1.25;letter-spacing:-.02em}
 

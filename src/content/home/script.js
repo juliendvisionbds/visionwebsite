@@ -77,6 +77,20 @@ function blipSVG(pose,color){
       ${shut(52,52,12)}
       ${zzz}`;
   }
+  else if(pose==='roller'){      /* ROULEAU COMPRESSEUR — il aplatit la tâche, pour de bon */
+    body=`<path d="M-4 95 q5 -7 10 0 q5 7 10 0" fill="none" stroke="${ink}" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+      <line x1="18" y1="97" x2="66" y2="97" stroke="${ink}" stroke-width="3" stroke-linecap="round" opacity=".2"/>
+      <circle cx="27" cy="78" r="21" fill="${ink}"/>
+      <path d="M12 70 a16 16 0 0 1 32 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".25"/>
+      <rect x="23" y="68" width="70" height="12" rx="6" fill="${ink}"/>
+      ${wheel(88,84,12)}
+      <rect x="45" y="29" width="48" height="41" rx="14" fill="${c}" stroke="${ink}" stroke-width="4"/>
+      <rect x="90" y="16" width="8" height="18" rx="4" fill="${c}" stroke="${ink}" stroke-width="3"/>
+      <circle cx="95" cy="9" r="5" fill="#fff" stroke="${ink}" stroke-width="2.5"/>
+      <circle cx="100" cy="0" r="3.5" fill="#fff" stroke="${ink}" stroke-width="2"/>
+      ${beacon(69,29)}
+      ${eye(69,49,15,14)}`;
+  }
   else{                          /* CAMION BENNE — la base de la flotte */
     body=`${wheel(30,80,13)}${wheel(74,80,13)}
       <rect x="12" y="70" width="80" height="9" rx="4.5" fill="${ink}"/>
