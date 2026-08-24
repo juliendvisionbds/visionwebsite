@@ -1,2 +1,2 @@
-export const title = "On fait disparaître vos tâches répétitives · vision, agence d'automatisation IA pour le BTP";
-export const description = "Automatisation IA pour les entreprises du bâtiment. Devis, situations, facturation, relances, suivi de chantier. Première automatisation en 3 semaines. Audit gratuit.";
+export const title = "Agence d'automatisation IA pour le BTP | vision";
+export const description = "vision automatise les devis, factures, situations et relances des entreprises du BTP. Première automatisation en 3 semaines. Diagnostic gratuit.";

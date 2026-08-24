@@ -1,2 +1,2 @@
-export const title = "Cas client : trois ans de factures transformées en base de prix · vision";
-export const description = "Comment on a transformé l'historique de factures d'une entreprise de gros œuvre en base de prix, et divisé par cinq le temps de production d'un devis.";
+export const title = "Cas client BTP : factures transformées en base de prix | vision";
+export const description = "Comment une entreprise de gros œuvre a transformé trois ans de factures en base de prix, et réduit de 80 % le temps de production de ses devis.";
