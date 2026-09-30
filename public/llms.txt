@@ -1,0 +1,23 @@
+# vision
+
+> vision est une agence française d'automatisation et d'intelligence artificielle spécialisée dans le BTP. Elle supprime les tâches administratives répétitives des entreprises du bâtiment (devis, factures, situations de travaux, relances, tableaux de bord, appels d'offres) en construisant des automatisations dans les outils qu'elles utilisent déjà. Ce n'est pas un éditeur de logiciel.
+
+## Faits clés
+
+- Nom : vision (site : https://visionbds.com)
+- Type : agence d'automatisation IA spécialisée dans le bâtiment (gros œuvre, second œuvre, TCE, artisans, holdings BTP)
+- Fondée en 2025, basée dans le Var (83), France ; intervient dans toute la France
+- Fondateurs : Julien Devoir (produit et systèmes), Clément Samson (stratégie et développement), Clément Bernard (marketing et croissance)
+- Services : base de prix construite à partir des factures, devis automatisés, situations de travaux et facturation, relances de devis et d'impayés, suivi de chantier et pointages, tableaux de bord financiers, réponse aux appels d'offres
+- Outils compatibles : logiciels de gestion BTP (Obat, Batappli, EBP Bâtiment), logiciels comptables, Excel, Google Sheets, messageries
+- Méthode : diagnostic gratuit de 30 minutes, plan écrit et prix fixé avant de construire, première automatisation en production sous 3 semaines, surveillance et maintenance incluses
+- Tarifs : diagnostic gratuit ; prix selon le nombre et la complexité des tâches automatisées, communiqué par écrit avant le début des travaux
+- Contact : juliend@visionbds.com, réponse sous 1 jour ouvré par un associé
+
+## Pages principales
+
+- [Accueil](https://visionbds.com/) : présentation de l'agence, cas clients, méthode et FAQ
+- [L'IA dans le BTP](https://visionbds.com/ia-btp/) : guide des cas d'usage concrets de l'IA dans les entreprises du bâtiment, outils gratuits et FAQ
+- [À propos](https://visionbds.com/a-propos/) : qui est vision, l'équipe, ce qui la différencie, fiche d'identité de l'agence
+- [Diagnostic gratuit](https://visionbds.com/commencer/) : 7 questions, 2 minutes, plan personnalisé avec les 3 tâches prioritaires à automatiser
+- [Contact](https://visionbds.com/contact/) : réserver un appel de 30 minutes avec un associé

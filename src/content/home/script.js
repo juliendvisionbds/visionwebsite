@@ -189,3 +189,18 @@ document.querySelectorAll('.q button').forEach(b=>{
   });
 });
 
+
+/* ——— calculateur : coût de l'administratif répétitif ——— */
+const WEEKS=45;
+const calc=document.getElementById('calc');
+if(calc){
+  const num=id=>Math.max(0,parseFloat(document.getElementById(id).value.replace(',','.'))||0);
+  const fmt=n=>Math.round(n).toLocaleString('fr-FR');
+  const update=()=>{
+    const hours=num('c-p')*num('c-h')*WEEKS;
+    document.getElementById('c-hy').textContent=fmt(hours)+' h';
+    document.getElementById('c-cy').textContent=fmt(hours*num('c-t'))+' €';
+  };
+  calc.addEventListener('input',update);
+  update();
+}

@@ -2,18 +2,16 @@ import type { Metadata } from "next";
 import LegacyPage from "@/components/LegacyPage";
 import { title, description, faq } from "@/content/ia-btp/meta";
 import { loadPageFiles } from "@/lib/load-content";
+import { SITE, ORG_ID, breadcrumb, escapeHtml, faqPage, jsonLdHtml, pageUrl, social } from "@/lib/seo";
 
-const URL = "https://visionbds.com/ia-btp";
+const URL = pageUrl("/ia-btp");
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/ia-btp" },
-  openGraph: { title, description, url: URL, type: "article" },
+  ...social(title, description, "/ia-btp", "article"),
 };
-
-const escapeHtml = (s: string) =>
-  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 const faqHtml = faq
   .map(
@@ -23,43 +21,33 @@ const faqHtml = faq
   .join("\n");
 
 const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://visionbds.com" },
-      { "@type": "ListItem", position: 2, name: "IA dans le BTP", item: URL },
-    ],
-  },
+  breadcrumb([
+    ["Accueil", "/"],
+    ["IA dans le BTP", "/ia-btp"],
+  ]),
   {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "L'IA dans le BTP : cas d'usage concrets, outils et guide",
     description,
     url: URL,
+    mainEntityOfPage: URL,
+    image: `${SITE}/og.jpg`,
     inLanguage: "fr-FR",
-    author: { "@type": "Organization", name: "vision", url: "https://visionbds.com" },
-    publisher: { "@type": "Organization", name: "vision", url: "https://visionbds.com" },
+    datePublished: "2026-09-30",
+    dateModified: "2026-09-30",
+    about: ["Intelligence artificielle", "BTP", "Automatisation"],
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faq.map(([q, a]) => ({
-      "@type": "Question",
-      name: q,
-      acceptedAnswer: { "@type": "Answer", text: a },
-    })),
-  },
+  faqPage(faq),
 ];
 
 export default function Page() {
   const { css, html, script } = loadPageFiles("ia-btp");
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }} />
       <LegacyPage
         css={css}
         html={html.replace('<div class="faq-wrap" id="faq"></div>', `<div class="faq-wrap">${faqHtml}</div>`)}

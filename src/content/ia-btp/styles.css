@@ -422,11 +422,11 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .ucard p{color:var(--muted);font-size:14.5px}
 
 /* calculateur */
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);background:var(--ink);color:var(--paper);
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);background:var(--brand);color:#fff;
   border-radius:28px;padding:clamp(28px,4.5vw,64px);position:relative;overflow:hidden;scroll-margin-top:90px}
 @media(max-width:900px){.calc{grid-template-columns:1fr}}
 .calc h2{font-size:clamp(28px,3.8vw,48px);letter-spacing:-.04em;margin:18px 0 16px;max-width:16ch}
-.calc-intro p{color:rgba(250,249,246,.72);max-width:44ch}
+.calc-intro p{color:rgba(255,255,255,.86);max-width:44ch}
 .calc-blip{display:block;width:clamp(80px,9vw,120px);margin-top:28px}
 @media(max-width:900px){.calc-blip{display:none}}
 .calc-form{background:var(--paper-2);color:var(--ink);border-radius:22px;padding:clamp(20px,2.6vw,30px);display:grid;gap:14px;align-content:start}

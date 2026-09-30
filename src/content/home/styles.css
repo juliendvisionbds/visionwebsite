@@ -143,15 +143,17 @@ h1{font-size:clamp(44px,6.2vw,84px);margin:22px 0 24px;max-width:14ch;letter-spa
 @media(max-width:640px){.grid3{grid-template-columns:1fr}}
 .tcard{background:var(--paper-2);border:1px solid var(--line);border-radius:20px;padding:26px;transition:.28s cubic-bezier(.2,.7,.3,1);position:relative;overflow:hidden}
 .tcard:hover{transform:translateY(-4px);border-color:var(--ink);box-shadow:0 14px 0 -8px var(--tint)}
-.tcard .before-label{display:block;color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px;opacity:.7}
-.tcard .before{color:var(--muted);font-size:15.5px;position:relative;display:inline}
-.tcard .before::after{content:"";position:absolute;left:0;right:0;top:52%;height:2px;background:var(--honey);
-  transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.6,0,.3,1)}
-.tcard:hover .before::after,.tcard.on .before::after{transform:scaleX(1)}
-.tcard .sep{display:flex;align-items:center;gap:10px;margin:18px 0;color:var(--brand);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.tcard{display:flex;flex-direction:column}
+#ce-quon-automatise .grid3{counter-reset:tc}
+.tcard h3{font-size:clamp(21px,1.9vw,25px);line-height:1.1;letter-spacing:-.035em;padding-bottom:18px;margin-bottom:18px;border-bottom:2px solid var(--ink)}
+.tcard h3::before{counter-increment:tc;content:counter(tc,decimal-leading-zero);display:block;font-size:13px;letter-spacing:.06em;color:var(--brand);margin-bottom:10px}
+.tcard .before-label{display:block;color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;opacity:.7}
+.tcard .before{color:var(--muted);font-size:15px;line-height:1.5;margin:0;text-decoration:line-through;text-decoration-color:transparent;text-decoration-thickness:2px;transition:text-decoration-color .4s}
+.tcard:hover .before,.tcard.on .before{text-decoration-color:color-mix(in srgb,var(--honey) 70%,transparent)}
+.tcard .sep{display:flex;align-items:center;gap:10px;margin:18px 0 8px;color:var(--brand);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
 .tcard .sep .blip{width:26px;flex:none}
 .tcard .sep::after{content:"";flex:1;height:1px;background:var(--line-soft)}
-.tcard .after{font-family:Gabarito;font-weight:600;font-size:18px;line-height:1.25;letter-spacing:-.02em}
+.tcard .after{font-size:16px;line-height:1.5;font-weight:500;color:var(--ink);margin:0}
 
 /* ————— process ————— */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,40px);position:relative}
@@ -278,7 +280,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
   *{animation:none!important;transition-duration:.01ms!important}
   .reveal{opacity:1;transform:none}
   .sq path{stroke-dashoffset:0}
-  .tcard .before::after{transform:scaleX(1)}
+  .tcard .before{text-decoration-color:color-mix(in srgb,var(--honey) 70%,transparent)}
 }
 
 
@@ -329,3 +331,21 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .case:hover .go .arw{transform:translateX(5px)}
 .case .go.off{color:var(--muted)}
 
+/* calculateur */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);background:var(--brand);color:#fff;
+  border-radius:28px;padding:clamp(28px,4.5vw,64px);position:relative;overflow:hidden;scroll-margin-top:90px}
+@media(max-width:900px){.calc{grid-template-columns:1fr}}
+.calc h2{font-size:clamp(28px,3.8vw,48px);letter-spacing:-.04em;margin:18px 0 16px;max-width:16ch}
+.calc-intro p{color:rgba(255,255,255,.86);max-width:44ch}
+.calc-blip{display:block;width:clamp(80px,9vw,120px);margin-top:28px}
+@media(max-width:900px){.calc-blip{display:none}}
+.calc-form{background:var(--paper-2);color:var(--ink);border-radius:22px;padding:clamp(20px,2.6vw,30px);display:grid;gap:14px;align-content:start}
+.calc-form label{display:grid;gap:6px;font-size:14px;font-weight:600}
+.calc-form input{font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--paper);color:var(--ink);outline:none;width:100%}
+.calc-form input:focus{border-color:var(--ink);background:#fff;box-shadow:0 0 0 4px var(--tint)}
+.calc-out{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.calc-out div{background:var(--tint);border-radius:14px;padding:14px 16px}
+.calc-out small{display:block;font-size:12.5px;color:var(--muted);font-weight:500}
+.calc-out b{display:block;font-family:Gabarito;font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.04em;line-height:1.1;margin-top:4px;color:var(--brand)}
+.calc-note{font-size:12.5px;color:var(--muted)}
+.calc-form .btn{justify-content:center}
