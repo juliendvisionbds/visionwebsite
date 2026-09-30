@@ -320,7 +320,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .case.soon:hover{transform:none;box-shadow:none;border-style:dashed}
 .case-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
 .case .k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.case .badge{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+.case .badge{white-space:nowrap;flex:none;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   background:var(--yellow);color:var(--ink);border:2px solid var(--ink);border-radius:7px;padding:3px 9px}
 .case h3{font-size:clamp(20px,2vw,23px);letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}
 .case p{color:var(--muted);font-size:14.5px;flex:1}
