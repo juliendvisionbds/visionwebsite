@@ -71,16 +71,20 @@ header{position:sticky;top:0;z-index:70;background:rgba(250,249,246,.85);backdro
 nav{display:flex;align-items:center;gap:26px}
 nav .nl{font-size:14.5px;font-weight:500;color:var(--muted);transition:.2s}
 nav .nl:hover{color:var(--ink)}
+nav .nl[aria-current]{color:var(--ink);font-weight:600}
 .lang{font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
 .lang b{color:var(--ink)}
 @media(max-width:880px){nav .hide-m{display:none}}
 
 /* ————— hero ————— */
 .hero{padding-top:clamp(46px,6vw,80px);padding-bottom:clamp(30px,4vw,54px)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(32px,5vw,72px);align-items:center}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:46px}}
 h1{font-size:clamp(44px,6.2vw,84px);margin:22px 0 24px;max-width:14ch;letter-spacing:-.045em}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;align-items:center}
+.hero .cta-row{gap:10px}
+.hero .cta-row .btn{padding-left:20px;padding-right:20px}
+.cta-note{margin-top:16px;font-size:13.5px;font-weight:500;color:var(--muted)}
 
 /* live panel */
 .panel{position:relative;background:var(--paper-2);border:2px solid var(--ink);border-radius:24px;padding:20px;
@@ -111,8 +115,8 @@ h1{font-size:clamp(44px,6.2vw,84px);margin:22px 0 24px;max-width:14ch;letter-spa
 @media(max-width:520px){.panel-blip{width:72px;right:-6px;bottom:-32px}}
 
 /* ————— stats ————— */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:clamp(52px,7vw,86px)}
-@media(max-width:860px){.stats{grid-template-columns:1fr 1fr}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(52px,7vw,86px)}
+@media(max-width:700px){.stats{grid-template-columns:1fr}}
 .stat{background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:24px 22px;transition:.25s}
 .stat:hover{transform:translateY(-3px);border-color:var(--ink)}
 .stat b{display:block;font-family:Gabarito;font-weight:800;font-size:clamp(28px,3.2vw,42px);letter-spacing:-.045em;line-height:1}

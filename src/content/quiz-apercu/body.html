@@ -1,0 +1,44 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, retour au site">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <span class="qcount" style="font-size:13.5px;font-weight:600;color:var(--muted)">Votre aperçu</span>
+  </div>
+</header>
+
+<main class="ap">
+  <div class="wrap ap-grid">
+    <div class="ap-col">
+      <span class="chip" id="recap-chip">Votre aperçu</span>
+      <h1>Votre premier point à simplifier : <span class="hl" id="ap-court"></span>.</h1>
+      <p class="lede" id="ap-constat"></p>
+
+      <div class="ap-card">
+        <span class="blip ap-blip hop" data-pose="carry" data-color="yellow"></span>
+        <h2>Votre plan détaille :</h2>
+        <ul class="inc" id="inc"></ul>
+      </div>
+      <p class="demo-note" id="demo" hidden>Page ouverte sans passer par le quiz : l'aperçu affiche un exemple.</p>
+    </div>
+
+    <aside class="ap-side">
+      <div class="obox">
+        <span class="k">Dernière étape</span>
+        <h2>Recevez votre plan personnalisé</h2>
+        <div class="price"><b>Gratuit</b></div>
+
+        <form class="eform" id="eform" novalidate>
+          <label for="email">À quelle adresse vous envoyer votre plan ?</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Votre email professionnel" aria-describedby="err" required>
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Voir et recevoir mon plan <span class="arw">→</span></button>
+        </form>
+
+        <ul class="trust">
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Le plan s'ouvre directement ici, pas besoin d'aller dans vos emails</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3" width="13" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 4l6 5 6-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Votre adresse sert uniquement à vous l'envoyer</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5l5 2v4c0 3.2-2.2 5.8-5 7-2.8-1.2-5-3.8-5-7v-4l5-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Gratuit, sans engagement</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>

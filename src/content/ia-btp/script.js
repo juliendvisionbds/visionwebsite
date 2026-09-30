@@ -129,47 +129,6 @@ if(!reduce && matchMedia('(pointer:fine)').matches){
   track();
 }
 
-/* live tape */
-const POOL=[
- ['Devis n°2481 assemblé depuis la base de prix','Auto'],
- ['Facture envoyée — Copropriété Croix du Sud','Auto'],
- ['Relance J+7 sur 3 devis sans réponse','Auto'],
- ['Situation mensuelle chantier Mercantour compilée','Auto'],
- ['Compte rendu de chantier envoyé au maître d\'ouvrage','En cours'],
- ['Heures de la semaine consolidées par chantier','En cours'],
- ['Demande de prix fournisseur → 4 relances programmées','Auto'],
- ['Appel manqué → SMS de rappel envoyé','Auto']
-];
-const tape=document.getElementById('tape');
-let cur=0;
-const mk=i=>{const li=document.createElement('li');
-  li.innerHTML='<span class="tk"></span><span class="tx">'+POOL[i%POOL.length][0]+'</span><span class="tag">'+POOL[i%POOL.length][1]+'</span>';
-  return li};
-for(;cur<6;cur++) tape.appendChild(mk(cur));
-/* Une étape à la fois : la suivante n'est programmée qu'une fois la précédente terminée.
-   (Avec setInterval, les minuteurs ralentis par le navigateur — onglet en arrière-plan —
-   se chevauchaient : la même ligne était retirée deux fois mais deux lignes ajoutées.) */
-const TAPE_MAX=6;
-if(!reduce){
-  const wait=ms=>new Promise(r=>setTimeout(r,ms));
-  (async function loop(){
-    while(tape.isConnected){
-      await wait(1780);                       /* 1780 + 900 + 520 = un cycle de 3,2 s, comme avant */
-      if(document.hidden) continue;           /* onglet masqué : on met en pause */
-      const f=tape.firstElementChild; if(!f) break;
-      f.classList.add('done');
-      await wait(900);
-      f.classList.add('out');
-      await wait(520);
-      f.remove();
-      const li=mk(cur++); li.classList.add('in'); tape.appendChild(li);
-      while(tape.children.length>TAPE_MAX) tape.firstElementChild.remove();   /* garde-fou */
-      const h=document.getElementById('hrs');
-      if(h&&cur%3===0&&parseInt(h.textContent)<24) h.textContent=parseInt(h.textContent)+1;   /* plafonné pour rester crédible */
-    }
-  })();
-}
-
 /* reveals + squiggles */
 const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){
@@ -189,3 +148,31 @@ document.querySelectorAll('.q button').forEach(b=>{
   });
 });
 
+
+
+/* ——— calculateur : coût de l'administratif répétitif ——— */
+const WEEKS=45;
+const calc=document.getElementById('calc');
+if(calc){
+  const num=id=>Math.max(0,parseFloat(document.getElementById(id).value.replace(',','.'))||0);
+  const fmt=n=>Math.round(n).toLocaleString('fr-FR');
+  const update=()=>{
+    const hours=num('c-p')*num('c-h')*WEEKS;
+    document.getElementById('c-hy').textContent=fmt(hours)+' h';
+    document.getElementById('c-cy').textContent=fmt(hours*num('c-t'))+' €';
+  };
+  calc.addEventListener('input',update);
+  update();
+}
+
+/* ——— sommaire du guide : met en avant la partie en cours de lecture ——— */
+const gtoc=document.getElementById('gtoc');
+if(gtoc){
+  const links=[...gtoc.querySelectorAll('a')];
+  const heads=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+  }),{rootMargin:'-20% 0px -70% 0px'});
+  heads.forEach(h=>spy.observe(h));
+}

@@ -129,47 +129,6 @@ if(!reduce && matchMedia('(pointer:fine)').matches){
   track();
 }
 
-/* live tape */
-const POOL=[
- ['Devis n°2481 assemblé depuis la base de prix','Auto'],
- ['Facture envoyée — Copropriété Croix du Sud','Auto'],
- ['Relance J+7 sur 3 devis sans réponse','Auto'],
- ['Situation mensuelle chantier Mercantour compilée','Auto'],
- ['Compte rendu de chantier envoyé au maître d\'ouvrage','En cours'],
- ['Heures de la semaine consolidées par chantier','En cours'],
- ['Demande de prix fournisseur → 4 relances programmées','Auto'],
- ['Appel manqué → SMS de rappel envoyé','Auto']
-];
-const tape=document.getElementById('tape');
-let cur=0;
-const mk=i=>{const li=document.createElement('li');
-  li.innerHTML='<span class="tk"></span><span class="tx">'+POOL[i%POOL.length][0]+'</span><span class="tag">'+POOL[i%POOL.length][1]+'</span>';
-  return li};
-for(;cur<6;cur++) tape.appendChild(mk(cur));
-/* Une étape à la fois : la suivante n'est programmée qu'une fois la précédente terminée.
-   (Avec setInterval, les minuteurs ralentis par le navigateur — onglet en arrière-plan —
-   se chevauchaient : la même ligne était retirée deux fois mais deux lignes ajoutées.) */
-const TAPE_MAX=6;
-if(!reduce){
-  const wait=ms=>new Promise(r=>setTimeout(r,ms));
-  (async function loop(){
-    while(tape.isConnected){
-      await wait(1780);                       /* 1780 + 900 + 520 = un cycle de 3,2 s, comme avant */
-      if(document.hidden) continue;           /* onglet masqué : on met en pause */
-      const f=tape.firstElementChild; if(!f) break;
-      f.classList.add('done');
-      await wait(900);
-      f.classList.add('out');
-      await wait(520);
-      f.remove();
-      const li=mk(cur++); li.classList.add('in'); tape.appendChild(li);
-      while(tape.children.length>TAPE_MAX) tape.firstElementChild.remove();   /* garde-fou */
-      const h=document.getElementById('hrs');
-      if(h&&cur%3===0&&parseInt(h.textContent)<24) h.textContent=parseInt(h.textContent)+1;   /* plafonné pour rester crédible */
-    }
-  })();
-}
-
 /* reveals + squiggles */
 const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){
@@ -189,3 +148,75 @@ document.querySelectorAll('.q button').forEach(b=>{
   });
 });
 
+
+
+/* ============================================================
+   RÉSERVATION D'UN APPEL
+   BOOKING_URL : lien Cal.com ou Calendly. S'il est renseigné, le vrai calendrier s'affiche à la place.
+   Laissé vide : sélecteur de créneaux (jours ouvrés, 4 horaires). La demande est enregistrée
+   (Supabase) et envoyée par email (Resend) ; l'invitation visio est envoyée ensuite à la main.
+   ============================================================ */
+const BOOKING_URL='https://calendly.com/juliend-visionbds/30min';
+const cal=document.getElementById('cal');
+const escH=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+if(cal&&BOOKING_URL){
+  const u=new URL(BOOKING_URL);
+  u.searchParams.set('embed_domain',location.hostname); u.searchParams.set('embed_type','Inline');
+  u.searchParams.set('hide_gdpr_banner','1'); u.searchParams.set('primary_color','5a4bff');
+  cal.classList.add('embed');
+  cal.innerHTML=`<iframe src="${escH(u.toString())}" title="Réserver un appel" loading="lazy"></iframe>`;
+}else if(cal){
+  const DJ=['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'], MO=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  const JL=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+  const days=[]; const d=new Date(); d.setHours(0,0,0,0);
+  while(days.length<8){d.setDate(d.getDate()+1); if(d.getDay()%6) days.push(new Date(d));}
+  const TIMES=['09:00','10:30','14:00','16:30'];
+  const pad=n=>String(n).padStart(2,'0');
+  let dSel=0,tSel=null;
+  const keep={};
+  const paint=()=>{
+    cal.innerHTML=`<h2>Choisissez un créneau</h2><p class="sub">30 minutes · en visio ou par téléphone · heure de Paris</p>
+      <div class="days" role="group" aria-label="Jour">${days.map((x,i)=>`<button type="button" class="day" data-i="${i}" aria-pressed="${i===dSel}"><small>${DJ[x.getDay()]}</small><b>${x.getDate()}</b><small>${MO[x.getMonth()]}</small></button>`).join('')}</div>
+      <div class="slots" role="group" aria-label="Heure">${TIMES.map((t,i)=>`<button type="button" class="slot" data-i="${i}" aria-pressed="${i===tSel}">${t}</button>`).join('')}</div>
+      <form class="bform" id="bform" ${tSel==null?'hidden':''}>
+        <div class="two"><div><label for="bn">Prénom et nom</label><input id="bn" required autocomplete="name"></div>
+        <div><label for="be">Entreprise</label><input id="be" required autocomplete="organization"></div></div>
+        <div class="two"><div><label for="bm">Email</label><input id="bm" type="email" required autocomplete="email"></div>
+        <div><label for="bt">Téléphone <span style="font-weight:400">(facultatif)</span></label><input id="bt" type="tel" autocomplete="tel"></div></div>
+        <div><label for="bx">Ce qui vous prend le plus de temps <span style="font-weight:400">(facultatif)</span></label><textarea id="bx" maxlength="2000" placeholder="Ex : nos devis repartent de zéro, on ne retrouve jamais nos anciens prix."></textarea></div>
+        <button class="btn btn-primary" type="submit">Réserver mon appel <span class="arw">→</span></button>
+        <p class="note">Sans engagement. Vous recevez la confirmation et le lien de visio par email.</p>
+      </form>`;
+    /* conserve la saisie quand on change de créneau */
+    ['bn','be','bm','bt','bx'].forEach(id=>{const el=document.getElementById(id); if(el){el.value=keep[id]||''; el.addEventListener('input',()=>{keep[id]=el.value})}});
+    cal.querySelectorAll('.day').forEach(b=>b.addEventListener('click',()=>{dSel=+b.dataset.i;tSel=null;paint()}));
+    cal.querySelectorAll('.slot').forEach(b=>b.addEventListener('click',()=>{tSel=+b.dataset.i;paint();document.getElementById('bn').focus()}));
+    const f=document.getElementById('bform');
+    f.addEventListener('submit',async e=>{
+      e.preventDefault(); if(!f.reportValidity()) return;
+      const sb=f.querySelector('button[type="submit"]'); if(sb.disabled) return;
+      const x=days[dSel], label=`${JL[x.getDay()]} ${x.getDate()} ${MO[x.getMonth()]} à ${TIMES[tSel].replace(':','h')}`;
+      const v=id=>document.getElementById(id).value.trim();
+      const email=v('bm');
+      sb.disabled=true; const html=sb.innerHTML; sb.innerHTML='Envoi…';
+      let ok=false;
+      try{
+        const res=await fetch('/api/quiz/booking',{method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({source:'contact',when:`${x.getFullYear()}-${pad(x.getMonth()+1)}-${pad(x.getDate())}T${TIMES[tSel]}`,label,
+            name:v('bn'),company:v('be'),email,phone:v('bt'),message:v('bx')})});
+        ok=res.ok;
+      }catch(err){console.error('booking error:',err)}
+      if(!ok){
+        sb.disabled=false; sb.innerHTML=html;
+        let n=f.querySelector('.berr'); if(!n){n=document.createElement('p');n.className='note berr';n.setAttribute('role','alert');f.appendChild(n)}
+        n.textContent="La réservation n'a pas pu être envoyée. Réessayez, ou écrivez-nous à juliend@visionbds.com.";
+        return;
+      }
+      cal.innerHTML=`<div class="bdone" role="status"><span class="blip hop" data-pose="wave" data-color="yellow"></span>
+        <h2>C'est noté !</h2><p>${escH(label)}. La confirmation et le lien de visio partent à ${escH(email)}.</p>
+        <p>En attendant, vous pouvez <a href="/commencer" style="color:var(--brand);font-weight:600">faire le diagnostic en 2 minutes</a> pour préparer l'échange.</p></div>`;
+      cal.querySelectorAll('.blip').forEach(el=>{el.innerHTML=blipSVG(el.dataset.pose,el.dataset.color)});
+    });
+  };
+  paint();
+}

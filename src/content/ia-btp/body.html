@@ -1,0 +1,426 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp" aria-current="page">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero ia-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><span aria-current="page">IA dans le BTP</span></nav>
+    <div class="hero-grid">
+      <div>
+        <span class="chip">Cas d'usage · outils · guide</span>
+        <h1>L'IA dans le BTP, <span class="sq brand">concrètement<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span></h1>
+        <p class="lede">Pas de robot sur le chantier, pas de promesse floue. Des usages précis, déjà en place dans des entreprises du bâtiment : des chiffres qui remontent tout seuls, une base de prix construite à partir de vos factures, des devis assemblés en minutes, des appels d'offres triés et préparés.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#cas-usage">Voir les cas d'usage <span class="arw">→</span></a>
+          <a class="btn btn-ghost" href="/commencer">Voir ce que je peux automatiser</a>
+        </div>
+      </div>
+
+      <div class="panel toc-panel">
+        <div class="panel-head">
+          <span>Sur cette page</span>
+          <span class="live"><i></i> 5 min de lecture</span>
+        </div>
+        <ol class="toc-list">
+          <li><a href="#cas-usage"><b>4 cas d'usage</b><small>Tableau de bord, base de données, devis, appels d'offres</small></a></li>
+          <li><a href="#autres-usages"><b>Les autres usages</b><small>Chantier, factures, relances, heures…</small></a></li>
+          <li><a href="#calcul"><b>Le coût de l'administratif</b><small>Calculez-le en 30 secondes</small></a></li>
+          <li><a href="#outils"><b>Outils gratuits</b><small>Pour les entreprises du bâtiment</small></a></li>
+          <li><a href="#guide"><b>Le guide de l'IA dans le BTP</b><small>Par où commencer, coûts, limites</small></a></li>
+        </ol>
+        <span class="blip panel-blip b2 hop" data-pose="look" data-color="yellow"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAS D'USAGE PRINCIPAUX -->
+<section id="cas-usage" style="padding-top:clamp(40px,5vw,70px)">
+  <div class="wrap">
+    <div class="shead shead-full reveal">
+      <div class="shead-row"><span class="blip b3" data-pose="carry" data-color="orange"></span></div>
+      <h2>Quatre usages de l'IA qui changent <span class="sq">une entreprise du bâtiment<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M5 15 C 80 5, 190 19, 295 9"/></svg></span></h2>
+      <p class="lede">Ce sont les quatre chantiers qu'on met en place le plus souvent. Chacun part de ce que vous avez déjà : vos factures, vos exports comptables, vos anciens devis, vos dossiers de consultation.</p>
+    </div>
+
+    <!-- 1. TABLEAU DE BORD FINANCIER — SILO : /ia-btp/tableau-de-bord-financier -->
+    <article class="uc reveal" id="tableau-de-bord">
+      <div class="uc-text">
+        <div class="uc-top"><span class="uc-n">01</span><span class="uc-tag">Pilotage</span></div>
+        <h3>Tableaux de bord financiers de performance</h3>
+        <p class="uc-pain">Chaque fin de mois, quelqu'un rassemble les exports comptables, les heures et les factures fournisseurs dans un tableur. Les chiffres arrivent tard, et la marge d'un chantier se découvre une fois qu'il est terminé.</p>
+        <h4>Ce que fait l'IA</h4>
+        <ul class="uc-list">
+          <li>Récupère les données de votre comptabilité, de vos fichiers et de votre logiciel BTP, sans ressaisie.</li>
+          <li>Rapproche chaque dépense du bon chantier et compare budget et réel pendant que le chantier avance.</li>
+          <li>Met à jour un tableau de bord unique : marge par chantier, trésorerie, frais généraux, par société si vous en avez plusieurs.</li>
+        </ul>
+        <p class="uc-keep"><b>Ce que vous gardez en main :</b> le choix des indicateurs, leur lecture et les décisions.</p>
+        <div class="case-kpis"><span>3 jours → 10 min</span><span>Chiffres à J+2</span></div>
+        <div class="uc-foot">
+          <span class="case-slot"><span class="dot"></span>Cas client : holding de 5 entités, bientôt en ligne</span>
+          <span class="go off">Guide détaillé bientôt</span>
+        </div>
+      </div>
+      <div class="uc-visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-head"><span>Marge par chantier</span><span class="pill-s">Mis à jour ce matin</span></div>
+          <div class="bars">
+            <div class="bar-r"><span class="lb">Résidence Les Tilleuls</span><span class="track"><i style="--w:78%"></i></span><b>18,2 %</b></div>
+            <div class="bar-r"><span class="lb">École Jean-Moulin</span><span class="track"><i style="--w:64%"></i></span><b>14,9 %</b></div>
+            <div class="bar-r warn"><span class="lb">Bureaux Quai Est</span><span class="track"><i style="--w:31%"></i></span><b>7,1 %</b></div>
+            <div class="bar-r"><span class="lb">Maison Durand</span><span class="track"><i style="--w:70%"></i></span><b>16,4 %</b></div>
+          </div>
+          <div class="mock-alert"><span class="ic">!</span>Bureaux Quai Est : dépenses matériaux +22 % sur budget</div>
+        </div>
+        <span class="blip uc-blip" data-pose="look" data-color="orange"></span>
+      </div>
+    </article>
+
+    <!-- 2. BASE DE DONNÉES INTELLIGENTE — SILO : /ia-btp/base-de-donnees-intelligente -->
+    <article class="uc rev reveal" id="base-de-donnees">
+      <div class="uc-text">
+        <div class="uc-top"><span class="uc-n">02</span><span class="uc-tag">Données</span></div>
+        <h3>Une base de données intelligente, construite à partir de vos documents</h3>
+        <p class="uc-pain">Vos prix, vos ouvrages et vos références existent déjà : dans des centaines de factures fournisseurs, d'anciens devis et de fichiers Excel. Le problème, c'est qu'on ne les retrouve jamais au moment d'en avoir besoin.</p>
+        <h4>Ce que fait l'IA</h4>
+        <ul class="uc-list">
+          <li>Lit vos factures et vos devis (PDF, scans, emails) et en extrait références, quantités, prix et fournisseurs.</li>
+          <li>Classe tout par ouvrage, par chantier et par période dans une base consultable.</li>
+          <li>Répond à des questions simples : « dernier prix du placo BA13 chez nos trois fournisseurs ? »</li>
+        </ul>
+        <p class="uc-keep"><b>Ce que vous gardez en main :</b> la validation des références et les prix que vous retenez.</p>
+        <div class="case-kpis"><span>3 ans de factures structurées</span><span>Réponse le jour même</span></div>
+        <div class="uc-foot">
+          <span class="case-slot"><span class="dot"></span>Cas client : entreprise de gros œuvre, bientôt en ligne</span>
+          <span class="go off">Guide détaillé bientôt</span>
+        </div>
+      </div>
+      <div class="uc-visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-head"><span>Base de prix</span><span class="pill-s">4 812 lignes</span></div>
+          <div class="search"><svg viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>plaque de plâtre BA13</div>
+          <table class="dbt">
+            <thead><tr><th>Fournisseur</th><th>Prix HT</th><th>Date</th></tr></thead>
+            <tbody>
+              <tr><td>Fournisseur A</td><td><b>3,42 €/m²</b></td><td>12 sept.</td></tr>
+              <tr><td>Fournisseur B</td><td>3,58 €/m²</td><td>28 août</td></tr>
+              <tr><td>Fournisseur C</td><td>3,71 €/m²</td><td>3 juil.</td></tr>
+            </tbody>
+          </table>
+          <div class="src">Extrait de 214 factures fournisseurs</div>
+        </div>
+        <span class="blip uc-blip" data-pose="carry" data-color="yellow"></span>
+      </div>
+    </article>
+
+    <!-- 3. DEVIS AUTOMATISÉ — SILO : /ia-btp/devis-automatise -->
+    <article class="uc reveal" id="devis">
+      <div class="uc-text">
+        <div class="uc-top"><span class="uc-n">03</span><span class="uc-tag">Commercial</span></div>
+        <h3>Des devis assemblés en minutes, pas rédigés en heures</h3>
+        <p class="uc-pain">Chaque devis repart de zéro : on cherche les prix, on réécrit des prestations déjà chiffrées cent fois, on vérifie la marge à la main. Pendant ce temps, le client attend, et le premier devis crédible emporte souvent l'affaire.</p>
+        <h4>Ce que fait l'IA</h4>
+        <ul class="uc-list">
+          <li>Transforme vos notes de visite, photos et métrés en une trame de devis structurée.</li>
+          <li>Propose les ouvrages de votre bibliothèque avec les prix de votre base, à jour.</li>
+          <li>Calcule le coût de revient et la marge ligne par ligne, puis relance le client après l'envoi.</li>
+        </ul>
+        <p class="uc-keep"><b>Ce que vous gardez en main :</b> les choix techniques, le prix final et la décision d'envoyer.</p>
+        <div class="case-kpis"><span>−80 % de temps par devis</span><span>Relances automatiques</span></div>
+        <div class="uc-foot">
+          <span class="case-slot"><span class="dot"></span>Cas client en cours de rédaction</span>
+          <span class="go off">Guide détaillé bientôt</span>
+        </div>
+      </div>
+      <div class="uc-visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-head"><span>Devis n°2481 · Rénovation salle de bain</span><span class="pill-s ok">Marge 21 %</span></div>
+          <ul class="lines">
+            <li><span>Dépose sanitaires existants</span><b>420,00 €</b></li>
+            <li><span>Cloison hydrofuge BA13 H, 8 m²</span><b>612,00 €</b></li>
+            <li><span>Receveur extra-plat 90×120</span><b>748,00 €</b></li>
+            <li class="new"><span>Faïence murale posée, 14 m²</span><b>1 134,00 €</b></li>
+          </ul>
+          <div class="mock-total"><span>Total HT</span><b>2 914,00 €</b></div>
+        </div>
+        <span class="blip uc-blip" data-pose="default" data-color="orange"></span>
+      </div>
+    </article>
+
+    <!-- 4. APPELS D'OFFRES — SILO : /ia-btp/appels-d-offres -->
+    <article class="uc rev reveal" id="appels-d-offres">
+      <div class="uc-text">
+        <div class="uc-top"><span class="uc-n">04</span><span class="uc-tag">Marchés</span></div>
+        <h3>Réponse aux appels d'offres automatisée</h3>
+        <p class="uc-pain">Trier les annonces, lire le règlement de consultation et le CCTP, rassembler les attestations, réécrire le mémoire technique : répondre à un appel d'offres mobilise des jours, souvent pour décider au final de ne pas y aller.</p>
+        <h4>Ce que fait l'IA</h4>
+        <ul class="uc-list">
+          <li>Surveille les plateformes et ne vous transmet que les consultations qui correspondent à vos lots, zones et montants.</li>
+          <li>Lit le dossier et en sort une synthèse : critères, délais, pièces demandées, points de vigilance.</li>
+          <li>Pré-rédige le mémoire technique à partir de vos références et assemble le dossier administratif.</li>
+        </ul>
+        <p class="uc-keep"><b>Ce que vous gardez en main :</b> la décision de répondre, la stratégie et la relecture finale.</p>
+        <div class="case-kpis"><span>Veille en continu</span><span>Synthèse en quelques minutes</span></div>
+        <div class="uc-foot">
+          <span class="case-slot"><span class="dot"></span>Cas client en cours de développement</span>
+          <span class="go off">Guide détaillé bientôt</span>
+        </div>
+      </div>
+      <div class="uc-visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-head"><span>Consultation · Réhabilitation gymnase</span><span class="pill-s ok">Correspond à 92 %</span></div>
+          <ul class="checks">
+            <li class="ok"><span></span>Lot 03 Menuiseries extérieures : dans vos lots</li>
+            <li class="ok"><span></span>Montant estimé 180 k€ : dans votre fourchette</li>
+            <li class="warn"><span></span>Visite obligatoire le 14 octobre</li>
+            <li class="ok"><span></span>Pièces administratives : 9 sur 10 à jour</li>
+          </ul>
+          <div class="mock-alert soft"><span class="ic">✎</span>Mémoire technique pré-rédigé à partir de 6 références</div>
+        </div>
+        <span class="blip uc-blip" data-pose="wave" data-color="yellow"></span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- AUTRES USAGES -->
+<section id="autres-usages" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="blip b2" data-pose="roller" data-color="amber"></span></div>
+      <h2>Et partout où une tâche <span class="sq">se répète<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 15 C 90 6, 190 19, 296 9"/></svg></span></h2>
+      <p class="lede">Si quelqu'un refait la même chose chaque semaine, de la même manière, c'est probablement automatisable. Quelques exemples qu'on rencontre souvent.</p>
+    </div>
+    <div class="usegrid">
+      <div class="ucard reveal"><span class="ico">📝</span><h3>Comptes rendus de chantier</h3><p>Une note vocale et des photos sur place deviennent un compte rendu structuré, prêt à relire et à envoyer.</p></div>
+      <div class="ucard reveal"><span class="ico">📊</span><h3>Situations de travaux</h3><p>Calculées à partir du marché, de l'avancement par poste et des situations précédentes.</p></div>
+      <div class="ucard reveal"><span class="ico">💶</span><h3>Relances de paiement</h3><p>Envoyées à échéance, avec un ton qui monte progressivement, et une alerte quand un client ne répond plus.</p></div>
+      <div class="ucard reveal"><span class="ico">🧾</span><h3>Factures fournisseurs</h3><p>Lues à l'arrivée dans la boîte mail, rattachées au bon chantier et rangées au bon endroit.</p></div>
+      <div class="ucard reveal"><span class="ico">⏱️</span><h3>Heures des équipes</h3><p>Saisies une fois depuis le téléphone, consolidées par chantier pour la paie et le suivi des coûts.</p></div>
+      <div class="ucard reveal"><span class="ico">📁</span><h3>Dossier administratif</h3><p>Attestations, assurances, Kbis tenus à jour, avec une alerte avant chaque expiration.</p></div>
+      <div class="ucard reveal"><span class="ico">📞</span><h3>Demandes entrantes</h3><p>Un appel manqué ou une demande de devis reçoit une réponse immédiate, et la demande est qualifiée.</p></div>
+      <div class="ucard reveal"><span class="ico">🔗</span><h3>Logiciel BTP et Excel reliés</h3><p>Ce qui passe de l'un à l'autre n'est plus recopié à la main : une information saisie une fois est à jour partout.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATEUR -->
+<section id="calcul" style="padding-top:0">
+  <div class="wrap">
+    <div class="calc reveal">
+      <div class="calc-intro">
+        <span class="chip" style="background:rgba(255,255,255,.14);color:#fff">Outil gratuit</span>
+        <h2>Combien vous coûte l'administratif répétitif ?</h2>
+        <p>Trois chiffres, une estimation. Les heures passées à ressaisir, chercher et relancer ont un coût, même quand personne ne le calcule.</p>
+        <span class="blip calc-blip" data-pose="roller" data-color="yellow"></span>
+      </div>
+      <form class="calc-form" id="calc" onsubmit="return false">
+        <label><span>Personnes concernées</span><input type="number" id="c-p" min="1" max="200" value="3" inputmode="numeric"></label>
+        <label><span>Heures répétitives par semaine, par personne</span><input type="number" id="c-h" min="0" max="60" value="6" inputmode="numeric"></label>
+        <label><span>Coût horaire chargé (€)</span><input type="number" id="c-t" min="10" max="200" value="38" inputmode="numeric"></label>
+        <div class="calc-out" aria-live="polite">
+          <div><small>Heures par an</small><b id="c-hy">—</b></div>
+          <div><small>Coût annuel estimé</small><b id="c-cy">—</b></div>
+        </div>
+        <p class="calc-note">Base de 45 semaines travaillées. Une estimation, pas un devis : le diagnostic gratuit permet de chiffrer précisément ce qui est automatisable.</p>
+        <a class="btn btn-primary" href="/commencer">Identifier ce qui peut être automatisé <span class="arw">→</span></a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- OUTILS GRATUITS -->
+<section id="outils" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="blip b4" data-pose="wave" data-color="orange"></span></div>
+      <h2>Des outils <span class="sq">gratuits<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 16 C 90 4, 180 20, 296 8"/></svg></span>, pensés pour le bâtiment</h2>
+      <p class="lede">De petits outils pour gagner du temps dès aujourd'hui, sans inscription ni logiciel à installer.</p>
+    </div>
+    <div class="tools">
+      <!-- Outil disponible -->
+      <a class="tool live reveal" href="/commencer">
+        <div class="tool-top"><span class="ico">🎯</span><span class="badge">Disponible</span></div>
+        <h3>Diagnostic IA de votre entreprise</h3>
+        <p>7 questions, 2 minutes : vos 3 priorités à automatiser, adaptées à votre métier et à vos outils.</p>
+        <span class="go">Faire le diagnostic <span class="arw">→</span></span>
+      </a>
+      <a class="tool live reveal" href="#calcul">
+        <div class="tool-top"><span class="ico">🧮</span><span class="badge">Disponible</span></div>
+        <h3>Calculateur du coût de l'administratif</h3>
+        <p>Estimez ce que vous coûtent chaque année les tâches répétitives de vos équipes.</p>
+        <span class="go">Calculer <span class="arw">→</span></span>
+      </a>
+      <!-- Outils à venir — SILO : /outils/... -->
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">✉️</span><span class="badge">Bientôt</span></div>
+        <h3>Générateur de relance de devis</h3>
+        <p>Le bon message au bon moment : J+3, J+10, J+21, avec un ton adapté à votre client.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">⚖️</span><span class="badge">Bientôt</span></div>
+        <h3>Générateur de relance d'impayés</h3>
+        <p>De la relance amiable à la mise en demeure, avec les pénalités de retard et l'indemnité forfaitaire.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">📐</span><span class="badge">Bientôt</span></div>
+        <h3>Calculateur de coefficient de vente</h3>
+        <p>Du déboursé sec au prix de vente : frais de chantier, frais généraux et marge, poste par poste.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">🏗️</span><span class="badge">Bientôt</span></div>
+        <h3>Calculateur de situation de travaux</h3>
+        <p>Avancement, situations précédentes, retenue de garantie : le montant à facturer ce mois-ci.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">✅</span><span class="badge">Bientôt</span></div>
+        <h3>Checklist de candidature aux marchés publics</h3>
+        <p>Les pièces à réunir pour répondre, et leur durée de validité, pour ne plus rien oublier.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">💬</span><span class="badge">Bientôt</span></div>
+        <h3>Prompts ChatGPT pour le BTP</h3>
+        <p>Des consignes prêtes à copier pour rédiger un compte rendu, résumer un CCTP ou répondre à un client.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="blip" data-pose="look" data-color="orange"></span></div>
+      <h2>Comment on met l'IA en place <span class="sq">chez vous<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 16 C 90 4, 180 20, 296 8"/></svg></span></h2>
+      <p class="lede">Pas de logiciel à acheter, pas d'équipe à former pendant des semaines. On construit dans vos outils actuels, une tâche à la fois.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="blip" data-pose="look" data-color="orange"></span>
+        <div class="n">1</div>
+        <h3>Diagnostic gratuit</h3>
+        <p>On identifie les trois tâches qui vous coûtent le plus de temps et qui sont les plus simples à automatiser.</p>
+      </div>
+      <div class="step reveal">
+        <span class="blip b2" data-pose="carry" data-color="yellow"></span>
+        <div class="n">2</div>
+        <h3>Un plan validé avant de construire</h3>
+        <p>La tâche, comment elle est automatisée, ce qui reste entre vos mains et le prix. Vous décidez.</p>
+      </div>
+      <div class="step reveal">
+        <span class="blip b3" data-pose="sleep" data-color="amber"></span>
+        <div class="n">3</div>
+        <h3>En production en trois semaines</h3>
+        <p>La première automatisation tourne. On la surveille et on la maintient : vous n'avez rien à gérer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section id="guide" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="blip b2" data-pose="default" data-color="yellow"></span></div>
+      <h2>Le guide de l'IA dans le BTP</h2>
+      <p class="lede">Ce qu'il faut savoir avant de se lancer : ce que l'IA sait faire, par où commencer, combien ça coûte et ce qu'il faut surveiller.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-definition">Ce que l'IA change dans une entreprise du bâtiment</a></li>
+            <li><a href="#g-differences">IA, automatisation, logiciel métier : les différences</a></li>
+            <li><a href="#g-ou">Où l'IA fait gagner du temps, et où pas encore</a></li>
+            <li><a href="#g-commencer">Par où commencer : la méthode en 4 étapes</a></li>
+            <li><a href="#g-donnees">Vos données, le vrai point de départ</a></li>
+            <li><a href="#g-cout">Combien ça coûte, et comment mesurer le retour</a></li>
+            <li><a href="#g-limites">Les limites et les risques à connaître</a></li>
+            <li><a href="#g-glossaire">Petit glossaire</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-definition">1. Ce que l'IA change dans une entreprise du bâtiment</h3>
+        <p>Dans le bâtiment, l'IA ne remplace ni le chef de chantier ni le conducteur de travaux. Elle s'attaque à ce qui se passe <b>autour</b> du chantier : la paperasse, la ressaisie, la recherche d'informations, les relances. Autrement dit, tout ce qui occupe les soirées des dirigeants et sature les services administratifs.</p>
+        <p>Ce qui a changé ces dernières années, c'est que l'IA sait désormais <b>lire des documents non structurés</b> : une facture fournisseur scannée, un CCTP de 80 pages, un email de client, une note vocale prise sur le chantier. Or c'est précisément sous cette forme que vit l'essentiel de l'information d'une entreprise du BTP.</p>
+
+        <h3 id="g-differences">2. IA, automatisation, logiciel métier : les différences</h3>
+        <p>Ces trois termes sont souvent confondus. Ils sont complémentaires :</p>
+        <ul>
+          <li><b>Le logiciel métier</b> (Batappli, Obat, EBP Bâtiment…) structure votre activité : devis, factures, suivi. Il attend que quelqu'un saisisse les informations.</li>
+          <li><b>L'automatisation</b> enchaîne des actions sans intervention : quand un devis est signé, créer le chantier ; quand une facture arrive à échéance, relancer.</li>
+          <li><b>L'IA</b> apporte la compréhension : lire un document, extraire les bonnes informations, rédiger un texte, classer une demande.</li>
+        </ul>
+        <p>Les projets qui fonctionnent combinent les trois : l'IA lit et comprend, l'automatisation fait circuler, votre logiciel métier reste la référence. On n'ajoute pas un outil de plus, on relie ceux qui existent.</p>
+
+        <h3 id="g-ou">3. Où l'IA fait gagner du temps, et où pas encore</h3>
+        <p>L'IA est efficace sur les tâches <b>répétitives, fréquentes et à partir de documents</b> : extraire des prix de factures, préparer une situation, rédiger un compte rendu, trier des appels d'offres, relancer un client. Plus une tâche revient souvent, plus le gain est rapide.</p>
+        <p>Elle l'est beaucoup moins pour ce qui demande du jugement ou de la relation : négocier avec un client, arbitrer une décision technique, gérer un litige. Là, elle peut préparer le terrain (une synthèse, un brouillon), mais la décision reste humaine.</p>
+        <div class="callout"><b>Règle simple :</b> si une personne de votre équipe refait la même chose chaque semaine, de la même manière, c'est un bon candidat à l'automatisation.</div>
+
+        <h3 id="g-commencer">4. Par où commencer : la méthode en 4 étapes</h3>
+        <ol>
+          <li><b>Lister les tâches répétitives.</b> Pendant une semaine, notez ce qui est ressaisi, recherché ou relancé, et le temps que ça prend.</li>
+          <li><b>Choisir une seule tâche.</b> Celle qui coûte le plus de temps et dont les règles sont les plus claires. Pas un grand projet de transformation.</li>
+          <li><b>La mettre en place dans vos outils actuels.</b> Vos équipes ne doivent pas changer leur façon de travailler pour que ça marche.</li>
+          <li><b>Mesurer, puis passer à la suivante.</b> Le temps récupéré sur la première tâche finance et justifie la deuxième.</li>
+        </ol>
+        <p>Si vous ne savez pas laquelle choisir, c'est exactement le rôle de notre <a href="/commencer">diagnostic gratuit</a> : il identifie vos trois priorités en deux minutes.</p>
+
+        <h3 id="g-donnees">5. Vos données, le vrai point de départ</h3>
+        <p>Une IA ne fait des merveilles qu'avec vos informations à vous : vos prix, vos ouvrages, vos temps de pose, vos références. Bonne nouvelle : vous n'avez pas besoin de données « propres » pour commencer. Des factures en PDF, des devis Word, des fichiers Excel hétérogènes suffisent. Les structurer fait justement partie du travail.</p>
+        <p>En revanche, ce qui n'existe que dans la tête de quelques personnes (un coefficient, un circuit de validation, une règle de prix) doit être mis par écrit avant d'être automatisé. C'est souvent l'étape la plus utile de tout le projet.</p>
+
+        <h3 id="g-cout">6. Combien ça coûte, et comment mesurer le retour</h3>
+        <p>Le coût dépend du nombre de tâches traitées et de leur complexité : relier deux outils n'a pas le même prix que construire une base de prix à partir de trois ans de factures. Dans tous les cas, demandez un chiffrage par tâche, avec ce qui est inclus et ce qui ne l'est pas.</p>
+        <p>Pour mesurer le retour, partez du temps : heures récupérées par semaine × coût horaire chargé × semaines travaillées. Notre <a href="#calcul">calculateur</a> fait ce calcul pour vous. Ajoutez-y ce qui ne se voit pas dans les heures : des devis envoyés plus vite, des relances qui ne sont plus oubliées, une marge suivie pendant le chantier plutôt qu'après.</p>
+
+        <h3 id="g-limites">7. Les limites et les risques à connaître</h3>
+        <ul>
+          <li><b>L'IA peut se tromper.</b> Elle doit être encadrée : des contrôles automatiques, et une validation humaine sur tout ce qui engage l'entreprise (un prix, un envoi au client, un paiement).</li>
+          <li><b>La confidentialité.</b> Vos prix et vos marges sont stratégiques. Vérifiez où sont hébergées vos données, qui y accède, et que vos documents ne servent pas à entraîner des modèles tiers.</li>
+          <li><b>Le RGPD.</b> Dès que des données personnelles sont traitées (clients, salariés), les règles habituelles s'appliquent : finalité, durée de conservation, sécurité.</li>
+          <li><b>La dépendance.</b> Préférez des solutions construites dans vos outils, dont vous gardez la maîtrise, plutôt qu'une boîte noire dont vous ne pourriez plus sortir.</li>
+        </ul>
+
+        <h3 id="g-glossaire">8. Petit glossaire</h3>
+        <dl class="gloss">
+          <dt>IA générative</dt><dd>IA capable de produire du texte (ou des images) : rédiger un compte rendu, résumer un document, répondre à une question. ChatGPT en est l'exemple le plus connu.</dd>
+          <dt>LLM</dt><dd>« Large Language Model », ou grand modèle de langage : le moteur des IA génératives, entraîné à comprendre et produire du texte.</dd>
+          <dt>OCR</dt><dd>Reconnaissance de caractères : la technologie qui transforme un scan ou une photo de document en texte exploitable.</dd>
+          <dt>Automatisation</dt><dd>Un enchaînement d'actions déclenché sans intervention humaine, selon des règles définies à l'avance.</dd>
+          <dt>API</dt><dd>La « prise » qui permet à deux logiciels d'échanger des données sans ressaisie.</dd>
+          <dt>Agent IA</dt><dd>Une IA qui ne se contente pas de répondre mais enchaîne plusieurs actions pour accomplir une tâche : lire un dossier, chercher une information, préparer un document.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FAQ (reprise dans le JSON-LD FAQPage de page.tsx : garder les deux synchronisés) -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="shead-row"><span class="blip b3" data-pose="sleep" data-color="amber"></span></div>
+      <h2>Questions fréquentes sur l'IA dans le BTP</h2>
+    </div>
+    <div class="faq-wrap" id="faq"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->

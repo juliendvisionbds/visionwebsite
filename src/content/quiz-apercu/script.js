@@ -1,6 +1,71 @@
+/* Moteur du quiz : src/lib/quiz-engine.ts, exposé par QuizPage sur window.VQ. */
+const {METIERS,TAILLES,DOULEURS,OU,QUI,OUTILS,BLOCAGES,FREQ,vqBlocage,vqPlan,vqSummary}=window.VQ;
+const byId=(arr,id)=>arr.find(x=>x.id===id);
+const VQ_KEY='vision_quiz_v1';
+const VQ_DEMO={metier:'electricite',taille:'6-15',douleurs:['devis','factures'],blocage:'prix',
+  ou:'excel',qui:'dirigeant',outils:['excel','emails'],frequence:2,email:'contact@exemple.fr'};
+const vqLoad=()=>{try{return JSON.parse(localStorage.getItem(VQ_KEY))||null}catch(e){return null}};
+const vqSave=s=>{try{localStorage.setItem(VQ_KEY,JSON.stringify(s))}catch(e){}};
+/* page ouverte directement (sans passer par le quiz) : on affiche un exemple */
+const vqState=()=>{const s=vqLoad();return (s&&s.metier&&s.douleurs&&s.douleurs.length&&s.blocage)?s:{...VQ_DEMO,demo:true}};
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
+/* ——— configuration ——— */
+const NEXT_URL='/commencer/plan';
+/* Enregistre le lead (Supabase) et déclenche l'email du plan (Resend).
+   Renvoie false seulement si le serveur refuse l'adresse ; une panne ne bloque pas l'affichage du plan. */
+async function sendLead(state){
+  const ctrl=new AbortController(); const timer=setTimeout(()=>ctrl.abort(),10000);
+  try{
+    const res=await fetch('/api/quiz/lead',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:state.email,answers:state}),signal:ctrl.signal,keepalive:true});
+    if(res.status===400) return false;
+    if(!res.ok) console.error('quiz lead failed:',res.status);
+  }catch(e){console.error('quiz lead error:',e)}
+  finally{clearTimeout(timer)}
+  return true;
+}
 
+const S=vqState(); const P=vqPlan(S);
+if(S.demo) document.getElementById('demo').hidden=false;
+document.getElementById('ap-court').textContent=P.difficulte;
+document.getElementById('ap-constat').textContent=P.constat;
+document.getElementById('recap-chip').textContent=P.recap[0]+' · '+P.recap[1];
 
+const others=P.priorities.length-1;
+const LOCK='<svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="6" width="9" height="6.5" rx="1.6" fill="var(--brand)"/><path d="M4.5 6V4.5a2.5 2.5 0 015 0V6" stroke="var(--brand)" stroke-width="1.6"/></svg>';
+const items=[`<li><span class="ic ok"></span><span class="t"><b>Votre première priorité</b> et pourquoi commencer par elle.</span></li>`];
+if(others>0) items.push(`<li class="locked"><span class="ic lk">${LOCK}</span><span class="t">${others===2?'Deux autres améliorations adaptées':'Une autre amélioration adaptée'} à votre organisation.<span class="blur"></span></span></li>`);
+items.push(`<li class="locked"><span class="ic lk">${LOCK}</span><span class="t">Une première action pour ${others>0?'chaque priorité':'la mettre en place'}.<span class="blur" style="max-width:190px"></span></span></li>`);
+document.getElementById('inc').innerHTML=items.join('');
+
+const f=document.getElementById('eform'), inp=document.getElementById('email'), err=document.getElementById('err');
+if(S.email&&!S.demo) inp.value=S.email;
+const btn=f.querySelector('button[type="submit"]'), btnHTML=btn.innerHTML;
+const invalid=msg=>{inp.setAttribute('aria-invalid','true');err.textContent=msg;err.classList.add('on');inp.focus()};
+f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(btn.disabled) return;
+  const v=inp.value.trim();
+  const ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  if(!ok){
+    invalid(v?'Cette adresse semble incomplète. Vérifiez-la, par exemple nom@entreprise.fr.':'Indiquez votre adresse email pour afficher votre plan.');
+    return;}
+  inp.removeAttribute('aria-invalid'); err.classList.remove('on');
+  const st={...S,email:v}; delete st.demo;
+  if(!S.demo){
+    btn.disabled=true; btn.innerHTML='Préparation de votre plan…';
+    const accepted=await sendLead(st);
+    if(!accepted){btn.disabled=false;btn.innerHTML=btnHTML;invalid('Cette adresse ne semble pas valide. Vérifiez-la, par exemple nom@entreprise.fr.');return;}
+    vqSave(st);
+  }
+  location.href=NEXT_URL;
+});
+inp.addEventListener('input',()=>{if(inp.getAttribute('aria-invalid')){inp.removeAttribute('aria-invalid');err.classList.remove('on')}});
+
+/* ============================================================
+   BASE VISION — système des engins (identique au site)
+   ============================================================ */
 /* ============================================================
    BLIPS — le système de mascotte.
    Un seul générateur SVG, 6 poses, 4 couleurs.
@@ -111,8 +176,6 @@ function blipSVG(pose,color){
 document.querySelectorAll('.blip').forEach(el=>{
   el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'brand');
 });
-document.querySelectorAll('.eyecheck').forEach(el=>{el.innerHTML=blipSVG('eyecheck','mint')});
-
 /* les yeux suivent le curseur */
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(!reduce && matchMedia('(pointer:fine)').matches){
@@ -132,38 +195,6 @@ if(!reduce && matchMedia('(pointer:fine)').matches){
   track();
 }
 
-/* live tape */
-const POOL=[
- ['Devis n°2481 assemblé depuis la base de prix','Auto'],
- ['Facture envoyée — Copropriété Croix du Sud','Auto'],
- ['Relance J+7 sur 3 devis sans réponse','Auto'],
- ['Situation mensuelle chantier Mercantour compilée','Auto'],
- ['Compte rendu de chantier envoyé au maître d\'ouvrage','En cours'],
- ['Heures de la semaine consolidées par chantier','En cours'],
- ['Demande de prix fournisseur → 4 relances programmées','Auto'],
- ['Appel manqué → SMS de rappel envoyé','Auto']
-];
-const tape=document.getElementById('tape');
-let cur=0;
-const mk=i=>{const li=document.createElement('li');
-  li.innerHTML='<span class="tk"></span><span class="tx">'+POOL[i%POOL.length][0]+'</span><span class="tag">'+POOL[i%POOL.length][1]+'</span>';
-  return li};
-if(tape){for(;cur<6;cur++) tape.appendChild(mk(cur));}
-if(tape&&!reduce){
-  setInterval(()=>{
-    const f=tape.firstElementChild; if(!f) return;
-    f.classList.add('done');
-    setTimeout(()=>{
-      f.classList.add('out');
-      setTimeout(()=>{
-        f.remove(); const li=mk(cur++); li.classList.add('in'); tape.appendChild(li);
-        const h=document.getElementById('hrs');
-        if(cur%3===0) h.textContent=parseInt(h.textContent)+1;
-      },520);
-    },900);
-  },3200);
-}
-
 /* reveals + squiggles */
 const io=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){
@@ -172,7 +203,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
     io.unobserve(e.target);
   }}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
-setTimeout(()=>document.querySelectorAll('.q-hero .sq').forEach(s=>s.classList.add('drawn')),700);
+setTimeout(()=>document.querySelectorAll('.hero .sq, .drawnow .sq').forEach(s=>s.classList.add('drawn')),700);
 
 /* faq */
 document.querySelectorAll('.q button').forEach(b=>{
@@ -184,48 +215,8 @@ document.querySelectorAll('.q button').forEach(b=>{
 });
 
 
+/* re-dessine les engins ajoutés dynamiquement */
+function drawBlips(root){(root||document).querySelectorAll('.blip:not([data-drawn])').forEach(el=>{
+  el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'brand');el.dataset.drawn='1';});}
 
-/* ——— formulaire : envoi + état de confirmation ——— */
-const form=document.getElementById('qform');
-if(form){
-  const errorBox=document.getElementById('f-error');
-  const submitBtn=form.querySelector('.submit');
-  const submitBtnHTML=submitBtn?submitBtn.innerHTML:'';
-
-  form.addEventListener('submit',async e=>{
-    e.preventDefault();
-    if(errorBox){errorBox.hidden=true;errorBox.textContent='';}
-    if(submitBtn){submitBtn.disabled=true;submitBtn.innerHTML='Envoi en cours…';}
-
-    const payload=Object.fromEntries(new FormData(form).entries());
-
-    try{
-      const res=await fetch('/api/send-form/',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(payload)
-      });
-
-      if(!res.ok){
-        let detail='';
-        try{ detail=(await res.json()).error||''; }catch{}
-        console.error('send-form failed:',res.status,detail);
-        throw new Error(`HTTP ${res.status}${detail?': '+detail:''}`);
-      }
-
-      document.getElementById('formwrap').style.display='none';
-      const d=document.getElementById('done');
-      d.style.display='block';
-      d.querySelectorAll('.blip').forEach(el=>{el.innerHTML=blipSVG(el.dataset.pose||'default',el.dataset.color||'yellow')});
-      d.scrollIntoView({behavior:'smooth',block:'center'});
-    }catch(err){
-      console.error('send-form error:',err);
-      if(errorBox){
-        errorBox.hidden=false;
-        errorBox.textContent="Une erreur est survenue lors de l'envoi. Réessayez, ou écrivez-nous directement. ("+err.message+")";
-      }
-      if(submitBtn){submitBtn.disabled=false;submitBtn.innerHTML=submitBtnHTML;}
-    }
-  });
-}
-
+document.querySelectorAll('.blip').forEach(el=>el.dataset.drawn='1');

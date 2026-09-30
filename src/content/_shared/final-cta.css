@@ -1,0 +1,42 @@
+/* ============================================================
+   CTA FINAL partagé (toutes les pages hors quiz)
+   ============================================================ */
+.fcta-sec{padding-top:0}
+.fcta{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,72px);align-items:center;
+  background:var(--brand);color:#fff;border-radius:32px;padding:clamp(34px,5.5vw,80px);overflow:hidden;isolation:isolate}
+.fcta::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.14;
+  background-image:radial-gradient(circle at 1px 1px,#fff 1.2px,transparent 0);background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(115deg,transparent 35%,#000 100%);mask-image:linear-gradient(115deg,transparent 35%,#000 100%)}
+@media(max-width:940px){.fcta{grid-template-columns:1fr}}
+.fcta h2{font-size:clamp(32px,4.4vw,60px);letter-spacing:-.045em;line-height:1.02;max-width:15ch}
+.fcta-hl{position:relative;white-space:nowrap;color:var(--ink);z-index:0}
+.fcta-hl::before{content:"";position:absolute;inset:.08em -.14em -.02em;background:var(--yellow);border-radius:.18em;transform:rotate(-1.6deg);z-index:-1}
+.fcta p{margin-top:22px;max-width:48ch;color:rgba(255,255,255,.86);font-size:clamp(16px,1.35vw,18px)}
+.fcta .fcta-btn{margin-top:32px;background:#fff;color:var(--ink);box-shadow:0 5px 0 0 var(--ink);font-size:16.5px;padding:17px 28px}
+.fcta .fcta-btn:hover{box-shadow:0 2px 0 0 var(--ink)}
+.fcta-meta{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;margin:22px 0 0;padding:0;font-size:14px;font-weight:600;color:rgba(255,255,255,.9)}
+.fcta-meta li{display:inline-flex;align-items:center;gap:8px}
+.fcta-meta li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.6 8.3l2.2 2.2L11.4 6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+
+/* aperçu animé du quiz */
+.fcta-demo{position:relative;display:block;color:var(--ink);padding-bottom:10px}
+.fcta-card{position:absolute;background:#fff;border:2px solid var(--ink);border-radius:22px;padding:20px;transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.fcta-k{display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.fcta-q{position:relative;z-index:1;margin:30px 12% 0 0;box-shadow:8px 8px 0 0 var(--ink);transform:rotate(-2deg)}
+.fcta-q h3{font-size:clamp(19px,1.8vw,23px);letter-spacing:-.03em;line-height:1.15;margin:8px 0 14px}
+.fcta-result{right:0;left:22%;top:0;transform:rotate(3deg);background:var(--paper)}
+.fcta-p{display:flex;align-items:center;gap:10px;margin-top:10px}
+.fcta-p b{font-family:Gabarito;font-weight:800;color:var(--brand);font-size:14px}
+.fcta-p i{display:block;height:9px;width:78%;border-radius:9px;background:var(--line)}
+.fcta-demo:hover .fcta-q{transform:rotate(0) translateY(-6px)}
+.fcta-demo:hover .fcta-result{transform:rotate(5deg) translate(8px,-6px)}
+.fcta-opts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.fcta-opts li{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;font-size:14.5px;font-weight:500;transition:.3s}
+.fcta-opts .n{width:22px;height:22px;flex:none;border-radius:6px;background:var(--line-soft);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--muted);transition:.3s}
+.fcta-opts .tk{margin-left:auto;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);flex:none;transition:.3s}
+.fcta-opts li.on{border-color:var(--ink);background:var(--tint)}
+.fcta-opts li.on .n{background:var(--brand);color:#fff}
+.fcta-opts li.on .tk{border-color:var(--mint);background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.6 8.3l2.2 2.2L11.4 6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.fcta-blip{position:absolute;width:clamp(78px,8vw,108px);right:4%;bottom:-8px;z-index:2}
+@media(max-width:940px){.fcta-demo{max-width:460px}}
+@media(max-width:520px){.fcta-q{margin-right:0}.fcta-result{left:14%}.fcta-blip{width:70px;right:0;bottom:-18px}}

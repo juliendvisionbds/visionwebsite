@@ -11,11 +11,6 @@ const pages = [
     id: "home",
   },
   {
-    file: "vision-qualify-btp-fr.html",
-    route: "commencer/page.tsx",
-    id: "commencer",
-  },
-  {
     file: "vision-usecase-devis-fr.html",
     route: "cas/devis/page.tsx",
     id: "devis",
