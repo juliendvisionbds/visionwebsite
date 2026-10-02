@@ -483,3 +483,20 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .gloss dt{font-family:Gabarito;font-weight:700;padding-right:14px}
 .gloss dd{color:#3A3A3E;font-size:16px}
 @media(max-width:560px){.gloss{grid-template-columns:1fr}.gloss dd{border-top:0;padding-top:0}}
+
+/* ============================================================
+   PAGE OUTILS GRATUITS
+   ============================================================ */
+.ot-hero .wrap{text-align:center}
+.ot-hero .crumbs{justify-content:center}
+.ot-hero h1{max-width:18ch;margin-left:auto;margin-right:auto}
+.ot-hero .lede{margin:0 auto}
+.ot-sub{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+.ot-sub:not(:first-child){margin-top:clamp(34px,4vw,52px)}
+.tools.ot-live{grid-template-columns:1fr 1fr}
+.tools.ot-live .tool{padding:clamp(22px,2.6vw,32px)}
+.tools.ot-live .tool h3{font-size:clamp(21px,2vw,25px)}
+.tools.ot-live .tool p{font-size:15.5px}
+.tools.ot-soon{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1060px){.tools.ot-soon{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.tools.ot-live,.tools.ot-soon{grid-template-columns:1fr}}

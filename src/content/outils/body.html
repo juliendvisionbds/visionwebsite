@@ -1,0 +1,104 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero ot-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><span aria-current="page">Outils gratuits</span></nav>
+    <span class="chip">Outils gratuits</span>
+    <h1>Des outils <span class="sq brand">gratuits<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span>, pensés pour le bâtiment</h1>
+    <p class="lede">De petits outils pour gagner du temps dès aujourd'hui, sans inscription ni logiciel à installer.</p>
+  </div>
+</section>
+
+<!-- LES OUTILS -->
+<section id="outils" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+    <h2 class="ot-sub">Disponibles</h2>
+    <div class="tools ot-live">
+      <a class="tool live reveal" href="/commencer">
+        <div class="tool-top"><span class="ico">🎯</span><span class="badge">Disponible</span></div>
+        <h3>Diagnostic IA de votre entreprise</h3>
+        <p>7 questions, 2 minutes : vos 3 priorités à automatiser, adaptées à votre métier et à vos outils.</p>
+        <span class="go">Faire le diagnostic <span class="arw">→</span></span>
+      </a>
+      <a class="tool live reveal" href="#calcul">
+        <div class="tool-top"><span class="ico">🧮</span><span class="badge">Disponible</span></div>
+        <h3>Calculateur du coût de l'administratif</h3>
+        <p>Estimez ce que vous coûtent chaque année les tâches répétitives de vos équipes.</p>
+        <span class="go">Calculer <span class="arw">→</span></span>
+      </a>
+    </div>
+
+    <h2 class="ot-sub">Bientôt</h2>
+    <div class="tools ot-soon">
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">✉️</span><span class="badge">Bientôt</span></div>
+        <h3>Générateur de relance de devis</h3>
+        <p>Le bon message au bon moment : J+3, J+10, J+21, avec un ton adapté à votre client.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">⚖️</span><span class="badge">Bientôt</span></div>
+        <h3>Générateur de relance d'impayés</h3>
+        <p>De la relance amiable à la mise en demeure, avec les pénalités de retard et l'indemnité forfaitaire.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">📐</span><span class="badge">Bientôt</span></div>
+        <h3>Calculateur de coefficient de vente</h3>
+        <p>Du déboursé sec au prix de vente : frais de chantier, frais généraux et marge, poste par poste.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">🏗️</span><span class="badge">Bientôt</span></div>
+        <h3>Calculateur de situation de travaux</h3>
+        <p>Avancement, situations précédentes, retenue de garantie : le montant à facturer ce mois-ci.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">✅</span><span class="badge">Bientôt</span></div>
+        <h3>Checklist de candidature aux marchés publics</h3>
+        <p>Les pièces à réunir pour répondre, et leur durée de validité, pour ne plus rien oublier.</p>
+      </div>
+      <div class="tool soon reveal">
+        <div class="tool-top"><span class="ico">💬</span><span class="badge">Bientôt</span></div>
+        <h3>Prompts ChatGPT pour le BTP</h3>
+        <p>Des consignes prêtes à copier pour rédiger un compte rendu, résumer un CCTP ou répondre à un client.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATEUR -->
+<section id="calcul" style="padding-top:0">
+  <div class="wrap">
+    <div class="calc reveal">
+      <div class="calc-intro">
+        <span class="chip" style="background:rgba(255,255,255,.14);color:#fff">Outil gratuit</span>
+        <h2>Combien vous coûte l'administratif répétitif ?</h2>
+        <p>Trois chiffres, une estimation. Les heures passées à ressaisir, chercher et relancer ont un coût, même quand personne ne le calcule.</p>
+        <span class="blip calc-blip" data-pose="roller" data-color="yellow"></span>
+      </div>
+      <form class="calc-form" id="calc" onsubmit="return false">
+        <label><span>Personnes concernées</span><input type="number" id="c-p" min="1" max="200" value="3" inputmode="numeric"></label>
+        <label><span>Heures répétitives par semaine, par personne</span><input type="number" id="c-h" min="0" max="60" value="6" inputmode="numeric"></label>
+        <label><span>Coût horaire chargé (€)</span><input type="number" id="c-t" min="10" max="200" value="38" inputmode="numeric"></label>
+        <div class="calc-out" aria-live="polite">
+          <div><small>Heures par an</small><b id="c-hy">—</b></div>
+          <div><small>Coût annuel estimé</small><b id="c-cy">—</b></div>
+        </div>
+        <p class="calc-note">Base de 45 semaines travaillées. Une estimation, pas un devis : le diagnostic gratuit permet de chiffrer précisément ce qui est automatisable.</p>
+        <a class="btn btn-primary" href="/commencer">Identifier ce qui peut être automatisé <span class="arw">→</span></a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->

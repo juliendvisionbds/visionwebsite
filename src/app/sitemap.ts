@@ -6,7 +6,9 @@ const PAGES: Array<[path: string, priority: number, changeFrequency: "weekly" | 
   ["/", 1, "weekly"],
   ["/ia-btp", 0.9, "monthly"],
   ["/commencer", 0.8, "monthly"],
+  ["/outils", 0.7, "monthly"],
   ["/a-propos", 0.7, "monthly"],
+  ["/equipe", 0.6, "monthly"],
   ["/contact", 0.6, "monthly"],
 ];
 
