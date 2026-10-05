@@ -82,6 +82,20 @@ export default function BookingWidget() {
     return () => clearTimeout(t);
   }, [noAuto]);
 
+  // Tout lien marqué data-booking (ex. : boutons des cas d'usage) ouvre la fenêtre de réservation.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as Element | null)?.closest?.("[data-booking]");
+      if (!link || e.metaKey || e.ctrlKey) return;
+      e.preventDefault();
+      store.set(K_SEEN, "1");
+      setCard(false);
+      setModal(true);
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
+
   useEffect(() => {
     if (!modal) return;
     const prev = document.body.style.overflow;

@@ -1,6 +1,6 @@
 export const title = "IA dans le BTP : cas d'usage concrets, outils et guide | vision";
 export const description =
-  "Comment l'IA est utilisée dans les entreprises du bâtiment : tableaux de bord financiers, base de prix, devis automatisés, appels d'offres. Outils gratuits et guide pour bien démarrer.";
+  "L'IA dans les entreprises du bâtiment : bibliothèque de prix, devis automatisés, planning, tableaux de bord. Cas d'usage, outils gratuits et guide.";
 
 /** FAQ : rendue dans la page ET dans le JSON-LD FAQPage. */
 export const faq: Array<[question: string, answer: string]> = [

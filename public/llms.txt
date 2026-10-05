@@ -4,7 +4,7 @@
 
 ## Faits clés
 
-- Nom : vision (site : https://visionbds.com)
+- Nom : vision (site : https://www.visionbds.com)
 - Type : agence d'automatisation IA spécialisée dans le bâtiment (gros œuvre, second œuvre, TCE, artisans, holdings BTP)
 - Fondée en 2025, basée dans le Var (83), France ; intervient dans toute la France
 - Fondateurs : Julien Devoir (produit et systèmes), Clément Samson (stratégie et développement), Clément Bernard (marketing et croissance)
@@ -16,10 +16,22 @@
 
 ## Pages principales
 
-- [Accueil](https://visionbds.com/) : présentation de l'agence, cas clients, méthode et FAQ
-- [L'IA dans le BTP](https://visionbds.com/ia-btp/) : guide des cas d'usage concrets de l'IA dans les entreprises du bâtiment, outils gratuits et FAQ
-- [Outils gratuits](https://visionbds.com/outils/) : diagnostic IA, calculateur du coût de l'administratif, et les outils à venir pour les entreprises du bâtiment
-- [À propos](https://visionbds.com/a-propos/) : qui est vision, l'équipe, ce qui la différencie, fiche d'identité de l'agence
-- [L'équipe](https://visionbds.com/equipe/) : les trois associés de vision, leur parcours et leur rôle
-- [Diagnostic gratuit](https://visionbds.com/commencer/) : 7 questions, 2 minutes, plan personnalisé avec les 3 tâches prioritaires à automatiser
-- [Contact](https://visionbds.com/contact/) : réserver un appel de 30 minutes avec un associé
+- [Accueil](https://www.visionbds.com/) : présentation de l'agence, cas clients, méthode et FAQ
+- [L'IA dans le BTP](https://www.visionbds.com/ia-btp/) : guide des cas d'usage concrets de l'IA dans les entreprises du bâtiment, outils gratuits et FAQ
+- [Outils gratuits](https://www.visionbds.com/outils/) : diagnostic IA, calculateur du coût de l'administratif, et les outils à venir pour les entreprises du bâtiment
+- [À propos](https://www.visionbds.com/a-propos/) : qui est vision, l'équipe, ce qui la différencie, fiche d'identité de l'agence
+- [L'équipe](https://www.visionbds.com/equipe/) : les trois associés de vision, leur parcours et leur rôle
+- [Diagnostic gratuit](https://www.visionbds.com/commencer/) : 7 questions, 2 minutes, plan personnalisé avec les 3 tâches prioritaires à automatiser
+- [Contact](https://www.visionbds.com/contact/) : réserver un appel de 30 minutes avec un associé
+- [Blog](https://www.visionbds.com/blog/) : articles de vision, dont le manifeste de l'agence
+
+## Cas d'usage IA BTP
+
+- [Tableau de bord BTP](https://www.visionbds.com/cas/tableau-de-bord-btp/) : un reporting Excel annuel transformé en tableau de bord d'activité actualisé à chaque import (PME du bâtiment, ~3 M€ de CA)
+- [Bibliothèque de prix BTP](https://www.visionbds.com/cas/bibliotheque-de-prix-btp/) : plusieurs années de devis et de factures extraites par l'IA en une base de prix commune, consultable par toute l'équipe (construction et terrassement, ~50 salariés)
+- [Planning de chantier BTP](https://www.visionbds.com/cas/planning-chantier-btp/) : planning et fiches de tâches générés à partir des interventions du jour, au lieu de 2 à 3 heures de répartition manuelle par jour (bâtiments modulaires)
+- [Automatisation de devis BTP](https://www.visionbds.com/cas/automatisation-devis-btp/) : une première version du devis préparée en quelques minutes à partir de la demande client, de la bibliothèque de prix et des anciens devis, puis validée par l'équipe
+
+## Articles
+
+- [Le manifeste de vision](https://www.visionbds.com/blog/manifeste/) : pourquoi vision a été créée, ce qu'elle refuse de faire et ce qu'elle promet aux entreprises du bâtiment, par Julien Devoir, cofondateur

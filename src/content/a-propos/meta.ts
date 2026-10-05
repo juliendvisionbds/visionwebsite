@@ -1,6 +1,6 @@
 export const title = "À propos de vision, l'agence d'automatisation IA du BTP | vision";
 export const description =
-  "vision est une agence d'automatisation IA qui supprime les tâches administratives répétitives des entreprises du bâtiment. Qui nous sommes, ce qu'on fait, comment on travaille.";
+  "vision, agence d'automatisation IA, supprime les tâches administratives répétitives des entreprises du bâtiment. Qui nous sommes, comment on travaille.";
 
 /** FAQ : rendue dans la page (questions en H3) ET dans le JSON-LD FAQPage. */
 export const faq: Array<[question: string, answer: string]> = [

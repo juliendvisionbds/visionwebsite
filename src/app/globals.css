@@ -2,3 +2,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Sur mobile, un passage souligné trop long pour la largeur d'écran peut passer à la ligne. */
+@media (max-width: 600px) {
+  body .sq {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Des devis et factures dispersés à une bibliothèque de prix consultable (données fictives)</title>
+  <rect width="1200" height="660" rx="28" fill="#FAF9F6"/>
+
+  <!-- ===== Gauche : les archives dispersées ===== -->
+  <text x="60" y="70" font-size="15" font-weight="700" letter-spacing="2" fill="#6C6A66">AVANT · LES ARCHIVES</text>
+  <text x="60" y="100" font-size="24" font-weight="800" fill="#14151A">Des centaines de devis et factures</text>
+
+  <g transform="translate(92 150) rotate(-7)">
+    <rect width="230" height="290" rx="14" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="38" font-size="15" font-weight="700" fill="#14151A">Devis 2021-077</text>
+    <rect x="20" y="58" width="150" height="8" rx="4" fill="#E4E2DD"/><rect x="20" y="80" width="190" height="8" rx="4" fill="#E4E2DD"/>
+    <rect x="20" y="102" width="120" height="8" rx="4" fill="#E4E2DD"/><rect x="20" y="124" width="170" height="8" rx="4" fill="#E4E2DD"/>
+  </g>
+  <g transform="translate(250 190) rotate(6)">
+    <rect width="230" height="290" rx="14" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="38" font-size="15" font-weight="700" fill="#14151A">Facture F-2023-045</text>
+    <rect x="20" y="58" width="180" height="8" rx="4" fill="#E4E2DD"/><rect x="20" y="80" width="130" height="8" rx="4" fill="#E4E2DD"/>
+    <rect x="20" y="102" width="190" height="8" rx="4" fill="#E4E2DD"/><rect x="20" y="124" width="100" height="8" rx="4" fill="#E4E2DD"/>
+  </g>
+  <g transform="translate(130 300) rotate(-2)">
+    <rect width="250" height="300" rx="14" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="38" font-size="15" font-weight="700" fill="#14151A">Devis 2022-118</text>
+    <text x="20" y="62" font-size="12" fill="#6C6A66">Chantier : plateforme logistique</text>
+    <g font-size="12" fill="#14151A">
+      <rect x="14" y="80" width="222" height="28" rx="6" fill="#FFF3D1"/>
+      <text x="22" y="99">Terrassement</text><text x="228" y="99" text-anchor="end" font-weight="700">17,90 €/m³</text>
+      <text x="22" y="131">Remblai compacté</text><text x="228" y="131" text-anchor="end" font-weight="700">23,50 €/m³</text>
+      <text x="22" y="159">Béton de propreté</text><text x="228" y="159" text-anchor="end" font-weight="700">14,20 €/m²</text>
+    </g>
+    <rect x="20" y="186" width="160" height="8" rx="4" fill="#E4E2DD"/><rect x="20" y="208" width="200" height="8" rx="4" fill="#E4E2DD"/>
+    <rect x="20" y="230" width="120" height="8" rx="4" fill="#E4E2DD"/>
+  </g>
+  <!-- bulle « on l'avait chiffré combien ? » -->
+  <g transform="translate(330 470)">
+    <rect width="210" height="58" rx="16" fill="#14151A"/>
+    <path d="M30 58 l-6 16 l20 -16 z" fill="#14151A"/>
+    <text x="18" y="25" font-size="13" fill="#FAF9F6">« On l'avait chiffré</text>
+    <text x="18" y="44" font-size="13" fill="#FAF9F6">combien, la dernière fois ? »</text>
+  </g>
+
+  <!-- ===== Flèche : extraction par l'IA ===== -->
+  <g transform="translate(560 300)">
+    <rect x="-6" y="-46" width="120" height="34" rx="17" fill="#EDEBFF"/>
+    <text x="54" y="-24" font-size="13" font-weight="700" fill="#5A4BFF" text-anchor="middle">Extraction IA</text>
+    <path d="M0 0 H96" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M84 -12 L100 0 L84 12" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="54" y="30" font-size="12" fill="#6C6A66" text-anchor="middle">ligne par ligne</text>
+  </g>
+
+  <!-- ===== Droite : la bibliothèque de prix ===== -->
+  <text x="700" y="70" font-size="15" font-weight="700" letter-spacing="2" fill="#5A4BFF">APRÈS · LA BIBLIOTHÈQUE</text>
+  <text x="700" y="100" font-size="24" font-weight="800" fill="#14151A">Une base de prix commune</text>
+
+  <g transform="translate(700 130)">
+    <rect width="450" height="470" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <!-- recherche -->
+    <rect x="22" y="22" width="406" height="48" rx="24" fill="#FAF9F6" stroke="#14151A" stroke-width="2"/>
+    <circle cx="50" cy="46" r="8" fill="none" stroke="#14151A" stroke-width="2.5"/><path d="M56 52 L63 59" stroke="#14151A" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="74" y="51" font-size="15" fill="#14151A">terrassement</text>
+    <rect x="166" y="34" width="2" height="22" fill="#5A4BFF"/>
+
+    <!-- en-têtes -->
+    <g font-size="11" font-weight="700" letter-spacing="1.4" fill="#6C6A66">
+      <text x="24" y="104">OUVRAGE</text><text x="246" y="104">UNITÉ</text><text x="306" y="104">PRIX</text><text x="426" y="104" text-anchor="end">SOURCES</text>
+    </g>
+    <path d="M22 116 H428" stroke="#E4E2DD"/>
+
+    <g font-size="14" fill="#14151A">
+      <rect x="14" y="124" width="422" height="52" rx="10" fill="#EDEBFF"/>
+      <text x="24" y="148" font-weight="700">Terrassement en pleine masse</text>
+      <text x="24" y="166" font-size="11.5" fill="#6C6A66">Mis à jour avec la facture de septembre</text>
+      <text x="246" y="155">m³</text><text x="306" y="155" font-weight="800" fill="#5A4BFF">18,40 €</text><text x="426" y="155" text-anchor="end" fill="#6C6A66">12 docs</text>
+
+      <text x="24" y="210">Terrassement en rigole</text>
+      <text x="246" y="210">m³</text><text x="306" y="210" font-weight="700">27,60 €</text><text x="426" y="210" text-anchor="end" fill="#6C6A66">8 docs</text>
+      <path d="M22 228 H428" stroke="#F0EEEA"/>
+      <text x="24" y="256">Remblai compacté</text>
+      <text x="246" y="256">m³</text><text x="306" y="256" font-weight="700">24,10 €</text><text x="426" y="256" text-anchor="end" fill="#6C6A66">9 docs</text>
+      <path d="M22 274 H428" stroke="#F0EEEA"/>
+      <text x="24" y="302">Évacuation des terres</text>
+      <text x="246" y="302">m³</text><text x="306" y="302" font-weight="700">11,80 €</text><text x="426" y="302" text-anchor="end" fill="#6C6A66">15 docs</text>
+    </g>
+
+    <!-- assistant IA -->
+    <rect x="22" y="336" width="406" height="112" rx="14" fill="#FAF9F6" stroke="#E4E2DD"/>
+    <rect x="38" y="352" width="24" height="24" rx="7" fill="#5A4BFF"/><text x="50" y="369" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">?</text>
+    <text x="74" y="369" font-size="13.5" font-weight="700" fill="#14151A">« Prix du terrassement en pleine masse ? »</text>
+    <text x="38" y="402" font-size="13" fill="#14151A">18,40 €/m³ en référence, pondéré vers les</text>
+    <text x="38" y="421" font-size="13" fill="#14151A">documents les plus récents. Dernier prix : 19,10 €.</text>
+  </g>
+
+  <text x="1150" y="636" font-size="12" fill="#6C6A66" text-anchor="end">Données fictives pour l'illustration</text>
+</svg>

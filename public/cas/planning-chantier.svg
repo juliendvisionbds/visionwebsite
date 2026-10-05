@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Les interventions du jour, le planning généré, puis une fiche de tâches prête à imprimer (données fictives)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <!-- ===== 1. Les interventions à réaliser ===== -->
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#6C6A66">1 · LES INTERVENTIONS</text>
+  <text x="48" y="94" font-size="22" font-weight="800" fill="#14151A">Ce qu'il faut faire demain</text>
+  <g transform="translate(48 122)">
+    <rect width="300" height="430" rx="18" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="46" rx="18" fill="#EFEDE8"/><rect x="0" y="28" width="300" height="18" fill="#EFEDE8"/>
+    <rect x="18" y="14" width="18" height="18" rx="4" fill="#1F7A45"/>
+    <text x="46" y="29" font-size="13" font-weight="700" fill="#14151A">interventions_mardi.xlsx</text>
+    <g font-size="12.5" fill="#14151A">
+      <text x="18" y="80" font-weight="700">École Jean-Jaurès</text><text x="282" y="80" text-anchor="end" fill="#6C6A66">Pose 2 modules</text>
+      <text x="18" y="98" fill="#6C6A66" font-size="11.5">Salle de classe · Toulon</text>
+      <path d="M18 114 H282" stroke="#EFEDE8"/>
+      <text x="18" y="140" font-weight="700">Mairie annexe</text><text x="282" y="140" text-anchor="end" fill="#6C6A66">Dépose 1 module</text>
+      <text x="18" y="158" fill="#6C6A66" font-size="11.5">Bureau · La Seyne</text>
+      <path d="M18 174 H282" stroke="#EFEDE8"/>
+      <text x="18" y="200" font-weight="700">Collège Pagnol</text><text x="282" y="200" text-anchor="end" fill="#6C6A66">Raccordements</text>
+      <text x="18" y="218" fill="#6C6A66" font-size="11.5">Réfectoire · Hyères</text>
+      <path d="M18 234 H282" stroke="#EFEDE8"/>
+      <text x="18" y="260" font-weight="700">Base vie chantier A8</text><text x="282" y="260" text-anchor="end" fill="#6C6A66">Pose 3 modules</text>
+      <text x="18" y="278" fill="#6C6A66" font-size="11.5">Vestiaires · Brignoles</text>
+      <path d="M18 294 H282" stroke="#EFEDE8"/>
+      <text x="18" y="320" font-weight="700">Crèche Les Pins</text><text x="282" y="320" text-anchor="end" fill="#6C6A66">Finitions</text>
+      <text x="18" y="338" fill="#6C6A66" font-size="11.5">Dortoir · Fréjus</text>
+    </g>
+    <rect x="18" y="368" width="264" height="44" rx="12" fill="#FBE7DA"/>
+    <text x="34" y="388" font-size="12" font-weight="700" fill="#B4531B">Avant : 2 à 3 h par jour</text>
+    <text x="34" y="404" font-size="11.5" fill="#B4531B">pour tout répartir à la main</text>
+  </g>
+
+  <!-- flèche 1 -->
+  <g transform="translate(366 330)">
+    <path d="M0 0 H50" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M38 -11 L53 0 L38 11" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="26" y="-20" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Import</text>
+  </g>
+
+  <!-- ===== 2. Le planning généré ===== -->
+  <text x="436" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">2 · LE PLANNING</text>
+  <text x="436" y="94" font-size="22" font-weight="800" fill="#14151A">Généré en une fois</text>
+  <g transform="translate(436 122)">
+    <rect width="380" height="430" rx="18" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="34" font-size="13" font-weight="700" fill="#14151A">Mardi · 5 chantiers · 4 équipes</text>
+    <g font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">
+      <text x="20" y="66">ÉQUIPE</text><text x="132" y="66">7 h</text><text x="212" y="66">10 h</text><text x="292" y="66">14 h</text>
+    </g>
+    <path d="M20 76 H360" stroke="#EFEDE8"/>
+    <g font-size="12.5" fill="#14151A">
+      <text x="20" y="112" font-weight="700">Karim, Léo</text>
+      <rect x="128" y="94" width="150" height="28" rx="8" fill="#5A4BFF"/><text x="138" y="113" font-size="11.5" fill="#fff" font-weight="700">École Jean-Jaurès</text>
+      <rect x="284" y="94" width="76" height="28" rx="8" fill="#EDEBFF"/><text x="292" y="113" font-size="11.5" fill="#5A4BFF" font-weight="700">Crèche</text>
+
+      <text x="20" y="168" font-weight="700">Paul, Sami</text>
+      <rect x="128" y="150" width="232" height="28" rx="8" fill="#FFC42E"/><text x="138" y="169" font-size="11.5" font-weight="700">Base vie chantier A8</text>
+
+      <text x="20" y="224" font-weight="700">Hugo</text>
+      <rect x="128" y="206" width="110" height="28" rx="8" fill="#25D3A4"/><text x="138" y="225" font-size="11.5" fill="#fff" font-weight="700">Mairie annexe</text>
+
+      <text x="20" y="280" font-weight="700">Marc, Théo</text>
+      <rect x="208" y="262" width="152" height="28" rx="8" fill="#14151A"/><text x="218" y="281" font-size="11.5" fill="#fff" font-weight="700">Collège Pagnol</text>
+    </g>
+    <path d="M20 316 H360" stroke="#EFEDE8"/>
+    <rect x="20" y="334" width="340" height="76" rx="12" fill="#EDEBFF"/>
+    <text x="38" y="362" font-size="12.5" font-weight="700" fill="#5A4BFF">Planning et répartition prêts</text>
+    <text x="38" y="384" font-size="12" fill="#14151A">Chaque équipe sait où aller</text>
+    <text x="38" y="400" font-size="12" fill="#14151A">et quoi faire.</text>
+  </g>
+
+  <!-- flèche 2 -->
+  <g transform="translate(834 330)">
+    <path d="M0 0 H50" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M38 -11 L53 0 L38 11" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== 3. La fiche de tâches ===== -->
+  <text x="904" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#6C6A66">3 · LA FICHE</text>
+  <text x="904" y="94" font-size="22" font-weight="800" fill="#14151A">Imprimée le matin</text>
+  <g transform="translate(910 128) rotate(2)">
+    <rect width="246" height="420" rx="6" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="38" font-size="11" font-weight="700" letter-spacing="1.4" fill="#6C6A66">FICHE DU MARDI</text>
+    <text x="20" y="64" font-size="17" font-weight="800" fill="#14151A">Karim, Léo</text>
+    <path d="M20 80 H226" stroke="#14151A" stroke-width="1.5"/>
+    <text x="20" y="108" font-size="12.5" font-weight="700" fill="#14151A">7 h · École Jean-Jaurès</text>
+    <text x="20" y="126" font-size="11.5" fill="#6C6A66">12 rue des Écoles, Toulon</text>
+    <g font-size="12" fill="#14151A">
+      <rect x="20" y="142" width="14" height="14" rx="3" fill="none" stroke="#14151A" stroke-width="1.5"/><text x="44" y="154">Réception des 2 modules</text>
+      <rect x="20" y="168" width="14" height="14" rx="3" fill="none" stroke="#14151A" stroke-width="1.5"/><text x="44" y="180">Calage et mise à niveau</text>
+      <rect x="20" y="194" width="14" height="14" rx="3" fill="none" stroke="#14151A" stroke-width="1.5"/><text x="44" y="206">Jonction des modules</text>
+      <rect x="20" y="220" width="14" height="14" rx="3" fill="none" stroke="#14151A" stroke-width="1.5"/><text x="44" y="232">Raccordement électrique</text>
+    </g>
+    <path d="M20 256 H226" stroke="#EFEDE8"/>
+    <text x="20" y="282" font-size="12.5" font-weight="700" fill="#14151A">14 h · Crèche Les Pins</text>
+    <text x="20" y="300" font-size="11.5" fill="#6C6A66">Avenue du Port, Fréjus</text>
+    <g font-size="12" fill="#14151A">
+      <rect x="20" y="316" width="14" height="14" rx="3" fill="none" stroke="#14151A" stroke-width="1.5"/><text x="44" y="328">Joints et finitions</text>
+      <rect x="20" y="342" width="14" height="14" rx="3" fill="none" stroke="#14151A" stroke-width="1.5"/><text x="44" y="354">Contrôle avant remise</text>
+    </g>
+    <rect x="20" y="380" width="96" height="22" rx="11" fill="#EDEBFF"/>
+    <text x="68" y="395" font-size="11" font-weight="700" fill="#5A4BFF" text-anchor="middle">Prête à imprimer</text>
+  </g>
+
+  <text x="1152" y="616" font-size="12" fill="#6C6A66" text-anchor="end">Illustration avec des données fictives</text>
+</svg>

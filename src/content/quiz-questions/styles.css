@@ -80,6 +80,7 @@ nav .nl:hover{color:var(--ink)}
 /* ————— hero ————— */
 .hero{padding-top:clamp(46px,6vw,80px);padding-bottom:clamp(30px,4vw,54px)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-grid>*{min-width:0}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:46px}}
 h1{font-size:clamp(44px,6.2vw,84px);margin:22px 0 24px;max-width:14ch;letter-spacing:-.045em}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;align-items:center}
@@ -409,3 +410,6 @@ body{min-height:100vh;display:flex;flex-direction:column}
 .analyse .tape li{white-space:normal}
 .analyse .tape li .tx{white-space:normal}
 .analyse .tape li.done .tx{text-decoration:none;color:var(--ink)}
+
+/* titre de page pour les moteurs et les lecteurs d'écran, sans affichage */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

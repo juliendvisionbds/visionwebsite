@@ -1,6 +1,6 @@
 /** Constantes et helpers SEO partagés (URL canonique, JSON-LD). */
 
-export const SITE = "https://visionbds.com";
+export const SITE = "https://www.visionbds.com";
 
 /** URL absolue d'une route, avec le slash final (next.config : trailingSlash). */
 export const pageUrl = (path: string) => `${SITE}${path === "/" ? "/" : `${path.replace(/\/$/, "")}/`}`;
@@ -13,9 +13,15 @@ const OG_IMAGE = {
 };
 
 /** Balises Open Graph / Twitter d'une page (les redéfinir côté page écrase celles du layout, image comprise). */
-export const social = (title: string, description: string, path: string, type: "website" | "article" = "website") => ({
-  openGraph: { title, description, url: path, siteName: "vision", locale: "fr_FR", type, images: [OG_IMAGE] },
-  twitter: { card: "summary_large_image" as const, title, description, images: [OG_IMAGE.url] },
+export const social = (
+  title: string,
+  description: string,
+  path: string,
+  type: "website" | "article" = "website",
+  image: { url: string; alt: string } = OG_IMAGE
+) => ({
+  openGraph: { title, description, url: path, siteName: "vision", locale: "fr_FR", type, images: [image] },
+  twitter: { card: "summary_large_image" as const, title, description, images: [image.url] },
 });
 
 export const ORG_ID = `${SITE}/#organization`;
