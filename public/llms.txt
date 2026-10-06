@@ -37,4 +37,5 @@
 
 - [Créer sa bibliothèque de prix BTP](https://www.visionbds.com/blog/creer-bibliotheque-prix-btp/) : méthode en 5 étapes pour transformer ses anciens devis et factures en bibliothèque de prix (champs à prévoir, regroupement des ouvrages, validation, mise à jour, Excel ou IA)
 - [Devis BTP trop longs à préparer](https://www.visionbds.com/blog/gagner-temps-devis-batiment/) : méthode pour décomposer cinq devis, mesurer la recherche de prix, la ressaisie et l'attente, distinguer préparation et décision, puis choisir la première étape à simplifier (grille de mesure incluse)
+- [Tableau de bord BTP : quels indicateurs suivre](https://www.visionbds.com/blog/indicateurs-tableau-de-bord-btp/) : les indicateurs d'un tableau de bord de dirigeant du bâtiment par famille (commercial, production, marge, trésorerie), avec leur calcul, leur source, leur fréquence et la décision qu'ils déclenchent
 - [Le manifeste de vision](https://www.visionbds.com/blog/manifeste/) : pourquoi vision a été créée, ce qu'elle refuse de faire et ce qu'elle promet aux entreprises du bâtiment, par Julien Devoir, cofondateur

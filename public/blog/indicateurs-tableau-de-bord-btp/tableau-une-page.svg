@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Tableau de bord dirigeant d'une page : six indicateurs avec leur valeur, le mois précédent, leur seuil et leur statut (chiffres fictifs)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">TABLEAU DE BORD DIRIGEANT · REVUE MENSUELLE</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Six chiffres, une page, deux sujets à traiter</text>
+  <g transform="translate(48 136)">
+    <rect x="7" y="7" width="358" height="192" rx="20" fill="#EDEBFF"/>
+    <rect width="358" height="192" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="22" y="36" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">COMMERCIAL</text>
+    <rect x="207" y="18" width="129" height="26" rx="13" fill="#E3F9F2"/><circle cx="222" cy="31" r="5.5" fill="#25D3A4"/><text x="234" y="35.5" font-size="12" font-weight="700" fill="#14151A">Dans le seuil</text>
+    <text x="22" y="68" font-size="15.5" font-weight="700" fill="#14151A">Carnet de commandes</text>
+    <text x="22" y="122" font-size="40" font-weight="800" fill="#14151A">4,2 mois</text>
+    <path d="M22 142 H336" stroke="#E4E2DD"/>
+    <text x="22" y="168" font-size="13" fill="#6C6A66">Mois précédent : <tspan font-weight="700" fill="#14151A">4,6 mois</tspan></text><text x="336" y="168" font-size="13" fill="#6C6A66" text-anchor="end">Seuil : <tspan font-weight="700" fill="#14151A">&gt; 3 mois</tspan></text>
+  </g>
+  <g transform="translate(421 136)">
+    <rect x="7" y="7" width="358" height="192" rx="20" fill="#EDEBFF"/>
+    <rect width="358" height="192" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="22" y="36" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">COMMERCIAL</text>
+    <rect x="207" y="18" width="129" height="26" rx="13" fill="#E3F9F2"/><circle cx="222" cy="31" r="5.5" fill="#25D3A4"/><text x="234" y="35.5" font-size="12" font-weight="700" fill="#14151A">Dans le seuil</text>
+    <text x="22" y="68" font-size="15.5" font-weight="700" fill="#14151A">Taux de transformation</text>
+    <text x="22" y="122" font-size="40" font-weight="800" fill="#14151A">28 %</text>
+    <path d="M22 142 H336" stroke="#E4E2DD"/>
+    <text x="22" y="168" font-size="13" fill="#6C6A66">Mois précédent : <tspan font-weight="700" fill="#14151A">31 %</tspan></text><text x="336" y="168" font-size="13" fill="#6C6A66" text-anchor="end">Seuil : <tspan font-weight="700" fill="#14151A">&gt; 25 %</tspan></text>
+  </g>
+  <g transform="translate(794 136)">
+    <rect x="7" y="7" width="358" height="192" rx="20" fill="#EDEBFF"/>
+    <rect width="358" height="192" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="22" y="36" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">PRODUCTION</text>
+    <rect x="214" y="18" width="122" height="26" rx="13" fill="#FFF4D6"/><circle cx="229" cy="31" r="5.5" fill="#FFC64D"/><text x="241" y="35.5" font-size="12" font-weight="700" fill="#14151A">À surveiller</text>
+    <text x="22" y="68" font-size="15.5" font-weight="700" fill="#14151A">Production non facturée</text>
+    <text x="22" y="122" font-size="40" font-weight="800" fill="#14151A">186 k€</text>
+    <path d="M22 142 H336" stroke="#E4E2DD"/>
+    <text x="22" y="168" font-size="13" fill="#6C6A66">Mois précédent : <tspan font-weight="700" fill="#14151A">142 k€</tspan></text><text x="336" y="168" font-size="13" fill="#6C6A66" text-anchor="end">Seuil : <tspan font-weight="700" fill="#14151A">&lt; 150 k€</tspan></text>
+  </g>
+  <g transform="translate(48 352)">
+    <rect x="7" y="7" width="358" height="192" rx="20" fill="#EDEBFF"/>
+    <rect width="358" height="192" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="22" y="36" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">MARGE</text>
+    <rect x="214" y="18" width="122" height="26" rx="13" fill="#FFF4D6"/><circle cx="229" cy="31" r="5.5" fill="#FFC64D"/><text x="241" y="35.5" font-size="12" font-weight="700" fill="#14151A">À surveiller</text>
+    <text x="22" y="68" font-size="15.5" font-weight="700" fill="#14151A">Chantiers sous la marge budgétée</text>
+    <text x="22" y="122" font-size="40" font-weight="800" fill="#14151A">2 sur 12</text>
+    <path d="M22 142 H336" stroke="#E4E2DD"/>
+    <text x="22" y="168" font-size="13" fill="#6C6A66">Mois précédent : <tspan font-weight="700" fill="#14151A">1 sur 11</tspan></text><text x="336" y="168" font-size="13" fill="#6C6A66" text-anchor="end">Seuil : <tspan font-weight="700" fill="#14151A">0</tspan></text>
+  </g>
+  <g transform="translate(421 352)">
+    <rect x="7" y="7" width="358" height="192" rx="20" fill="#EDEBFF"/>
+    <rect width="358" height="192" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="22" y="36" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">TRÉSORERIE</text>
+    <rect x="256" y="18" width="80" height="26" rx="13" fill="#FFE3E0"/><circle cx="271" cy="31" r="5.5" fill="#E5484D"/><text x="283" y="35.5" font-size="12" font-weight="700" fill="#B3261E">Alerte</text>
+    <text x="22" y="68" font-size="15.5" font-weight="700" fill="#14151A">Encours échus &gt; 45 jours</text>
+    <text x="22" y="122" font-size="40" font-weight="800" fill="#14151A">74 k€</text>
+    <path d="M22 142 H336" stroke="#E4E2DD"/>
+    <text x="22" y="168" font-size="13" fill="#6C6A66">Mois précédent : <tspan font-weight="700" fill="#14151A">58 k€</tspan></text><text x="336" y="168" font-size="13" fill="#6C6A66" text-anchor="end">Seuil : <tspan font-weight="700" fill="#14151A">&lt; 50 k€</tspan></text>
+  </g>
+  <g transform="translate(794 352)">
+    <rect x="7" y="7" width="358" height="192" rx="20" fill="#EDEBFF"/>
+    <rect width="358" height="192" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="22" y="36" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">TRÉSORERIE</text>
+    <rect x="207" y="18" width="129" height="26" rx="13" fill="#E3F9F2"/><circle cx="222" cy="31" r="5.5" fill="#25D3A4"/><text x="234" y="35.5" font-size="12" font-weight="700" fill="#14151A">Dans le seuil</text>
+    <text x="22" y="68" font-size="15.5" font-weight="700" fill="#14151A">Trésorerie prév. à 10 semaines</text>
+    <text x="22" y="122" font-size="40" font-weight="800" fill="#14151A">310 k€</text>
+    <path d="M22 142 H336" stroke="#E4E2DD"/>
+    <text x="22" y="168" font-size="13" fill="#6C6A66">Mois précédent : <tspan font-weight="700" fill="#14151A">290 k€</tspan></text><text x="336" y="168" font-size="13" fill="#6C6A66" text-anchor="end">Seuil : <tspan font-weight="700" fill="#14151A">&gt; 200 k€</tspan></text>
+  </g>
+  <text x="48" y="606" font-size="14.5" font-weight="600" fill="#14151A">À traiter ce mois-ci : émettre les situations en retard, relancer les encours, voir deux chantiers avec leurs conducteurs.</text>
+  <text x="1152" y="606" font-size="13" fill="#6C6A66" text-anchor="end">Chiffres fictifs.</text>
+</svg>
