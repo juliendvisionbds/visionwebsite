@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Du déboursé sec au prix de vente pour un mètre carré de maçonnerie : déboursé sec 51,21 €, coût direct 55,31 €, prix de revient 61,95 €, prix de vente 66,91 € (exemple fictif)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">1 M² DE MAÇONNERIE EN BLOCS BÉTON DE 20 CM</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Du déboursé sec au prix de vente, couche par couche</text>
+  <text x="48" y="160" font-size="18" font-weight="800" fill="#14151A">Déboursé sec</text><text x="48" y="181" font-size="13" fill="#6C6A66">Matériaux, main-d'œuvre, matériel</text>
+  <clipPath id="c0"><rect x="300" y="138" width="460.9" height="50" rx="12"/></clipPath>
+  <g clip-path="url(#c0)">
+    <rect x="300" y="138" width="190.9" height="50" fill="#5A4BFF"/><rect x="490.9" y="138" width="256.5" height="50" fill="#8F85FF"/><rect x="747.4" y="138" width="13.5" height="50" fill="#14151A"/>
+  </g>
+  <rect x="300" y="138" width="460.9" height="50" rx="12" fill="none" stroke="#14151A" stroke-width="2"/>
+  <text x="316" y="169" font-size="14.5" font-weight="700" fill="#fff">Matériaux · 21,21 €</text><text x="506.9" y="169" font-size="14.5" font-weight="700" fill="#fff">Main-d'œuvre · 28,50 €</text>
+  <text x="774.9" y="169" font-size="13.5" font-weight="600" fill="#14151A">Matériel · 1,50 €</text>
+  <text x="1152" y="172" font-size="22" font-weight="800" fill="#14151A" text-anchor="end">51,21 €</text>
+  <path d="M48 214 H1152" stroke="#E4E2DD"/>
+  <text x="48" y="262" font-size="18" font-weight="800" fill="#14151A">Coût direct</text><text x="48" y="283" font-size="13" fill="#6C6A66">+ frais de chantier</text>
+  <clipPath id="c1"><rect x="300" y="240" width="497.8" height="50" rx="12"/></clipPath>
+  <g clip-path="url(#c1)">
+    <rect x="300" y="240" width="460.9" height="50" fill="#EDEBFF"/><rect x="760.9" y="240" width="36.9" height="50" fill="#FFC64D"/>
+  </g>
+  <rect x="300" y="240" width="497.8" height="50" rx="12" fill="none" stroke="#14151A" stroke-width="2"/>
+  <path d="M760.9 240 v50" stroke="#14151A" stroke-width="2"/>
+  <text x="316" y="271" font-size="14" fill="#6C6A66">Déboursé sec · 51,21 €</text>
+  <text x="811.8" y="271" font-size="13.5" font-weight="700" fill="#14151A">+ 8 % · 4,10 €</text>
+  <text x="1152" y="274" font-size="22" font-weight="800" fill="#14151A" text-anchor="end">55,31 €</text>
+  <path d="M48 316 H1152" stroke="#E4E2DD"/>
+  <text x="48" y="364" font-size="18" font-weight="800" fill="#14151A">Prix de revient</text><text x="48" y="385" font-size="13" fill="#6C6A66">+ frais généraux</text>
+  <clipPath id="c2"><rect x="300" y="342" width="557.6" height="50" rx="12"/></clipPath>
+  <g clip-path="url(#c2)">
+    <rect x="300" y="342" width="497.8" height="50" fill="#EDEBFF"/><rect x="797.8" y="342" width="59.8" height="50" fill="#FF8A7A"/>
+  </g>
+  <rect x="300" y="342" width="557.6" height="50" rx="12" fill="none" stroke="#14151A" stroke-width="2"/>
+  <path d="M797.8 342 v50" stroke="#14151A" stroke-width="2"/>
+  <text x="316" y="373" font-size="14" fill="#6C6A66">Coût direct · 55,31 €</text>
+  <text x="871.6" y="373" font-size="13.5" font-weight="700" fill="#14151A">+ 12 % · 6,64 €</text>
+  <text x="1152" y="376" font-size="22" font-weight="800" fill="#14151A" text-anchor="end">61,95 €</text>
+  <path d="M48 418 H1152" stroke="#E4E2DD"/>
+  <text x="48" y="466" font-size="18" font-weight="800" fill="#14151A">Prix de vente HT</text><text x="48" y="487" font-size="13" fill="#6C6A66">+ bénéfice et aléas</text>
+  <clipPath id="c3"><rect x="300" y="444" width="602.2" height="50" rx="12"/></clipPath>
+  <g clip-path="url(#c3)">
+    <rect x="300" y="444" width="557.6" height="50" fill="#EDEBFF"/><rect x="857.6" y="444" width="44.6" height="50" fill="#25D3A4"/>
+  </g>
+  <rect x="300" y="444" width="602.2" height="50" rx="12" fill="none" stroke="#14151A" stroke-width="2"/>
+  <path d="M857.6 444 v50" stroke="#14151A" stroke-width="2"/>
+  <text x="316" y="475" font-size="14" fill="#6C6A66">Prix de revient · 61,95 €</text>
+  <text x="916.2" y="475" font-size="13.5" font-weight="700" fill="#14151A">+ 8 % · 4,96 €</text>
+  <text x="1152" y="478" font-size="26" font-weight="800" fill="#5A4BFF" text-anchor="end">66,91 €</text>
+  <g transform="translate(48 556)">
+    <rect width="1104" height="52" rx="16" fill="#14151A"/>
+    <text x="552" y="32" font-size="15.5" font-weight="600" fill="#fff" text-anchor="middle">Coefficient de vente : 66,91 ÷ 51,21 = 1,31. Taux appliqués en cascade, chacun sur l'étape précédente. Exemple fictif.</text>
+  </g>
+</svg>
