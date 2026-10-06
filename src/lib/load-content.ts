@@ -26,7 +26,7 @@ export function loadPageFiles(id: string) {
     }
   }
 
-  // Menu « L'IA dans le BTP » : déroulant vers les cas d'usage (src/content/cas/*.md), sur toutes les pages.
+  // Menu « L'IA dans le BTP » : déroulant vers les cas d'usage (src/content/cas/*.md), suivi du lien Blog, sur toutes les pages.
   const NAV_IA = /<a class="nl hide-m" href="\/ia-btp"( aria-current="page")?>L'IA dans le BTP<\/a>/;
   if (NAV_IA.test(html)) {
     html = html.replace(NAV_IA, (_, current = "") => navIaBtp(current));
@@ -51,7 +51,8 @@ function navIaBtp(current: string) {
         <div class="nd-menu">
           ${items}
         </div>
-      </div>`;
+      </div>
+      <a class="nl hide-m" href="/blog">Blog</a>`;
 }
 
 const NAV_CSS = `
