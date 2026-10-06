@@ -161,7 +161,7 @@ L'IA peut extraire les prix d'achat de vos factures, retrouver vos prix de vente
 
 ## Pour aller plus loin
 
-Une base structurée de cette façon devient la fondation d'autres usages : préparer un premier brouillon de devis à partir d'une demande client, comparer un chiffrage à vos prix habituels, ou décider quand s'appuyer sur une bibliothèque de prix du marché.
+Une base structurée de cette façon devient la fondation d'autres usages : [préparer un premier brouillon de devis à partir d'une demande client](/blog/preparer-devis-btp-ia/), comparer un chiffrage à vos prix habituels, ou décider quand s'appuyer sur une bibliothèque de prix du marché.
 
 Chez une entreprise de construction et terrassement d'environ 50 salariés, c'est cette distinction entre prix d'achat issus des factures et prix de vente issus des devis qui a structuré la base de prix partagée. Le détail est dans le cas d'usage : [Bibliothèque de prix BTP : des archives de devis à une base partagée](/cas/bibliotheque-de-prix-btp/).
 

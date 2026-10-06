@@ -106,7 +106,7 @@ Puis appliquez la piste qui correspond à votre blocage principal :
 | Si le blocage principal est… | Première piste |
 |---|---|
 | La recherche de prix | Structurer une bibliothèque de prix à partir de vos archives |
-| La reprise des lignes d'anciens devis | Préparer un premier brouillon à partir de vos devis similaires et de votre base de prix |
+| La reprise des lignes d'anciens devis | [Préparer un premier brouillon](/blog/preparer-devis-btp-ia/) à partir de vos devis similaires et de votre base de prix |
 | La ressaisie entre outils | Relier vos fichiers et votre logiciel pour supprimer les copier-coller |
 | L'attente d'informations client | Une liste type des pièces à demander dès la réception |
 | Les consultations fournisseurs | Des demandes de prix standardisées et un suivi des réponses |

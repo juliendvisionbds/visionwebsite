@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Du brouillon aux corrections : ce que le brouillon de devis a signalé et ce que la relecture a corrigé ou ajouté, dont la liaison avec l'existant, absente du brouillon (exemple fictif)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">EXTENSION DE 25 M² · GROS ŒUVRE</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Ce que le brouillon signale, ce que la relecture décide</text>
+  <g transform="translate(48 132)">
+    <rect x="8" y="8" width="1104" height="434" rx="20" fill="#EDEBFF"/>
+    <rect width="1104" height="434" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <g font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">
+      <text x="24" y="36">LIGNE</text><text x="320" y="36">DANS LE BROUILLON</text><text x="720" y="36">APRÈS RELECTURE</text>
+    </g>
+    <path d="M0 56 H1104" stroke="#14151A" stroke-width="2"/>
+    <text x="24" y="92" font-size="15.5" font-weight="700" fill="#14151A">Maçonnerie agglos 20 cm</text><circle cx="331" cy="87" r="11" fill="#FFC64D"/><text x="331" y="92" font-size="15" font-weight="800" fill="#14151A" text-anchor="middle">!</text><text x="352" y="92" font-size="14.5" fill="#6C6A66">40,5 m², ouvertures non déduites</text><path d="M676 87 h22 m-7 -6 l7 6 l-7 6" fill="none" stroke="#5A4BFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="720" y="92" font-size="14.5" font-weight="600" fill="#14151A">33,8 m² après déduction des deux baies</text>
+    <path d="M0 119 H1104" stroke="#E4E2DD"/>
+    <text x="24" y="155" font-size="15.5" font-weight="700" fill="#14151A">Linteaux</text><circle cx="331" cy="150" r="11" fill="#14151A"/><text x="331" y="155" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">?</text><text x="352" y="155" font-size="14.5" fill="#6C6A66">Dimensions des baies à relever</text><path d="M676 150 h22 m-7 -6 l7 6 l-7 6" fill="none" stroke="#5A4BFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="720" y="155" font-size="14.5" font-weight="600" fill="#14151A">2 linteaux ajoutés d'après les plans</text>
+    <path d="M0 182 H1104" stroke="#E4E2DD"/>
+    <text x="24" y="218" font-size="15.5" font-weight="700" fill="#14151A">Dalle BA ép. 15 cm</text><circle cx="331" cy="213" r="11" fill="#FFC64D"/><text x="331" y="218" font-size="15" font-weight="800" fill="#14151A" text-anchor="middle">!</text><text x="352" y="218" font-size="14.5" fill="#6C6A66">Hérisson et isolant sous dalle ?</text><path d="M676 213 h22 m-7 -6 l7 6 l-7 6" fill="none" stroke="#5A4BFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="720" y="218" font-size="14.5" font-weight="600" fill="#14151A">Hérisson et film polyane ajoutés, prix à revoir</text>
+    <path d="M0 245 H1104" stroke="#E4E2DD"/>
+    <text x="24" y="281" font-size="15.5" font-weight="700" fill="#14151A">Évacuation des terres</text><circle cx="331" cy="276" r="11" fill="#14151A"/><text x="331" y="281" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">?</text><text x="352" y="281" font-size="14.5" fill="#6C6A66">Quantité et prix de vente à définir</text><path d="M676 276 h22 m-7 -6 l7 6 l-7 6" fill="none" stroke="#5A4BFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="720" y="281" font-size="14.5" font-weight="600" fill="#14151A">Volumes estimés, prix de vente calculé</text>
+    <rect x="1" y="309" width="1102" height="61" fill="#FFF3F1"/>
+    <path d="M0 308 H1104" stroke="#E4E2DD"/>
+    <text x="24" y="344" font-size="15.5" font-weight="700" fill="#14151A">Liaison avec l'existant</text><circle cx="331" cy="339" r="11" fill="#E5484D"/><text x="331" y="344" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">+</text><text x="352" y="344" font-size="14.5" fill="#E5484D" font-weight="700">Poste absent, non signalé</text><path d="M676 339 h22 m-7 -6 l7 6 l-7 6" fill="none" stroke="#5A4BFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="720" y="344" font-size="14.5" font-weight="600" fill="#14151A">Ajoutée à la main par le chargé d'affaires</text>
+    <path d="M0 371 H1104" stroke="#E4E2DD"/>
+    <text x="24" y="407" font-size="15.5" font-weight="700" fill="#14151A">Exclusions</text><text x="320" y="407" font-size="14.5" fill="#6C6A66">Non listées</text><path d="M676 402 h22 m-7 -6 l7 6 l-7 6" fill="none" stroke="#5A4BFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="720" y="407" font-size="14.5" font-weight="600" fill="#14151A">Charpente, couverture, menuiseries, enduits</text>
+  </g>
+  <text x="48" y="610" font-size="14.5" font-weight="600" fill="#14151A">Un quart d'heure de relecture, plans en main. La recherche et la mise en forme étaient déjà faites.</text>
+  <text x="1152" y="610" font-size="13" fill="#6C6A66" text-anchor="end">Exemple fictif.</text>
+</svg>

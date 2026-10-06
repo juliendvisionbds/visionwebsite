@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Ce qu'il faut fournir à l'IA pour un brouillon de devis exploitable : la demande qualifiée, la base de prix, les devis similaires et les règles écrites ; le brouillon affiche trois statuts par ligne</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">CE QUE VOUS FOURNISSEZ, CE QUE VOUS OBTENEZ</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Un brouillon vaut ce que valent les informations fournies</text>
+  <g transform="translate(48 136)">
+    <rect x="7" y="7" width="250" height="190" rx="20" fill="#EDEBFF"/>
+    <rect width="250" height="190" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="38" r="17" fill="#14151A"/><text x="38" y="43.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+    <text x="22" y="92" font-size="20" font-weight="800" fill="#14151A">La demande</text><text x="22" y="116" font-size="20" font-weight="800" fill="#14151A">qualifiée</text>
+    <text x="22" y="146" font-size="13.5" fill="#6C6A66">Plans, photos, adresse,</text><text x="22" y="165" font-size="13.5" fill="#6C6A66">périmètre, délais</text>
+  </g>
+  <g transform="translate(314 136)">
+    <rect x="7" y="7" width="250" height="190" rx="20" fill="#EDEBFF"/>
+    <rect width="250" height="190" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="38" r="17" fill="#14151A"/><text x="38" y="43.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+    <text x="22" y="92" font-size="20" font-weight="800" fill="#14151A">Votre base</text><text x="22" y="116" font-size="20" font-weight="800" fill="#14151A">de prix</text>
+    <text x="22" y="146" font-size="13.5" fill="#6C6A66">Prix datés et sourcés :</text><text x="22" y="165" font-size="13.5" fill="#6C6A66">achat, déboursé, vente</text>
+  </g>
+  <g transform="translate(48 342)">
+    <rect x="7" y="7" width="250" height="190" rx="20" fill="#EDEBFF"/>
+    <rect width="250" height="190" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="38" r="17" fill="#14151A"/><text x="38" y="43.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+    <text x="22" y="92" font-size="20" font-weight="800" fill="#14151A">Vos devis</text><text x="22" y="116" font-size="20" font-weight="800" fill="#14151A">similaires</text>
+    <text x="22" y="146" font-size="13.5" fill="#6C6A66">Vos libellés, votre découpage,</text><text x="22" y="165" font-size="13.5" fill="#6C6A66">vos ordres de grandeur</text>
+  </g>
+  <g transform="translate(314 342)">
+    <rect x="7" y="7" width="250" height="190" rx="20" fill="#EDEBFF"/>
+    <rect width="250" height="190" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="38" r="17" fill="#14151A"/><text x="38" y="43.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">4</text>
+    <text x="22" y="92" font-size="20" font-weight="800" fill="#14151A">Vos règles</text><text x="22" y="116" font-size="20" font-weight="800" fill="#14151A">écrites</text>
+    <text x="22" y="146" font-size="13.5" fill="#6C6A66">Coefficients, inclusions,</text><text x="22" y="165" font-size="13.5" fill="#6C6A66">exclusions, mentions</text>
+  </g>
+  <g transform="translate(590 334)">
+    <path d="M0 0 H44" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M32 -11 L47 0 L32 11" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(660 136)">
+    <rect x="8" y="8" width="492" height="396" rx="20" fill="#EDEBFF"/>
+    <rect width="492" height="396" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="28" y="42" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">LE BROUILLON</text>
+    <text x="28" y="76" font-size="22" font-weight="800" fill="#14151A">Trois statuts, ligne par ligne</text>
+    <text x="28" y="101" font-size="13.5" fill="#6C6A66">Chaque ligne indique aussi d'où vient son prix.</text>
+    <path d="M0 122 H492" stroke="#14151A" stroke-width="2"/>
+    <circle cx="44" cy="167" r="15" fill="#25D3A4"/><path d="M38.5 167 l4 4 l7 -8" fill="none" stroke="#14151A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="74" y="162" font-size="17" font-weight="800" fill="#14151A">Prix trouvé</text><text x="74" y="184" font-size="13.5" fill="#6C6A66">Dans la base ou un devis similaire récent</text><text x="464" y="173" font-size="15" font-weight="700" fill="#14151A" text-anchor="end">3 lignes</text>
+    <path d="M0 213 H492" stroke="#E4E2DD"/>
+    <circle cx="44" cy="258" r="15" fill="#FFC64D"/><text x="44" y="263" font-size="15" font-weight="800" fill="#14151A" text-anchor="middle">!</text><text x="74" y="253" font-size="17" font-weight="800" fill="#14151A">À vérifier</text><text x="74" y="275" font-size="13.5" fill="#6C6A66">Prix ancien, hypothèse, périmètre incertain</text><text x="464" y="264" font-size="15" font-weight="700" fill="#14151A" text-anchor="end">3 lignes</text>
+    <path d="M0 304 H492" stroke="#E4E2DD"/>
+    <circle cx="44" cy="349" r="15" fill="#14151A"/><text x="44" y="354" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">?</text><text x="74" y="344" font-size="17" font-weight="800" fill="#14151A">Information manquante</text><text x="74" y="366" font-size="13.5" fill="#6C6A66">Réponse du client ou visite nécessaire</text><text x="464" y="355" font-size="15" font-weight="700" fill="#14151A" text-anchor="end">2 lignes</text>
+  </g>
+  <g transform="translate(48 566)">
+    <rect width="1104" height="48" rx="16" fill="#14151A"/>
+    <text x="552" y="30" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">Un brouillon où tout est vert alors que la demande était incomplète doit éveiller la méfiance.</text>
+  </g>
+</svg>

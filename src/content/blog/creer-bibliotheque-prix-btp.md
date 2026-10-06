@@ -55,7 +55,7 @@ Avant d'ouvrir le moindre fichier, il faut fixer un principe. Une bibliothèque 
 
 *Montants illustratifs.*
 
-Le piège classique : comparer le prix de vente d'une dalle sur un devis de 2023 avec le déboursé calculé pour un chantier de 2026, et conclure qu'on « a toujours vendu trop cher » ou « trop peu cher ». Chaque ligne de votre bibliothèque doit dire **de quel niveau de prix il s'agit**. La structuration fine (déboursé sec, frais de chantier, frais généraux, marge) fera l'objet d'un article dédié.
+Le piège classique : comparer le prix de vente d'une dalle sur un devis de 2023 avec le déboursé calculé pour un chantier de 2026, et conclure qu'on « a toujours vendu trop cher » ou « trop peu cher ». Chaque ligne de votre bibliothèque doit dire **de quel niveau de prix il s'agit**. La structuration fine (déboursé sec, frais de chantier, frais généraux, marge) fait l'objet d'[un article dédié](/blog/structurer-base-prix-btp/).
 
 ## Étape 1 — Inventorier vos archives
 
@@ -216,7 +216,7 @@ Dans ce cas, l'IA peut lire chaque document ligne par ligne, en extraire le libe
 :: Ce que vous gardez en main
 L'IA prépare : elle extrait, regroupe et signale. Les décisions restent humaines : valider les regroupements douteux, trancher les écarts de prix, décider quel prix utiliser dans un devis. Une bibliothèque de prix engage vos marges ; elle ne doit pas être une boîte noire.
 
-Une fois la base structurée, elle devient aussi la fondation d'autres usages : préparer un brouillon de devis à partir d'une demande client, comparer un chiffrage à vos prix habituels, suivre l'évolution de vos achats.
+Une fois la base structurée, elle devient aussi la fondation d'autres usages : [préparer un brouillon de devis à partir d'une demande client](/blog/preparer-devis-btp-ia/), comparer un chiffrage à vos prix habituels, suivre l'évolution de vos achats.
 
 ## Les erreurs les plus fréquentes
 
