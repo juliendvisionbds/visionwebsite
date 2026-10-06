@@ -31,7 +31,9 @@
 - [Bibliothèque de prix BTP](https://www.visionbds.com/cas/bibliotheque-de-prix-btp/) : plusieurs années de devis et de factures extraites par l'IA en une base de prix commune, consultable par toute l'équipe (construction et terrassement, ~50 salariés)
 - [Planning de chantier BTP](https://www.visionbds.com/cas/planning-chantier-btp/) : planning et fiches de tâches générés à partir des interventions du jour, au lieu de 2 à 3 heures de répartition manuelle par jour (bâtiments modulaires)
 - [Automatisation de devis BTP](https://www.visionbds.com/cas/automatisation-devis-btp/) : une première version du devis préparée en quelques minutes à partir de la demande client, de la bibliothèque de prix et des anciens devis, puis validée par l'équipe
+- [Réponse aux appels d'offres automatisée](https://www.visionbds.com/cas/reponse-appels-offres-automatisee/) : le dossier de consultation synthétisé avec ses sources, puis une première trame de réponse préparée à partir des documents de l'entreprise (gros œuvre, ~30 salariés)
 
 ## Articles
 
+- [Créer sa bibliothèque de prix BTP](https://www.visionbds.com/blog/creer-bibliotheque-prix-btp/) : méthode en 5 étapes pour transformer ses anciens devis et factures en bibliothèque de prix (champs à prévoir, regroupement des ouvrages, validation, mise à jour, Excel ou IA)
 - [Le manifeste de vision](https://www.visionbds.com/blog/manifeste/) : pourquoi vision a été créée, ce qu'elle refuse de faire et ce qu'elle promet aux entreprises du bâtiment, par Julien Devoir, cofondateur

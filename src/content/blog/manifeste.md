@@ -2,7 +2,9 @@
 title: Le manifeste de vision
 description: Pourquoi on a créé vision, ce qu'on refuse de faire, et ce qu'on promet aux entreprises du bâtiment. Par Julien Devoir, cofondateur.
 tag: Manifeste
-date: 2026-10-05
+date: 2026-09-01
+cover: /blog/manifeste.jpg
+coverAlt: Un bureau d'entreprise du bâtiment couvert de classeurs, de factures et de plans, avec un casque de chantier et un ordinateur portable.
 author: Julien Devoir
 authorRole: Cofondateur de vision · Produit & systèmes
 authorPhoto: /team/julien.jpg

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Où sont vos prix aujourd'hui : factures fournisseurs, devis acceptés, DPGF et BPU, fichiers personnels, devis refusés</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">ÉTAPE 1 · L'INVENTAIRE</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Où sont vos prix aujourd'hui ?</text>
+  <g transform="translate(48 136)">
+    <rect x="7" y="7" width="208" height="380" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="380" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="20" y="22" width="52" height="40" rx="10" fill="#E5484D"/><text x="46" y="47" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">PDF</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Factures</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">fournisseurs</text>
+    <text x="20" y="162" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">OÙ CHERCHER</text><text x="20" y="184" font-size="13.5" fill="#14151A">Comptabilité, boîte mail,</text><text x="20" y="203" font-size="13.5" fill="#14151A">GED</text>
+    <path d="M20 224 H188" stroke="#E4E2DD"/>
+    <text x="20" y="252" font-size="13.5" fill="#6C6A66">Réellement payés : vos</text><text x="20" y="271" font-size="13.5" fill="#6C6A66">prix les plus fiables.</text>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CE QU’ON Y TROUVE</text>
+    <rect x="20" y="330" width="113" height="24" rx="12" fill="#EDEBFF"/><text x="76.5" y="346.5" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Prix d'achat</text>
+  </g>
+  <g transform="translate(272 136)">
+    <rect x="7" y="7" width="208" height="380" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="380" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="20" y="22" width="52" height="40" rx="10" fill="#5A4BFF"/><text x="46" y="47" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">DEV</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Devis</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">acceptés</text>
+    <text x="20" y="162" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">OÙ CHERCHER</text><text x="20" y="184" font-size="13.5" fill="#14151A">Logiciel de devis, Excel,</text><text x="20" y="203" font-size="13.5" fill="#14151A">Word, PDF</text>
+    <path d="M20 224 H188" stroke="#E4E2DD"/>
+    <text x="20" y="252" font-size="13.5" fill="#6C6A66">Ce que vos clients ont</text><text x="20" y="271" font-size="13.5" fill="#6C6A66">accepté, sur votre zone.</text>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CE QU’ON Y TROUVE</text>
+    <rect x="20" y="330" width="121" height="24" rx="12" fill="#D9F7EE"/><text x="80.5" y="346.5" font-size="12" font-weight="700" fill="#0E7C5F" text-anchor="middle">Prix de vente</text>
+  </g>
+  <g transform="translate(496 136)">
+    <rect x="7" y="7" width="208" height="380" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="380" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="20" y="22" width="52" height="40" rx="10" fill="#1F7A45"/><text x="46" y="47" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">XLS</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">DPGF, BPU,</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">appels d'offres</text>
+    <text x="20" y="162" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">OÙ CHERCHER</text><text x="20" y="184" font-size="13.5" fill="#14151A">Dossiers de réponse</text><text x="20" y="203" font-size="13.5" fill="#14151A"></text>
+    <path d="M20 224 H188" stroke="#E4E2DD"/>
+    <text x="20" y="252" font-size="13.5" fill="#6C6A66">Souvent très bien</text><text x="20" y="271" font-size="13.5" fill="#6C6A66">décomposés.</text>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CE QU’ON Y TROUVE</text>
+    <rect x="20" y="330" width="136" height="24" rx="12" fill="#D9F7EE"/><text x="88.0" y="346.5" font-size="12" font-weight="700" fill="#0E7C5F" text-anchor="middle">Prix décomposés</text>
+  </g>
+  <g transform="translate(720 136)">
+    <rect x="7" y="7" width="208" height="380" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="380" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="20" y="22" width="52" height="40" rx="10" fill="#B07A00"/><text x="46" y="47" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">PERSO</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Fichiers</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">personnels</text>
+    <text x="20" y="162" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">OÙ CHERCHER</text><text x="20" y="184" font-size="13.5" fill="#14151A">Excel du conducteur,</text><text x="20" y="203" font-size="13.5" fill="#14151A">carnet du dirigeant</text>
+    <path d="M20 224 H188" stroke="#E4E2DD"/>
+    <text x="20" y="252" font-size="13.5" fill="#6C6A66">Parfois les meilleurs</text><text x="20" y="271" font-size="13.5" fill="#6C6A66">ratios de l'entreprise.</text>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CE QU’ON Y TROUVE</text>
+    <rect x="20" y="330" width="136" height="24" rx="12" fill="#FFF1D0"/><text x="88.0" y="346.5" font-size="12" font-weight="700" fill="#8A5A00" text-anchor="middle">Ratios internes</text>
+  </g>
+  <g transform="translate(944 136)">
+    <rect width="208" height="380" rx="20" fill="#FAF9F6" stroke="#6C6A66" stroke-width="2" stroke-dasharray="7 6"/>
+    <rect x="20" y="22" width="52" height="40" rx="10" fill="#6C6A66"/><text x="46" y="47" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">DEV</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Devis</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">refusés</text>
+    <text x="20" y="162" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">OÙ CHERCHER</text><text x="20" y="184" font-size="13.5" fill="#14151A">Logiciel de devis,</text><text x="20" y="203" font-size="13.5" fill="#14151A">archives</text>
+    <path d="M20 224 H188" stroke="#E4E2DD"/>
+    <text x="20" y="252" font-size="13.5" fill="#6C6A66">Utiles plus tard pour</text><text x="20" y="271" font-size="13.5" fill="#6C6A66">comprendre les écarts.</text>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CE QU’ON Y TROUVE</text>
+    <rect x="20" y="330" width="168" height="24" rx="12" fill="none" stroke="#6C6A66" stroke-dasharray="4 4"/><text x="104" y="346.5" font-size="12" font-weight="700" fill="#6C6A66" text-anchor="middle">Mis de côté au départ</text>
+  </g>
+  <g transform="translate(48 552)">
+    <rect width="1104" height="54" rx="16" fill="#14151A"/>
+    <text x="552" y="33" font-size="15.5" font-weight="600" fill="#fff" text-anchor="middle">Deux à trois ans d'historique suffisent. Commencez par les 30 à 50 ouvrages que vous chiffrez le plus.</text>
+  </g>
+</svg>

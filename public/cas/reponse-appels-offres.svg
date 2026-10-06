@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Les documents de l'appel d'offres, la synthèse avec ses sources, puis la trame de réponse à compléter (données fictives)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <!-- ===== 1. Le dossier ===== -->
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#6C6A66">1 · LE DOSSIER</text>
+  <text x="48" y="94" font-size="22" font-weight="800" fill="#14151A">Déposé dans l'interface</text>
+  <g transform="translate(48 122)">
+    <rect width="290" height="430" rx="18" fill="#fff" stroke="#14151A" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="145" y="38" font-size="12" font-weight="700" letter-spacing="1.4" fill="#6C6A66" text-anchor="middle">DOSSIER DE CONSULTATION</text>
+    <g font-size="13" fill="#14151A">
+      <g transform="translate(20 60)"><rect width="250" height="54" rx="12" fill="#FAF9F6" stroke="#E4E2DD"/><rect x="12" y="12" width="26" height="30" rx="5" fill="#E5484D"/><text x="25" y="32" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">PDF</text><text x="50" y="25" font-weight="700">Règlement de consultation</text><text x="50" y="42" font-size="11.5" fill="#6C6A66">RC · 14 pages</text></g>
+      <g transform="translate(20 124)"><rect width="250" height="54" rx="12" fill="#FAF9F6" stroke="#E4E2DD"/><rect x="12" y="12" width="26" height="30" rx="5" fill="#E5484D"/><text x="25" y="32" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">PDF</text><text x="50" y="25" font-weight="700">CCTP lot 02 Gros œuvre</text><text x="50" y="42" font-size="11.5" fill="#6C6A66">62 pages</text></g>
+      <g transform="translate(20 188)"><rect width="250" height="54" rx="12" fill="#FAF9F6" stroke="#E4E2DD"/><rect x="12" y="12" width="26" height="30" rx="5" fill="#E5484D"/><text x="25" y="32" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">PDF</text><text x="50" y="25" font-weight="700">CCAP</text><text x="50" y="42" font-size="11.5" fill="#6C6A66">28 pages</text></g>
+      <g transform="translate(20 252)"><rect width="250" height="54" rx="12" fill="#FAF9F6" stroke="#E4E2DD"/><rect x="12" y="12" width="26" height="30" rx="5" fill="#1F7A45"/><text x="25" y="32" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">XLS</text><text x="50" y="25" font-weight="700">DPGF</text><text x="50" y="42" font-size="11.5" fill="#6C6A66">Décomposition du prix</text></g>
+      <g transform="translate(20 316)"><rect width="250" height="54" rx="12" fill="#FAF9F6" stroke="#E4E2DD"/><rect x="12" y="12" width="26" height="30" rx="5" fill="#5A4BFF"/><text x="25" y="32" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">DWG</text><text x="50" y="25" font-weight="700">Plans</text><text x="50" y="42" font-size="11.5" fill="#6C6A66">9 fichiers</text></g>
+    </g>
+    <text x="145" y="406" font-size="12" fill="#6C6A66" text-anchor="middle">Tout lire avant de décider</text>
+  </g>
+
+  <g transform="translate(356 330)">
+    <path d="M0 0 H50" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M38 -11 L53 0 L38 11" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== 2. La synthèse ===== -->
+  <text x="426" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">2 · LA SYNTHÈSE</text>
+  <text x="426" y="94" font-size="22" font-weight="800" fill="#14151A">Chaque point, avec sa source</text>
+  <g transform="translate(426 122)">
+    <rect width="370" height="430" rx="18" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="34" font-size="13" font-weight="700" fill="#14151A">Extension du groupe scolaire · Lot 02</text>
+    <path d="M20 48 H350" stroke="#EFEDE8"/>
+    <g font-size="12.5" fill="#14151A">
+      <text x="20" y="74" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#6C6A66">TRAVAUX</text>
+      <text x="20" y="94">Fondations, dallage, voiles béton, 480 m²</text>
+      <rect x="282" y="62" width="68" height="20" rx="10" fill="#EDEBFF"/><text x="316" y="76" font-size="10.5" font-weight="700" fill="#5A4BFF" text-anchor="middle">CCTP p. 8</text>
+      <path d="M20 110 H350" stroke="#F3F1EC"/>
+
+      <text x="20" y="134" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#6C6A66">ÉCHÉANCES</text>
+      <text x="20" y="154">Remise des offres : 14 novembre, 12 h</text>
+      <rect x="296" y="122" width="54" height="20" rx="10" fill="#EDEBFF"/><text x="323" y="136" font-size="10.5" font-weight="700" fill="#5A4BFF" text-anchor="middle">RC p. 3</text>
+      <path d="M20 170 H350" stroke="#F3F1EC"/>
+
+      <text x="20" y="194" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CRITÈRES</text>
+      <text x="20" y="214">Prix 60 % · Valeur technique 40 %</text>
+      <rect x="296" y="182" width="54" height="20" rx="10" fill="#EDEBFF"/><text x="323" y="196" font-size="10.5" font-weight="700" fill="#5A4BFF" text-anchor="middle">RC p. 9</text>
+      <path d="M20 230 H350" stroke="#F3F1EC"/>
+
+      <text x="20" y="254" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#6C6A66">PIÈCES DEMANDÉES</text>
+      <text x="20" y="274">Mémoire technique, DPGF, attestations</text>
+      <rect x="290" y="242" width="60" height="20" rx="10" fill="#EDEBFF"/><text x="320" y="256" font-size="10.5" font-weight="700" fill="#5A4BFF" text-anchor="middle">RC p. 11</text>
+    </g>
+    <rect x="20" y="296" width="330" height="50" rx="12" fill="#FFF3D1"/>
+    <rect x="34" y="310" width="22" height="22" rx="7" fill="#FF8A1F"/><text x="45" y="326" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">!</text>
+    <text x="66" y="318" font-size="12" font-weight="700" fill="#14151A">Contrainte repérée</text>
+    <text x="66" y="335" font-size="11.5" fill="#14151A">Travaux en site occupé, hors vacances scolaires</text>
+    <rect x="20" y="358" width="330" height="50" rx="12" fill="#EDEBFF"/>
+    <rect x="34" y="372" width="22" height="22" rx="7" fill="#5A4BFF"/><text x="45" y="388" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">?</text>
+    <text x="66" y="380" font-size="12" font-weight="700" fill="#14151A">2 questions encore ouvertes</text>
+    <text x="66" y="397" font-size="11.5" fill="#14151A">À poser avant de décider de répondre</text>
+  </g>
+
+  <g transform="translate(814 330)">
+    <path d="M0 0 H50" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M38 -11 L53 0 L38 11" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="26" y="-20" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">On y va</text>
+  </g>
+
+  <!-- ===== 3. La trame de réponse ===== -->
+  <text x="884" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#6C6A66">3 · LA TRAME</text>
+  <text x="884" y="94" font-size="22" font-weight="800" fill="#14151A">À compléter, à corriger</text>
+  <g transform="translate(884 122)">
+    <rect width="268" height="430" rx="18" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="20" y="34" font-size="13" font-weight="700" fill="#14151A">Mémoire technique</text>
+    <path d="M20 48 H248" stroke="#EFEDE8"/>
+    <g font-size="12.5" fill="#14151A">
+      <g transform="translate(20 62)"><rect width="228" height="46" rx="10" fill="#E6F7EF"/><circle cx="22" cy="23" r="9" fill="#25D3A4"/><path d="M17.5 23 l3 3 l6 -6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="20" font-weight="700">Présentation</text><text x="40" y="36" font-size="11" fill="#6C6A66">Reprise de vos documents</text></g>
+      <g transform="translate(20 116)"><rect width="228" height="46" rx="10" fill="#E6F7EF"/><circle cx="22" cy="23" r="9" fill="#25D3A4"/><path d="M17.5 23 l3 3 l6 -6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="20" font-weight="700">Références chantiers</text><text x="40" y="36" font-size="11" fill="#6C6A66">3 opérations similaires</text></g>
+      <g transform="translate(20 170)"><rect width="228" height="46" rx="10" fill="#E6F7EF"/><circle cx="22" cy="23" r="9" fill="#25D3A4"/><path d="M17.5 23 l3 3 l6 -6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="20" font-weight="700">Moyens humains</text><text x="40" y="36" font-size="11" fill="#6C6A66">Profils de l'équipe</text></g>
+      <g transform="translate(20 224)"><rect width="228" height="46" rx="10" fill="#FFF3D1"/><circle cx="22" cy="23" r="9" fill="#FF8A1F"/><text x="22" y="27.5" font-size="12" font-weight="800" fill="#fff" text-anchor="middle">!</text><text x="40" y="20" font-weight="700">Moyens matériels</text><text x="40" y="36" font-size="11" fill="#B4531B">À actualiser</text></g>
+      <g transform="translate(20 278)"><rect width="228" height="46" rx="10" fill="#fff" stroke="#5A4BFF" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="22" cy="23" r="9" fill="#EDEBFF"/><text x="22" y="27.5" font-size="12" font-weight="800" fill="#5A4BFF" text-anchor="middle">+</text><text x="40" y="20" font-weight="700">Méthode d'intervention</text><text x="40" y="36" font-size="11" fill="#5A4BFF">À rédiger par le conducteur</text></g>
+      <g transform="translate(20 332)"><rect width="228" height="46" rx="10" fill="#fff" stroke="#5A4BFF" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="22" cy="23" r="9" fill="#EDEBFF"/><text x="22" y="27.5" font-size="12" font-weight="800" fill="#5A4BFF" text-anchor="middle">+</text><text x="40" y="20" font-weight="700">Planning prévisionnel</text><text x="40" y="36" font-size="11" fill="#5A4BFF">Information manquante</text></g>
+    </g>
+    <text x="134" y="408" font-size="11.5" fill="#6C6A66" text-anchor="middle">Relecture et validation par l'équipe</text>
+  </g>
+
+  <text x="1152" y="616" font-size="12" fill="#6C6A66" text-anchor="end">Illustration avec des données fictives</text>
+</svg>

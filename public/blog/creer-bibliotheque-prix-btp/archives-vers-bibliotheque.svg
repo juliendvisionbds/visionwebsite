@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Des devis et factures dispersés à une bibliothèque de prix : une ligne par ouvrage, avec unité, niveau de prix et source (données fictives)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <!-- ===== 1. Les archives ===== -->
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#6C6A66">1 · VOS ARCHIVES</text>
+  <text x="48" y="94" font-size="22" font-weight="800" fill="#14151A">Devis et factures dispersés</text>
+  <g transform="translate(60 130) rotate(-3)">
+    <rect width="300" height="150" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="34" height="22" rx="6" fill="#E5484D"/><text x="35" y="31.5" font-size="9.5" font-weight="800" fill="#fff" text-anchor="middle">PDF</text>
+    <text x="62" y="32" font-size="13" font-weight="700" fill="#14151A">Facture F-8812 · 02/2026</text>
+    <rect x="12" y="53" width="276" height="22" rx="6" fill="#FFC64D" opacity=".45"/>
+    <text x="18" y="68" font-size="12.5" fill="#14151A" font-weight="700">Béton C25/30 livré toupie</text><text x="282" y="68" font-size="12.5" fill="#14151A" text-anchor="end" font-weight="700">158,00 €/m³</text>
+    <text x="18" y="95" font-size="12.5" fill="#6C6A66">Pompage, forfait</text><text x="282" y="95" font-size="12.5" fill="#6C6A66" text-anchor="end">290,00 €</text>
+    <text x="18" y="122" font-size="12.5" fill="#6C6A66">Attente toupie</text><text x="282" y="122" font-size="12.5" fill="#6C6A66" text-anchor="end">45,00 €</text>
+  </g>
+  <g transform="translate(84 290) rotate(2.5)">
+    <rect width="300" height="150" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="34" height="22" rx="6" fill="#1F7A45"/><text x="35" y="31.5" font-size="9.5" font-weight="800" fill="#fff" text-anchor="middle">XLS</text>
+    <text x="62" y="32" font-size="13" font-weight="700" fill="#14151A">Devis D-2026-041 · 03/2026</text>
+    <text x="18" y="68" font-size="12.5" fill="#6C6A66">Terrassement, mise à niveau</text><text x="282" y="68" font-size="12.5" fill="#6C6A66" text-anchor="end">18,00 €/m²</text>
+    <rect x="12" y="80" width="276" height="22" rx="6" fill="#FFC64D" opacity=".45"/>
+    <text x="18" y="95" font-size="12.5" fill="#14151A" font-weight="700">Dallage BA 15cm, treillis ST25</text><text x="282" y="95" font-size="12.5" fill="#14151A" text-anchor="end" font-weight="700">84,00 €/m²</text>
+    <text x="18" y="122" font-size="12.5" fill="#6C6A66">Joints de dilatation</text><text x="282" y="122" font-size="12.5" fill="#6C6A66" text-anchor="end">9,50 €/ml</text>
+  </g>
+  <g transform="translate(52 448) rotate(-1.5)">
+    <rect width="300" height="150" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="34" height="22" rx="6" fill="#E5484D"/><text x="35" y="31.5" font-size="9.5" font-weight="800" fill="#fff" text-anchor="middle">PDF</text>
+    <text x="62" y="32" font-size="13" font-weight="700" fill="#14151A">Facture F-8790 · 01/2026</text>
+    <rect x="12" y="53" width="276" height="22" rx="6" fill="#FFC64D" opacity=".45"/>
+    <text x="18" y="68" font-size="12.5" fill="#14151A" font-weight="700">Acier HA façonné</text><text x="282" y="68" font-size="12.5" fill="#14151A" text-anchor="end" font-weight="700">1,42 €/kg</text>
+    <text x="18" y="95" font-size="12.5" fill="#6C6A66">Treillis soudé ST25C</text><text x="282" y="95" font-size="12.5" fill="#6C6A66" text-anchor="end">3,10 €/m²</text>
+    <text x="18" y="122" font-size="12.5" fill="#6C6A66">Transport</text><text x="282" y="122" font-size="12.5" fill="#6C6A66" text-anchor="end">85,00 €</text>
+  </g>
+  <g transform="translate(410 356)">
+    <path d="M0 0 H50" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M38 -11 L53 0 L38 11" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== 2. La bibliothèque ===== -->
+  <text x="490" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">2 · LA BIBLIOTHÈQUE DE PRIX</text>
+  <text x="490" y="94" font-size="22" font-weight="800" fill="#14151A">Une ligne par ouvrage, vérifiable</text>
+  <g transform="translate(490 122)">
+    <rect x="8" y="8" width="662" height="470" rx="20" fill="#EDEBFF"/>
+    <rect width="662" height="470" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <g font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">
+      <text x="24" y="36">OUVRAGE</text><text x="282" y="36">UNITÉ</text><text x="350" y="36">NIVEAU</text><text x="510" y="36" text-anchor="end">PRIX HT</text><text x="534" y="36">SOURCE</text>
+    </g>
+    <path d="M0 56 H662" stroke="#14151A" stroke-width="2"/>
+    <text x="24" y="86" font-size="15" font-weight="700" fill="#14151A">Béton C25/30 livré toupie</text><text x="24" y="106" font-size="12" fill="#6C6A66">FO-BET-C25</text><text x="282" y="96" font-size="14.5" fill="#14151A">m³</text><rect x="350" y="79" width="64" height="24" rx="12" fill="#EDEBFF"/><text x="382.0" y="95.5" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Achat</text><text x="510" y="96" font-size="15.5" font-weight="800" fill="#14151A" text-anchor="end">158,00 €</text><text x="534" y="96" font-size="12.5" fill="#5A4BFF" text-decoration="underline">Facture F-8812</text>
+    <path d="M0 125 H662" stroke="#E4E2DD"/>
+    <text x="24" y="155" font-size="15" font-weight="700" fill="#14151A">Acier HA façonné</text><text x="24" y="175" font-size="12" fill="#6C6A66">FO-ACI-HA</text><text x="282" y="165" font-size="14.5" fill="#14151A">kg</text><rect x="350" y="148" width="64" height="24" rx="12" fill="#EDEBFF"/><text x="382.0" y="164.5" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Achat</text><text x="510" y="165" font-size="15.5" font-weight="800" fill="#14151A" text-anchor="end">1,42 €</text><text x="534" y="165" font-size="12.5" fill="#5A4BFF" text-decoration="underline">Facture F-8790</text>
+    <path d="M0 194 H662" stroke="#E4E2DD"/>
+    <text x="24" y="224" font-size="15" font-weight="700" fill="#14151A">Location mini-pelle 5 t</text><text x="24" y="244" font-size="12" fill="#6C6A66">LO-PEL-05</text><text x="282" y="234" font-size="14.5" fill="#14151A">jour</text><rect x="350" y="217" width="64" height="24" rx="12" fill="#EDEBFF"/><text x="382.0" y="233.5" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Achat</text><text x="510" y="234" font-size="15.5" font-weight="800" fill="#14151A" text-anchor="end">640,00 €</text><text x="534" y="234" font-size="12.5" fill="#5A4BFF" text-decoration="underline">Facture F-8602</text>
+    <path d="M0 263 H662" stroke="#E4E2DD"/>
+    <text x="24" y="293" font-size="15" font-weight="700" fill="#14151A">Dalle béton armé ép. 15 cm</text><text x="24" y="313" font-size="12" fill="#6C6A66">GO-DAL-015</text><text x="282" y="303" font-size="14.5" fill="#14151A">m²</text><rect x="350" y="286" width="64" height="24" rx="12" fill="#D9F7EE"/><text x="382.0" y="302.5" font-size="12" font-weight="700" fill="#0E7C5F" text-anchor="middle">Vente</text><text x="510" y="303" font-size="15.5" font-weight="800" fill="#14151A" text-anchor="end">84,00 €</text><text x="534" y="303" font-size="12.5" fill="#5A4BFF" text-decoration="underline">Devis D-2026-041</text>
+    <path d="M0 332 H662" stroke="#E4E2DD"/>
+    <text x="24" y="362" font-size="15" font-weight="700" fill="#14151A">Semelle filante BA 50×25</text><text x="24" y="382" font-size="12" fill="#6C6A66">GO-SEM-FIL</text><text x="282" y="372" font-size="14.5" fill="#14151A">ml</text><rect x="350" y="355" width="64" height="24" rx="12" fill="#D9F7EE"/><text x="382.0" y="371.5" font-size="12" font-weight="700" fill="#0E7C5F" text-anchor="middle">Vente</text><text x="510" y="372" font-size="15.5" font-weight="800" fill="#14151A" text-anchor="end">98,00 €</text><text x="534" y="372" font-size="12.5" fill="#5A4BFF" text-decoration="underline">Devis D-2026-038</text>
+    <path d="M0 401 H662" stroke="#E4E2DD"/>
+    <text x="24" y="431" font-size="15" font-weight="700" fill="#14151A">Maçonnerie agglos 20 cm</text><text x="24" y="451" font-size="12" fill="#6C6A66">GO-MAC-B20</text><text x="282" y="441" font-size="14.5" fill="#14151A">m²</text><rect x="350" y="424" width="64" height="24" rx="12" fill="#D9F7EE"/><text x="382.0" y="440.5" font-size="12" font-weight="700" fill="#0E7C5F" text-anchor="middle">Vente</text><text x="510" y="441" font-size="15.5" font-weight="800" fill="#14151A" text-anchor="end">68,00 €</text><text x="534" y="441" font-size="12.5" fill="#5A4BFF" text-decoration="underline">Devis D-2026-012</text>
+  </g>
+  <text x="490" y="624" font-size="13" fill="#6C6A66">Chaque prix garde son unité, sa date et le document d'où il vient. Données fictives.</text>
+</svg>

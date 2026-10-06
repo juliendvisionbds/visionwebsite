@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Validation d'un échantillon de la bibliothèque de prix : lignes validées, écart du simple au double à vérifier, ouvrages à séparer (données fictives)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">ÉTAPE 4 · LA VALIDATION</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Un échantillon relu par ceux qui chiffrent</text>
+  <g transform="translate(48 136)">
+    <rect x="8" y="8" width="760" height="456" rx="20" fill="#EDEBFF"/>
+    <rect width="760" height="456" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <g font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">
+      <text x="24" y="36">OUVRAGE NORMALISÉ</text><text x="278" y="36">UNITÉ</text><text x="334" y="36">PRIX RELEVÉS</text><text x="504" y="36">VERDICT</text>
+    </g>
+    <path d="M0 56 H760" stroke="#14151A" stroke-width="2"/>
+    <text x="24" y="101" font-size="15" font-weight="700" fill="#14151A">Dalle béton armé ép. 15 cm</text><text x="278" y="101" font-size="14.5" fill="#14151A">m²</text><rect x="334" y="83" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="358.0" y="101" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">82 €</text><rect x="388" y="83" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="412.0" y="101" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">84 €</text><rect x="442" y="83" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="466.0" y="101" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">86 €</text><circle cx="516" cy="96" r="11" fill="#25D3A4"/><path d="M510.5 96 l4 4 l7 -8" fill="none" stroke="#14151A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="538" y="101" font-size="14.5" font-weight="700" fill="#14151A">Validé</text>
+    <path d="M0 136 H760" stroke="#E4E2DD"/>
+    <text x="24" y="181" font-size="15" font-weight="700" fill="#14151A">Maçonnerie agglos 20 cm</text><text x="278" y="181" font-size="14.5" fill="#14151A">m²</text><rect x="334" y="163" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="358.0" y="181" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">64 €</text><rect x="388" y="163" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="412.0" y="181" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">68 €</text><rect x="442" y="163" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="466.0" y="181" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">71 €</text><circle cx="516" cy="176" r="11" fill="#25D3A4"/><path d="M510.5 176 l4 4 l7 -8" fill="none" stroke="#14151A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="538" y="181" font-size="14.5" font-weight="700" fill="#14151A">Validé</text>
+    <rect x="1" y="217" width="758" height="78" fill="#FFF8E6"/>
+    <path d="M0 216 H760" stroke="#E4E2DD"/>
+    <text x="24" y="261" font-size="15" font-weight="700" fill="#14151A">Fouille en rigole</text><text x="278" y="261" font-size="14.5" fill="#14151A">m³</text><rect x="334" y="243" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="358.0" y="261" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">46 €</text><rect x="388" y="243" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="412.0" y="261" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">92 €</text><circle cx="516" cy="248" r="11" fill="#FFC64D"/><text x="516" y="253" font-size="15" font-weight="800" fill="#14151A" text-anchor="middle">!</text><text x="538" y="253" font-size="14.5" font-weight="700" fill="#14151A">Écart du simple au double</text><text x="538" y="273" font-size="12.5" fill="#6C6A66">Erreur d'unité ? À vérifier.</text>
+    <rect x="1" y="297" width="758" height="78" fill="#FFF3F1"/>
+    <path d="M0 296 H760" stroke="#E4E2DD"/>
+    <text x="24" y="341" font-size="15" font-weight="700" fill="#14151A">Dalle BA 15 cm sur hérisson</text><text x="278" y="341" font-size="14.5" fill="#14151A">m²</text><rect x="334" y="323" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="358.0" y="341" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">84 €</text><rect x="388" y="323" width="56" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="416.0" y="341" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">109 €</text><circle cx="516" cy="328" r="11" fill="#E5484D"/><text x="516" y="333" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">!</text><text x="538" y="333" font-size="14.5" font-weight="700" fill="#14151A">À séparer</text><text x="538" y="353" font-size="12.5" fill="#6C6A66">Périmètre différent.</text>
+    <path d="M0 376 H760" stroke="#E4E2DD"/>
+    <text x="24" y="421" font-size="15" font-weight="700" fill="#14151A">Semelle filante BA 50×25</text><text x="278" y="421" font-size="14.5" fill="#14151A">ml</text><rect x="334" y="403" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="358.0" y="421" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">95 €</text><rect x="388" y="403" width="48" height="26" rx="8" fill="#FAF9F6" stroke="#E4E2DD"/><text x="412.0" y="421" font-size="13.5" font-weight="600" fill="#14151A" text-anchor="middle">98 €</text><circle cx="516" cy="416" r="11" fill="#25D3A4"/><path d="M510.5 416 l4 4 l7 -8" fill="none" stroke="#14151A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="538" y="421" font-size="14.5" font-weight="700" fill="#14151A">Validé</text>
+  </g>
+
+  <g transform="translate(848 136)">
+    <rect width="304" height="456" rx="20" fill="#14151A"/>
+    <text x="24" y="42" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#FFC64D">SUR CHAQUE LIGNE</text>
+    <text x="24" y="72" font-size="21" font-weight="800" fill="#fff">4 questions</text>
+    <circle cx="38" cy="120" r="14" fill="#5A4BFF"/><text x="38" y="125" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">1</text><text x="64" y="116" font-size="14.5" fill="#fff">Le libellé correspond-il</text><text x="64" y="136" font-size="14.5" fill="#fff">à ce qu'on réalise ?</text>
+    <circle cx="38" cy="188" r="14" fill="#5A4BFF"/><text x="38" y="193" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">2</text><text x="64" y="184" font-size="14.5" fill="#fff">L'unité est-elle celle</text><text x="64" y="204" font-size="14.5" fill="#fff">de nos devis ?</text>
+    <circle cx="38" cy="256" r="14" fill="#5A4BFF"/><text x="38" y="261" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">3</text><text x="64" y="252" font-size="14.5" fill="#fff">Le prix est-il dans l'ordre</text><text x="64" y="272" font-size="14.5" fill="#fff">de grandeur attendu ?</text>
+    <circle cx="38" cy="324" r="14" fill="#5A4BFF"/><text x="38" y="329" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">4</text><text x="64" y="320" font-size="14.5" fill="#fff">Deux ouvrages regroupés</text><text x="64" y="340" font-size="14.5" fill="#fff">sont-ils à séparer ?</text>
+    <path d="M24 384 H280" stroke="#fff" opacity=".2"/>
+    <text x="24" y="412" font-size="13" fill="#fff" opacity=".75">30 à 50 lignes, une ou deux</text>
+    <text x="24" y="431" font-size="13" fill="#fff" opacity=".75">sessions d'une heure.</text>
+  </g>
+  <text x="48" y="624" font-size="13" fill="#6C6A66">Données fictives.</text>
+</svg>

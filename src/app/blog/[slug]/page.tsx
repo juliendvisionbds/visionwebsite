@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import LegacyPage from "@/components/LegacyPage";
 import { crumbsOf, getPost, listPosts, renderPost, shareImage, type Kind } from "@/lib/posts";
 import { loadPageFiles } from "@/lib/load-content";
-import { ORG_ID, SITE, breadcrumb, jsonLdHtml, pageUrl, social } from "@/lib/seo";
+import { ORG_ID, SITE, breadcrumb, faqPage, jsonLdHtml, pageUrl, social } from "@/lib/seo";
 
 const KIND: Kind = "blog";
 
@@ -53,6 +53,7 @@ export default async function Page({ params }: PageProps<"/blog/[slug]">) {
       author: p.author ? { "@type": "Person", name: p.author, ...(p.authorRole && { jobTitle: p.authorRole }) } : { "@id": ORG_ID },
       publisher: { "@id": ORG_ID },
     },
+    ...(p.faq.length ? [faqPage(p.faq)] : []),
   ];
 
   return (

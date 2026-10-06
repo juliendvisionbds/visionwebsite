@@ -15,6 +15,10 @@
  *   ### Sous-section
  *   **Libellé :** texte         paragraphes consécutifs de ce type → encadré « fiche »
  *   - élément                   liste à puces
+ *   1. élément                  liste numérotée
+ *   | A | B |                   tableau (2e ligne : |---|---|), défilable sur mobile
+ *   :: Titre                    encadré : ligne de titre, puis une liste ou un paragraphe dans le même bloc
+ *   ## Questions fréquentes     les ### de cette section alimentent aussi les données FAQ pour Google
  *   > citation                  citation mise en avant
  *   [Légende]                   emplacement de visuel à venir (légende affichée dessous)
  *   ![Légende](/blog/image.png) visuel (image dans public/), avec légende
@@ -58,7 +62,13 @@ export type PostMeta = {
   ogImage?: string;
 };
 
-export type Post = PostMeta & { html: string; toc: Array<{ id: string; text: string }>; minutes: number };
+export type Post = PostMeta & {
+  html: string;
+  toc: Array<{ id: string; text: string }>;
+  minutes: number;
+  /** Questions / réponses de la section « Questions fréquentes » (texte brut, pour le JSON-LD). */
+  faq: Array<[q: string, a: string]>;
+};
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -79,6 +89,14 @@ const inline = (s: string) =>
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, u) => `<a href="${href(u)}">${t}</a>`)
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
     .replace(/(^|[\s(])\*([^*\s][^*]*?)\*(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>");
+
+/** Texte brut d'un bloc Markdown (pour les données structurées). */
+const plain = (s: string) => s.replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1").replace(/\*+/g, "").replace(/\s+/g, " ").trim();
+
+const cells = (line: string) => line.replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+
+const list = (tag: "ul" | "ol", lines: string[]) =>
+  `<${tag}>${lines.map((l) => `<li>${inline(l.replace(/^(-|\d+\.) /, ""))}</li>`).join("")}</${tag}>`;
 
 export const formatDate = (d: string) =>
   d ? new Date(`${d}T12:00:00`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "";
@@ -106,6 +124,8 @@ export function getPost(kind: Kind, slug: string): Post | null {
   const toc: Post["toc"] = [];
   const out: string[] = [];
   let facts: string[] = [];
+  const faq: Post["faq"] = [];
+  let inFaq = false;
   const flushFacts = () => {
     if (facts.length) out.push(`<dl class="post-facts">${facts.join("")}</dl>`);
     facts = [];
@@ -119,15 +139,29 @@ export function getPost(kind: Kind, slug: string): Post | null {
     }
     flushFacts();
 
+    const lines = block.split("\n");
     let m;
     if ((m = block.match(/^# (.+)$/))) out.push(`<p class="post-lead">${inline(m[1])}</p>`);
     else if ((m = block.match(/^## (.+)$/))) {
       const id = slugify(m[1]);
       toc.push({ id, text: m[1] });
+      inFaq = /^questions fréquentes/i.test(m[1]);
       out.push(`<h2 id="${id}">${inline(m[1])}</h2>`);
-    } else if ((m = block.match(/^### (.+)$/))) out.push(`<h3>${inline(m[1])}</h3>`);
-    else if (block.split("\n").every((l) => l.startsWith("- ")))
-      out.push(`<ul>${block.split("\n").map((l) => `<li>${inline(l.slice(2))}</li>`).join("")}</ul>`);
+    } else if ((m = block.match(/^### (.+)$/))) {
+      if (inFaq) faq.push([plain(m[1]), ""]);
+      out.push(`<h3>${inline(m[1])}</h3>`);
+    } else if (lines.every((l) => l.startsWith("- "))) out.push(list("ul", lines));
+    else if (lines.every((l) => /^\d+\. /.test(l))) out.push(list("ol", lines));
+    else if (lines.length > 2 && lines.every((l) => l.startsWith("|")) && /^[|\s:-]+$/.test(lines[1])) {
+      const row = (l: string, tag: "th" | "td") => `<tr>${cells(l).map((c) => `<${tag}>${inline(c)}</${tag}>`).join("")}</tr>`;
+      out.push(
+        `<div class="post-table"><table><thead>${row(lines[0], "th")}</thead><tbody>${lines.slice(2).map((l) => row(l, "td")).join("")}</tbody></table></div>`
+      );
+    } else if ((m = lines[0].match(/^:: (.+)$/)) && lines.length > 1) {
+      const rest = lines.slice(1);
+      const content = rest.every((l) => l.startsWith("- ")) ? list("ul", rest) : `<p>${inline(rest.join(" "))}</p>`;
+      out.push(`<aside class="post-callout"><b>${inline(m[1])}</b>${content}</aside>`);
+    }
     else if (block.split("\n").every((l) => l.startsWith(">")))
       out.push(`<blockquote>${inline(block.split("\n").map((l) => l.replace(/^>\s?/, "")).join(" "))}</blockquote>`);
     else if ((m = block.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/)))
@@ -139,11 +173,14 @@ export function getPost(kind: Kind, slug: string): Post | null {
     else if ((m = block.match(/^\*\*\[([^\]]+)\]\(([^)\s]+)\)\*\*$/))) {
       const label = esc(m[1]).replace(/\s*→$/, "");
       out.push(`<p class="post-cta"><a class="btn btn-primary" href="${href(m[2])}">${label} <span class="arw">→</span></a></p>`);
-    } else out.push(`<p>${inline(block.replace(/\n/g, " "))}</p>`);
+    } else {
+      if (inFaq && faq.length) faq[faq.length - 1][1] = `${faq[faq.length - 1][1]} ${plain(block)}`.trim();
+      out.push(`<p>${inline(block.replace(/\n/g, " "))}</p>`);
+    }
   }
   flushFacts();
 
-  const words = body.replace(/[#*\-[\]()>]/g, " ").split(/\s+/).filter(Boolean).length;
+  const words = body.replace(/[#*\-[\]()>|]/g, " ").split(/\s+/).filter(Boolean).length;
 
   return {
     kind,
@@ -165,6 +202,7 @@ export function getPost(kind: Kind, slug: string): Post | null {
     ogImage: meta.ogImage,
     html: out.join("\n"),
     toc,
+    faq: faq.filter(([, a]) => a),
     minutes: Math.max(1, Math.round(words / 220)),
   };
 }
@@ -181,6 +219,11 @@ export const allPosts = (kind: Kind) =>
 const metaLine = (p: Post) =>
   `<div class="post-meta">${p.date ? `<span>${formatDate(p.date)}</span>` : ""}<span>${p.minutes} min de lecture</span></div>`;
 
+const authorLine = (p: Post) =>
+  p.author
+    ? `<div class="post-author">${p.authorPhoto ? `<img src="${esc(p.authorPhoto)}" alt="">` : ""}<div><b>${esc(p.author)}</b>${p.authorRole ? `<small>${esc(p.authorRole)}</small>` : ""}</div></div>`
+    : "";
+
 /** Fil d'Ariane d'une page (pour le JSON-LD). */
 export const crumbsOf = (p: Post): Array<[string, string]> => [
   ["Accueil", "/"],
@@ -191,9 +234,7 @@ export const crumbsOf = (p: Post): Array<[string, string]> => [
 /** En-tête, sommaire collant et article, insérés dans le gabarit src/content/blog/_template/body.html. */
 export function renderPost(p: Post) {
   const [crumbLabel, crumbHref] = KINDS[p.kind].crumb;
-  const author = p.author
-    ? `<div class="post-author">${p.authorPhoto ? `<img src="${esc(p.authorPhoto)}" alt="">` : ""}<div><b>${esc(p.author)}</b>${p.authorRole ? `<small>${esc(p.authorRole)}</small>` : ""}</div></div>`
-    : "";
+  const author = authorLine(p);
   const side = p.sideTitle
     ? `<div class="post-side-cta"><b>${esc(p.sideTitle)}</b>${p.sideText ? `<p>${esc(p.sideText)}</p>` : ""}<a href="/contact" data-booking>${esc(p.sideLink ?? "Réserver un appel →")}</a></div>`
     : "";
@@ -238,11 +279,15 @@ export function renderIndex(posts: Post[]) {
 ${posts
   .map(
     (p) => `      <a class="post-card reveal" href="/${p.kind}/${p.slug}">
-        <span class="k">${esc(p.tag)}</span>
-        <h2>${esc(p.title)}</h2>
-        <p>${esc(p.description)}</p>
-        ${metaLine(p)}
-        <span class="go">Lire l'article <span class="arw">→</span></span>
+        ${p.cover ? `<img class="post-card-cover" src="${esc(p.cover)}" alt="${esc(p.coverAlt ?? "")}" loading="lazy">` : ""}
+        <div class="post-card-body">
+          <span class="k">${esc(p.tag)}</span>
+          <h2>${esc(p.title)}</h2>
+          <p>${esc(p.description)}</p>
+          ${authorLine(p)}
+          ${metaLine(p)}
+          <span class="go">Lire l'article <span class="arw">→</span></span>
+        </div>
       </a>`
   )
   .join("\n")}

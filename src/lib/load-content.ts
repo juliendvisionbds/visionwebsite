@@ -46,12 +46,10 @@ function navIaBtp(current: string) {
   const items = allPosts("cas")
     .map((p) => `<a href="/cas/${p.slug}"><b>${esc(p.tag)}</b><small>${esc(p.navText ?? p.description)}</small></a>`)
     .join("");
-  // Cas d'usage annoncé, pas encore publié.
-  const soon = `<span class="nd-soon"><b>Appels d'offres <em>Bientôt</em></b><small>Les consultations triées, le dossier préparé</small></span>`;
   return `<div class="nd hide-m">
         <a class="nl" href="/ia-btp"${current} aria-haspopup="true">L'IA dans le BTP<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></a>
         <div class="nd-menu">
-          ${items}${soon}
+          ${items}
         </div>
       </div>`;
 }
@@ -66,11 +64,7 @@ const NAV_CSS = `
 .nd-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
 .nd:hover .nd-menu,.nd:focus-within .nd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
 .nd:hover>.nl svg,.nd:focus-within>.nl svg{transform:rotate(180deg)}
-.nd-menu a,.nd-soon{display:block;padding:10px 12px;border-radius:11px;transition:background .15s}
-.nd-soon{cursor:default}
-.nd-soon b,.nd-soon small{opacity:.55}
-.nd-soon em{font-style:normal;font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  margin-left:6px;padding:2px 7px;border-radius:6px;background:var(--line-soft);color:var(--muted);vertical-align:2px}
+.nd-menu a{display:block;padding:10px 12px;border-radius:11px;transition:background .15s}
 .nd-menu a:hover,.nd-menu a:focus-visible{background:var(--tint)}
 .nd-menu b{display:block;font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:15px;color:var(--ink);line-height:1.25}
 .nd-menu small{display:block;font-size:13px;color:var(--muted);line-height:1.35;margin-top:2px}
@@ -86,7 +80,6 @@ function mobileMenu() {
     <div class="wrap">
       <a class="nm-l" href="/ia-btp">L'IA dans le BTP</a>
       ${cas}
-      <span class="nm-sub nm-soon">Appels d'offres · bientôt</span>
       <a class="nm-l" href="/outils">Outils gratuits</a>
       <a class="nm-l" href="/blog">Blog</a>
       <a class="nm-l" href="/a-propos">À propos</a>
@@ -114,7 +107,7 @@ header.nav-open .nb span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
   .nm .wrap{display:flex;flex-direction:column;padding-top:10px;padding-bottom:24px}
   .nm-l{display:block;padding:14px 0;font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em;color:var(--ink);border-bottom:1px solid var(--line-soft)}
   .nm-sub{display:block;padding:9px 0 9px 16px;font-size:15.5px;font-weight:500;color:var(--muted);border-left:2px solid var(--line-soft)}
-  .nm-soon{opacity:.55;margin-bottom:8px}
+  .nm-sub:last-of-type{margin-bottom:8px}
   .nm-cta{margin-top:20px;justify-content:center}
   /* le bouton rond de réservation ne passe pas par-dessus le menu ouvert */
   body:has(header.nav-open) .bk-fab,body:has(header.nav-open) .bk-card{display:none}
