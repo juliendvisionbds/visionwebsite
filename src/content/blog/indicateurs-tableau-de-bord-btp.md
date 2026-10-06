@@ -90,7 +90,7 @@ C'est l'étape qui fait la différence entre un tableau de bord fiable et un tab
 
 Deux points d'attention :
 
-- **Le chiffre d'affaires ne donne pas la marge.** Un tableau construit uniquement sur le journal des ventes montre l'activité : CA par client, par chantier, tendances, concentration. C'est utile, mais ça ne dit pas si un chantier gagne ou perd de l'argent. Pour la marge, il faut rattacher achats, heures et sous-traitance à chaque chantier. Nous détaillerons la méthode dans un prochain article sur le suivi de rentabilité.
+- **Le chiffre d'affaires ne donne pas la marge.** Un tableau construit uniquement sur le journal des ventes montre l'activité : CA par client, par chantier, tendances, concentration. C'est utile, mais ça ne dit pas si un chantier gagne ou perd de l'argent. Pour la marge, il faut rattacher achats, heures et sous-traitance à chaque chantier. La méthode est détaillée dans [notre article sur le suivi de rentabilité d'un chantier](/blog/suivi-rentabilite-chantier/).
 - **L'affectation des factures fournisseurs est souvent le maillon faible.** Une facture sans référence de chantier finit en charge générale, et la marge du chantier paraît meilleure qu'elle n'est.
 
 Si une source n'existe pas encore, ce n'est pas une raison pour abandonner l'indicateur. Notez-le « à construire » et commencez par ceux dont les données sont disponibles.

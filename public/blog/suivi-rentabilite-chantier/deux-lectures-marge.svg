@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Deux lectures de la marge du même chantier à 62 % d'avancement : 32,9 % avec les seules factures reçues, 25,4 % en comptant 8 400 € d'engagements non facturés (chiffres fictifs)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">CHANTIER À 62 % D'AVANCEMENT · PRODUCTION 111 600 €</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Deux lectures du même chantier</text>
+  <g transform="translate(48 136)">
+    <rect x="8" y="8" width="484" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="484" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="28" y="42" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">LECTURE 1 · FACTURES REÇUES</text>
+    <text x="28" y="76" font-size="23" font-weight="800" fill="#14151A">« Tout va bien »</text>
+    <text x="28" y="102" font-size="14" fill="#6C6A66">111 600 € de production − 74 860 € facturés</text>
+    <clipPath id="m1"><rect x="28" y="124" width="428" height="44" rx="12"/></clipPath>
+    <g clip-path="url(#m1)">
+      <rect x="28" y="124" width="428" height="44" fill="#25D3A4"/>
+      <rect x="28" y="124" width="287.1" height="44" fill="#FFC64D"/>
+      <rect x="28" y="124" width="287.1" height="44" fill="#14151A"/>
+    </g>
+    <rect x="28" y="124" width="428" height="44" rx="12" fill="none" stroke="#14151A" stroke-width="2"/>
+    <text x="44" y="151" font-size="14" font-weight="700" fill="#fff">Facturé · 74 860 €</text>
+    <text x="444" y="151" font-size="13" font-weight="700" fill="#14151A" text-anchor="end">Marge</text>
+    <text x="28" y="198" font-size="13" fill="#6C6A66">Les engagements ne sont pas comptés.</text>
+    <path d="M28 220 H456" stroke="#E4E2DD"/>
+    <text x="28" y="250" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">MARGE À DATE</text>
+    <text x="28" y="318" font-size="58" font-weight="800" fill="#14151A">32,9 %</text>
+    <text x="456" y="318" font-size="24" font-weight="800" fill="#6C6A66" text-anchor="end">36 740 €</text>
+    <rect x="28" y="344" width="232" height="30" rx="15" fill="#E3F9F2"/><text x="144.0" y="364" font-size="13.5" font-weight="700" fill="#0E7C5F" text-anchor="middle">Mieux que le budget (29,4 %)</text>
+  </g>
+  <g transform="translate(668 136)">
+    <rect x="8" y="8" width="484" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="484" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="28" y="42" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">LECTURE 2 · AVEC LES ENGAGEMENTS</text>
+    <text x="28" y="76" font-size="23" font-weight="800" fill="#14151A">La marge réelle à date</text>
+    <text x="28" y="102" font-size="14" fill="#6C6A66">111 600 € de production − 83 260 € de coût réel</text>
+    <clipPath id="m2"><rect x="28" y="124" width="428" height="44" rx="12"/></clipPath>
+    <g clip-path="url(#m2)">
+      <rect x="28" y="124" width="428" height="44" fill="#25D3A4"/>
+      <rect x="28" y="124" width="319.3" height="44" fill="#FFC64D"/>
+      <rect x="28" y="124" width="287.1" height="44" fill="#14151A"/>
+    </g>
+    <rect x="28" y="124" width="428" height="44" rx="12" fill="none" stroke="#14151A" stroke-width="2"/>
+    <text x="44" y="151" font-size="14" font-weight="700" fill="#fff">Facturé · 74 860 €</text>
+    <text x="444" y="151" font-size="13" font-weight="700" fill="#14151A" text-anchor="end">Marge</text>
+    <path d="M331.2 172 v10" stroke="#14151A" stroke-width="1.5"/><text x="331.2" y="198" font-size="13" font-weight="700" fill="#14151A" text-anchor="middle">+ 8 400 € engagés</text>
+    <path d="M28 220 H456" stroke="#E4E2DD"/>
+    <text x="28" y="250" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">MARGE À DATE</text>
+    <text x="28" y="318" font-size="58" font-weight="800" fill="#14151A">25,4 %</text>
+    <text x="456" y="318" font-size="24" font-weight="800" fill="#6C6A66" text-anchor="end">28 340 €</text>
+    <rect x="28" y="344" width="262" height="30" rx="15" fill="#FFE3E0"/><text x="159.0" y="364" font-size="13.5" font-weight="700" fill="#B3261E" text-anchor="middle">4 points sous le budget (29,4 %)</text>
+  </g>
+  <g transform="translate(600 336)">
+    <circle r="56" fill="#14151A"/>
+    <text y="-4" font-size="21" font-weight="800" fill="#FFC64D" text-anchor="middle">8 400 €</text>
+    <text y="15" font-size="11.5" font-weight="600" fill="#fff" text-anchor="middle">engagés,</text>
+    <text y="30" font-size="11.5" font-weight="600" fill="#fff" text-anchor="middle">non facturés</text>
+  </g>
+  <g transform="translate(48 566)">
+    <rect width="1104" height="48" rx="16" fill="#14151A"/>
+    <text x="552" y="30" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">Sans les engagements, le problème aurait été découvert deux mois plus tard. Chiffres fictifs.</text>
+  </g>
+</svg>
