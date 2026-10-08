@@ -208,3 +208,9 @@ if(pform){
     document.querySelectorAll('.pdone .blip').forEach(el=>{el.innerHTML=blipSVG(el.dataset.pose,el.dataset.color)});
   });
 }
+
+/* retour au formulaire : après le défilement, le curseur est déjà dans le premier champ */
+document.querySelectorAll('a[href="#candidature"]').forEach(a=>a.addEventListener('click',()=>{
+  const first=document.querySelector('#pform [name="name"]');
+  if(first) setTimeout(()=>first.focus({preventScroll:true}),700);
+}));

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import Blip from "@/components/app/Blip";
 import Logo from "@/components/app/Logo";
 import { currentPartner } from "@/lib/partners/auth";
 import { SITE } from "@/lib/seo";
@@ -13,23 +12,24 @@ export default async function Page({ searchParams }: PageProps<"/portail/connexi
   const expired = (await searchParams).lien === "expire";
   return (
     <main className="app-auth">
-      <div className="card yellow">
-        <Blip pose="wave" color="yellow" />
+      <div className="app-auth-in">
         <Logo href="/connexion/" />
-        <h1>Espace partenaires</h1>
-        <p className="lede">Votre kit de recommandation, vos recommandations et vos commissions.</p>
-        {expired && (
-          <p className="error" role="alert" style={{ marginBottom: 14 }}>
-            Ce lien n’est plus valable. Demandez-en un nouveau ci-dessous.
+        <div className="card yellow">
+          <h1>Espace partenaires</h1>
+          <p className="lede">Votre kit de recommandation, vos recommandations et vos commissions.</p>
+          {expired && (
+            <p className="error" role="alert" style={{ marginBottom: 14 }}>
+              Ce lien n’est plus valable. Demandez-en un nouveau ci-dessous.
+            </p>
+          )}
+          <LoginForm />
+          <p className="note" style={{ marginTop: 18 }}>
+            Pas encore partenaire ?{" "}
+            <a className="link" href={`${SITE}/devenir-partenaire/`}>
+              Rejoindre le programme
+            </a>
           </p>
-        )}
-        <LoginForm />
-        <p className="note" style={{ marginTop: 18 }}>
-          Pas encore partenaire ?{" "}
-          <a className="link" href={`${SITE}/devenir-partenaire/`}>
-            Rejoindre le programme
-          </a>
-        </p>
+        </div>
       </div>
     </main>
   );

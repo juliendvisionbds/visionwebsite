@@ -344,7 +344,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .pt-list li::before{content:"";width:18px;height:18px;border-radius:6px;background:var(--mint);margin-top:4px;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.4' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .pt-list b{color:var(--ink);font-weight:600}
-.pt-side{position:sticky;top:96px}
+.pt-side{position:sticky;top:96px;scroll-margin-top:96px}
 @media(max-width:1000px){.pt-side{position:static}}
 .pt-alt{margin-top:18px;font-size:14px;color:var(--muted);text-align:center}
 .pt-alt a{color:var(--brand);font-weight:600}
@@ -371,12 +371,48 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .pdone h2{font-size:26px;letter-spacing:-.03em}
 .pdone p{color:var(--muted);font-size:15px;margin-top:8px}
 
+/* commissions : aperçu du tableau de bord partenaire */
+.pt-com{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,72px);align-items:center}
+.pt-com > *{min-width:0}
+@media(max-width:1000px){.pt-com{grid-template-columns:1fr}}
+.pt-com h2{font-size:clamp(32px,4.2vw,54px);letter-spacing:-.04em;margin-top:18px}
+.pt-com .lede{margin-top:20px}
+.pt-com .pt-list{margin-top:24px}
+.dash{position:relative;background:var(--paper-2);border:2px solid var(--ink);border-radius:24px;padding:clamp(16px,2vw,22px);box-shadow:8px 8px 0 0 var(--tint)}
+.dash-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 4px 14px;border-bottom:1px solid var(--line-soft)}
+.dash-head span{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dash-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+@media(max-width:560px){.dash-kpis{grid-template-columns:1fr 1fr}}
+.dash-kpi{border:1px solid var(--line);border-radius:14px;padding:13px 12px}
+.dash-kpi b{display:block;font-family:Gabarito;font-weight:800;font-size:clamp(21px,2.2vw,27px);letter-spacing:-.04em;line-height:1;white-space:nowrap}
+.dash-kpi span{display:block;margin-top:7px;font-size:12.5px;color:var(--muted);line-height:1.3}
+.dash-kpi.hl{background:var(--ink);border-color:var(--ink)}
+.dash-kpi.hl b{color:var(--yellow)}
+.dash-kpi.hl span{color:rgba(250,249,246,.72)}
+.dash-rows{list-style:none;margin:6px 0 0;padding:0}
+.dash-rows li{display:grid;grid-template-columns:1fr auto auto;gap:6px 16px;align-items:center;padding:13px 4px;border-bottom:1px solid var(--line-soft);font-size:14.5px}
+.dash-rows li:last-child{border-bottom:0;padding-bottom:4px}
+.dash-rows b{font-weight:600}
+.dash-rows small{display:block;margin-top:1px;color:var(--muted);font-size:13px}
+.dash-rows .amt{font-family:Gabarito;font-weight:700;font-size:18px;letter-spacing:-.02em;text-align:right;white-space:nowrap;min-width:74px}
+.dash-badge{font-size:11.5px;font-weight:600;line-height:1;padding:6px 10px;border-radius:100px;white-space:nowrap}
+.dash-badge.paid{background:#DDF7EF;color:#0B6B52}
+.dash-badge.due{background:#FFF0CC;color:#7A4E00}
+@media(max-width:480px){.dash-rows li{grid-template-columns:1fr auto}.dash-badge{grid-row:2;justify-self:start}.dash-rows .amt{grid-row:1/3;grid-column:2}}
+.dash-blip{position:absolute;right:-16px;bottom:-44px;width:92px;z-index:3}
+@media(max-width:520px){.dash-blip{width:70px;right:-6px;bottom:-34px}}
+.dash-note{margin-top:16px;font-size:12.5px;color:var(--muted)}
+
 /* qui peut devenir partenaire + questions */
 .pt-who{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);background:var(--paper-2);border:2px solid var(--ink);border-radius:28px;padding:clamp(28px,4.5vw,60px);box-shadow:8px 8px 0 0 var(--tint)}
 @media(max-width:900px){.pt-who{grid-template-columns:1fr}}
 .pt-who h2{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.04em;margin-bottom:16px}
 .pt-who .pills{margin-top:22px}
 .pt-who .pill{font-size:14px;padding:8px 14px}
+/* colonne de gauche : le bouton se cale en bas, à hauteur de la dernière question */
+.pt-who > div:first-child{display:flex;flex-direction:column;align-items:flex-start}
+.pt-who-cta{margin-top:auto}
+.pt-who .pills{margin-bottom:28px}
 .pt-faq{display:grid;gap:0}
 .pt-faq div{padding:18px 0;border-top:1px solid var(--line-soft)}
 .pt-faq div:first-child{border-top:0;padding-top:0}

@@ -15,25 +15,27 @@ export default async function Page({ searchParams }: PageProps<"/admin/connexion
   const error = ERRORS[String((await searchParams).erreur)];
   return (
     <main className="app-auth">
-      <div className="card">
+      <div className="app-auth-in">
         <Logo href="/connexion/" />
-        <h1>Admin partenaires</h1>
-        <p className="lede">Réservé à l’équipe vision.</p>
-        {/* Formulaire POST classique vers src/app/admin/session/route.ts */}
-        <form className="form" method="post" action="/session/">
-          <label className="field">
-            <span>Mot de passe</span>
-            <input type="password" name="password" required autoFocus autoComplete="current-password" />
-          </label>
-          {error && (
-            <p className="error" role="alert">
-              {error}
-            </p>
-          )}
-          <button className="btn btn-primary" type="submit">
-            Entrer
-          </button>
-        </form>
+        <div className="card">
+          <h1>Admin partenaires</h1>
+          <p className="lede">Réservé à l’équipe vision.</p>
+          {/* Formulaire POST classique vers src/app/admin/session/route.ts */}
+          <form className="form" method="post" action="/session/">
+            <label className="field">
+              <span>Mot de passe</span>
+              <input type="password" name="password" required autoFocus autoComplete="current-password" />
+            </label>
+            {error && (
+              <p className="error" role="alert">
+                {error}
+              </p>
+            )}
+            <button className="btn btn-primary" type="submit">
+              Entrer
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   );
