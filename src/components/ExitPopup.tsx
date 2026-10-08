@@ -25,8 +25,8 @@ export default function ExitPopup() {
   const [step, setStep] = useState(0);
   const ctaRef = useRef<HTMLAnchorElement>(null);
 
-  // Inutile sur le quiz : le visiteur y est déjà.
-  const disabled = pathname.startsWith("/commencer");
+  // Inutile sur le quiz : le visiteur y est déjà. Hors sujet sur la page partenaires.
+  const disabled = pathname.startsWith("/commencer") || pathname.startsWith("/devenir-partenaire");
 
   // Intention de sortie : la souris quitte la fenêtre par le haut (onglets, barre d'adresse). Une fois par session.
   useEffect(() => {

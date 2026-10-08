@@ -62,7 +62,8 @@ export default function BookingWidget() {
 
   // Le quiz se termine déjà par la prise de rendez-vous ; /contact affiche déjà l'agenda.
   const hidden = pathname.startsWith("/commencer");
-  const noAuto = hidden || pathname.startsWith("/contact");
+  // Sur /devenir-partenaire, le visiteur n'est pas un prospect : pas d'ouverture automatique non plus.
+  const noAuto = hidden || pathname.startsWith("/contact") || pathname.startsWith("/devenir-partenaire");
 
   const days = useMemo(() => (card || modal ? nextWorkdays(5) : []), [card, modal]);
 

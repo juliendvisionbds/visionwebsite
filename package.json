@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "convert:html": "node scripts/convert-html.mjs"
+    "convert:html": "node scripts/convert-html.mjs",
+    "build:kit": "node scripts/build-kit.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.3.0",

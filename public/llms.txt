@@ -23,6 +23,7 @@
 - [L'équipe](https://www.visionbds.com/equipe/) : les trois associés de vision, leur parcours et leur rôle
 - [Diagnostic gratuit](https://www.visionbds.com/commencer/) : 7 questions, 2 minutes, plan personnalisé avec les 3 tâches prioritaires à automatiser
 - [Contact](https://www.visionbds.com/contact/) : réserver un appel de 30 minutes avec un associé
+- [Devenir partenaire](https://www.visionbds.com/devenir-partenaire/) : programme de recommandation, 15 % des contrats signés avec les entreprises présentées, dès le premier appel obtenu
 - [Blog](https://www.visionbds.com/blog/) : articles de vision, dont le manifeste de l'agence
 
 ## Cas d'usage IA BTP

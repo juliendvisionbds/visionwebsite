@@ -12,6 +12,7 @@ const PAGES: Array<[path: string, priority: number, changeFrequency: "weekly" | 
   ["/a-propos", 0.7, "monthly"],
   ["/equipe", 0.6, "monthly"],
   ["/contact", 0.6, "monthly"],
+  ["/devenir-partenaire", 0.5, "monthly"],
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

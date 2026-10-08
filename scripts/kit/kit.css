@@ -1,0 +1,97 @@
+/* One-pagers du kit partenaires : une page A4, imprimée en PDF par scripts/build-kit.mjs. */
+@page{size:A4;margin:0}
+:root{
+  --paper:#FAF9F6;--paper-2:#fff;--ink:#14151A;--muted:#5F5D59;--brand:#5A4BFF;--tint:#EDEBFF;
+  --honey:#FFC64D;--yellow:#FFC42E;--yellow-soft:#FFF0CC;--orange:#FF7A1A;--amber:#FFA000;--mint:#25D3A4;
+  --line:rgba(20,21,26,.14);--line-soft:rgba(20,21,26,.08);
+}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{margin:0;padding:0}
+body{width:210mm;height:297mm;overflow:hidden;background:var(--paper);color:var(--ink);
+  font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:9.6pt;line-height:1.45;-webkit-font-smoothing:antialiased}
+.page{width:210mm;height:297mm;padding:9.5mm 13mm 0;display:flex;flex-direction:column;position:relative}
+h1,h2,h3{font-family:Gabarito,system-ui,sans-serif;font-weight:800;letter-spacing:-.035em;line-height:1.04;margin:0}
+p{margin:0}
+.muted{color:var(--muted)}
+.brand{color:var(--brand)}
+
+/* en-tête */
+.top{display:flex;align-items:center;justify-content:space-between}
+.mark{font-family:Gabarito,system-ui,sans-serif;font-weight:800;font-size:25pt;letter-spacing:-.05em;display:inline-flex;align-items:center;line-height:1}
+.mark .blip{width:.62em;height:.62em;margin:0 .02em;position:relative;top:.02em}
+.chip{display:inline-flex;align-items:center;background:var(--tint);color:var(--brand);font-weight:600;font-size:7.4pt;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:100px}
+
+/* accroche */
+.hero{margin-top:6.5mm}
+.hero h1{font-size:29pt;letter-spacing:-.045em}
+.hero .lede{margin-top:3.6mm;font-size:10.6pt;color:var(--muted);line-height:1.45}
+.sq{position:relative;display:inline-block;white-space:nowrap}
+.sq svg{position:absolute;left:-2%;bottom:-.2em;width:104%;height:.4em;overflow:visible}
+.sq path{fill:none;stroke:var(--honey);stroke-width:7;stroke-linecap:round}
+
+/* chiffres */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:5mm}
+.stat{background:var(--paper-2);border:1px solid var(--line);border-radius:4mm;padding:3.4mm 4mm}
+.stat b{display:block;font-family:Gabarito,system-ui,sans-serif;font-weight:800;font-size:19pt;letter-spacing:-.045em;line-height:1}
+.stat span{display:block;margin-top:1.4mm;color:var(--muted);font-size:8.6pt;line-height:1.3}
+
+/* titres de section */
+.sec{margin-top:6mm}
+.sec>h2{font-size:17pt;max-width:170mm}
+.sec>.sub{margin-top:1.8mm;color:var(--muted);font-size:9.8pt}
+.label{font-size:7.2pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* les trois étapes */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:4.4mm;position:relative}
+.steps::before{content:"";position:absolute;top:9mm;left:14%;right:14%;height:2px;background-image:linear-gradient(90deg,var(--line) 50%,transparent 0);background-size:9px 2px}
+.step{text-align:center;position:relative}
+.step .blip{display:block;width:17mm;margin:0 auto 2.4mm;position:relative;z-index:2;background:var(--paper);padding:0 2mm;box-sizing:content-box}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:6.4mm;height:6.4mm;border-radius:50%;background:var(--ink);color:var(--paper);font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:9pt;margin-bottom:2mm}
+.step h3{font-size:12.2pt;letter-spacing:-.03em;line-height:1.14;margin-bottom:1.8mm}
+.step p{color:var(--muted);font-size:8.8pt;line-height:1.42}
+
+/* cartes */
+.cards{display:grid;gap:3.6mm;margin-top:4mm}
+.cards.c2{grid-template-columns:1fr 1fr}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--paper-2);border:1.6px solid var(--ink);border-radius:4.4mm;padding:4mm 4.4mm;box-shadow:1.6mm 1.6mm 0 0 var(--tint)}
+.card.y{box-shadow:1.6mm 1.6mm 0 0 var(--yellow-soft)}
+.card h3{font-size:12.6pt;letter-spacing:-.03em;line-height:1.12;margin:1.6mm 0 1.6mm}
+.card p{color:var(--muted);font-size:8.8pt;line-height:1.4}
+.badge{display:inline-block;font-size:6.6pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--yellow);border:1.4px solid var(--ink);border-radius:1.6mm;padding:1.5px 6px}
+.card .before{display:block;margin-top:1.6mm;font-size:8.2pt;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--honey);text-decoration-thickness:1.4px}
+.card .after{color:var(--ink);font-weight:500}
+
+/* points courts */
+.points{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:4mm}
+.point{border-top:2px solid var(--ink);padding-top:2.2mm}
+.point b{display:block;font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:10.4pt;letter-spacing:-.02em;line-height:1.15}
+.point span{display:block;margin-top:1.2mm;color:var(--muted);font-size:8.3pt;line-height:1.35}
+
+/* encart sur mesure */
+.custom{background:var(--brand);color:#fff;border-radius:4.4mm;padding:4mm 4.4mm;position:relative;overflow:hidden;border:1.6px solid var(--ink);box-shadow:1.6mm 1.6mm 0 0 var(--yellow)}
+.custom .badge{background:#fff;color:var(--ink)}
+.custom h3{font-size:12.6pt;letter-spacing:-.03em;line-height:1.12;margin:1.6mm 0 1.6mm;color:#fff}
+.custom p{color:rgba(255,255,255,.9);font-size:8.8pt;line-height:1.4}
+.custom b{color:var(--yellow);font-weight:600}
+
+/* bandeau des étapes (page offre) */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:4mm}
+.flow div{display:grid;grid-template-columns:auto 1fr;gap:2.6mm;align-items:start;background:var(--paper-2);border:1px solid var(--line);border-radius:3.6mm;padding:3mm 3.4mm}
+.flow .n{display:inline-flex;align-items:center;justify-content:center;width:6mm;height:6mm;border-radius:50%;background:var(--ink);color:var(--paper);font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:8.6pt}
+.flow b{display:block;font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:10.2pt;letter-spacing:-.02em;line-height:1.15}
+.flow span{display:block;margin-top:.8mm;color:var(--muted);font-size:8.2pt;line-height:1.35}
+
+/* pied : appel à l'action */
+.cta{margin:auto -13mm 0;background:var(--ink);color:var(--paper);padding:5.5mm 13mm 6mm;display:flex;align-items:center;gap:7mm}
+.cta h2{font-size:15pt;line-height:1.1}
+.cta h2 span{color:var(--yellow)}
+.cta p{margin-top:1.6mm;font-size:8.8pt;color:rgba(250,249,246,.72);max-width:86mm}
+.cta .who{margin-left:auto;font-size:9.4pt;line-height:1.6;text-align:right;white-space:nowrap}
+.cta .who b{font-weight:600}
+.cta .who .site{display:inline-block;margin-top:1.4mm;background:var(--yellow);color:var(--ink);font-weight:700;border-radius:100px;padding:1.2mm 3.6mm;font-size:9.4pt}
+/* sur fond sombre, les contours de la mascotte disparaissent : on la pose sur une pastille claire */
+.cta .blip{flex:none;width:15mm;box-sizing:content-box;padding:1.8mm 2.2mm 1.2mm;background:var(--paper);border-radius:4mm}
+
+.blip{display:inline-block;line-height:0}
+.blip svg{width:100%;height:auto;overflow:visible}

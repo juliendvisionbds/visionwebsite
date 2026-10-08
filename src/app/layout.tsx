@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { SITE, ORG_ID, organization, jsonLdHtml, social } from "@/lib/seo";
-import BookingWidget from "@/components/BookingWidget";
-import ExitPopup from "@/components/ExitPopup";
 import "./globals.css";
 
 const title = "vision — Agence d'automatisation IA pour le BTP";
@@ -58,12 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }} />
       </head>
-      <body>
-        {children}
-        <BookingWidget />
-        <ExitPopup />
-      </body>
-      <GoogleAnalytics gaId="G-N9YJ1N4HPF" />
+      <body>{children}</body>
     </html>
   );
 }

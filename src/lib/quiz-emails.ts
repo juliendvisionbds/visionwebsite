@@ -28,7 +28,7 @@ const BRAND = "#5A4BFF";
 const TINT = "#EDEBFF";
 const YELLOW = "#FFC42E";
 
-function layout(content: string) {
+export function layout(content: string) {
   return `<!doctype html><html lang="fr"><body style="margin:0;background:#FAF9F6">
   <div style="max-width:620px;margin:0 auto;padding:32px 20px;font-family:Arial,Helvetica,sans-serif;color:${INK};font-size:15px;line-height:1.55">
     <div style="font-size:26px;font-weight:800;letter-spacing:-1px;margin-bottom:28px">vision</div>
@@ -81,7 +81,7 @@ export function planEmail(answers: Answers) {
   return { subject: "Votre plan personnalisé — vision", html, plan };
 }
 
-function table(rows: Array<[string, string]>) {
+export function table(rows: Array<[string, string]>) {
   return `<table style="border-collapse:collapse;font-size:14px;width:100%">${rows
     .map(
       ([k, v]) => `<tr>
