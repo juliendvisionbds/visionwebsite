@@ -171,6 +171,23 @@ const form=document.getElementById('ri-form'); if(!form) return;
 const $=id=>document.getElementById(id);
 const out=$('ri-out');
 
+/* Copie dans le presse-papiers : API moderne, puis execCommand, puis sélection du texte pour copie manuelle. */
+async function copyToClipboard(text,html,fallbackEl){
+  try{
+    if(html&&window.ClipboardItem){await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})]);return 'ok'}
+    await navigator.clipboard.writeText(text);return 'ok';
+  }catch{}
+  try{
+    const onCopy=e=>{e.clipboardData.setData('text/plain',text);if(html)e.clipboardData.setData('text/html',html);e.preventDefault()};
+    document.addEventListener('copy',onCopy,{once:true});
+    const ok=document.execCommand('copy');
+    document.removeEventListener('copy',onCopy);
+    if(ok) return 'ok';
+  }catch{}
+  if(fallbackEl){const sel=getSelection();sel.removeAllRanges();const r=document.createRange();r.selectNodeContents(fallbackEl);sel.addRange(r)}
+  return 'manual';
+}
+
 /* Taux du 2e semestre 2026 (revus chaque semestre : à mettre à jour au 1er janvier et au 1er juillet). */
 const RATES={bce:2.40,legalPro:2.75,legalPart:6.84};
 const DEFAULT_RATE={pro:+(RATES.bce+10).toFixed(2),public:+(RATES.bce+8).toFixed(2),particulier:0};
@@ -476,8 +493,9 @@ function renderMessages(m,source){
     pane('sms',`<pre class="ri-msg only">${esc(m.sms)}</pre>`,m.sms,`${m.sms.length} caractères.`)+
     pane('appel',appelList,m.appel.map((a,i)=>`${i+1}. ${a}`).join('\n'),'À garder sous les yeux pendant l\'appel.');
   panes.querySelectorAll('.ri-copy').forEach(b=>b.addEventListener('click',async()=>{
-    try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent='Copié ✓';b.classList.add('ok');setTimeout(()=>{b.textContent='Copier';b.classList.remove('ok')},1800)}
-    catch{b.textContent='Sélectionnez le texte'}
+    const r=await copyToClipboard(b.dataset.copy,null,b.closest('.ri-pane').querySelector('.ri-msg'));
+    b.textContent=r==='ok'?'Copié ✓':'Texte sélectionné : faites Ctrl+C';if(r==='ok')b.classList.add('ok');
+    setTimeout(()=>{b.textContent='Copier';b.classList.remove('ok')},2200);
   }));
   void source;
 }
@@ -526,7 +544,7 @@ form.addEventListener('submit',e=>{
   render(f);
   renderMessages(templates(f),'template');
   rendered=true; $('ri-go').innerHTML='Préparer ma relance <span class="arw">→</span>';
-  if(innerWidth<980) out.scrollIntoView({behavior:'smooth',block:'start'});
+  out.scrollIntoView({behavior:'smooth',block:'start'});
   personalize(f,token);
 });
 })();

@@ -1,0 +1,198 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + FORMULAIRE -->
+<section class="hero cr-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Compte rendu de chantier</span></nav>
+    <div class="cr-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Bâtiment</span>
+        <h1>Vos notes de chantier, en <span class="sq brand">compte rendu<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span> prêt à envoyer</h1>
+        <p class="lede">Collez ce que vous avez noté pendant la réunion ou la visite, tel quel. L'outil en fait un compte rendu structuré : avancement, décisions, points bloquants, actions avec responsables et échéances, et la liste de ce qui reste à préciser.</p>
+        <ul class="cr-meta-list">
+          <li>Sans inscription</li>
+          <li>Rien n'est inventé : ce qui manque est signalé</li>
+          <li>Copie en texte, e-mail, Word ou PDF</li>
+        </ul>
+      </div>
+
+      <form class="cr-form" id="cr-form" novalidate>
+        <div class="cr-fh"><span class="k">Le chantier</span></div>
+        <div class="cr-row">
+          <label class="cr-l"><span>Nom du chantier</span><input id="cr-chantier" type="text" maxlength="120" placeholder="Résidence Les Oliviers, Toulon"></label>
+          <label class="cr-l"><span>Date de la réunion</span><input id="cr-date" type="date" required></label>
+        </div>
+        <div class="cr-row">
+          <label class="cr-l"><span>N° du compte rendu <small>facultatif</small></span><input id="cr-numero" type="text" maxlength="40" placeholder="12"></label>
+          <label class="cr-l"><span>Rédigé par</span><input id="cr-redacteur" type="text" maxlength="120" placeholder="J. Durand, Durand Rénovation"></label>
+        </div>
+        <label class="cr-l"><span>Présents <small>facultatif, sinon repris des notes</small></span><input id="cr-presents" type="text" maxlength="400" placeholder="M. Rossi (MOA), J. Martin (MOE), Sanit'Pro"></label>
+
+        <div class="cr-fh"><span class="k">Vos notes</span><button type="button" class="cr-link" id="cr-example">Charger un exemple</button></div>
+        <label class="cr-l cr-notes-l">
+          <span class="vh">Notes brutes</span>
+          <textarea id="cr-notes" rows="11" maxlength="8000" required placeholder="Collez vos notes telles quelles : liste, phrases, SMS, dictée vocale…
+
+Par exemple :
+- élec : gaines passées RDC, R+1 en cours, manque plans cuisine → Julie jeudi
+- fuite toiture terrasse côté nord, étanchéiste prévenu
+- MOA valide carrelage gris 60x60, commande cette semaine (Durand)
+- prochaine réunion vendredi 9h"></textarea>
+          <small class="cr-count"><span id="cr-count">0</span> / 8 000</small>
+        </label>
+
+        <p class="cr-err" id="cr-err" role="alert" hidden></p>
+        <button class="btn btn-primary" id="cr-go" type="submit">Rédiger le compte rendu <span class="arw">→</span></button>
+        <p class="cr-note">Vos notes sont transmises au service de rédaction le temps de générer le compte rendu, puis oubliées. Rien n'est enregistré par vision.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSULTAT -->
+<section id="resultat" class="cr-sec-out">
+  <div class="wrap">
+    <div class="cr-out" id="cr-out" aria-live="polite">
+      <div class="cr-empty">
+        <span class="blip" data-pose="look" data-color="brand"></span>
+        <p><b>Votre compte rendu apparaîtra ici, sous le formulaire.</b><br>Relisez-le, corrigez-le directement dans la page, puis copiez-le ou téléchargez-le.</p>
+      </div>
+    </div>
+
+    <div class="cr-cta reveal">
+      <span class="blip cr-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Un compte rendu par réunion, une relance par facture, un pointage par semaine…</h2>
+        <p>Ce que vous refaites chaque semaine de la même manière peut partir tout seul. Deux minutes pour repérer les trois tâches à automatiser en priorité dans votre entreprise.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="cr-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Rédiger un compte rendu de chantier qui sert à quelque chose</h2>
+      <p class="lede">À quoi il sert vraiment, ce qu'il doit contenir, comment l'écrire vite et bien, et un modèle à copier.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-pourquoi">À quoi sert un compte rendu de chantier</a></li>
+            <li><a href="#g-contenu">Ce qu'il doit contenir</a></li>
+            <li><a href="#g-ecrire">Comment l'écrire : les règles qui tiennent</a></li>
+            <li><a href="#g-modele">Modèle de compte rendu de chantier à copier</a></li>
+            <li><a href="#g-erreurs">Les erreurs qui coûtent cher</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-pourquoi">1. À quoi sert un compte rendu de chantier</h3>
+        <p>Un compte rendu de chantier a trois fonctions, et la troisième est celle qu'on oublie. Il informe ceux qui n'étaient pas là : le client, le bureau d'études, le sous-traitant absent. Il fait avancer le chantier : chaque action a un nom et une date, et la réunion suivante commence par la liste des actions de la précédente. Et il fait preuve : six mois plus tard, quand un travail supplémentaire est contesté ou qu'un retard est reproché, c'est le compte rendu qui dit qui a décidé quoi, et quand.</p>
+        <p>Dans de nombreux contrats, et dans la norme NF P 03-001 quand elle s'applique aux marchés privés, un compte rendu diffusé qui n'est pas contesté dans le délai convenu est réputé accepté. C'est un document contractuel, pas une formalité. D'où deux règles simples : il part le jour même, et il part à tout le monde.</p>
+        <div class="callout"><b>Le test du compte rendu utile :</b> si la personne qui le lit ne peut pas dire, en trente secondes, ce qui bloque et qui doit faire quoi pour quand, il est à refaire.</div>
+
+        <h3 id="g-contenu">2. Ce qu'il doit contenir</h3>
+        <ul>
+          <li><b>L'en-tête :</b> le chantier, la date, le numéro du compte rendu, les présents, les absents et excusés, le rédacteur et la liste de diffusion.</li>
+          <li><b>L'avancement, lot par lot ou zone par zone :</b> ce qui est terminé, en cours, en retard, avec les quantités ou les pourcentages quand on les a.</li>
+          <li><b>Les décisions prises :</b> une phrase par décision, avec qui l'a prise. C'est la partie qui a valeur de preuve.</li>
+          <li><b>Les points bloquants :</b> ce qui empêche d'avancer, l'impact sur le planning, et qui doit lever le blocage.</li>
+          <li><b>Les actions :</b> un tableau, une ligne par action, avec un verbe, un responsable, une échéance et un statut. Les actions des comptes rendus précédents y restent tant qu'elles ne sont pas faites.</li>
+          <li><b>Les points divers :</b> sécurité en premier, puis livraisons, accès, météo, informations diverses.</li>
+          <li><b>La prochaine réunion :</b> date, heure, lieu.</li>
+        </ul>
+
+        <h3 id="g-ecrire">3. Comment l'écrire : les règles qui tiennent</h3>
+        <ul>
+          <li><b>Des faits, pas des avis.</b> « Le plombier est en retard d'une semaine, reprise à confirmer » plutôt que « le plombier n'est pas sérieux ». Le compte rendu peut être lu par un juge.</li>
+          <li><b>Un responsable et une date par action.</b> Une action sans nom n'est à personne ; une action sans date n'est pour jamais. Quand on ne sait pas, on écrit « à préciser » et on le demande avant d'envoyer.</li>
+          <li><b>Des dates, pas des jours de la semaine.</b> « Vendredi » ne veut plus rien dire trois semaines plus tard. Écrivez « vendredi 16 octobre ».</li>
+          <li><b>Le vocabulaire du chantier.</b> Gardez les noms de lots, de zones et d'entreprises tels que tout le monde les utilise sur place.</li>
+          <li><b>Numérotez et diffusez.</b> Un numéro par compte rendu, la même liste de diffusion à chaque fois, et une mention du délai pour faire des observations.</li>
+          <li><b>Rédigez le jour même.</b> Les notes prises à chaud suffisent, à condition de les mettre en forme avant d'oublier le contexte. C'est exactement ce que fait l'outil ci-dessus.</li>
+        </ul>
+
+        <h3 id="g-modele">4. Modèle de compte rendu de chantier à copier</h3>
+        <p>Le même squelette que celui produit par l'outil, vide, à coller dans votre traitement de texte ou votre messagerie.</p>
+        <div class="cr-model" id="cr-model">
+          <div class="cr-model-head"><span>Modèle vierge</span><button type="button" class="cr-btn" id="cr-copy-model">Copier le modèle</button></div>
+<pre>COMPTE RENDU DE CHANTIER N° …
+Chantier : …
+Date : …
+Présents : …
+Absents / excusés : …
+Rédigé par : …
+Diffusion : …
+
+EN RÉSUMÉ
+…
+
+AVANCEMENT
+- Lot / zone : état (terminé, en cours, en retard), quantités
+- …
+
+DÉCISIONS
+- …
+
+POINTS BLOQUANTS
+- Point : impact sur le planning. À lever par : …
+
+ACTIONS
+N° | Action | Responsable | Échéance | Statut
+1  | …      | …           | …        | à faire
+
+POINTS DIVERS
+- Sécurité : …
+- Livraisons, accès, météo : …
+
+PROCHAINE RÉUNION
+… le … à … h
+
+Observations à transmettre sous … jours, faute de quoi le présent compte rendu est réputé accepté.</pre>
+        </div>
+
+        <h3 id="g-erreurs">5. Les erreurs qui coûtent cher</h3>
+        <ul>
+          <li><b>L'envoyer trois jours plus tard.</b> Les actions ont déjà glissé, et les absents ont pris leurs décisions sans vous.</li>
+          <li><b>Mélanger constat et décision.</b> « La fuite en toiture a été constatée » n'est pas « l'étanchéiste reprend la toiture avant le 20 ». Il faut les deux, dans deux rubriques.</li>
+          <li><b>Oublier la sécurité.</b> Un garde-corps manquant noté dans le compte rendu, c'est une consigne donnée. Non noté, c'est votre responsabilité.</li>
+          <li><b>Laisser les actions mourir.</b> Une action non faite reste dans le compte rendu suivant, avec son retard. C'est désagréable, et c'est le but.</li>
+          <li><b>Ne pas lister les absents.</b> Celui qui n'était pas là ne pourra pas dire qu'il n'a pas été informé si le compte rendu lui a été envoyé.</li>
+        </ul>
+        <div class="callout"><b>Ce guide et l'outil donnent une méthode et un modèle,</b> pas un conseil juridique. Pour les clauses de votre contrat sur la valeur des comptes rendus et les délais d'observation, reportez-vous au marché signé.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur le compte rendu de chantier</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->
