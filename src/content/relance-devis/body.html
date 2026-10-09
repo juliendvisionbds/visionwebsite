@@ -1,0 +1,190 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + FORMULAIRE -->
+<section class="hero rd-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Relance de devis</span></nav>
+    <div class="rd-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Bâtiment</span>
+        <h1>Relancer un devis <span class="sq brand">sans réponse<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span>, sans insister</h1>
+        <p class="lede">La date d'envoi, les travaux, le dernier échange, le ton que vous voulez : l'outil vous dit si c'est le moment, quoi écrire, et rédige le mail, le SMS et les trois phrases à dire au téléphone.</p>
+        <ul class="rd-meta">
+          <li>Sans inscription</li>
+          <li>Le bon message selon la situation</li>
+          <li>Mail, SMS et script d'appel</li>
+        </ul>
+      </div>
+
+      <form class="rd-form" id="rd-form" novalidate>
+        <div class="rd-fh"><span class="k">1. Le devis</span></div>
+        <fieldset class="rd-fs">
+          <legend>Votre client</legend>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="rd-client" value="petit" checked><span><b>Particulier, petit chantier</b><small>dépannage, reprise, petite maçonnerie</small></span></label>
+            <label><input type="radio" name="rd-client" value="gros"><span><b>Particulier, projet important</b><small>extension, rénovation lourde</small></span></label>
+            <label><input type="radio" name="rd-client" value="pro"><span><b>Professionnel</b><small>maître d'œuvre, entreprise, promoteur</small></span></label>
+          </div>
+        </fieldset>
+        <div class="rd-row">
+          <label class="rd-l"><span>Travaux</span><input id="rd-works" type="text" maxlength="120" placeholder="rénovation salle de bain, Hyères" required></label>
+          <label class="rd-l"><span>Montant HT <small>facultatif</small></span><input id="rd-amount" type="number" min="1" step="1" inputmode="numeric" placeholder="8 400"></label>
+        </div>
+        <div class="rd-row">
+          <label class="rd-l"><span>Devis envoyé le</span><input id="rd-sent" type="date" required></label>
+          <label class="rd-l"><span>Décision annoncée <small>facultatif</small></span><input id="rd-decision" type="date"></label>
+        </div>
+
+        <div class="rd-fh"><span class="k">2. Le dernier échange</span></div>
+        <div class="rd-row">
+          <label class="rd-l">
+            <span>Situation</span>
+            <select id="rd-situation">
+              <option value="silence">Aucune réponse depuis l'envoi</option>
+              <option value="recu">A accusé réception, pas de décision</option>
+              <option value="question">A posé une question ou demandé une modification</option>
+              <option value="prix">Hésite sur le prix, compare</option>
+              <option value="reporte">Projet reporté</option>
+            </select>
+          </label>
+          <label class="rd-l">
+            <span>Relances déjà faites</span>
+            <select id="rd-done">
+              <option value="0">Aucune</option>
+              <option value="1">Une</option>
+              <option value="2">Deux</option>
+              <option value="3">Trois ou plus</option>
+            </select>
+          </label>
+        </div>
+        <label class="rd-l"><span>Ce qu'il vous a dit <small>facultatif, en quelques mots</small></span><input id="rd-said" type="text" maxlength="300" placeholder="« on attend le retour de la banque »"></label>
+
+        <fieldset class="rd-fs">
+          <legend>Le ton</legend>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="rd-tone" value="cordial" checked><span><b>Cordial</b><small>courtois, simple</small></span></label>
+            <label><input type="radio" name="rd-tone" value="direct"><span><b>Direct</b><small>court, une question</small></span></label>
+            <label><input type="radio" name="rd-tone" value="chaleureux"><span><b>Chaleureux</b><small>client que je connais</small></span></label>
+          </div>
+        </fieldset>
+
+        <details class="rd-more">
+          <summary>Personnalisation <small>facultatif</small></summary>
+          <div class="rd-more-in">
+            <div class="rd-row">
+              <label class="rd-l"><span>Votre entreprise</span><input id="rd-company" type="text" maxlength="80" placeholder="Durand Rénovation" autocomplete="organization"></label>
+              <label class="rd-l"><span>Prénom du client</span><input id="rd-contact" type="text" maxlength="80" placeholder="Mme Lefèvre"></label>
+            </div>
+            <label class="rd-l"><span>Devis valable jusqu'au</span><input id="rd-valid" type="date"></label>
+          </div>
+        </details>
+
+        <p class="rd-err" id="rd-err" role="alert" hidden></p>
+        <button class="btn btn-primary" id="rd-go" type="submit">Préparer ma relance <span class="arw">→</span></button>
+        <p class="rd-note">Le calendrier et le choix du message se font dans votre navigateur. Les messages sont rédigés par une IA à partir de vos réponses. Rien n'est enregistré par vision.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSULTAT -->
+<section id="resultat" class="rd-sec">
+  <div class="wrap">
+    <div class="rd-out" id="rd-out" aria-live="polite">
+      <div class="rd-empty">
+        <span class="blip" data-pose="look" data-color="brand"></span>
+        <p><b>Vos résultats apparaîtront ici, sous le formulaire.</b><br>Si c'est le moment de relancer, le message prêt à copier, et la suite.</p>
+      </div>
+    </div>
+
+    <div class="rd-cta reveal">
+      <span class="blip rd-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Combien de devis dorment dans vos mails ?</h2>
+        <p>Chez nos clients, les relances de routine partent seules à la bonne date, et une personne reprend la main dès que le client répond. Deux minutes pour voir ce qui peut partir tout seul chez vous.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="rd-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Relancer un devis : quand, quoi écrire, quand arrêter</h2>
+      <p class="lede">L'essentiel de la méthode. Le détail, avec les cinq modèles complets, est dans notre article <a href="/blog/relance-devis-btp/">Relance de devis BTP : quand relancer et quoi écrire</a>.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-quand">Quand relancer : un calendrier par type de client</a></li>
+            <li><a href="#g-quoi">Cinq situations, cinq messages</a></li>
+            <li><a href="#g-arreter">Savoir arrêter, et reprendre la main</a></li>
+            <li><a href="#g-suivre">Suivre ses devis</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-quand">1. Quand relancer : un calendrier par type de client</h3>
+        <p>Un devis envoyé n'est ni gagné ni perdu : il est en attente, et c'est là que le travail s'arrête souvent. La première relance ne demande pas une décision, elle vérifie que le devis est arrivé et qu'il est clair. Les suivantes apportent chacune quelque chose. Le rythme dépend du client :</p>
+        <table class="rd-table">
+          <thead><tr><th>Type de devis</th><th>1re relance</th><th>2e relance</th><th>3e relance</th><th>Clôture</th></tr></thead>
+          <tbody>
+            <tr><td><b>Petit chantier de particulier</b></td><td>J+2</td><td>J+7</td><td>J+14</td><td>J+21</td></tr>
+            <tr><td><b>Projet important de particulier</b></td><td>J+3</td><td>J+10</td><td>J+21, par téléphone</td><td>J+35</td></tr>
+            <tr><td><b>Professionnel, maître d'œuvre</b></td><td>J+3, réception</td><td>Avant la date de décision annoncée</td><td>Juste après cette date</td><td>Selon le projet</td></tr>
+            <tr><td><b>Marché public</b></td><td colspan="4">Pas de relance commerciale. Demander où en est la consultation, et les motifs en cas de rejet.</td></tr>
+          </tbody>
+        </table>
+        <p>Deux habitudes changent tout : demander la date de décision dès l'envoi du devis, ce qui transforme la relance en suivi convenu, et surveiller la date de validité, qui donne une raison légitime de reprendre contact.</p>
+        <div class="callout"><b>Calendrier indicatif,</b> à ajuster selon vos propres taux de réponse et la saison. L'outil ci-dessus l'applique à votre dossier.</div>
+
+        <h3 id="g-quoi">2. Cinq situations, cinq messages</h3>
+        <ul>
+          <li><b>Sans réponse, première relance :</b> vérifier la réception et la compréhension. « Bien reçu ? Un poste mérite-t-il une explication ? » Rien sur la décision.</li>
+          <li><b>Sans réponse, relance suivante :</b> apporter une information utile, une date de démarrage possible, une contrainte de calendrier, la validité du devis, puis poser une question simple sur l'avancement.</li>
+          <li><b>Le client hésite sur le prix :</b> pas de remise. Comprendre ce qui est comparé, proposer un appel de dix minutes, puis une variante ou un phasage. Un écart de prix cache souvent un écart de périmètre.</li>
+          <li><b>Le projet est reporté :</b> accuser réception sans insister, proposer une date de reprise de contact, rappeler la validité du devis. Un projet reporté sans date de reprise est un projet perdu.</li>
+          <li><b>La clôture :</b> « sans nouvelles, je classe le devis ; il suffit de répondre pour reprendre ; si vous avez choisi une autre solution, un mot sur la raison m'aiderait. » Ce message obtient souvent une réponse.</li>
+        </ul>
+        <p>Et quand le client a posé une question ou demandé une modification, on ne relance pas : on répond, vite, et on propose un appel.</p>
+
+        <h3 id="g-arreter">3. Savoir arrêter, et reprendre la main</h3>
+        <p>Trois relances, puis la clôture. Au-delà, on n'apporte plus rien. La séquence s'arrête dès que le client répond, signe, refuse ou demande à ne plus être sollicité. Et une personne reprend la main dès qu'il pose une question, formule une objection ou demande une modification : une relance automatique qui continue d'écrire « avez-vous pris votre décision ? » à quelqu'un qui a posé une question la veille fait plus de mal que de bien.</p>
+
+        <h3 id="g-suivre">4. Suivre ses devis</h3>
+        <p>Le meilleur message ne sert à rien si personne ne sait quels devis relancer cette semaine. Le minimum : une liste des devis en cours avec, pour chacun, un statut et une prochaine action datée. Quinze minutes par semaine suffisent, et les motifs de perte notés au fil des mois en disent long sur vos prix, vos délais et vos devis. <a href="/blog/relance-devis-btp/#etape-5--suivre-les-dossiers">L'article détaille le tableau de suivi</a>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur la relance de devis</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->

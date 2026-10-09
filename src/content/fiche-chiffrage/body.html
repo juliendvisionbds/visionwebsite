@@ -1,0 +1,159 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + FORMULAIRE -->
+<section class="hero fc-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Fiche de chiffrage</span></nav>
+    <div class="fc-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Bâtiment</span>
+        <h1>La demande du client, en <span class="sq brand">fiche de chiffrage<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span></h1>
+        <p class="lede">Collez le mail, le SMS ou le formulaire reçu. L'outil en sort les travaux demandés lot par lot, les quantités connues, les contraintes, ce qui manque pour chiffrer juste, et rédige le mail de questions à renvoyer au client.</p>
+        <ul class="fc-meta-list">
+          <li>Sans inscription</li>
+          <li>Rien n'est inventé : chaque quantité est sourcée</li>
+          <li>Fiche éditable, mail de questions prêt à envoyer</li>
+        </ul>
+      </div>
+
+      <form class="fc-form" id="fc-form" novalidate>
+        <div class="fc-fh"><span class="k">Votre contexte</span></div>
+        <div class="fc-row">
+          <label class="fc-l"><span>Vos métiers <small>facultatif</small></span><input id="fc-metier" type="text" maxlength="160" placeholder="plomberie, salle de bain, carrelage"></label>
+          <label class="fc-l">
+            <span>Type de client</span>
+            <select id="fc-client">
+              <option value="particulier">Particulier</option>
+              <option value="pro">Professionnel</option>
+              <option value="syndic">Syndic, copropriété</option>
+              <option value="inconnu">Je ne sais pas</option>
+            </select>
+          </label>
+        </div>
+        <label class="fc-l"><span>Votre entreprise <small>facultatif, pour signer le mail</small></span><input id="fc-entreprise" type="text" maxlength="80" placeholder="Durand Rénovation" autocomplete="organization"></label>
+
+        <div class="fc-fh"><span class="k">La demande du client</span><button type="button" class="fc-link" id="fc-example">Charger un exemple</button></div>
+        <label class="fc-l fc-notes-l">
+          <span class="vh">Demande du client</span>
+          <textarea id="fc-demande" rows="11" maxlength="8000" required placeholder="Collez la demande telle que vous l'avez reçue : mail, SMS, formulaire du site, notes d'un appel…
+
+Par exemple :
+« Bonjour, nous voulons refaire la salle de bain de notre maison à Hyères : remplacer la baignoire par une douche à l'italienne, refaire le carrelage, changer le meuble vasque. La pièce fait environ 6 m². Si possible avant Noël, budget autour de 9 000 €. »"></textarea>
+          <small class="fc-count"><span id="fc-count">0</span> / 8 000</small>
+        </label>
+
+        <p class="fc-err" id="fc-err" role="alert" hidden></p>
+        <button class="btn btn-primary" id="fc-go" type="submit">Analyser la demande <span class="arw">→</span></button>
+        <p class="fc-note">La demande est transmise au service d'analyse le temps de produire la fiche, puis oubliée. Rien n'est enregistré par vision. Aucun prix n'est calculé : la fiche prépare le devis.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSULTAT -->
+<section id="resultat" class="fc-sec-out">
+  <div class="wrap">
+    <div class="fc-out" id="fc-out" aria-live="polite">
+      <div class="fc-empty">
+        <span class="blip" data-pose="look" data-color="brand"></span>
+        <p><b>Votre fiche de chiffrage apparaîtra ici, sous le formulaire.</b><br>Travaux, quantités, contraintes, ce qui manque, et le mail de questions au client.</p>
+      </div>
+    </div>
+
+    <div class="fc-cta reveal">
+      <span class="blip fc-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Et si la fiche se remplissait toute seule à chaque demande reçue ?</h2>
+        <p>Chez nos clients, chaque demande entrante est analysée, qualifiée et rangée dans le suivi des devis avant même qu'on l'ouvre. Deux minutes pour voir ce qui peut partir tout seul chez vous.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="fc-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Analyser une demande de devis avant de chiffrer</h2>
+      <p class="lede">Pourquoi dix minutes d'analyse font gagner une visite et une deuxième version du devis, ce qu'une fiche de chiffrage doit contenir, et les questions qui manquent presque toujours.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-pourquoi">Pourquoi analyser avant de chiffrer</a></li>
+            <li><a href="#g-contenu">Ce qu'une fiche de chiffrage contient</a></li>
+            <li><a href="#g-manque">Les informations qui manquent presque toujours</a></li>
+            <li><a href="#g-repondre">Répondre au client : le mail de questions</a></li>
+            <li><a href="#g-visite">Visite ou chiffrage sur pièces ?</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-pourquoi">1. Pourquoi analyser avant de chiffrer</h3>
+        <p>Une demande de devis arrive rarement complète. « Refaire la salle de bain », « rénover l'appartement », « voir pour la toiture » : le client décrit son envie, pas son chantier. Chiffrer directement, c'est choisir entre deux mauvaises options : un devis faux, qu'il faudra refaire après la visite, ou une visite pour poser des questions qu'un mail aurait réglées.</p>
+        <p>L'analyse de la demande est l'étape qui manque entre les deux. Elle prend dix minutes, elle se fait avant toute chose, et elle produit trois résultats : la liste de ce qui est demandé, la liste de ce qui manque, et la réponse au client. C'est aussi le moment de repérer ce qui n'est pas pour vous : un lot hors de vos métiers, un délai impossible, un budget sans rapport avec le projet.</p>
+        <div class="callout"><b>Le test :</b> si vous ne pouvez pas dire, pour chaque poste, quelle quantité vous allez chiffrer et d'où elle vient, vous n'êtes pas prêt à faire le devis.</div>
+
+        <h3 id="g-contenu">2. Ce qu'une fiche de chiffrage contient</h3>
+        <ul>
+          <li><b>Le client et le chantier :</b> qui demande, pour quelle adresse, comment le joindre, et qui décide s'il y a plusieurs personnes.</li>
+          <li><b>Le projet en deux phrases :</b> la nature des travaux (neuf, rénovation, dépannage), le délai souhaité, le budget s'il est donné, l'état de l'existant tel que décrit.</li>
+          <li><b>Les travaux demandés, lot par lot :</b> une ligne par poste, avec la quantité connue et sa précision. Indiquée par le client, estimée d'après le texte, ou à relever sur place.</li>
+          <li><b>Les contraintes :</b> tout ce qui pèse sur le prix ou le planning sans être un poste de travaux : étage sans ascenseur, logement occupé, copropriété, horaires, fournitures par le client.</li>
+          <li><b>Les informations manquantes :</b> les questions sans réponse qui empêchent de chiffrer juste, de la plus bloquante à la moins bloquante.</li>
+          <li><b>Les points de vigilance :</b> ce qui peut faire déraper le devis ou le chantier : amiante selon l'année, réseaux anciens, structure, évacuation en étage.</li>
+          <li><b>Les pièces à demander et la prochaine étape :</b> photos précises, plans, relevé, et la décision : visite technique ou chiffrage sur pièces.</li>
+        </ul>
+
+        <h3 id="g-manque">3. Les informations qui manquent presque toujours</h3>
+        <ul>
+          <li><b>Les surfaces et les hauteurs.</b> « Environ 6 m² » ne dit rien des murs à carreler ni de la hauteur sous plafond.</li>
+          <li><b>L'état de l'existant.</b> Année de construction, nature des supports, réseaux visibles ou encastrés, présence d'humidité.</li>
+          <li><b>L'accès.</b> Étage, ascenseur, stationnement, distance de portage, horaires autorisés.</li>
+          <li><b>Qui fournit quoi.</b> Le carrelage choisi par le client, la robinetterie achetée en ligne : à préciser avant de chiffrer la pose.</li>
+          <li><b>Le niveau de finition attendu.</b> Entrée de gamme ou haut de gamme, le même poste va du simple au triple.</li>
+          <li><b>Le délai réel et le budget.</b> « Avant Noël » et « environ 9 000 € » sont des informations précieuses, souvent absentes, parfois incompatibles entre elles.</li>
+          <li><b>Les décisions déjà prises.</b> Un architecte, un autre devis, un permis déposé, une assurance qui rembourse : autant d'éléments qui changent la réponse.</li>
+        </ul>
+
+        <h3 id="g-repondre">4. Répondre au client : le mail de questions</h3>
+        <p>Le mail de questions fait deux choses à la fois : il montre au client que sa demande a été lue avec attention, et il lui donne un travail simple à faire pour avancer. Sa structure tient en cinq lignes : merci, la reformulation en une phrase, les questions numérotées (cinq au plus, les plus bloquantes d'abord), les pièces à envoyer, la suite proposée avec une date. Un client qui répond à ce mail est un client qui a décidé de travailler avec vous.</p>
+        <div class="callout"><b>Ne posez pas toutes les questions.</b> Celles qu'une visite réglera en deux minutes n'ont pas leur place dans le mail. Gardez celles qui décident de la visite elle-même, du périmètre et du budget.</div>
+
+        <h3 id="g-visite">5. Visite ou chiffrage sur pièces ?</h3>
+        <p>Un remplacement à l'identique, avec photos et dimensions, se chiffre à distance. Une rénovation qui touche aux réseaux, à la structure ou à un existant mal connu demande une visite, et il vaut mieux le dire tout de suite au client que de produire un devis « sous réserve » que personne ne lira jusqu'au bout. Entre les deux, les photos précises et un relevé de cotes fait par le client suffisent souvent pour un premier chiffrage, à confirmer sur place avant signature.</p>
+        <div class="callout"><b>Ce guide et l'outil préparent le devis,</b> ils ne le font pas : aucun prix n'est calculé, et la fiche produite se relit avant d'être utilisée. Les points de vigilance sur l'amiante ou le plomb renvoient aux obligations de diagnostic en vigueur.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur l'analyse de demande de devis</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->

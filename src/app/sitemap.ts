@@ -9,6 +9,8 @@ const PAGES: Array<[path: string, priority: number, changeFrequency: "weekly" | 
   ["/ia-btp", 0.9, "monthly"],
   ["/commencer", 0.8, "monthly"],
   ["/outils", 0.7, "monthly"],
+  ["/outils/fiche-chiffrage", 0.8, "monthly"],
+  ["/outils/relance-devis", 0.8, "monthly"],
   ["/outils/relance-impayes", 0.8, "monthly"],
   ["/outils/compte-rendu-chantier", 0.8, "monthly"],
   ["/a-propos", 0.7, "monthly"],
