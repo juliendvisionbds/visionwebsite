@@ -226,17 +226,17 @@ function reportHtml(r,ctx){
   const meta=[['Chantier',e.chantier||ctx.chantier],['Date',e.date||frDate(ctx.date)],['Compte rendu n°',e.numero||ctx.numero],['Rédigé par',e.redacteur||ctx.redacteur],
     ['Présents',(e.presents||[]).join(', ')],['Absents / excusés',(e.absents||[]).join(', ')]].filter(([,v])=>v&&String(v).trim());
   const av=r.avancement||[], bl=r.blocages||[], ac=r.actions||[];
-  return `<header class="cr-head">
+  return `<div class="cr-head">
     <h2>${esc(r.titre||'Compte rendu de chantier')}</h2>
     <dl class="cr-meta">${meta.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
-  </header>
-  <section class="cr-sec"><h3>En résumé</h3><p>${esc(r.resume||'')}</p></section>
-  <section class="cr-sec"><h3>Avancement</h3>${av.length?`<ul>${av.map(a=>`<li><b>${esc(a.lot)}</b> : ${esc(a.etat)}</li>`).join('')}</ul>`:'<p class="empty">Aucun point d\'avancement dans les notes.</p>'}</section>
-  <section class="cr-sec"><h3>Décisions</h3>${li(r.decisions||[],'Aucune décision actée.')}</section>
-  <section class="cr-sec"><h3>Points bloquants</h3>${bl.length?`<table><thead><tr><th>Point</th><th>Impact</th><th>À lever par</th></tr></thead><tbody>${bl.map(b=>`<tr><td data-l="Point">${esc(b.point)}</td><td data-l="Impact">${esc(b.impact)}</td><td data-l="À lever par">${esc(b.a_lever_par)}</td></tr>`).join('')}</tbody></table>`:'<p class="empty">Aucun point bloquant signalé.</p>'}</section>
-  <section class="cr-sec"><h3>Actions</h3>${ac.length?`<table><thead><tr><th>#</th><th>Action</th><th>Responsable</th><th>Échéance</th><th>Statut</th></tr></thead><tbody>${ac.map((a,i)=>`<tr><td class="num">${i+1}</td><td data-l="Action">${esc(a.action)}</td><td data-l="Responsable">${esc(a.responsable)}</td><td data-l="Échéance">${esc(a.echeance)}</td><td data-l="Statut"><span class="${stCls(a.statut)}">${esc(a.statut)}</span></td></tr>`).join('')}</tbody></table>`:'<p class="empty">Aucune action.</p>'}</section>
-  <section class="cr-sec"><h3>Points divers</h3>${li(r.divers||[],'Rien à signaler.')}</section>
-  <section class="cr-sec"><h3>Prochaine réunion</h3><p${r.prochaine_reunion?'':' class="empty"'}>${esc(r.prochaine_reunion||'À fixer.')}</p></section>
+  </div>
+  <div class="cr-sec"><h3>En résumé</h3><p>${esc(r.resume||'')}</p></div>
+  <div class="cr-sec"><h3>Avancement</h3>${av.length?`<ul>${av.map(a=>`<li><b>${esc(a.lot)}</b> : ${esc(a.etat)}</li>`).join('')}</ul>`:'<p class="empty">Aucun point d\'avancement dans les notes.</p>'}</div>
+  <div class="cr-sec"><h3>Décisions</h3>${li(r.decisions||[],'Aucune décision actée.')}</div>
+  <div class="cr-sec"><h3>Points bloquants</h3>${bl.length?`<table><thead><tr><th>Point</th><th>Impact</th><th>À lever par</th></tr></thead><tbody>${bl.map(b=>`<tr><td data-l="Point">${esc(b.point)}</td><td data-l="Impact">${esc(b.impact)}</td><td data-l="À lever par">${esc(b.a_lever_par)}</td></tr>`).join('')}</tbody></table>`:'<p class="empty">Aucun point bloquant signalé.</p>'}</div>
+  <div class="cr-sec"><h3>Actions</h3>${ac.length?`<table><thead><tr><th>#</th><th>Action</th><th>Responsable</th><th>Échéance</th><th>Statut</th></tr></thead><tbody>${ac.map((a,i)=>`<tr><td class="num">${i+1}</td><td data-l="Action">${esc(a.action)}</td><td data-l="Responsable">${esc(a.responsable)}</td><td data-l="Échéance">${esc(a.echeance)}</td><td data-l="Statut"><span class="${stCls(a.statut)}">${esc(a.statut)}</span></td></tr>`).join('')}</tbody></table>`:'<p class="empty">Aucune action.</p>'}</div>
+  <div class="cr-sec"><h3>Points divers</h3>${li(r.divers||[],'Rien à signaler.')}</div>
+  <div class="cr-sec"><h3>Prochaine réunion</h3><p${r.prochaine_reunion?'':' class="empty"'}>${esc(r.prochaine_reunion||'À fixer.')}</p></div>
   <p class="cr-foot">Observations à transmettre au rédacteur sous huit jours, faute de quoi le présent compte rendu est réputé accepté.</p>`;
 }
 const BLANK={titre:'Compte rendu de chantier n° …',entete:{chantier:'',date:'',numero:'',redacteur:'',presents:['…'],absents:['…']},resume:'…',
@@ -264,12 +264,12 @@ function render(r,ctx,source){
 function domToText(){
   const rep=$('cr-report'); if(!rep) return '';
   const L=[];
-  rep.querySelectorAll(':scope > header, :scope > section, :scope > p').forEach(node=>{
-    if(node.tagName==='HEADER'){
+  rep.querySelectorAll(':scope > .cr-head, :scope > .cr-sec, :scope > p').forEach(node=>{
+    if(node.classList.contains('cr-head')){
       L.push(node.querySelector('h2')?.textContent.trim().toUpperCase()||'');
       node.querySelectorAll('dt').forEach(dt=>L.push(`${dt.textContent.trim()} : ${dt.nextElementSibling?.textContent.trim()||''}`));
       L.push('');
-    }else if(node.tagName==='SECTION'){
+    }else if(node.classList.contains('cr-sec')){
       L.push(node.querySelector('h3')?.textContent.trim().toUpperCase()||'');
       node.querySelectorAll('p').forEach(p=>L.push(p.textContent.trim()));
       node.querySelectorAll('li').forEach(x=>L.push('- '+x.textContent.trim()));
