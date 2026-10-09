@@ -20,7 +20,7 @@
   --amber:#FFA000;      /* ambre */
   --line:rgba(20,21,26,.12);
   --line-soft:rgba(20,21,26,.07);
-  --maxw:1240px;
+  --maxw:1440px;
   --pad:clamp(20px,4.5vw,60px);
 }
 *{box-sizing:border-box}
