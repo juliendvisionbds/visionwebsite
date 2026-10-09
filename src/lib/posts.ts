@@ -20,6 +20,7 @@
  *   :: Titre                    encadré : ligne de titre, puis une liste ou un paragraphe dans le même bloc
  *   ## Questions fréquentes     les ### de cette section alimentent aussi les données FAQ pour Google
  *   > citation                  citation mise en avant
+ *   > ligne / > / > ligne       citation de plusieurs paragraphes → modèle de message (mail type à copier)
  *   [Légende]                   emplacement de visuel à venir (légende affichée dessous)
  *   ![Légende](/blog/image.png) visuel (image dans public/), avec légende
  *   **[Texte →](booking)**      bouton ; "booking" ouvre la prise de rendez-vous
@@ -162,8 +163,14 @@ export function getPost(kind: Kind, slug: string): Post | null {
       const content = rest.every((l) => l.startsWith("- ")) ? list("ul", rest) : `<p>${inline(rest.join(" "))}</p>`;
       out.push(`<aside class="post-callout"><b>${inline(m[1])}</b>${content}</aside>`);
     }
-    else if (block.split("\n").every((l) => l.startsWith(">")))
-      out.push(`<blockquote>${inline(block.split("\n").map((l) => l.replace(/^>\s?/, "")).join(" "))}</blockquote>`);
+    else if (lines.every((l) => l.startsWith(">"))) {
+      const quote = lines.map((l) => l.replace(/^>\s?/, ""));
+      if (quote.includes("")) {
+        // plusieurs paragraphes : modèle de message, retours à la ligne conservés
+        const paras = quote.join("\n").split(/\n{2,}/).map((p) => `<p>${p.split("\n").map(inline).join("<br>")}</p>`);
+        out.push(`<div class="post-msg">${paras.join("")}</div>`);
+      } else out.push(`<blockquote>${inline(quote.join(" "))}</blockquote>`);
+    }
     else if ((m = block.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/)))
       out.push(
         `<figure class="post-fig"><img src="${esc(m[2])}" alt="${esc(m[1])}" loading="lazy">${m[1] ? `<figcaption>${esc(m[1])}</figcaption>` : ""}</figure>`

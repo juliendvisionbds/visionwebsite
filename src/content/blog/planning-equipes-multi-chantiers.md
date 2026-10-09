@@ -3,7 +3,7 @@ title: Planning multi-chantiers : affecter équipes, véhicules et matériel san
 seoTitle: Planning multi-chantiers : équipes, véhicules, matériel
 description: Organiser le planning de plusieurs chantiers : une source unique, les contraintes, l'affectation des équipes, véhicules et matériel, et une semaine type avec imprévu.
 tag: Terrain
-date: 2026-10-09
+date: 2026-10-08
 cover: /blog/planning-equipes-multi-chantiers/planning-multi-chantiers.jpg
 coverAlt: Deux fourgons et un camion plateau en cours de chargement dans la cour d'un dépôt d'entreprise du bâtiment, à l'aube.
 author: Julien Devoir

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Cinq messages de relance de devis selon la situation : vérifier la réception, relancer avec une information utile, répondre à une hésitation sur le prix, gérer un projet reporté, clôturer proprement</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">ÉTAPE 3 · LES MESSAGES</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Cinq situations, cinq messages différents</text>
+  <g transform="translate(48 136)">
+    <rect x="7" y="7" width="208" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="40" r="18" fill="#5A4BFF"/><text x="38" y="46" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Vérifier</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">la réception</text>
+    <rect x="20" y="142" width="90" height="26" rx="13" fill="#FFC64D" opacity=".6"/><text x="65.0" y="159.5" font-size="12.5" font-weight="700" fill="#14151A" text-anchor="middle">J+2 à J+3</text>
+    <path d="M20 192 H188" stroke="#E4E2DD"/>
+    <text x="20" y="220" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">LE MESSAGE</text><text x="20" y="244" font-size="14" font-weight="600" fill="#14151A">« Le devis est-il bien</text><text x="20" y="264" font-size="14" font-weight="600" fill="#14151A">arrivé, et clair ? »</text>
+    <path d="M20 290 H188" stroke="#E4E2DD"/>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">À RETENIR</text><text x="20" y="342" font-size="13.5" fill="#6C6A66">La question la plus</text><text x="20" y="361" font-size="13.5" fill="#6C6A66">facile à poser.</text>
+  </g>
+  <g transform="translate(272 136)">
+    <rect x="7" y="7" width="208" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="40" r="18" fill="#5A4BFF"/><text x="38" y="46" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Sans</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">réponse</text>
+    <rect x="20" y="142" width="97" height="26" rx="13" fill="#FFC64D" opacity=".6"/><text x="68.5" y="159.5" font-size="12.5" font-weight="700" fill="#14151A" text-anchor="middle">J+7 à J+10</text>
+    <path d="M20 192 H188" stroke="#E4E2DD"/>
+    <text x="20" y="220" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">LE MESSAGE</text><text x="20" y="244" font-size="14" font-weight="600" fill="#14151A">Une information utile :</text><text x="20" y="264" font-size="14" font-weight="600" fill="#14151A">disponibilités, calendrier.</text>
+    <path d="M20 290 H188" stroke="#E4E2DD"/>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">À RETENIR</text><text x="20" y="342" font-size="13.5" fill="#6C6A66">Ne pas relancer</text><text x="20" y="361" font-size="13.5" fill="#6C6A66">« pour relancer ».</text>
+  </g>
+  <g transform="translate(496 136)">
+    <rect x="7" y="7" width="208" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="40" r="18" fill="#5A4BFF"/><text x="38" y="46" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Hésitation</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">sur le prix</text>
+    <rect x="20" y="142" width="134" height="26" rx="13" fill="#FFC64D" opacity=".6"/><text x="87.0" y="159.5" font-size="12.5" font-weight="700" fill="#14151A" text-anchor="middle">Dès l'objection</text>
+    <path d="M20 192 H188" stroke="#E4E2DD"/>
+    <text x="20" y="220" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">LE MESSAGE</text><text x="20" y="244" font-size="14" font-weight="600" fill="#14151A">Comprendre ce qui</text><text x="20" y="264" font-size="14" font-weight="600" fill="#14151A">est comparé.</text>
+    <path d="M20 290 H188" stroke="#E4E2DD"/>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">À RETENIR</text><text x="20" y="342" font-size="13.5" fill="#6C6A66">Variante ou phasage</text><text x="20" y="361" font-size="13.5" fill="#6C6A66">avant toute remise.</text>
+  </g>
+  <g transform="translate(720 136)">
+    <rect x="7" y="7" width="208" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="40" r="18" fill="#5A4BFF"/><text x="38" y="46" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">4</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Projet</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">reporté</text>
+    <rect x="20" y="142" width="104" height="26" rx="13" fill="#FFC64D" opacity=".6"/><text x="72.0" y="159.5" font-size="12.5" font-weight="700" fill="#14151A" text-anchor="middle">À l'annonce</text>
+    <path d="M20 192 H188" stroke="#E4E2DD"/>
+    <text x="20" y="220" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">LE MESSAGE</text><text x="20" y="244" font-size="14" font-weight="600" fill="#14151A">Convenir d'une date</text><text x="20" y="264" font-size="14" font-weight="600" fill="#14151A">de reprise de contact.</text>
+    <path d="M20 290 H188" stroke="#E4E2DD"/>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">À RETENIR</text><text x="20" y="342" font-size="13.5" fill="#6C6A66">Sans date, le projet</text><text x="20" y="361" font-size="13.5" fill="#6C6A66">est perdu.</text>
+  </g>
+  <g transform="translate(944 136)">
+    <rect x="7" y="7" width="208" height="400" rx="20" fill="#EDEBFF"/>
+    <rect width="208" height="400" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <circle cx="38" cy="40" r="18" fill="#5A4BFF"/><text x="38" y="46" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">5</text>
+    <text x="20" y="98" font-size="21" font-weight="800" fill="#14151A">Clôturer</text><text x="20" y="124" font-size="21" font-weight="800" fill="#14151A">proprement</text>
+    <rect x="20" y="142" width="141" height="26" rx="13" fill="#FFC64D" opacity=".6"/><text x="90.5" y="159.5" font-size="12.5" font-weight="700" fill="#14151A" text-anchor="middle">Dernière relance</text>
+    <path d="M20 192 H188" stroke="#E4E2DD"/>
+    <text x="20" y="220" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">LE MESSAGE</text><text x="20" y="244" font-size="14" font-weight="600" fill="#14151A">Classer le dossier,</text><text x="20" y="264" font-size="14" font-weight="600" fill="#14151A">demander la raison.</text>
+    <path d="M20 290 H188" stroke="#E4E2DD"/>
+    <text x="20" y="318" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">À RETENIR</text><text x="20" y="342" font-size="13.5" fill="#6C6A66">Le projet repart, ou</text><text x="20" y="361" font-size="13.5" fill="#6C6A66">vous savez pourquoi.</text>
+  </g>
+  <g transform="translate(48 566)">
+    <rect width="1104" height="48" rx="16" fill="#14151A"/>
+    <text x="552" y="30" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">Une réponse du client, quelle qu'elle soit, arrête la séquence et passe la main à une personne.</text>
+  </g>
+</svg>

@@ -513,6 +513,12 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .post-callout>b{display:block;font-family:Gabarito;font-weight:700;font-size:19px;letter-spacing:-.02em;margin-bottom:8px}
 .post-callout p{margin:0}
 
+/* modèle de message (citation de plusieurs paragraphes) */
+.post-msg{margin-top:1.6em;padding:20px 24px;background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:6px 16px 16px 6px;font-size:16px;line-height:1.6}
+.post-msg p{margin:0}
+.post-msg p+p{margin-top:.9em}
+.post-msg p:first-child b:first-child{font-family:Gabarito;font-size:17px}
+
 /* visuel d'en-tête : part de la colonne de l'article et s'étend jusqu'au bord droit */
 .post-cover{margin:clamp(28px,3.5vw,44px) 0 0}
 .post-cover img{display:block;width:100%;height:auto;border-radius:22px;border:2px solid var(--ink);box-shadow:10px 10px 0 0 var(--tint)}
