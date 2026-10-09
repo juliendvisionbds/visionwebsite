@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Planning de la semaine après replanification : trois équipes sur cinq jours, quatre cases modifiées après une absence et un coulage décalé (exemple fictif)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">LA SEMAINE APRÈS L'IMPRÉVU</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Quatre cases modifiées, tout le reste inchangé</text>
+  <text x="332.0" y="150" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#6C6A66" text-anchor="middle">LUNDI</text>
+  <text x="514.0" y="150" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#6C6A66" text-anchor="middle">MARDI</text>
+  <text x="696.0" y="150" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#6C6A66" text-anchor="middle">MERCREDI</text>
+  <text x="878.0" y="150" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#6C6A66" text-anchor="middle">JEUDI</text>
+  <text x="1060.0" y="150" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#6C6A66" text-anchor="middle">VENDREDI</text>
+  <text x="48" y="214" font-size="19" font-weight="800" fill="#14151A">Équipe A</text><text x="48" y="236" font-size="13" fill="#6C6A66">Fourgon 1</text>
+  <rect x="244" y="168" width="176" height="104" rx="14" fill="#EDEBFF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="260" y="218" font-size="17" font-weight="800" fill="#14151A">Draguignan</text><text x="260" y="241" font-size="13" fill="#14151A" opacity=".75">Maçonnerie</text>
+  <rect x="426" y="168" width="176" height="104" rx="14" fill="#EDEBFF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="442" y="218" font-size="17" font-weight="800" fill="#14151A">Draguignan</text><text x="442" y="241" font-size="13" fill="#14151A" opacity=".75">Maçonnerie</text>
+  <rect x="608" y="168" width="176" height="104" rx="14" fill="#EDEBFF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="624" y="218" font-size="17" font-weight="800" fill="#14151A">Draguignan</text><text x="624" y="241" font-size="13" fill="#14151A" opacity=".75">Maçonnerie</text>
+  <rect x="790" y="168" width="176" height="104" rx="14" fill="#FFF1D0" stroke="#14151A" stroke-width="3"/><text x="806" y="218" font-size="17" font-weight="800" fill="#14151A">Fréjus</text><text x="806" y="241" font-size="13" fill="#14151A" opacity=".75">Coulage, en renfort</text><rect x="890" y="178" width="66" height="22" rx="11" fill="#5A4BFF"/><text x="923" y="193.5" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">Modifié</text>
+  <rect x="972" y="168" width="176" height="104" rx="14" fill="#EDEBFF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="988" y="218" font-size="17" font-weight="800" fill="#14151A">Draguignan</text><text x="988" y="241" font-size="13" fill="#14151A" opacity=".75">Maçonnerie</text>
+  <text x="48" y="326" font-size="19" font-weight="800" fill="#14151A">Équipe B</text><text x="48" y="348" font-size="13" fill="#6C6A66">Fourgon 2</text>
+  <rect x="244" y="280" width="176" height="104" rx="14" fill="#FFF1D0" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="260" y="330" font-size="17" font-weight="800" fill="#14151A">Fréjus</text><text x="260" y="353" font-size="13" fill="#14151A" opacity=".75">Coffrage dalle</text>
+  <rect x="426" y="280" width="176" height="104" rx="14" fill="#FFF1D0" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="442" y="330" font-size="17" font-weight="800" fill="#14151A">Fréjus</text><text x="442" y="353" font-size="13" fill="#14151A" opacity=".75">Coffrage, ferraillage</text>
+  <rect x="608" y="280" width="176" height="104" rx="14" fill="#FFF1D0" stroke="#14151A" stroke-width="3"/><text x="624" y="330" font-size="17" font-weight="800" fill="#14151A">Fréjus</text><text x="624" y="353" font-size="13" fill="#14151A" opacity=".75">Préparation, 1 pers.</text><rect x="708" y="290" width="66" height="22" rx="11" fill="#5A4BFF"/><text x="741" y="305.5" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">Modifié</text>
+  <rect x="790" y="280" width="176" height="104" rx="14" fill="#FFF1D0" stroke="#14151A" stroke-width="3"/><text x="806" y="330" font-size="17" font-weight="800" fill="#14151A">Fréjus</text><text x="806" y="353" font-size="13" fill="#14151A" opacity=".75">Coulage, toupie 8 h</text><rect x="890" y="290" width="66" height="22" rx="11" fill="#5A4BFF"/><text x="923" y="305.5" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">Modifié</text>
+  <rect x="972" y="280" width="176" height="104" rx="14" fill="#FFF1D0" stroke="#14151A" stroke-width="3"/><text x="988" y="330" font-size="17" font-weight="800" fill="#14151A">Fréjus</text><text x="988" y="353" font-size="13" fill="#14151A" opacity=".75">Finitions dalle, 1 pers.</text><rect x="1072" y="290" width="66" height="22" rx="11" fill="#5A4BFF"/><text x="1105" y="305.5" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">Modifié</text>
+  <text x="48" y="438" font-size="19" font-weight="800" fill="#14151A">Équipe C</text><text x="48" y="460" font-size="13" fill="#6C6A66">Camion + mini-pelle</text>
+  <rect x="244" y="392" width="176" height="104" rx="14" fill="#DDF7EF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="260" y="442" font-size="17" font-weight="800" fill="#14151A">Lorgues</text><text x="260" y="465" font-size="13" fill="#14151A" opacity=".75">Terrassement</text>
+  <rect x="426" y="392" width="176" height="104" rx="14" fill="#DDF7EF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="442" y="442" font-size="17" font-weight="800" fill="#14151A">Lorgues</text><text x="442" y="465" font-size="13" fill="#14151A" opacity=".75">Terrassement</text>
+  <rect x="608" y="392" width="176" height="104" rx="14" fill="#DDF7EF" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="624" y="442" font-size="17" font-weight="800" fill="#14151A">Lorgues</text><text x="624" y="465" font-size="13" fill="#14151A" opacity=".75">Semelles</text>
+  <rect x="790" y="392" width="176" height="104" rx="14" fill="#ECEAE5" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="806" y="442" font-size="17" font-weight="800" fill="#14151A">Le Muy</text><text x="806" y="465" font-size="13" fill="#14151A" opacity=".75">Reprise, mini-pelle</text>
+  <rect x="972" y="392" width="176" height="104" rx="14" fill="#ECEAE5" stroke="#14151A" stroke-width="1.2" stroke-opacity=".25"/><text x="988" y="442" font-size="17" font-weight="800" fill="#14151A">Le Muy</text><text x="988" y="465" font-size="13" fill="#14151A" opacity=".75">Reprise</text>
+  <g font-size="13" font-weight="600" fill="#14151A">
+    <circle cx="438" cy="522" r="6" fill="#E5484D"/><text x="452" y="526.5">Mardi 18 h : un compagnon de l'équipe B absent jusqu'à vendredi</text>
+    <circle cx="438" cy="548" r="6" fill="#E5484D"/><text x="452" y="552.5">Mercredi 7 h : pluie annoncée, coulage de Fréjus décalé à jeudi</text>
+  </g>
+  <text x="48" y="526.5" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#6C6A66">LES DEUX IMPRÉVUS</text>
+  <g transform="translate(48 566)">
+    <rect width="1104" height="48" rx="16" fill="#14151A"/>
+    <text x="552" y="30" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">Deux équipes prévenues, une centrale et un client informés. Rien n'a été recopié. Exemple fictif.</text>
+  </g>
+</svg>

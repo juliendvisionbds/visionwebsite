@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Fiche du jour d'une équipe de chantier : adresse et horaire, tâche, matériel à charger, véhicule, contact sur place et points d'attention ; trois règles de transmission (exemple fictif)</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">ÉTAPE 5 · LA TRANSMISSION</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">Une fiche par équipe, pas le planning complet</text>
+  <g transform="translate(48 136)">
+    <rect x="8" y="8" width="700" height="456" rx="20" fill="#EDEBFF"/>
+    <rect width="700" height="456" rx="20" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <text x="28" y="40" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">FICHE DU JOUR</text>
+    <text x="28" y="72" font-size="24" font-weight="800" fill="#14151A">Équipe A · jeudi</text>
+    <rect x="512" y="26" width="160" height="30" rx="15" fill="#FFC64D"/><text x="592" y="46" font-size="13" font-weight="700" fill="#14151A" text-anchor="middle">Révisée mercredi 16 h</text>
+    <path d="M0 92 H700" stroke="#14151A" stroke-width="2"/>
+    <text x="28" y="128" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">ADRESSE ET HORAIRE</text><text x="28" y="160" font-size="19" font-weight="800" fill="#14151A">Villa à Fréjus</text><text x="28" y="184" font-size="13.5" fill="#6C6A66">Toupie à 8 h</text>
+    <path d="M350 92 v121" stroke="#E4E2DD"/>
+    <text x="378" y="128" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">TÂCHE</text><text x="378" y="160" font-size="19" font-weight="800" fill="#14151A">Coulage de la dalle</text><text x="378" y="184" font-size="13.5" fill="#6C6A66">Avec le chef de l'équipe B</text>
+    <path d="M0 213 H700" stroke="#E4E2DD"/>
+    <text x="28" y="249" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">MATÉRIEL À CHARGER</text><text x="28" y="281" font-size="19" font-weight="800" fill="#14151A">Règle et vibreur</text><text x="28" y="305" font-size="13.5" fill="#6C6A66">À charger mercredi soir</text>
+    <path d="M350 213 v121" stroke="#E4E2DD"/>
+    <text x="378" y="249" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">VÉHICULE</text><text x="378" y="281" font-size="19" font-weight="800" fill="#14151A">Fourgon 1</text><text x="378" y="305" font-size="13.5" fill="#6C6A66">Comme le reste de la semaine</text>
+    <path d="M0 334 H700" stroke="#E4E2DD"/>
+    <text x="28" y="370" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">CONTACT SUR PLACE</text><text x="28" y="402" font-size="19" font-weight="800" fill="#14151A">Le client de Fréjus</text><text x="28" y="426" font-size="13.5" fill="#6C6A66">Informé du décalage d'un jour</text>
+    <path d="M350 334 v121" stroke="#E4E2DD"/>
+    <text x="378" y="370" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6C6A66">POINTS D'ATTENTION</text><text x="378" y="402" font-size="19" font-weight="800" fill="#14151A">Draguignan suspendu jeudi</text><text x="378" y="426" font-size="13.5" fill="#6C6A66">Reprise de la maçonnerie vendredi</text>
+  </g>
+  <g transform="translate(784 136)">
+    <rect width="368" height="456" rx="20" fill="#14151A"/>
+    <text x="28" y="42" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#FFC64D">POUR TRANSMETTRE</text>
+    <text x="28" y="74" font-size="22" font-weight="800" fill="#fff">Trois règles simples</text>
+    <circle cx="44" cy="128" r="16" fill="#5A4BFF"/><text x="44" y="133.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">1</text><text x="74" y="126" font-size="16.5" font-weight="800" fill="#fff">Une heure fixe la veille</text><text x="74" y="150" font-size="13.5" fill="#fff" opacity=".75">16 h, par exemple. Après,</text><text x="74" y="169" font-size="13.5" fill="#fff" opacity=".75">c'est l'exception, par appel.</text>
+    <circle cx="44" cy="228" r="16" fill="#5A4BFF"/><text x="44" y="233.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">2</text><text x="74" y="226" font-size="16.5" font-weight="800" fill="#fff">Une fiche par équipe</text><text x="74" y="250" font-size="13.5" fill="#fff" opacity=".75">Ce qu'elle doit savoir,</text><text x="74" y="269" font-size="13.5" fill="#fff" opacity=".75">pas le planning de tous.</text>
+    <circle cx="44" cy="328" r="16" fill="#5A4BFF"/><text x="44" y="333.5" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">3</text><text x="74" y="326" font-size="16.5" font-weight="800" fill="#fff">Prévenir les concernés</text><text x="74" y="350" font-size="13.5" fill="#fff" opacity=".75">Eux seulement, en vérifiant</text><text x="74" y="369" font-size="13.5" fill="#fff" opacity=".75">qu'ils ont reçu l'information.</text>
+    <path d="M28 388 H340" stroke="#fff" opacity=".2"/>
+    <text x="28" y="414" font-size="13" fill="#fff" opacity=".75">Papier, message ou application :</text>
+    <text x="28" y="433" font-size="13" fill="#fff" opacity=".75">le support compte moins que la régularité.</text>
+  </g>
+  <text x="48" y="622" font-size="13" fill="#6C6A66">Exemple fictif.</text>
+</svg>
