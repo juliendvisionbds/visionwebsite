@@ -11,9 +11,11 @@
     "start": "next start",
     "lint": "eslint",
     "convert:html": "node scripts/convert-html.mjs",
-    "build:kit": "node scripts/build-kit.mjs"
+    "build:kit": "node scripts/build-kit.mjs",
+    "check:keyone": "node --env-file=.env.local scripts/keyone-check.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
     "@next/third-parties": "^16.3.0",
     "@supabase/supabase-js": "^2.117.2",
     "next": "16.3.0",

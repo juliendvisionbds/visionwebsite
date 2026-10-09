@@ -1,0 +1,252 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero ri-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Relance de facture impayée</span></nav>
+    <div class="ri-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Bâtiment</span>
+        <h1>Relancer une facture <span class="sq brand">impayée<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span>, sans y passer la soirée</h1>
+        <p class="lede">Décrivez la facture. L'outil vous dit où vous en êtes, ce que vous pouvez réclamer, quoi écrire, et quand passer à l'étape suivante. Particuliers, entreprises, marchés publics.</p>
+        <ul class="ri-meta">
+          <li>Sans inscription</li>
+          <li>Pénalités et indemnité de 40 € calculées</li>
+          <li>Mail, SMS et script d'appel</li>
+        </ul>
+      </div>
+      <span class="blip ri-hero-blip" data-pose="carry" data-color="honey"></span>
+    </div>
+  </div>
+</section>
+
+<!-- L'OUTIL -->
+<section id="outil" class="ri-sec">
+  <div class="wrap">
+    <div class="ri">
+      <form class="ri-form" id="ri-form" novalidate>
+        <div class="ri-fh"><span class="k">1. La facture</span></div>
+
+        <fieldset class="ri-fs">
+          <legend>Votre client</legend>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="ri-client" value="pro" checked><span><b>Entreprise</b><small>promoteur, entreprise générale, pro</small></span></label>
+            <label><input type="radio" name="ri-client" value="particulier"><span><b>Particulier</b><small>maison, appartement</small></span></label>
+            <label><input type="radio" name="ri-client" value="public"><span><b>Marché public</b><small>mairie, bailleur social, État</small></span></label>
+          </div>
+        </fieldset>
+
+        <label class="ri-l">
+          <span>Type de facture</span>
+          <select id="ri-type">
+            <option value="facture">Facture classique</option>
+            <option value="situation">Situation de travaux (acompte mensuel)</option>
+            <option value="solde">Solde après réception</option>
+            <option value="retenue">Retenue de garantie</option>
+          </select>
+        </label>
+
+        <div class="ri-row">
+          <label class="ri-l">
+            <span>Montant TTC (€)</span>
+            <input id="ri-amount" type="number" min="1" step="0.01" inputmode="decimal" placeholder="12 450" required>
+          </label>
+          <label class="ri-l">
+            <span id="ri-date-label">Date de facture</span>
+            <input id="ri-date" type="date" required>
+          </label>
+        </div>
+
+        <label class="ri-l">
+          <span>Date d'échéance <small id="ri-due-hint">proposée selon le client, modifiable</small></span>
+          <input id="ri-due" type="date" required>
+        </label>
+
+        <div class="ri-fh"><span class="k">2. Où vous en êtes</span></div>
+
+        <div class="ri-row">
+          <label class="ri-l">
+            <span>Relances déjà faites</span>
+            <select id="ri-done">
+              <option value="0">Aucune</option>
+              <option value="1">Une relance</option>
+              <option value="2">Deux relances ou plus</option>
+              <option value="md">Mise en demeure déjà envoyée</option>
+            </select>
+          </label>
+          <label class="ri-l">
+            <span>Situation</span>
+            <select id="ri-situation">
+              <option value="silence">Aucune réponse</option>
+              <option value="visa">Situation bloquée au visa du maître d'œuvre</option>
+              <option value="contestee">Facture contestée (montant, travaux sup, réserves)</option>
+              <option value="promesse">Promesse de paiement non tenue</option>
+              <option value="difficulte">Client en difficulté de trésorerie</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="ri-fs">
+          <legend>Relation avec ce client</legend>
+          <div class="seg seg-2" role="radiogroup">
+            <label><input type="radio" name="ri-relation" value="ponctuel" checked><span><b>Ponctuelle</b><small>un chantier, une facture</small></span></label>
+            <label><input type="radio" name="ri-relation" value="recurrent"><span><b>Donneur d'ordre récurrent</b><small>on travaille souvent ensemble</small></span></label>
+          </div>
+        </fieldset>
+
+        <details class="ri-more">
+          <summary>Taux et personnalisation <small>facultatif</small></summary>
+          <div class="ri-more-in">
+            <label class="ri-l">
+              <span>Taux de pénalités annuel (%) <small id="ri-rate-hint"></small></span>
+              <input id="ri-rate" type="number" min="0" max="60" step="0.01" inputmode="decimal">
+            </label>
+            <div class="ri-row">
+              <label class="ri-l"><span>Votre entreprise</span><input id="ri-company" type="text" maxlength="80" placeholder="Durand Rénovation" autocomplete="organization"></label>
+              <label class="ri-l"><span>Contact chez le client</span><input id="ri-contact" type="text" maxlength="80" placeholder="M. Martin"></label>
+            </div>
+            <div class="ri-row">
+              <label class="ri-l"><span>Référence de la facture</span><input id="ri-ref" type="text" maxlength="40" placeholder="F-2026-118"></label>
+              <label class="ri-l"><span>Objet des travaux</span><input id="ri-works" type="text" maxlength="80" placeholder="rénovation de toiture, Toulon"></label>
+            </div>
+          </div>
+        </details>
+
+        <p class="ri-err" id="ri-err" role="alert" hidden></p>
+        <button class="btn btn-primary" id="ri-go" type="submit">Préparer ma relance <span class="arw">→</span></button>
+        <p class="ri-note" id="ri-note">Les montants et les dates sont calculés dans votre navigateur. Les messages sont rédigés par une IA à partir de vos réponses. Rien n'est enregistré par vision.</p>
+      </form>
+
+      <div class="ri-out" id="ri-out" aria-live="polite">
+        <div class="ri-empty">
+          <span class="blip" data-pose="look" data-color="brand"></span>
+          <p><b>Vos résultats apparaîtront ici.</b><br>Le niveau de relance, le montant à réclamer, les messages prêts à copier et les prochaines étapes datées.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ri-cta reveal">
+      <span class="blip ri-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Dix factures à relancer par mois ? Elles peuvent partir toutes seules.</h2>
+        <p>Chez nos clients, la relance part à la bonne date, avec le bon ton, et une personne ne reprend la main que lorsque le client répond. Deux minutes pour voir si c'est votre cas.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="ri-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Relance de facture impayée dans le bâtiment : la méthode</h2>
+      <p class="lede">Ce que dit la loi, ce qui marche sur le terrain, et les cas qui n'existent que chez nous : situations de travaux, réserves, retenue de garantie.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-quand">Quand relancer : le calendrier qui tient</a></li>
+            <li><a href="#g-montants">Pénalités et indemnité de 40 € : ce que vous pouvez réclamer</a></li>
+            <li><a href="#g-btp">Situations, réserves, retenue de garantie : les cas du BTP</a></li>
+            <li><a href="#g-ecrire">De la relance amiable à la mise en demeure : quoi écrire</a></li>
+            <li><a href="#g-recours">Quand et comment passer au recours</a></li>
+            <li><a href="#g-erreurs">Les erreurs qui coûtent cher</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-quand">1. Quand relancer : le calendrier qui tient</h3>
+        <p>Une facture n'est en retard qu'après son échéance. Avant cette date, la seule chose à vérifier est qu'elle est bien arrivée au bon endroit : le bon interlocuteur chez un promoteur, le dépôt sur Chorus Pro pour un marché public, le visa du maître d'œuvre pour une situation de travaux. Beaucoup de « retards » sont en réalité des factures qui n'ont jamais atteint le service comptable.</p>
+        <p>Après l'échéance, le rythme qui fonctionne dans le bâtiment tient en quatre temps :</p>
+        <ul>
+          <li><b>J+1 à J+7 : le rappel cordial.</b> On signale l'échéance, on laisse la porte ouverte à un oubli ou à un croisement avec le règlement. Un mail court suffit.</li>
+          <li><b>J+10 à J+15 : la relance ferme.</b> Le montant, le nombre de jours de retard, les pénalités chiffrées, une date limite précise. Un appel téléphonique la veille ou le lendemain double l'efficacité.</li>
+          <li><b>Autour de J+30 : la mise en demeure.</b> Un courrier recommandé avec accusé de réception. C'est la dernière étape amiable, et la pièce que le juge demandera si vous allez plus loin.</li>
+          <li><b>J+45 à J+60 : le recours.</b> Commissaire de justice, injonction de payer ou tribunal administratif selon le client. Attendre davantage n'apporte rien, sauf si le client a proposé un échéancier écrit.</li>
+        </ul>
+        <p>Avec un donneur d'ordre récurrent, le téléphone passe avant l'écrit : un promoteur qui vous confie trois chantiers par an mérite un appel avant un mail ferme. Les étapes restent les mêmes, le ton change.</p>
+        <div class="callout"><b>La règle qui évite les dossiers oubliés :</b> chaque facture impayée a une prochaine action et une date. Si vous ne savez pas quand vous relancez, vous ne relancerez pas.</div>
+
+        <h3 id="g-montants">2. Pénalités et indemnité de 40 € : ce que vous pouvez réclamer</h3>
+        <p>Ce que vous pouvez ajouter à la facture dépend entièrement du type de client. C'est le point que la plupart des entreprises traitent de la même manière, à tort.</p>
+        <table class="ri-table">
+          <thead><tr><th>Client</th><th>Délai de paiement</th><th>Pénalités de retard</th><th>Indemnité de 40 €</th><th>Prescription</th></tr></thead>
+          <tbody>
+            <tr><td><b>Entreprise privée</b></td><td>30 jours par défaut, 60 jours au plus (ou 45 jours fin de mois)</td><td>Taux de vos CGV, au minimum 3 fois le taux légal (8,25 %). Sans clause : taux BCE + 10 points (12,40 %)</td><td>Oui, par facture, de plein droit</td><td>5 ans</td></tr>
+            <tr><td><b>Particulier</b></td><td>Celui du devis</td><td>Seulement si le devis signé les prévoit. Sinon, intérêts au taux légal (2,75 %) à partir de la mise en demeure</td><td>Non</td><td>2 ans</td></tr>
+            <tr><td><b>Marché public</b></td><td>30 jours (50 jours pour les hôpitaux, 60 pour les entreprises publiques)</td><td>Intérêts moratoires : taux BCE + 8 points (10,40 %), dus automatiquement</td><td>Oui, de plein droit</td><td>4 ans (déchéance quadriennale)</td></tr>
+          </tbody>
+        </table>
+        <p>Le calcul est le même partout : <b>montant TTC × taux annuel × jours de retard ÷ 365</b>. Pour une facture de 12 450 € en retard de 38 jours chez un promoteur sans clause particulière : 12 450 × 12,40 % × 38 ÷ 365 = 160,70 €, plus 40 € d'indemnité forfaitaire. Les taux ci-dessus sont ceux du second semestre 2026 ; ils sont revus chaque semestre, et c'est le taux en vigueur au premier jour du semestre où le retard commence qui s'applique.</p>
+        <p>Entre professionnels, les pénalités et l'indemnité sont dues sans qu'un rappel soit nécessaire. Dans la pratique, elles servent surtout de levier : « nous y renonçons si le règlement nous parvient sous huit jours » débloque plus de dossiers qu'une facture de pénalités envoyée après coup.</p>
+        <div class="callout"><b>Le piège du particulier :</b> sans clause de pénalités dans le devis signé, vous ne pouvez rien ajouter avant la mise en demeure, et jamais les 40 €. La solution est en amont : une ligne « pénalités de retard » dans vos devis.</div>
+
+        <h3 id="g-btp">3. Situations, réserves, retenue de garantie : les cas du BTP</h3>
+        <p><b>La situation de travaux bloquée au visa.</b> Une situation mensuelle doit être visée par le maître d'œuvre avant d'être payée par le maître d'ouvrage. Quand elle dort sur son bureau, relancer le client seul ne sert à rien : c'est le maître d'œuvre qu'il faut relancer, par écrit, avec le maître d'ouvrage en copie. En marché public, le délai de paiement de 30 jours court à partir du dépôt de la situation, et le silence du maître d'œuvre ne le suspend pas : les intérêts moratoires courent quand même. En marché privé, tout dépend du contrat et, s'il s'y réfère, de la norme NF P 03-001.</p>
+        <p><b>Le solde retenu pour des réserves.</b> Des réserves à la réception ne justifient pas de bloquer tout le solde. Le maître d'ouvrage peut retenir la part correspondant aux travaux réservés, pas davantage : c'est précisément le rôle de la retenue de garantie. Proposez une date pour lever les réserves et demandez le règlement du reste.</p>
+        <p><b>La retenue de garantie.</b> Elle est plafonnée à 5 % du marché et encadrée par la loi du 16 juillet 1971 : le maître d'ouvrage doit la consigner auprès d'un tiers (Caisse des dépôts) ou accepter une caution bancaire à la place. Elle est libérée un an après la réception, sauf opposition motivée notifiée par lettre recommandée avant ce terme. Passé un an sans opposition, réclamez-la directement au consignataire ou à la caution : le maître d'ouvrage n'a plus son mot à dire. Un maître d'ouvrage qui « garde les 5 % » sur son compte sans les consigner est hors des règles : demandez la consignation par écrit.</p>
+        <p><b>Les travaux supplémentaires.</b> Sans devis signé ni ordre écrit, la contestation est probable. Isolez-les : relancez fermement la part non contestée, et traitez les travaux supplémentaires comme un litige à part, documents à l'appui.</p>
+
+        <h3 id="g-ecrire">4. De la relance amiable à la mise en demeure : quoi écrire</h3>
+        <p>Chaque niveau a un objectif différent, et donc un contenu différent.</p>
+        <ul>
+          <li><b>Le rappel cordial</b> rappelle les faits (facture, montant, échéance), propose l'hypothèse d'un oubli, et offre un appel si quelque chose bloque. Pas de pénalités à ce stade.</li>
+          <li><b>La relance ferme</b> chiffre le retard : jours, pénalités, indemnité, total. Elle fixe une date limite à huit ou dix jours et annonce la suite sans détour. Avec un professionnel, elle propose de renoncer aux pénalités contre un règlement rapide.</li>
+          <li><b>La mise en demeure</b> est un courrier recommandé avec accusé de réception. Elle contient les mots « mettre en demeure », le détail des sommes, un délai de huit jours et les conséquences à défaut. Pour un particulier, elle fait courir les intérêts légaux. Pour tous, elle prouve au juge que vous avez tenté l'amiable.</li>
+        </ul>
+        <p>Le ton compte autant que le fond : pas de menace vague, pas de majuscules, pas de « dernier avertissement » répété trois fois. Les faits, la date, la suite. Et entre deux écrits, un appel : la voix débloque ce que le mail n'obtient pas, à condition de savoir quoi dire. Préparez trois phrases, la question qui fait réagir (« qu'est-ce qui empêche le règlement aujourd'hui ? ») et la conclusion datée.</p>
+
+        <h3 id="g-recours">5. Quand et comment passer au recours</h3>
+        <p>Quand la mise en demeure reste sans effet, le choix dépend du client et du montant :</p>
+        <ul>
+          <li><b>Moins de 5 000 € :</b> la procédure simplifiée de recouvrement, menée par un commissaire de justice (l'ancien huissier). Rapide, peu coûteuse, sans passer devant un juge. Si le débiteur refuse d'y participer, on passe à l'injonction.</li>
+          <li><b>Injonction de payer :</b> un formulaire déposé au tribunal judiciaire (particulier) ou au tribunal de commerce (entreprise), sans avocat. Le juge rend une ordonnance sur pièces ; elle est signifiée au débiteur, qui a un mois pour s'y opposer.</li>
+          <li><b>Marché public :</b> pas d'injonction de payer contre une collectivité ou un établissement public. On adresse une réclamation préalable écrite, puis un référé-provision au tribunal administratif. Les intérêts moratoires et l'indemnité de 40 € restent dus.</li>
+          <li><b>Client en redressement ou en liquidation :</b> les relances s'arrêtent. Il faut déclarer la créance au mandataire judiciaire dans les deux mois de la publication au BODACC, sinon elle est perdue.</li>
+        </ul>
+        <p>Le dossier à réunir est le même dans tous les cas : devis signé, ordres de service ou bons de commande, situations visées, procès-verbal de réception, la facture, les relances envoyées, la mise en demeure et son accusé de réception. Et agissez avant la prescription : deux ans face à un particulier, cinq ans entre professionnels, quatre ans en marché public.</p>
+
+        <h3 id="g-erreurs">6. Les erreurs qui coûtent cher</h3>
+        <ul>
+          <li><b>Attendre la clôture du mois pour relancer.</b> Chaque semaine de silence après l'échéance réduit vos chances d'être payé sans procédure.</li>
+          <li><b>Relancer sans date limite.</b> « Merci de régulariser rapidement » ne déclenche rien. « Avant le 17 octobre » si.</li>
+          <li><b>Mélanger retard et litige.</b> Une facture contestée ne se relance pas, elle se clarifie : demandez par écrit ce qui est contesté et faites payer le reste.</li>
+          <li><b>Laisser une situation sans visa.</b> Le maître d'œuvre ne relancera pas à votre place.</li>
+          <li><b>Oublier les 40 € et les pénalités chez les professionnels.</b> Sur une année, c'est de la marge qui dort.</li>
+          <li><b>Ne pas tenir de liste.</b> Un tableau avec le statut de chaque facture et sa prochaine action datée vaut mieux que la meilleure lettre.</li>
+        </ul>
+        <div class="callout"><b>Ce guide et l'outil donnent des repères et des modèles,</b> pas un conseil juridique. Les taux indiqués sont ceux du second semestre 2026 ; vérifiez-les chaque semestre sur les sources officielles, et faites relire une mise en demeure importante par votre conseil.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur la relance d'impayés</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->
