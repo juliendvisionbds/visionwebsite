@@ -19,6 +19,7 @@
     "@next/third-parties": "^16.3.0",
     "@supabase/supabase-js": "^2.117.2",
     "next": "16.3.0",
+    "openai": "^7.31.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "resend": "^6.18.1"

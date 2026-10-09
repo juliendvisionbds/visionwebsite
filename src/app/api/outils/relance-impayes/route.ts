@@ -1,10 +1,14 @@
-import { KeyoneError, askKeyone } from "@/lib/keyone";
+import { KeyoneError, askKeyoneModel } from "@/lib/keyone";
 
 /*
  * Outil « relance de facture impayée » : rédaction personnalisée des messages.
  * Les montants, dates et niveaux sont calculés dans le navigateur (src/content/relance-impayes/script.js)
- * et transmis ici comme faits : le modèle rédige, il ne calcule rien. Appel routé par key.one.
+ * et transmis ici comme faits : le modèle rédige, il ne calcule rien.
+ * Appel routé par key.one ; modèle propre à l'outil : KEYONE_MODEL_RELANCE (sinon KEYONE_MODEL, « cheapest » par défaut).
  */
+
+/** Modèle de cet outil. Un nom gpt-* part sur le proxy OpenAI, un nom claude-* ou un alias key.one sur le proxy Anthropic. */
+const MODEL = process.env.KEYONE_MODEL_RELANCE || process.env.KEYONE_MODEL || "cheapest";
 
 const CLIENTS = ["pro", "particulier", "public"] as const;
 const TYPES = ["facture", "situation", "solde", "retenue"] as const;
@@ -173,9 +177,9 @@ export async function POST(request: Request) {
   const facts = parseFacts(body);
   if (!facts) return Response.json({ error: "Données du dossier incomplètes." }, { status: 400 });
 
-  const ask = (jsonSchema?: Record<string, unknown>) => askKeyone({ system: SYSTEM, prompt: prompt(facts), maxTokens: 1800, jsonSchema });
+  const ask = (jsonSchema?: Record<string, unknown>) => askKeyoneModel({ model: MODEL, system: SYSTEM, prompt: prompt(facts), maxTokens: 1800, jsonSchema, reasoning: "low" });
   try {
-    let reply: Awaited<ReturnType<typeof askKeyone>>;
+    let reply: Awaited<ReturnType<typeof askKeyoneModel>>;
     try {
       reply = await ask(SCHEMA);
     } catch (e) {

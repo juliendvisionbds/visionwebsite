@@ -1,12 +1,14 @@
-import { KeyoneError, askKeyone } from "@/lib/keyone";
+import { KeyoneError, askKeyoneModel } from "@/lib/keyone";
 
 /*
  * Outil « compte rendu de chantier » : des notes brutes vers un compte rendu structuré.
  * Le modèle classe et reformule, il n'invente rien ; ce qui manque est signalé dans `a_completer`.
- * Appel routé par key.one.
+ * Appel routé par key.one ; modèle propre à l'outil : KEYONE_MODEL_COMPTE_RENDU (gpt-5-mini par défaut).
  */
 
 const MAX_NOTES = 8000;
+/** Modèle de cet outil. Un nom gpt-* part sur le proxy OpenAI, un nom claude-* ou un alias key.one sur le proxy Anthropic. */
+const MODEL = process.env.KEYONE_MODEL_COMPTE_RENDU || process.env.KEYONE_OPENAI_MODEL || "gpt-5-mini";
 
 const SYSTEM = `Tu es l'assistant d'un conducteur de travaux dans le bâtiment, en France. À partir de notes brutes prises pendant une réunion ou une visite de chantier, tu rédiges un compte rendu de chantier clair, factuel et prêt à diffuser.
 
@@ -185,9 +187,9 @@ export async function POST(request: Request) {
   const date = typeof body.date === "string" && ISO.test(body.date) ? body.date : new Date().toISOString().slice(0, 10);
   const ctx = { chantier: text(body.chantier, 120), date, numero: text(body.numero, 40), redacteur: text(body.redacteur, 120), presents: text(body.presents, 400) };
 
-  const ask = (jsonSchema?: Record<string, unknown>) => askKeyone({ system: SYSTEM, prompt: prompt(ctx, notes), maxTokens: 3500, jsonSchema });
+  const ask = (jsonSchema?: Record<string, unknown>) => askKeyoneModel({ model: MODEL, system: SYSTEM, prompt: prompt(ctx, notes), maxTokens: 3500, jsonSchema, reasoning: "low" });
   try {
-    let reply: Awaited<ReturnType<typeof askKeyone>>;
+    let reply: Awaited<ReturnType<typeof askKeyoneModel>>;
     try {
       reply = await ask(SCHEMA);
     } catch (e) {

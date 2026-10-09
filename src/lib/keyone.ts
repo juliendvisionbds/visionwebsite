@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 
 /*
  * key.one (https://getkeyone.com) : les appels IA du site passent par le proxy key.one avec une
@@ -7,6 +8,10 @@ import Anthropic from "@anthropic-ai/sdk";
  */
 
 const DEFAULT_BASE_URL = "https://getkeyone.com/api/proxy/anthropic";
+const DEFAULT_OPENAI_BASE_URL = "https://getkeyone.com/api/proxy/openai/v1";
+
+/** Modèle OpenAI par défaut (via le proxy key.one), pour les outils qui préfèrent GPT. */
+export const KEYONE_OPENAI_MODEL = process.env.KEYONE_OPENAI_MODEL || "gpt-5-mini";
 
 /** Modèle par défaut : alias key.one (cheapest, balanced, best) ou identifiant Anthropic. */
 export const KEYONE_MODEL = process.env.KEYONE_MODEL || "cheapest";
@@ -15,6 +20,19 @@ export const KEYONE_MODEL = process.env.KEYONE_MODEL || "cheapest";
 const THINKING_MODELS = /(opus|sonnet|haiku)-5(-\d)?$|fable|mythos/i;
 
 let client: Anthropic | null = null;
+let openaiClient: OpenAI | null = null;
+
+/** Client OpenAI routé par key.one (même clé projet). null si KEYONE_API_KEY n'est pas configurée. */
+export function getKeyoneOpenAI(): OpenAI | null {
+  if (openaiClient) return openaiClient;
+  const apiKey = process.env.KEYONE_API_KEY;
+  if (!apiKey) {
+    console.error("keyone: KEYONE_API_KEY manquante.");
+    return null;
+  }
+  openaiClient = new OpenAI({ apiKey, baseURL: process.env.KEYONE_OPENAI_BASE_URL || DEFAULT_OPENAI_BASE_URL, timeout: 90_000 });
+  return openaiClient;
+}
 
 /** Client Anthropic routé par key.one. null si KEYONE_API_KEY n'est pas configurée. */
 export function getKeyone(): Anthropic | null {
@@ -117,10 +135,68 @@ export async function askKeyone(opts: {
   }
 }
 
+/** Même appel texte simple, mais sur un modèle OpenAI (Chat Completions) via key.one. */
+export async function askKeyoneOpenAI(opts: {
+  prompt: string;
+  system?: string;
+  maxTokens?: number;
+  model?: string;
+  /** Schéma JSON strict de la réponse (Structured Outputs OpenAI : le contenu renvoyé est du JSON valide). */
+  jsonSchema?: Record<string, unknown>;
+  /** Effort de raisonnement des modèles GPT-5 ; « low » garde la latence basse pour de la mise en forme. */
+  reasoning?: "minimal" | "low" | "medium" | "high";
+}): Promise<KeyoneReply> {
+  const openai = getKeyoneOpenAI();
+  if (!openai) throw new KeyoneError("missing_key", "Génération indisponible : clé key.one non configurée.");
+  const model = opts.model || KEYONE_OPENAI_MODEL;
+  try {
+    const { data, response } = await openai.chat.completions
+      .create({
+        model,
+        // Les modèles GPT-5 comptent leur raisonnement dans ce plafond : marge large.
+        max_completion_tokens: (opts.maxTokens ?? 2048) + 4000,
+        reasoning_effort: opts.reasoning ?? "low",
+        messages: [...(opts.system ? [{ role: "system" as const, content: opts.system }] : []), { role: "user" as const, content: opts.prompt }],
+        ...(opts.jsonSchema
+          ? { response_format: { type: "json_schema" as const, json_schema: { name: "reponse", strict: true, schema: opts.jsonSchema } } }
+          : {}),
+      })
+      .withResponse();
+    const choice = data.choices[0];
+    if (!choice) throw new KeyoneError("api", "Réponse vide du modèle.");
+    if (choice.finish_reason === "content_filter" || choice.message.refusal) {
+      throw new KeyoneError("refusal", "Le modèle a refusé cette demande.", choice.message.refusal);
+    }
+    const text = choice.message.content ?? "";
+    if (choice.finish_reason === "length") throw new KeyoneError("truncated", "Réponse coupée avant la fin : augmentez maxTokens.", { text });
+    return {
+      text,
+      model: response.headers.get("x-model-resolved") || data.model,
+      costUsd: num(response.headers.get("x-cost-usd")),
+      callId: response.headers.get("x-call-id"),
+      projectBudgetRemaining: num(response.headers.get("x-project-budget-remaining")),
+      usage: { input: data.usage?.prompt_tokens ?? 0, output: data.usage?.completion_tokens ?? 0 },
+    };
+  } catch (error) {
+    if (error instanceof KeyoneError) throw error;
+    throw toKeyoneError(error);
+  }
+}
+
+const OPENAI_MODEL = /^(gpt-|o\d|chatgpt)/i;
+/** Un modèle OpenAI se reconnaît à son nom ; tout le reste (claude-*, cheapest, balanced, best) part sur le proxy Anthropic. */
+export const isOpenAIModel = (model: string) => OPENAI_MODEL.test(model);
+
+/** Choisit le proxy d'après le nom du modèle : chaque outil peut ainsi fixer son modèle par variable d'environnement. */
+export function askKeyoneModel(opts: Parameters<typeof askKeyoneOpenAI>[0] & { model: string }): Promise<KeyoneReply> {
+  return isOpenAIModel(opts.model) ? askKeyoneOpenAI(opts) : askKeyone(opts);
+}
+
 /** Traduit les refus du proxy key.one (403 BLOCKED, 402 portefeuille vide) et les erreurs API. */
 function toKeyoneError(error: unknown): KeyoneError {
-  if (error instanceof Anthropic.APIError) {
-    const body = error.error as { status?: string; reason?: string; message?: string } | undefined;
+  if (error instanceof Anthropic.APIError || error instanceof OpenAI.APIError) {
+    const raw = error.error as { status?: string; reason?: string; message?: string; error?: { status?: string; reason?: string; message?: string } } | undefined;
+    const body = raw?.error && typeof raw.error === "object" && !raw.status ? raw.error : raw;
     if (error.status === 403 && body?.status === "BLOCKED") {
       const why = body.reason ?? "contrôle de dépense";
       return new KeyoneError("blocked", `Appel bloqué par key.one (${why}). ${body.message ?? ""}`.trim(), body);

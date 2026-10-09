@@ -518,7 +518,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 @media(max-width:480px){.cr-row{grid-template-columns:1fr}}
 .cr-count{display:block;text-align:right;font-weight:400;color:var(--muted);font-size:12.5px}
 .cr-err{font-size:14px;color:#B42318;background:#FDECEA;border-radius:10px;padding:10px 12px;margin:0}
-.cr-form .btn{justify-content:center}
+.cr-form .btn{justify-content:center;cursor:pointer}
 .cr-form .btn[disabled]{opacity:.6;cursor:wait;transform:none}
 .cr-note{font-size:12.5px;color:var(--muted);line-height:1.5}
 
