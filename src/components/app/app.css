@@ -39,8 +39,8 @@ body:has(.app){margin:0;background:#FAF9F6}
 @media(max-width:640px){
   .app-space{display:none}
   .app-bar-in{height:auto;flex-wrap:wrap;gap:4px;padding-top:10px;padding-bottom:8px}
-  .app-nav{width:100%;margin:0 -8px;overflow-x:auto;scrollbar-width:none}
-  .app-nav a,.app-nav button{padding:7px 8px;font-size:13.5px}
+  .app-nav{width:100%;margin:0 -6px;gap:2px;overflow-x:auto;scrollbar-width:none}
+  .app-nav a,.app-nav button{padding:7px 6px;font-size:13px}
   .app-nav form{margin-left:auto}
 }
 
@@ -182,6 +182,8 @@ body:has(.app){margin:0;background:#FAF9F6}
 
 .app .docs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,22px)}
 @media(max-width:760px){.app .docs{grid-template-columns:1fr}}
+.app .docs.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:980px){.app .docs.three{grid-template-columns:1fr}}
 .app .doc{display:flex;flex-direction:column;gap:10px}
 .app .doc .tag{align-self:flex-start;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--yellow);border:2px solid var(--ink);border-radius:7px;padding:3px 9px}
 .app .doc p{color:var(--muted);font-size:15px}

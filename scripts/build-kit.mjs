@@ -1,5 +1,6 @@
 // Génère les one-pagers PDF du kit partenaires (public/kit/*.pdf) à partir de scripts/kit/*.html.
-//   npm run build:kit
+//   npm run build:kit                 (tous)
+//   npm run build:kit -- partenaire   (un seul)
 // Impression par Chrome sans interface : CHROME_PATH pour indiquer un autre navigateur Chromium.
 // Les polices viennent de Google Fonts : une connexion est nécessaire.
 import { spawn } from "node:child_process";
@@ -12,10 +13,16 @@ const root = path.resolve(import.meta.dirname, "..");
 const src = path.join(root, "scripts/kit");
 const out = path.join(root, "public/kit");
 
-const DOCS = [
+const ALL = [
   ["presentation.html", "vision-presentation.pdf"],
   ["offre.html", "vision-offre.pdf"],
+  // Pour l'équipe : à remettre à un futur partenaire (listé dans l'admin).
+  ["partenaire.html", "vision-programme-partenaires.pdf"],
 ];
+// `npm run build:kit -- partenaire` ne régénère que les documents nommés.
+const only = process.argv.slice(2);
+const DOCS = only.length ? ALL.filter(([html]) => only.includes(html.replace(".html", ""))) : ALL;
+if (!DOCS.length) throw new Error(`Aucun document ne correspond à « ${only.join(", ")} ».`);
 
 const chrome = [process.env.CHROME_PATH, "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "/usr/bin/google-chrome", "/usr/bin/chromium"].find(
   (p) => p && fs.existsSync(p)

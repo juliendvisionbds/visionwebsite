@@ -26,6 +26,14 @@ export const MATERIALS = [
   },
 ];
 
+/** Pour l'équipe : à remettre à un futur partenaire. Listé dans l'admin, pas dans le kit du partenaire. */
+export const PROGRAMME = {
+  id: "programme",
+  file: "/kit/vision-programme-partenaires.pdf",
+  title: "Programme partenaires",
+  text: "Les bénéfices du programme et son fonctionnement en trois étapes : l'essentiel de la page « Devenir partenaire ».",
+};
+
 /** Qui recommander. */
 export const TARGETS = [
   ["PME et entreprises générales du bâtiment", "De 10 à 150 salariés : gros œuvre, charpente, couverture, second œuvre, TCE."],

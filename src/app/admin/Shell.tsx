@@ -4,6 +4,7 @@ import Logo from "@/components/app/Logo";
 const NAV = [
   { id: "partners", href: "/", label: "Partenaires" },
   { id: "contracts", href: "/contrats/", label: "Contrats" },
+  { id: "documents", href: "/documents/", label: "Documents" },
 ] as const;
 
 /** Barre de navigation de l'admin. Chaque page l'utilise, après son propre requireAdmin(). */
