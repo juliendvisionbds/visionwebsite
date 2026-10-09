@@ -26,10 +26,12 @@ export function loadPageFiles(id: string) {
     }
   }
 
-  // Menu « L'IA dans le BTP » : déroulant vers les cas d'usage (src/content/cas/*.md), suivi du lien Blog, sur toutes les pages.
+  // Menus « L'IA dans le BTP » (cas d'usage, src/content/cas/*.md) et « Outils gratuits » (TOOLS), suivis du lien Blog, sur toutes les pages.
   const NAV_IA = /<a class="nl hide-m" href="\/ia-btp"( aria-current="page")?>L'IA dans le BTP<\/a>/;
   if (NAV_IA.test(html)) {
-    html = html.replace(NAV_IA, (_, current = "") => navIaBtp(current));
+    const toolsCurrent = TOOL_PAGES.has(id) ? ' aria-current="page"' : "";
+    html = html.replace(NAV_IA, (_, current = "") => navIaBtp(current).replace('<a class="nl hide-m" href="/blog">Blog</a>', `${navOutils(toolsCurrent)}
+      <a class="nl hide-m" href="/blog">Blog</a>`));
     css += "\n" + NAV_CSS;
     // Menu burger sur mobile : bouton dans la barre, panneau sous l'en-tête.
     html = html.replace("</nav>\n  </div>\n</header>", () => `${BURGER}\n    </nav>\n  </div>\n  ${mobileMenu()}\n</header>`);
@@ -42,6 +44,15 @@ export function loadPageFiles(id: string) {
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 
+/** Outils gratuits affichés dans le menu (le calculateur de coût reste sur la page /outils seulement). */
+const TOOLS: Array<{ href: string; title: string; text: string }> = [
+  { href: "/outils/relance-impayes", title: "Relance de facture impayée", text: "Le bon message, les pénalités calculées, la prochaine étape datée." },
+  { href: "/outils/compte-rendu-chantier", title: "Compte rendu de chantier", text: "Vos notes brutes en compte rendu prêt à envoyer." },
+  { href: "/commencer", title: "Diagnostic IA de votre entreprise", text: "7 questions, 2 minutes : vos 3 priorités à automatiser." },
+];
+/** Identifiants de pages (src/content/<id>) pour lesquelles le menu Outils est marqué courant. */
+const TOOL_PAGES = new Set(["outils", "relance-impayes", "compte-rendu-chantier"]);
+
 function navIaBtp(current: string) {
   const items = allPosts("cas")
     .map((p) => `<a href="/cas/${p.slug}"><b>${esc(p.tag)}</b><small>${esc(p.navText ?? p.description)}</small></a>`)
@@ -53,6 +64,18 @@ function navIaBtp(current: string) {
         </div>
       </div>
       <a class="nl hide-m" href="/blog">Blog</a>`;
+}
+
+function navOutils(current: string) {
+  const items = TOOLS.map((t) => `<a href="${t.href}"><b>${esc(t.title)}</b><small>${esc(t.text)}</small></a>`).join("");
+  return `
+      <div class="nd hide-m">
+        <a class="nl" href="/outils"${current} aria-haspopup="true">Outils gratuits<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></a>
+        <div class="nd-menu">
+          ${items}
+          <a class="nd-all" href="/outils">Tous les outils gratuits <span class="arw">→</span></a>
+        </div>
+      </div>`;
 }
 
 const NAV_CSS = `
@@ -69,6 +92,9 @@ const NAV_CSS = `
 .nd-menu a:hover,.nd-menu a:focus-visible{background:var(--tint)}
 .nd-menu b{display:block;font-family:Gabarito,system-ui,sans-serif;font-weight:700;font-size:15px;color:var(--ink);line-height:1.25}
 .nd-menu small{display:block;font-size:13px;color:var(--muted);line-height:1.35;margin-top:2px}
+.nd-menu .nd-all{display:flex;align-items:center;gap:8px;margin-top:6px;padding-top:12px;border-top:1px solid var(--line-soft);font-size:14px;font-weight:600;color:var(--brand)}
+.nd-menu .nd-all:hover{background:none}
+.nd-menu .nd-all:hover .arw{transform:translateX(4px)}
 `;
 
 const BURGER = `  <button class="nb" id="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile"><span></span><span></span><span></span></button>`;
@@ -82,6 +108,7 @@ function mobileMenu() {
       <a class="nm-l" href="/ia-btp">L'IA dans le BTP</a>
       ${cas}
       <a class="nm-l" href="/outils">Outils gratuits</a>
+      ${TOOLS.map((t) => `<a class="nm-sub" href="${t.href}">${esc(t.title)}</a>`).join("\n      ")}
       <a class="nm-l" href="/blog">Blog</a>
       <a class="nm-l" href="/a-propos">À propos</a>
       <a class="nm-l" href="/equipe">L'équipe</a>
