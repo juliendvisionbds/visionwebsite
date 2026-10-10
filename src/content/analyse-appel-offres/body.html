@@ -1,0 +1,152 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + FORMULAIRE -->
+<section class="hero ao-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Analyse d'appel d'offres</span></nav>
+    <div class="ao-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Appels d'offres</span>
+        <h1>Le règlement de consultation, <span class="sq brand">analysé<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span> en une fiche</h1>
+        <p class="lede">Déposez le PDF du RC ou collez son texte. En une minute : objet, lots, dates limites, visite, critères d'attribution et leur pondération, documents à fournir, modalités de dépôt et points de vigilance. Chaque élément cite le passage du règlement qui le justifie.</p>
+        <ul class="ao-meta-list">
+          <li>Sans inscription</li>
+          <li>Chaque information sourcée dans le texte</li>
+          <li>Checklist des pièces, dates dans votre agenda</li>
+        </ul>
+      </div>
+
+      <form class="ao-form" id="ao-form" novalidate>
+        <div class="ao-fh"><span class="k">Votre contexte</span></div>
+        <div class="ao-row">
+          <label class="ao-l"><span>Vos lots ou métiers <small>facultatif</small></span><input id="ao-metiers" type="text" maxlength="160" placeholder="gros œuvre, VRD"></label>
+          <label class="ao-l"><span>Votre entreprise <small>facultatif</small></span><input id="ao-entreprise" type="text" maxlength="80" placeholder="Durand Construction" autocomplete="organization"></label>
+        </div>
+
+        <div class="ao-fh"><span class="k">Le règlement de consultation</span><button type="button" class="ao-link" id="ao-example">Charger un exemple</button></div>
+        <label class="ao-file" id="ao-file-l">
+          <input id="ao-file" type="file" accept="application/pdf,.pdf">
+          <span class="ao-file-in"><b>Déposer le PDF du RC</b><small id="ao-file-hint">ou cliquez pour le choisir. Le texte est extrait dans votre navigateur, le fichier n'est pas envoyé.</small></span>
+        </label>
+        <label class="ao-l ao-notes-l">
+          <span class="vh">Texte du règlement de consultation</span>
+          <textarea id="ao-rc" rows="9" maxlength="60000" required placeholder="… ou collez ici le texte du règlement de consultation (Ctrl+A, Ctrl+C dans votre lecteur PDF)."></textarea>
+          <small class="ao-count"><span id="ao-count">0</span> / 60 000 caractères</small>
+        </label>
+
+        <p class="ao-err" id="ao-err" role="alert" hidden></p>
+        <button class="btn btn-primary" id="ao-go" type="submit">Analyser le règlement <span class="arw">→</span></button>
+        <p class="ao-note">Le texte est transmis au service d'analyse le temps de produire la fiche, puis oublié. Rien n'est enregistré par vision. La fiche se relit avant toute décision : le document original fait foi.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSULTAT -->
+<section id="resultat" class="ao-sec-out">
+  <div class="wrap">
+    <div class="ao-out" id="ao-out" aria-live="polite">
+      <div class="ao-empty">
+        <span class="blip" data-pose="look" data-color="brand"></span>
+        <p><b>Votre fiche d'analyse apparaîtra ici, sous le formulaire.</b><br>Dates, visite, lots, critères, pièces à fournir, modalités et vigilance, avec les passages sources.</p>
+      </div>
+    </div>
+
+    <div class="ao-cta reveal">
+      <span class="blip ao-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Et si chaque dossier de consultation arrivait déjà analysé ?</h2>
+        <p>Chez nos clients, les DCE sont lus, triés et résumés avant même d'être ouverts : lots pertinents, dates, go/no-go. Deux minutes pour voir ce qui peut partir tout seul chez vous.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="ao-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Lire un règlement de consultation en dix minutes</h2>
+      <p class="lede">Ce qu'on cherche d'abord, comment les critères décident du gagnant, les pièces à réunir, les pièges classiques, et la décision de répondre ou non.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-dabord">Ce qu'on cherche d'abord dans un RC</a></li>
+            <li><a href="#g-criteres">Les critères d'attribution : comment on gagne</a></li>
+            <li><a href="#g-pieces">Les pièces à fournir</a></li>
+            <li><a href="#g-pieges">Les pièges qui font perdre un dossier</a></li>
+            <li><a href="#g-gonogo">Répondre ou non : décider vite</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-dabord">1. Ce qu'on cherche d'abord dans un RC</h3>
+        <p>Le règlement de consultation est le mode d'emploi de la consultation. Avant de lire le CCTP, quatre informations décident si le dossier mérite du temps :</p>
+        <ul>
+          <li><b>La date et l'heure limites de remise des offres,</b> et ce qu'il reste comme jours ouvrés pour chiffrer, obtenir les devis fournisseurs et rédiger le mémoire.</li>
+          <li><b>La visite du site :</b> obligatoire ou non, sur rendez-vous ou à dates fixes, avec ou sans attestation à joindre à l'offre. Une visite obligatoire manquée vaut rejet.</li>
+          <li><b>L'allotissement :</b> quels lots correspondent à vos métiers, si l'on peut répondre à un seul lot, si un lot vous ferme la porte des autres.</li>
+          <li><b>Les critères d'attribution et leur pondération :</b> un marché à 70 % prix ne se gagne pas comme un marché à 60 % valeur technique.</li>
+        </ul>
+        <p>Viennent ensuite les modalités de dépôt (plateforme, signature électronique, format des fichiers), la date limite des questions, le délai de validité des offres et l'existence d'une négociation. L'outil ci-dessus reprend tout cela, avec le passage du texte en regard de chaque information.</p>
+        <div class="callout"><b>Le RC prime sur les autres pièces pour la procédure,</b> mais le CCAP fixe les pénalités, la révision des prix et la retenue de garantie, et le CCTP le contenu technique. Ce que l'outil ne trouve pas dans le RC est listé dans « À vérifier dans le reste du dossier ».</div>
+
+        <h3 id="g-criteres">2. Les critères d'attribution : comment on gagne</h3>
+        <p>L'acheteur doit annoncer ses critères et leur pondération. Le plus souvent, deux critères : le prix et la valeur technique, pondérés de 40/60 à 70/30. La valeur technique se juge sur le mémoire technique, lui-même découpé en sous-critères annoncés : méthodologie, moyens humains et matériels, planning, qualité, sécurité, environnement. Lire ces sous-critères avant d'écrire une ligne du mémoire, c'est écrire pour le jury, dans son ordre et avec ses mots.</p>
+        <p>Le critère prix se calcule généralement par rapport à l'offre la moins-disante, selon une formule donnée dans le RC. Une offre 10 % plus chère que la meilleure perd rarement 10 % des points : la formule le dit, et il faut la lire pour savoir ce qu'un effort de prix rapporte réellement.</p>
+
+        <h3 id="g-pieces">3. Les pièces à fournir</h3>
+        <ul>
+          <li><b>Pour la candidature :</b> la lettre de candidature DC1 et la déclaration du candidat DC2, ou le DUME qui les remplace ; les attestations fiscales et sociales ; l'assurance responsabilité civile et décennale ; l'extrait Kbis ; les qualifications, certifications et références de chantiers comparables ; en groupement, les pièces de chaque membre et l'habilitation du mandataire.</li>
+          <li><b>Pour l'offre :</b> l'acte d'engagement ; le bordereau de prix unitaires ou la décomposition du prix global et forfaitaire, parfois un détail quantitatif estimatif ; le mémoire technique ; souvent un planning prévisionnel, des fiches techniques, l'attestation de visite, la déclaration de sous-traitance s'il y a lieu.</li>
+        </ul>
+        <p>Les pièces de candidature se préparent une fois et se mettent à jour chaque trimestre : c'est ce qui permet de répondre en quelques jours. L'outil transforme la liste du RC en checklist, à cocher avant le dépôt.</p>
+
+        <h3 id="g-pieges">4. Les pièges qui font perdre un dossier</h3>
+        <ul>
+          <li><b>Le dépôt à l'heure près.</b> Une offre déposée à 12 h 01 pour une limite à 12 h 00 est rejetée. Les plateformes ralentissent la dernière heure : déposer la veille.</li>
+          <li><b>La signature électronique.</b> Si elle est exigée au dépôt, il faut un certificat valide, obtenu plusieurs jours à l'avance.</li>
+          <li><b>La visite obligatoire</b> sans attestation jointe, ou faite par une personne non habilitée.</li>
+          <li><b>Les variantes.</b> Proposer une variante quand elles sont interdites, ou oublier l'offre de base quand elles sont autorisées.</li>
+          <li><b>Le délai de validité des offres.</b> 120 jours, parfois 180 : vos prix fournisseurs doivent tenir aussi longtemps.</li>
+          <li><b>Les questions trop tard.</b> Le RC fixe une date limite pour les questions ; après, plus de réponse, et une incertitude dans le chiffrage.</li>
+        </ul>
+
+        <h3 id="g-gonogo">5. Répondre ou non : décider vite</h3>
+        <p>Répondre à un appel d'offres coûte des jours de travail. La décision de répondre mérite dix minutes de méthode : le marché correspond-il à vos lots et à votre zone, le délai permet-il une offre sérieuse, les critères et les références exigées sont-ils à votre portée, le montant estimé et la durée en valent-ils la peine ? Deux « non » sur quatre, et le temps sera mieux employé sur le dossier suivant. Un « oui » franc, et la fiche d'analyse devient le plan de réponse : dates dans l'agenda, pièces à réunir, mémoire à bâtir sur les sous-critères.</p>
+        <div class="callout"><b>Ce guide et l'outil donnent une lecture et une méthode,</b> pas un conseil juridique. En cas de doute sur une clause ou un délai, le document original et, au besoin, l'acheteur via la plateforme font foi.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur l'analyse d'un appel d'offres</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->

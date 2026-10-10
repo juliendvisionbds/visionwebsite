@@ -46,14 +46,16 @@ const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 
 /** Outils gratuits affichés dans le menu (le calculateur de coût reste sur la page /outils seulement). */
 const TOOLS: Array<{ href: string; title: string; text: string }> = [
+  { href: "/outils/analyse-appel-offres", title: "Analyse express d'un appel d'offres", text: "Le règlement de consultation en une fiche : dates, lots, critères, pièces." },
   { href: "/outils/fiche-chiffrage", title: "Demande client → fiche de chiffrage", text: "Travaux, quantités, contraintes, ce qui manque, et le mail de questions." },
   { href: "/outils/relance-devis", title: "Relance de devis sans réponse", text: "Le bon message au bon moment, mail, SMS et script d'appel." },
   { href: "/outils/relance-impayes", title: "Relance de facture impayée", text: "Le bon message, les pénalités calculées, la prochaine étape datée." },
   { href: "/outils/compte-rendu-chantier", title: "Compte rendu de chantier", text: "Vos notes brutes en compte rendu prêt à envoyer." },
+  { href: "/outils/debourse-sec", title: "Calculateur de déboursé sec", text: "Matériaux, main-d'œuvre, matériel, sous-traitance : le coût direct du chantier." },
   { href: "/commencer", title: "Diagnostic IA de votre entreprise", text: "7 questions, 2 minutes : vos 3 priorités à automatiser." },
 ];
 /** Identifiants de pages (src/content/<id>) pour lesquelles le menu Outils est marqué courant. */
-const TOOL_PAGES = new Set(["outils", "fiche-chiffrage", "relance-devis", "relance-impayes", "compte-rendu-chantier"]);
+const TOOL_PAGES = new Set(["outils", "analyse-appel-offres", "debourse-sec", "fiche-chiffrage", "relance-devis", "relance-impayes", "compte-rendu-chantier"]);
 
 function navIaBtp(current: string) {
   const items = allPosts("cas")

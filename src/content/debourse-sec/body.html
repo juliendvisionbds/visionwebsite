@@ -1,0 +1,215 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + RÉSUMÉ -->
+<section class="hero ds-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Déboursé sec</span></nav>
+    <div class="ds-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Prix et rentabilité</span>
+        <h1>Le <span class="sq brand">déboursé sec<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span> de votre chantier, ligne par ligne</h1>
+        <p class="lede">Matériaux avec les pertes, main-d'œuvre au taux chargé, matériel, sous-traitance, autres coûts directs. Le total se met à jour à chaque saisie, avec le coût par unité d'ouvrage et un aperçu du prix de vente.</p>
+        <ul class="ds-meta">
+          <li>Sans inscription</li>
+          <li>Vos lignes restent dans votre navigateur</li>
+          <li>Récapitulatif à copier ou imprimer</li>
+        </ul>
+      </div>
+
+      <aside class="ds-sum" id="ds-sum" aria-live="polite">
+        <span class="k">Déboursé sec du chantier</span>
+        <div class="ds-total"><b id="ds-total">0 €</b><small>HT, coûts directs</small></div>
+        <ul class="ds-break" id="ds-break"></ul>
+        <p class="ds-unit" id="ds-unit"></p>
+        <details class="ds-pv">
+          <summary>Du déboursé sec au prix de vente <small>aperçu</small></summary>
+          <div class="ds-pv-in">
+            <div class="ds-pv-row"><label for="ds-fc">Frais de chantier</label><span><input id="ds-fc" type="number" min="0" max="100" step="0.5" inputmode="decimal"> %</span></div>
+            <div class="ds-pv-row"><label for="ds-fg">Frais généraux</label><span><input id="ds-fg" type="number" min="0" max="100" step="0.5" inputmode="decimal"> %</span></div>
+            <div class="ds-pv-row"><label for="ds-marge">Marge</label><span><input id="ds-marge" type="number" min="0" max="100" step="0.5" inputmode="decimal"> %</span></div>
+            <ul class="ds-pv-out">
+              <li><span>Déboursé total</span><b id="ds-dt">0 €</b></li>
+              <li><span>Prix de revient</span><b id="ds-pr">0 €</b></li>
+              <li class="big"><span>Prix de vente HT</span><b id="ds-pvht">0 €</b></li>
+              <li><span>Coefficient sur déboursé sec</span><b id="ds-coef">—</b></li>
+            </ul>
+            <p class="ds-pv-note">Chaque taux s'applique au montant précédent. Les frais de chantier couvrent l'installation, l'encadrement, le levage ; les frais généraux, la structure de l'entreprise. À remplacer par vos propres taux.</p>
+          </div>
+        </details>
+        <div class="ds-actions">
+          <button type="button" class="ds-btn" id="ds-copy">Copier le récapitulatif</button>
+          <button type="button" class="ds-btn" id="ds-print">Imprimer / PDF</button>
+          <button type="button" class="ds-btn ghost" id="ds-reset">Réinitialiser</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- LE CALCUL -->
+<section id="calcul" class="ds-sec">
+  <div class="wrap">
+    <div class="ds-head">
+      <div class="ds-row3">
+        <label class="ds-l"><span>Chantier ou ouvrage</span><input id="ds-nom" type="text" maxlength="80" placeholder="Pose carrelage sol, villa Lefèvre"></label>
+        <label class="ds-l"><span>Quantité d'ouvrage <small>pour le coût unitaire</small></span><input id="ds-qty" type="number" min="0" step="0.01" inputmode="decimal" placeholder="45"></label>
+        <label class="ds-l"><span>Unité</span>
+          <select id="ds-unitsel"><option value="m²">m²</option><option value="ml">ml</option><option value="m³">m³</option><option value="u">unité</option><option value="forfait">forfait</option></select>
+        </label>
+      </div>
+      <button type="button" class="ds-link" id="ds-example">Charger un exemple</button>
+    </div>
+
+    <div class="ds-grid">
+      <div class="ds-card" data-fam="mat">
+        <div class="ds-card-top"><h2>1. Matériaux</h2><b class="ds-fam-total" data-total="mat">0 €</b></div>
+        <p class="ds-help">Prix d'achat net, transport compris. Les pertes et chutes s'ajoutent en bas.</p>
+        <table class="ds-table">
+          <thead><tr><th>Désignation</th><th class="n">Quantité</th><th class="u">Unité</th><th class="n">Prix unit. HT</th><th class="t">Total</th><th class="x"></th></tr></thead>
+          <tbody id="ds-mat"></tbody>
+        </table>
+        <div class="ds-card-foot">
+          <button type="button" class="ds-add" data-add="mat">+ Ajouter une ligne</button>
+          <label class="ds-inline">Pertes et chutes <input id="ds-pertes" type="number" min="0" max="50" step="0.5" inputmode="decimal"> %</label>
+        </div>
+      </div>
+
+      <div class="ds-card" data-fam="mo">
+        <div class="ds-card-top"><h2>2. Main-d'œuvre</h2><b class="ds-fam-total" data-total="mo">0 €</b></div>
+        <p class="ds-help">Heures productives × taux horaire chargé (coût employeur complet ÷ heures productives, souvent 1,6 à 2 fois le brut horaire).</p>
+        <table class="ds-table">
+          <thead><tr><th>Poste</th><th class="n">Heures</th><th class="n">Taux chargé €/h</th><th class="t">Total</th><th class="x"></th></tr></thead>
+          <tbody id="ds-mo"></tbody>
+        </table>
+        <div class="ds-card-foot"><button type="button" class="ds-add" data-add="mo">+ Ajouter une ligne</button><span class="ds-inline" id="ds-hours"></span></div>
+      </div>
+
+      <div class="ds-card" data-fam="mel">
+        <div class="ds-card-top"><h2>3. Matériel</h2><b class="ds-fam-total" data-total="mel">0 €</b></div>
+        <p class="ds-help">Location, ou amortissement journalier de votre propre matériel. Le petit outillage se chiffre aussi.</p>
+        <table class="ds-table">
+          <thead><tr><th>Matériel</th><th class="n">Jours</th><th class="n">Coût / jour</th><th class="t">Total</th><th class="x"></th></tr></thead>
+          <tbody id="ds-mel"></tbody>
+        </table>
+        <div class="ds-card-foot"><button type="button" class="ds-add" data-add="mel">+ Ajouter une ligne</button></div>
+      </div>
+
+      <div class="ds-card" data-fam="st">
+        <div class="ds-card-top"><h2>4. Sous-traitance</h2><b class="ds-fam-total" data-total="st">0 €</b></div>
+        <p class="ds-help">Le montant HT du devis du sous-traitant, tel quel.</p>
+        <table class="ds-table">
+          <thead><tr><th>Prestation</th><th class="n">Montant HT</th><th class="x"></th></tr></thead>
+          <tbody id="ds-st"></tbody>
+        </table>
+        <div class="ds-card-foot"><button type="button" class="ds-add" data-add="st">+ Ajouter une ligne</button></div>
+      </div>
+
+      <div class="ds-card" data-fam="aut">
+        <div class="ds-card-top"><h2>5. Autres coûts directs</h2><b class="ds-fam-total" data-total="aut">0 €</b></div>
+        <p class="ds-help">Déplacements, benne et évacuation des déchets, consommables, études, assurances spécifiques au chantier.</p>
+        <table class="ds-table">
+          <thead><tr><th>Désignation</th><th class="n">Montant HT</th><th class="x"></th></tr></thead>
+          <tbody id="ds-aut"></tbody>
+        </table>
+        <div class="ds-card-foot"><button type="button" class="ds-add" data-add="aut">+ Ajouter une ligne</button></div>
+      </div>
+    </div>
+
+    <div class="ds-cta reveal">
+      <span class="blip ds-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Et si chaque déboursé alimentait votre bibliothèque de prix ?</h2>
+        <p>Chez nos clients, les déboursés unitaires se construisent à partir des chantiers réels et se retrouvent dans les devis suivants, sans ressaisie. Deux minutes pour voir ce qui peut se mettre en place chez vous.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- barre mobile -->
+<div class="ds-bar" id="ds-bar" aria-hidden="true"><span>Déboursé sec</span><b id="ds-bar-total">0 €</b><a href="#ds-sum">Détail</a></div>
+
+<!-- LE GUIDE -->
+<section id="guide" class="ds-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Déboursé sec : ce que c'est, comment le calculer, et ce qu'on en fait</h2>
+      <p class="lede">La définition, les quatre familles de coûts et la façon de les chiffrer, le passage au prix de vente, et les erreurs qui font perdre de la marge sans qu'on les voie.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-def">Ce qu'est le déboursé sec, et ce qu'il n'est pas</a></li>
+            <li><a href="#g-familles">Les quatre familles de coûts et comment les chiffrer</a></li>
+            <li><a href="#g-pv">Du déboursé sec au prix de vente</a></li>
+            <li><a href="#g-erreurs">Les erreurs qui coûtent de la marge</a></li>
+            <li><a href="#g-biblio">Déboursé unitaire et bibliothèque de prix</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-def">1. Ce qu'est le déboursé sec, et ce qu'il n'est pas</h3>
+        <p>Le déboursé sec est la somme des coûts qu'on peut affecter directement à un chantier ou à un ouvrage : les matériaux mis en œuvre, les heures de main-d'œuvre productive au coût chargé, le matériel utilisé sur place et la sous-traitance. C'est ce que le chantier vous coûte avant toute considération de structure ou de marge.</p>
+        <p>Il ne contient pas les frais de chantier indirects, comme l'installation, l'encadrement, le levage ou le gardiennage, qui forment avec lui le déboursé total. Il ne contient pas non plus les frais généraux de l'entreprise, le loyer, les véhicules, l'administratif, l'assurance décennale, qui donnent le prix de revient. Et il ne contient pas la marge. Un prix de vente qui part d'un déboursé sec faux est faux dans les mêmes proportions, quelle que soit la qualité des coefficients appliqués ensuite.</p>
+        <div class="callout"><b>La chaîne complète :</b> déboursé sec → déboursé total (avec frais de chantier) → prix de revient (avec frais généraux) → prix de vente HT (avec marge). L'outil ci-dessus calcule le premier et donne un aperçu des trois suivants.</div>
+
+        <h3 id="g-familles">2. Les quatre familles de coûts et comment les chiffrer</h3>
+        <ul>
+          <li><b>Les matériaux :</b> quantité mise en œuvre × prix d'achat net, remises déduites, transport compris. Puis les pertes et chutes : 5 % sur un carrelage simple, 10 à 15 % sur une pose en diagonale, du parquet ou des plaques découpées. Les quantités viennent du métré, pas du devis fournisseur.</li>
+          <li><b>La main-d'œuvre :</b> heures productives × taux horaire chargé. Le taux chargé se calcule une fois par an : coût annuel complet d'un salarié (brut, charges patronales, congés, paniers, trajets, équipements) divisé par ses heures réellement productives, souvent 1 500 à 1 600 heures. Il tombe généralement entre 1,6 et 2 fois le brut horaire. Les heures viennent de vos temps unitaires, ou de l'expérience des chantiers précédents.</li>
+          <li><b>Le matériel :</b> le coût de location pour la durée du chantier, ou pour votre propre matériel un coût d'amortissement journalier (prix d'achat divisé par les jours d'utilisation sur sa durée de vie, entretien compris). Échafaudage, mini-pelle, bétonnière, mais aussi le petit outillage consommé.</li>
+          <li><b>La sous-traitance :</b> le devis du sous-traitant, hors taxes, tel quel. Les frais que vous engagez pour le piloter sont des frais de chantier, pas du déboursé sec.</li>
+        </ul>
+        <p>À ces quatre familles s'ajoutent des coûts directs qu'on oublie souvent de rattacher au chantier : les déplacements, la benne et l'évacuation des déchets, les consommables, une étude ou un diagnostic spécifique.</p>
+
+        <h3 id="g-pv">3. Du déboursé sec au prix de vente</h3>
+        <p>Trois taux, appliqués en cascade. Les frais de chantier, en pourcentage du déboursé sec, donnent le déboursé total. Les frais généraux, en pourcentage du déboursé total, donnent le prix de revient : ce taux vient de votre comptabilité, frais généraux annuels divisés par le chiffre d'affaires. La marge, enfin, donne le prix de vente hors taxes. Le rapport entre prix de vente et déboursé sec est le coefficient de vente : selon le métier et la structure, il se situe souvent entre 1,3 et 1,7.</p>
+        <p>Un coefficient unique est une approximation acceptable pour une petite entreprise. Dès que la part de sous-traitance ou de matériaux varie beaucoup d'un chantier à l'autre, il vaut mieux des coefficients différents par famille : on ne marge pas la sous-traitance comme la main-d'œuvre.</p>
+        <div class="callout"><b>Attention au sens de la marge.</b> 10 % appliqués au prix de revient ne donnent pas 10 % de marge sur le prix de vente. L'outil applique la marge au prix de revient ; si vous raisonnez en taux de marge sur le prix de vente, divisez le prix de revient par (1 − taux).</div>
+
+        <h3 id="g-erreurs">4. Les erreurs qui coûtent de la marge</h3>
+        <ul>
+          <li><b>Compter le salaire au lieu du coût chargé.</b> L'écart est de 60 à 100 %. C'est l'erreur la plus fréquente, et la plus chère.</li>
+          <li><b>Oublier les pertes.</b> Cinq à quinze pour cent du poste matériaux, qui sortent directement de la marge.</li>
+          <li><b>Ne pas rattacher les déplacements, la benne, le petit matériel.</b> Ils finissent dans les frais généraux, où ils gonflent un taux que personne ne vérifie.</li>
+          <li><b>Prendre les quantités du fournisseur pour des quantités mises en œuvre.</b> Le métré fait foi.</li>
+          <li><b>Chiffrer les heures productives à partir des heures payées.</b> Un salarié payé 1 820 heures en produit 1 500 à 1 600.</li>
+          <li><b>Ne jamais comparer au réel.</b> Le déboursé prévu n'a de valeur que confronté aux heures et aux achats constatés en fin de chantier.</li>
+        </ul>
+
+        <h3 id="g-biblio">5. Déboursé unitaire et bibliothèque de prix</h3>
+        <p>Divisé par la quantité d'ouvrage, le déboursé sec devient un déboursé unitaire : tant d'euros par mètre carré de carrelage posé, par mètre linéaire de cloison, par unité de menuiserie. C'est l'élément de base d'une bibliothèque de prix : des ouvrages chiffrés une fois, avec leurs temps et leurs matériaux, réutilisés dans tous les devis suivants et corrigés à chaque chantier réel. C'est ce qui permet de chiffrer vite sans chiffrer faux. Nous expliquons comment la construire dans <a href="/cas/bibliotheque-de-prix-btp">notre page sur la bibliothèque de prix</a>.</p>
+        <div class="callout"><b>Ce guide et l'outil donnent une méthode et des ordres de grandeur,</b> pas vos chiffres. Les taux chargés, les pourcentages de pertes et les coefficients sont propres à chaque entreprise : remplacez les valeurs d'exemple par les vôtres.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur le déboursé sec</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->
