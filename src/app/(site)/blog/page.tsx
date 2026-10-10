@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import LegacyPage from "@/components/LegacyPage";
 import { allPosts, renderIndex } from "@/lib/posts";
 import { loadPageFiles } from "@/lib/load-content";
+import { relatedForBlogIndex } from "@/lib/related";
 import { breadcrumb, jsonLdHtml, social } from "@/lib/seo";
 
 const title = "Le blog de vision : l'IA et l'automatisation dans le BTP | vision";
@@ -25,7 +26,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }} />
-      <LegacyPage css={css} html={html.replace(/<!-- POST \(.*?\) -->/, () => renderIndex(allPosts("blog")))} script={script} />
+      <LegacyPage css={css} html={html.replace(/<!-- POST \(.*?\) -->/, () => `${renderIndex(allPosts("blog"))}\n\n${relatedForBlogIndex()}`)} script={script} />
     </>
   );
 }

@@ -7,6 +7,8 @@
  * cover + coverAlt (visuel d'en-tête, aussi utilisé comme image de partage), ogImage (image de partage
  * en JPG/PNG quand le visuel d'en-tête est un SVG, que les réseaux sociaux n'affichent pas),
  * author, authorRole, authorPhoto (facultatifs),
+ * topics (thèmes séparés par des virgules, du plus important au moins important : ils relient l'article
+ * aux outils, articles et cas d'usage proches ; liste des thèmes dans src/lib/tools.ts),
  * et pour l'encart sous le sommaire : sideTitle, sideText, sideLink (facultatifs).
  *
  * Markdown pris en charge (volontairement réduit) :
@@ -56,6 +58,8 @@ export type PostMeta = {
   sideLink?: string;
   /** Sous-titre court dans le menu « L'IA dans le BTP » (cas d'usage uniquement). */
   navText?: string;
+  /** Thèmes, du plus important au moins important (modules « contenus similaires »). */
+  topics: string[];
   /** Visuel d'en-tête (chemin dans public/) et son texte alternatif. */
   cover?: string;
   coverAlt?: string;
@@ -204,6 +208,7 @@ export function getPost(kind: Kind, slug: string): Post | null {
     sideText: meta.sideText,
     sideLink: meta.sideLink,
     navText: meta.navText,
+    topics: (meta.topics ?? "").split(",").map((t) => t.trim()).filter(Boolean),
     cover: meta.cover,
     coverAlt: meta.coverAlt,
     ogImage: meta.ogImage,
@@ -239,7 +244,7 @@ export const crumbsOf = (p: Post): Array<[string, string]> => [
 ];
 
 /** En-tête, sommaire collant et article, insérés dans le gabarit src/content/blog/_template/body.html. */
-export function renderPost(p: Post) {
+export function renderPost(p: Post, sideExtra = "") {
   const [crumbLabel, crumbHref] = KINDS[p.kind].crumb;
   const author = authorLine(p);
   const side = p.sideTitle
@@ -251,6 +256,7 @@ export function renderPost(p: Post) {
     <aside class="post-side">
       <p class="post-toc-k">Sur cette page</p>
       <ol class="post-toc" id="post-toc">${p.toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join("")}</ol>
+      ${sideExtra}
       ${side}
     </aside>
     <div class="post-main">

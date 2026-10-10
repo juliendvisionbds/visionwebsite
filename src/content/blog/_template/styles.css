@@ -522,3 +522,12 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 /* visuel d'en-tête : part de la colonne de l'article et s'étend jusqu'au bord droit */
 .post-cover{margin:clamp(28px,3.5vw,44px) 0 0}
 .post-cover img{display:block;width:100%;height:auto;border-radius:22px;border:2px solid var(--ink);box-shadow:10px 10px 0 0 var(--tint)}
+
+/* encart « outil gratuit » sous le sommaire (src/lib/related.ts) */
+.post-side-tool{display:block;margin-top:28px;background:var(--tint);border:2px solid var(--ink);border-radius:18px;padding:16px 18px;transition:.25s cubic-bezier(.2,.7,.3,1)}
+.post-side-tool:hover{transform:translateY(-3px);box-shadow:6px 6px 0 0 var(--yellow)}
+.post-side-tool .k{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+.post-side-tool b{display:block;font-family:Gabarito;font-weight:700;font-size:16px;line-height:1.2;color:var(--ink);margin:6px 0 8px}
+.post-side-tool .go{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--brand)}
+.post-side-tool:hover .arw{transform:translateX(4px)}
+.post-side-tool+.post-side-cta{margin-top:14px}

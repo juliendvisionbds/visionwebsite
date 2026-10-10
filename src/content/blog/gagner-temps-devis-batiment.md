@@ -3,6 +3,7 @@ title: Devis BTP trop longs à préparer : repérer les étapes qui vous font pe
 seoTitle: Gagner du temps sur ses devis bâtiment : mesurer avant d'agir
 description: Vos devis prennent trop de temps ? Décomposez-en cinq, mesurez recherche et ressaisie, et choisissez la bonne étape à simplifier. Grille de mesure incluse.
 tag: Prix & devis
+topics: devis, prix
 date: 2026-09-15
 cover: /blog/gagner-temps-devis-batiment/devis-fin-de-journee.jpg
 coverAlt: Une personne de dos prépare un devis à l'écran en fin de journée, sous une lampe de bureau, avec des plans, une calculatrice et un mètre ruban sur la table.

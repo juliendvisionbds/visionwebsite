@@ -6,6 +6,7 @@ tag: Bibliothèque de prix
 navText: Des archives de devis à une base de prix partagée
 cover: /cas/bibliotheque-prix-btp.png
 coverAlt: La bibliothèque de prix : une fourchette et une médiane par ouvrage, et un assistant IA qui répond à partir des factures. Données fictives.
+topics: prix, devis
 date: 2026-09-21
 author: Julien Devoir
 authorRole: Cofondateur de vision · Produit & systèmes

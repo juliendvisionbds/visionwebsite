@@ -10,6 +10,7 @@ authorPhoto: /team/julien.jpg
 cover: /cas/planning-chantier.svg
 ogImage: /cas/planning-chantier.jpg
 coverAlt: Les interventions du jour, le planning généré, puis une fiche de tâches prête à imprimer. Données fictives.
+topics: planning, chantier
 date: 2026-09-28
 sideTitle: Qui prépare le travail chez vous ?
 sideText: Racontez-nous comment vos équipes reçoivent leurs consignes.

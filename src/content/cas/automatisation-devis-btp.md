@@ -10,6 +10,7 @@ authorPhoto: /team/julien.jpg
 cover: /cas/devis-automatise.svg
 ogImage: /cas/devis-automatise.jpg
 coverAlt: Une demande client, le devis généré et modifiable, puis le PDF validé. Données fictives.
+topics: devis, prix
 date: 2026-10-05
 sideTitle: Où part le temps de vos devis ?
 sideText: Racontez-nous comment vous préparez un devis aujourd’hui.

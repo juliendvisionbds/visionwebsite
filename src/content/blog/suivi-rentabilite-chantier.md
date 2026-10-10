@@ -3,6 +3,7 @@ title: Rentabilité d'un chantier : comment comparer le budget aux coûts réels
 seoTitle: Suivi de rentabilité chantier : budget vs coûts réels
 description: Suivre la rentabilité d'un chantier pendant les travaux : budget par poste, heures, achats, engagements, avancement comparable et estimation à fin. Exemple chiffré.
 tag: Pilotage
+topics: pilotage, chantier, prix
 date: 2026-10-06
 cover: /blog/suivi-rentabilite-chantier/rentabilite-chantier.jpg
 coverAlt: Le gros œuvre d'une maison individuelle avec garage à mi-avancement, murs en blocs béton, échafaudages et palettes de matériaux, au coucher du soleil.

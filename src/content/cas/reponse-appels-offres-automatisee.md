@@ -10,6 +10,7 @@ authorPhoto: /team/julien.jpg
 cover: /cas/reponse-appels-offres.svg
 ogImage: /cas/reponse-appels-offres.jpg
 coverAlt: Réponse aux appels d’offres automatisée : les documents de la consultation, la synthèse avec ses sources, puis la trame de réponse à compléter. Données fictives.
+topics: appels-offres
 date: 2026-10-06
 sideTitle: Où part le temps de vos appels d’offres ?
 sideText: Comprendre le dossier, retrouver les pièces ou rédiger la réponse : racontez-nous.

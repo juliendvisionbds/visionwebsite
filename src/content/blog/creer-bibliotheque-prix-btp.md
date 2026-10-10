@@ -3,6 +3,7 @@ title: Créer sa bibliothèque de prix BTP à partir de ses anciens devis et fac
 seoTitle: Créer sa bibliothèque de prix BTP : la méthode en 5 étapes
 description: Vos prix sont dans vos archives. Méthode en 5 étapes pour créer une bibliothèque de prix BTP à partir de vos devis et factures, avec exemple et modèle de champs.
 tag: Prix & devis
+topics: prix, devis
 date: 2026-09-08
 cover: /blog/creer-bibliotheque-prix-btp/bibliotheque-de-prix.jpg
 coverAlt: Deux personnes de dos, dans un bureau d'entreprise du bâtiment, examinent ensemble un tableau à l'écran, des plans roulés sur le bureau.

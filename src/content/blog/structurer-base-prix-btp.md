@@ -3,6 +3,7 @@ title: Prix d'achat, déboursé sec, prix de vente : comment structurer sa base 
 seoTitle: Structurer sa base de prix BTP : déboursé sec, frais, marge
 description: Prix d'achat, déboursé sec, prix de revient, prix de vente : comment structurer une base de prix BTP sans mélanger des montants non comparables. Exemple chiffré.
 tag: Prix & devis
+topics: prix, devis
 date: 2026-09-29
 cover: /blog/structurer-base-prix-btp/structurer-base-prix-btp.jpg
 coverAlt: Un mur de blocs béton creux en cours de montage sur un chantier, avec une auge de mortier, une truelle et un niveau à bulle au premier plan.

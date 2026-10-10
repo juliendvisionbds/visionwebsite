@@ -6,6 +6,7 @@ tag: Tableau de bord
 navText: D’un export Excel au suivi d’activité
 cover: /cas/tableau-bord-activite-btp.jpg
 coverAlt: Le récapitulatif Excel construit à la main, et le tableau de bord actualisé à chaque import. Données fictives.
+topics: pilotage
 date: 2026-09-14
 sideTitle: Vous avez aussi votre fichier maison ?
 sideText: Racontez-nous comment vous préparez votre reporting.

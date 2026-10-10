@@ -3,6 +3,7 @@ title: Tableau de bord BTP : quels indicateurs suivre quand on dirige plusieurs 
 seoTitle: Indicateurs tableau de bord BTP : lesquels suivre et pourquoi
 description: Commercial, production, marge, trésorerie : les indicateurs d'un tableau de bord BTP utile, avec leur calcul, leur source et la décision qu'ils déclenchent.
 tag: Pilotage
+topics: pilotage
 date: 2026-09-22
 cover: /blog/indicateurs-tableau-de-bord-btp/tableau-bord-activite-batiment.jpg
 coverAlt: Un dirigeant du bâtiment, de dos, consulte un tableau de bord sur tablette devant un chantier de gros œuvre en fin de journée.

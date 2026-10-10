@@ -484,3 +484,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .gloss dt{font-family:Gabarito;font-weight:700;padding-right:14px}
 .gloss dd{color:#3A3A3E;font-size:16px}
 @media(max-width:560px){.gloss{grid-template-columns:1fr}.gloss dd{border-top:0;padding-top:0}}
+
+/* maillage interne : liens outil / article sous un cas d'usage, lien outil sur une carte */
+.uc-links{display:flex;flex-direction:column;gap:6px;margin-top:14px;font-size:14px;color:var(--muted)}
+.uc-links b{font-weight:600;color:var(--ink)}
+.uc-links a{color:var(--brand);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.ulink{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:14.5px;font-weight:600;color:var(--brand)}
+.ucard:hover .ulink .arw{transform:translateX(4px)}

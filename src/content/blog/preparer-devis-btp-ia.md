@@ -3,6 +3,7 @@ title: Devis BTP avec l'IA : quelles informations fournir pour obtenir un brouil
 seoTitle: Devis BTP avec l'IA : quoi fournir pour un brouillon fiable
 description: Un devis BTP préparé par l'IA vaut ce que valent les informations fournies. Liste des données à donner, exemple demande → brouillon → corrections, points à relire.
 tag: Prix & devis
+topics: devis, prix
 date: 2026-10-02
 cover: /blog/preparer-devis-btp-ia/devis-btp-ia.jpg
 coverAlt: Une main annote au crayon le plan d'une extension de maison, devant un écran affichant un devis dont quelques lignes sont surlignées.

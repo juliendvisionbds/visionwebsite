@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import LegacyPage from "@/components/LegacyPage";
 import { crumbsOf, getPost, listPosts, renderPost, shareImage, type Kind } from "@/lib/posts";
 import { loadPageFiles } from "@/lib/load-content";
+import { relatedForPost, sideToolFor } from "@/lib/related";
 import { ORG_ID, SITE, breadcrumb, faqPage, jsonLdHtml, pageUrl, social } from "@/lib/seo";
 
 const KIND: Kind = "blog";
@@ -59,7 +60,7 @@ export default async function Page({ params }: PageProps<"/blog/[slug]">) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }} />
-      <LegacyPage css={css} html={html.replace(/<!-- POST \(.*?\) -->/, () => renderPost(p))} script={script} />
+      <LegacyPage css={css} html={html.replace(/<!-- POST \(.*?\) -->/, () => `${renderPost(p, sideToolFor(p))}\n\n${relatedForPost(p)}`)} script={script} />
     </>
   );
 }

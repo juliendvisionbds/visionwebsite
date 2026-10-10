@@ -3,6 +3,7 @@ title: Relance de devis BTP : quand relancer et quoi écrire selon la situation
 seoTitle: Relance de devis BTP : quand relancer, quoi écrire (5 modèles)
 description: Relancer un devis BTP sans harceler : calendrier selon le type de client, 5 modèles de messages par situation, quand arrêter et comment suivre vos devis.
 tag: Prix & devis
+topics: relance, devis
 date: 2026-10-09
 cover: /blog/relance-devis-btp/relance-devis.jpg
 coverAlt: Une personne de dos, au téléphone dans le bureau d'une entreprise du bâtiment, devant un écran affichant une liste de dossiers avec des pastilles de couleur.
