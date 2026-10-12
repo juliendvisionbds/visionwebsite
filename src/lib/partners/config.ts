@@ -4,7 +4,7 @@ const DEV = process.env.NODE_ENV !== "production";
 // En local, admin.localhost et partenaires.localhost pointent sur le serveur de dev.
 const devOrigin = (sub: string) => `http://${sub}.localhost:${process.env.PORT || 3000}`;
 const origin = (override: string | undefined, sub: string) =>
-  (override || (DEV ? devOrigin(sub) : `https://${sub}.visionbds.com`)).replace(/\/$/, "");
+  (override || (DEV ? devOrigin(sub) : `https://${sub}.visionbtp.com`)).replace(/\/$/, "");
 
 export const ADMIN_URL = origin(process.env.ADMIN_URL, "admin");
 export const PARTNERS_URL = origin(process.env.PARTNERS_URL, "partenaires");

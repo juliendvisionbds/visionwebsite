@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/components/app/app.css";
 
-// Servi sur admin.visionbds.com (rewrite par hôte dans next.config.ts).
+// Servi sur admin.visionbtp.com (rewrite par hôte dans next.config.ts).
 export const metadata: Metadata = {
   title: { default: "Partenaires | Admin vision", template: "%s | Admin vision" },
   description: "Administration du programme partenaires de vision.",

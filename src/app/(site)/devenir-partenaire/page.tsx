@@ -38,7 +38,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }} />
       <LegacyPage
         css={css}
-        html={html.replace("<!-- PROFILES -->", profileOptions).replace("https://partenaires.visionbds.com", PARTNERS_URL)}
+        html={html.replace("<!-- PROFILES -->", profileOptions).replace("https://partenaires.visionbtp.com", PARTNERS_URL)}
         script={script}
       />
     </>

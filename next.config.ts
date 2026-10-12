@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-// Sous-domaines servis par cette même application : admin.visionbds.com → src/app/admin,
-// partenaires.visionbds.com → src/app/portail, carnetplein.visionbds.com → src/app/carnet-plein.
+// Sous-domaines servis par cette même application : admin.visionbtp.com → src/app/admin,
+// partenaires.visionbtp.com → src/app/portail, carnetplein.visionbtp.com → src/app/carnet-plein.
 // En local : admin.localhost, partenaires.localhost et carnetplein.localhost.
 // `noindex` : l'en-tête X-Robots-Tag garde le sous-domaine hors des moteurs de recherche.
 const SUBDOMAINS = [
@@ -11,7 +11,7 @@ const SUBDOMAINS = [
   { host: "carnetplein", prefix: "/carnet-plein", noindex: true },
 ];
 const subOrigin = (host: string) =>
-  process.env.NODE_ENV === "production" ? `https://${host}.visionbds.com` : `http://${host}.localhost:${process.env.PORT || 3000}`;
+  process.env.NODE_ENV === "production" ? `https://${host}.visionbtp.com` : `http://${host}.localhost:${process.env.PORT || 3000}`;
 // Tout sauf /_next, /api et les fichiers statiques (dernier segment avec une extension).
 const APP_PATH = "/:path((?!_next/|api/)(?:[^/]+/)*[^/.]*)";
 

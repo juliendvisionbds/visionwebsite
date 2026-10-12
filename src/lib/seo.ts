@@ -1,6 +1,6 @@
 /** Constantes et helpers SEO partagés (URL canonique, JSON-LD). */
 
-export const SITE = "https://www.visionbds.com";
+export const SITE = "https://www.visionbtp.com";
 
 /** URL absolue d'une route, avec le slash final (next.config : trailingSlash). */
 export const pageUrl = (path: string) => `${SITE}${path === "/" ? "/" : `${path.replace(/\/$/, "")}/`}`;

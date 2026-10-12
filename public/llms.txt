@@ -4,7 +4,7 @@
 
 ## Faits clés
 
-- Nom : vision (site : https://www.visionbds.com)
+- Nom : vision (site : https://www.visionbtp.com)
 - Type : agence d'automatisation IA spécialisée dans le bâtiment (gros œuvre, second œuvre, TCE, artisans, holdings BTP)
 - Fondée en 2025, basée dans le Var (83), France ; intervient dans toute la France
 - Fondateurs : Julien Devoir (produit et systèmes), Clément Samson (stratégie et développement), Clément Bernard (marketing et croissance)
@@ -16,32 +16,32 @@
 
 ## Pages principales
 
-- [Accueil](https://www.visionbds.com/) : présentation de l'agence, cas clients, méthode et FAQ
-- [L'IA dans le BTP](https://www.visionbds.com/ia-btp/) : guide des cas d'usage concrets de l'IA dans les entreprises du bâtiment, outils gratuits et FAQ
-- [Outils gratuits](https://www.visionbds.com/outils/) : diagnostic IA, calculateur du coût de l'administratif, et les outils à venir pour les entreprises du bâtiment
-- [À propos](https://www.visionbds.com/a-propos/) : qui est vision, l'équipe, ce qui la différencie, fiche d'identité de l'agence
-- [L'équipe](https://www.visionbds.com/equipe/) : les trois associés de vision, leur parcours et leur rôle
-- [Diagnostic gratuit](https://www.visionbds.com/commencer/) : 7 questions, 2 minutes, plan personnalisé avec les 3 tâches prioritaires à automatiser
-- [Contact](https://www.visionbds.com/contact/) : réserver un appel de 30 minutes avec un associé
-- [Devenir partenaire](https://www.visionbds.com/devenir-partenaire/) : programme de recommandation, 15 % des contrats signés avec les entreprises présentées, dès le premier appel obtenu
-- [Blog](https://www.visionbds.com/blog/) : articles de vision, dont le manifeste de l'agence
+- [Accueil](https://www.visionbtp.com/) : présentation de l'agence, cas clients, méthode et FAQ
+- [L'IA dans le BTP](https://www.visionbtp.com/ia-btp/) : guide des cas d'usage concrets de l'IA dans les entreprises du bâtiment, outils gratuits et FAQ
+- [Outils gratuits](https://www.visionbtp.com/outils/) : diagnostic IA, calculateur du coût de l'administratif, et les outils à venir pour les entreprises du bâtiment
+- [À propos](https://www.visionbtp.com/a-propos/) : qui est vision, l'équipe, ce qui la différencie, fiche d'identité de l'agence
+- [L'équipe](https://www.visionbtp.com/equipe/) : les trois associés de vision, leur parcours et leur rôle
+- [Diagnostic gratuit](https://www.visionbtp.com/commencer/) : 7 questions, 2 minutes, plan personnalisé avec les 3 tâches prioritaires à automatiser
+- [Contact](https://www.visionbtp.com/contact/) : réserver un appel de 30 minutes avec un associé
+- [Devenir partenaire](https://www.visionbtp.com/devenir-partenaire/) : programme de recommandation, 15 % des contrats signés avec les entreprises présentées, dès le premier appel obtenu
+- [Blog](https://www.visionbtp.com/blog/) : articles de vision, dont le manifeste de l'agence
 
 ## Cas d'usage IA BTP
 
-- [Tableau de bord BTP](https://www.visionbds.com/cas/tableau-de-bord-btp/) : un reporting Excel annuel transformé en tableau de bord d'activité actualisé à chaque import (PME du bâtiment, ~3 M€ de CA)
-- [Bibliothèque de prix BTP](https://www.visionbds.com/cas/bibliotheque-de-prix-btp/) : plusieurs années de devis et de factures extraites par l'IA en une base de prix commune, consultable par toute l'équipe (construction et terrassement, ~50 salariés)
-- [Planning de chantier BTP](https://www.visionbds.com/cas/planning-chantier-btp/) : planning et fiches de tâches générés à partir des interventions du jour, au lieu de 2 à 3 heures de répartition manuelle par jour (bâtiments modulaires)
-- [Automatisation de devis BTP](https://www.visionbds.com/cas/automatisation-devis-btp/) : une première version du devis préparée en quelques minutes à partir de la demande client, de la bibliothèque de prix et des anciens devis, puis validée par l'équipe
-- [Réponse aux appels d'offres automatisée](https://www.visionbds.com/cas/reponse-appels-offres-automatisee/) : le dossier de consultation synthétisé avec ses sources, puis une première trame de réponse préparée à partir des documents de l'entreprise (gros œuvre, ~30 salariés)
+- [Tableau de bord BTP](https://www.visionbtp.com/cas/tableau-de-bord-btp/) : un reporting Excel annuel transformé en tableau de bord d'activité actualisé à chaque import (PME du bâtiment, ~3 M€ de CA)
+- [Bibliothèque de prix BTP](https://www.visionbtp.com/cas/bibliotheque-de-prix-btp/) : plusieurs années de devis et de factures extraites par l'IA en une base de prix commune, consultable par toute l'équipe (construction et terrassement, ~50 salariés)
+- [Planning de chantier BTP](https://www.visionbtp.com/cas/planning-chantier-btp/) : planning et fiches de tâches générés à partir des interventions du jour, au lieu de 2 à 3 heures de répartition manuelle par jour (bâtiments modulaires)
+- [Automatisation de devis BTP](https://www.visionbtp.com/cas/automatisation-devis-btp/) : une première version du devis préparée en quelques minutes à partir de la demande client, de la bibliothèque de prix et des anciens devis, puis validée par l'équipe
+- [Réponse aux appels d'offres automatisée](https://www.visionbtp.com/cas/reponse-appels-offres-automatisee/) : le dossier de consultation synthétisé avec ses sources, puis une première trame de réponse préparée à partir des documents de l'entreprise (gros œuvre, ~30 salariés)
 
 ## Articles
 
-- [Créer sa bibliothèque de prix BTP](https://www.visionbds.com/blog/creer-bibliotheque-prix-btp/) : méthode en 5 étapes pour transformer ses anciens devis et factures en bibliothèque de prix (champs à prévoir, regroupement des ouvrages, validation, mise à jour, Excel ou IA)
-- [Devis BTP trop longs à préparer](https://www.visionbds.com/blog/gagner-temps-devis-batiment/) : méthode pour décomposer cinq devis, mesurer la recherche de prix, la ressaisie et l'attente, distinguer préparation et décision, puis choisir la première étape à simplifier (grille de mesure incluse)
-- [Tableau de bord BTP : quels indicateurs suivre](https://www.visionbds.com/blog/indicateurs-tableau-de-bord-btp/) : les indicateurs d'un tableau de bord de dirigeant du bâtiment par famille (commercial, production, marge, trésorerie), avec leur calcul, leur source, leur fréquence et la décision qu'ils déclenchent
-- [Structurer sa base de chiffrage BTP](https://www.visionbds.com/blog/structurer-base-prix-btp/) : distinguer prix d'achat, déboursé sec, coût direct, prix de revient et prix de vente, décomposer un ouvrage, stocker les coefficients à part et documenter la convention de calcul (exemple chiffré)
-- [Devis BTP avec l'IA : quelles informations fournir](https://www.visionbds.com/blog/preparer-devis-btp-ia/) : ce qu'il faut donner à l'IA pour obtenir un brouillon de devis exploitable (demande qualifiée, base de prix, devis similaires, règles écrites), exemple de la demande aux corrections et liste de relecture avant envoi
-- [Rentabilité d'un chantier : budget et coûts réels](https://www.visionbds.com/blog/suivi-rentabilite-chantier/) : suivre la marge pendant les travaux, avec un budget de référence par poste, le rattachement des heures et des achats, les engagements, la comparaison à avancement comparable et l'estimation à fin (exemple chiffré)
-- [Planning multi-chantiers : équipes, véhicules et matériel](https://www.visionbds.com/blog/planning-equipes-multi-chantiers/) : méthode en cinq étapes pour organiser le planning de plusieurs chantiers autour d'une source unique (interventions, contraintes, affectation, contrôle des conflits, transmission), avec une semaine type replanifiée après un imprévu
-- [Relance de devis BTP : quand relancer et quoi écrire](https://www.visionbds.com/blog/relance-devis-btp/) : calendrier de relance selon le type de client, cinq modèles de messages par situation (réception, sans réponse, hésitation sur le prix, projet reporté, clôture), règles d'arrêt et suivi des devis en cours
-- [Le manifeste de vision](https://www.visionbds.com/blog/manifeste/) : pourquoi vision a été créée, ce qu'elle refuse de faire et ce qu'elle promet aux entreprises du bâtiment, par Julien Devoir, cofondateur
+- [Créer sa bibliothèque de prix BTP](https://www.visionbtp.com/blog/creer-bibliotheque-prix-btp/) : méthode en 5 étapes pour transformer ses anciens devis et factures en bibliothèque de prix (champs à prévoir, regroupement des ouvrages, validation, mise à jour, Excel ou IA)
+- [Devis BTP trop longs à préparer](https://www.visionbtp.com/blog/gagner-temps-devis-batiment/) : méthode pour décomposer cinq devis, mesurer la recherche de prix, la ressaisie et l'attente, distinguer préparation et décision, puis choisir la première étape à simplifier (grille de mesure incluse)
+- [Tableau de bord BTP : quels indicateurs suivre](https://www.visionbtp.com/blog/indicateurs-tableau-de-bord-btp/) : les indicateurs d'un tableau de bord de dirigeant du bâtiment par famille (commercial, production, marge, trésorerie), avec leur calcul, leur source, leur fréquence et la décision qu'ils déclenchent
+- [Structurer sa base de chiffrage BTP](https://www.visionbtp.com/blog/structurer-base-prix-btp/) : distinguer prix d'achat, déboursé sec, coût direct, prix de revient et prix de vente, décomposer un ouvrage, stocker les coefficients à part et documenter la convention de calcul (exemple chiffré)
+- [Devis BTP avec l'IA : quelles informations fournir](https://www.visionbtp.com/blog/preparer-devis-btp-ia/) : ce qu'il faut donner à l'IA pour obtenir un brouillon de devis exploitable (demande qualifiée, base de prix, devis similaires, règles écrites), exemple de la demande aux corrections et liste de relecture avant envoi
+- [Rentabilité d'un chantier : budget et coûts réels](https://www.visionbtp.com/blog/suivi-rentabilite-chantier/) : suivre la marge pendant les travaux, avec un budget de référence par poste, le rattachement des heures et des achats, les engagements, la comparaison à avancement comparable et l'estimation à fin (exemple chiffré)
+- [Planning multi-chantiers : équipes, véhicules et matériel](https://www.visionbtp.com/blog/planning-equipes-multi-chantiers/) : méthode en cinq étapes pour organiser le planning de plusieurs chantiers autour d'une source unique (interventions, contraintes, affectation, contrôle des conflits, transmission), avec une semaine type replanifiée après un imprévu
+- [Relance de devis BTP : quand relancer et quoi écrire](https://www.visionbtp.com/blog/relance-devis-btp/) : calendrier de relance selon le type de client, cinq modèles de messages par situation (réception, sans réponse, hésitation sur le prix, projet reporté, clôture), règles d'arrêt et suivi des devis en cours
+- [Le manifeste de vision](https://www.visionbtp.com/blog/manifeste/) : pourquoi vision a été créée, ce qu'elle refuse de faire et ce qu'elle promet aux entreprises du bâtiment, par Julien Devoir, cofondateur

@@ -1,5 +1,5 @@
 /**
- * Carnet plein : contenus communs et contenus de la home, servis sur carnetplein.visionbds.com.
+ * Carnet plein : contenus communs et contenus de la home, servis sur carnetplein.visionbtp.com.
  * Les pages métier ont leurs textes dans ./niches.
  *
  * Règles d'écriture, valables pour toute la page hors FAQ :
@@ -8,7 +8,7 @@
  * - Chaque phrase doit pouvoir être répétée par le patron à son associé sans la reformuler.
  */
 
-export const ORIGIN = "https://carnetplein.visionbds.com";
+export const ORIGIN = "https://carnetplein.visionbtp.com";
 
 export const title = "Carnet plein : signez plus de projets avec les demandes que vous recevez déjà";
 export const description =

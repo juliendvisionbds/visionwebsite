@@ -7,7 +7,7 @@ import "./carnet.css";
 const sans = Geist({ subsets: ["latin"], variable: "--cp-sans" });
 const mono = Geist_Mono({ subsets: ["latin"], variable: "--cp-mono" });
 
-// Servi sur carnetplein.visionbds.com (rewrite par hôte dans next.config.ts).
+// Servi sur carnetplein.visionbtp.com (rewrite par hôte dans next.config.ts).
 export const metadata: Metadata = {
   metadataBase: new URL(ORIGIN),
   title,

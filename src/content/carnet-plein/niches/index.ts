@@ -9,7 +9,7 @@ import { spa } from "./spa";
  * Ajouter un métier : créer ./<slug>.ts sur le modèle de ./spa.ts, puis l'inscrire dans NICHES. Sa carte apparaît alors sur la home.
  */
 export type Niche = {
-  /** Adresse de la page : carnetplein.visionbds.com/<slug>/ */
+  /** Adresse de la page : carnetplein.visionbtp.com/<slug>/ */
   slug: string;
   /** Les onze variables du template : à remplir avant d'écrire la page. */
   vars: {

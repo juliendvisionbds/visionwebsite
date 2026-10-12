@@ -59,7 +59,7 @@ export const PLAYBOOK = [
   ["On vous demande ce que vision fait concrètement", "Envoyez la présentation de l'offre."],
   [
     "Il préfère se faire une idée seul",
-    "Donnez-lui le diagnostic en ligne (2 minutes) : visionbds.com/commencer. Déclarez la recommandation dans votre espace pour qu'elle vous soit attribuée.",
+    "Donnez-lui le diagnostic en ligne (2 minutes) : visionbtp.com/commencer. Déclarez la recommandation dans votre espace pour qu'elle vous soit attribuée.",
   ],
 ];
 

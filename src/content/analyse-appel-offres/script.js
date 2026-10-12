@@ -382,7 +382,7 @@ function icsText(a){
   const ev=(a.dates||[]).filter(d=>d.iso).map((d,i)=>{
     const ymd=d.iso.replace(/-/g,''); const t=d.heure?d.heure.split(':'):null;
     const dt=t?`DTSTART;TZID=Europe/Paris:${ymd}T${pad(t[0])}${pad(t[1])}00\nDTEND;TZID=Europe/Paris:${ymd}T${pad(t[0])}${pad(t[1])}00`:`DTSTART;VALUE=DATE:${ymd}`;
-    return `BEGIN:VEVENT\nUID:ao-${stamp}-${i}@visionbds.com\nDTSTAMP:${stamp}\n${dt}\nSUMMARY:${escI(d.evenement+' – '+short)}\nDESCRIPTION:${escI((d.date||'')+(d.source?'\n« '+d.source+' »':''))}\nEND:VEVENT`;
+    return `BEGIN:VEVENT\nUID:ao-${stamp}-${i}@visionbtp.com\nDTSTAMP:${stamp}\n${dt}\nSUMMARY:${escI(d.evenement+' – '+short)}\nDESCRIPTION:${escI((d.date||'')+(d.source?'\n« '+d.source+' »':''))}\nEND:VEVENT`;
   });
   return `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//vision//Analyse d'appel d'offres//FR\nCALSCALE:GREGORIAN\n${ev.join('\n')}\nEND:VCALENDAR\n`.replace(/\n/g,'\r\n');
 }

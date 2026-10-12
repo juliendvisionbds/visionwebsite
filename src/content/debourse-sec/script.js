@@ -274,7 +274,7 @@ function recap(){
     L.push('');
   }
   L.push(`Du déboursé sec au prix de vente (aperçu) : frais de chantier ${S.fc} % → déboursé total ${eur(last.dt)} ; frais généraux ${S.fg} % → prix de revient ${eur(last.pr)} ; marge ${S.marge} % → prix de vente HT ${eur(last.pv)} (coefficient × ${last.coef.toFixed(2)}).`);
-  L.push('','Calculé avec l\'outil gratuit de vision : visionbds.com/outils/debourse-sec/');
+  L.push('','Calculé avec l\'outil gratuit de vision : visionbtp.com/outils/debourse-sec/');
   return L.join('\n');
 }
 $('ds-copy').addEventListener('click',async e=>{
