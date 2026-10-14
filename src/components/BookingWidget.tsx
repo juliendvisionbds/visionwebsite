@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import "./BookingWidget.css";
 
 // Même agenda que /contact et la fin du quiz.
-const BOOKING_URL = "https://calendly.com/juliend-visionbds/30min";
+const BOOKING_URL = "https://calendly.com/juliend-visionbds/audit";
 // Temps passé sur le site (cumulé entre les pages) avant d'ouvrir la carte toute seule.
 const AUTO_OPEN_MS = 25_000;
 const K_START = "bk-start";

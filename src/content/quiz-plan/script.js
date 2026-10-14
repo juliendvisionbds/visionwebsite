@@ -14,7 +14,7 @@ const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
    BOOKING_URL : lien Cal.com ou Calendly. S'il est renseigné, le calendrier réel s'affiche dans la page,
    prérempli avec l'email et le résumé des réponses (paramètres email, name, notes pour Cal.com ; a1 pour Calendly).
    Laissé vide : un sélecteur de créneaux de démonstration s'affiche. */
-const BOOKING_URL='https://calendly.com/juliend-visionbds/30min';
+const BOOKING_URL='https://calendly.com/juliend-visionbds/audit';
 /* Enregistre la demande de créneau (Supabase) et prévient l'équipe + le client (Resend). Mode démo uniquement. */
 async function sendBooking(data){
   try{

@@ -156,7 +156,7 @@ document.querySelectorAll('.q button').forEach(b=>{
    Laissé vide : sélecteur de créneaux (jours ouvrés, 4 horaires). La demande est enregistrée
    (Supabase) et envoyée par email (Resend) ; l'invitation visio est envoyée ensuite à la main.
    ============================================================ */
-const BOOKING_URL='https://calendly.com/juliend-visionbds/30min';
+const BOOKING_URL='https://calendly.com/juliend-visionbds/audit';
 const cal=document.getElementById('cal');
 const escH=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 if(cal&&BOOKING_URL){
