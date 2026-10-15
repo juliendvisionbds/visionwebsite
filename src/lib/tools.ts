@@ -4,7 +4,7 @@
  *
  * topics : thèmes de l'outil, du plus important au moins important. Les mêmes mots-clés servent
  * dans l'en-tête des articles et des cas d'usage (ligne `topics:`) pour relier les contenus entre eux.
- * Thèmes utilisés : devis, prix, relance, facturation, planning, chantier, pilotage, appels-offres.
+ * Thèmes utilisés : devis, prix, relance, facturation, planning, chantier, pilotage, appels-offres, securite.
  */
 export type Tool = {
   /** Dossier de la page dans src/content (absent pour le diagnostic, qui est le quiz). */
@@ -16,6 +16,8 @@ export type Tool = {
 };
 
 export const TOOLS: Tool[] = [
+  { id: "planning-gantt", href: "/outils/planning-gantt", title: "Planning de chantier en Gantt", text: "Tâches, durées, dépendances : dates, chemin critique et Gantt du chantier.", topics: ["planning", "chantier"] },
+  { id: "consignes-equipes", href: "/outils/consignes-equipes", title: "Consignes traduites pour les équipes", text: "Une consigne → français simplifié, traductions, affiche A4 et version WhatsApp.", topics: ["chantier", "securite"] },
   { id: "analyse-appel-offres", href: "/outils/analyse-appel-offres", title: "Analyse express d'un appel d'offres", text: "Le règlement de consultation en une fiche : dates, lots, critères, pièces.", topics: ["appels-offres"] },
   { id: "fiche-chiffrage", href: "/outils/fiche-chiffrage", title: "Demande client → fiche de chiffrage", text: "Travaux, quantités, contraintes, ce qui manque, et le mail de questions.", topics: ["devis", "prix"] },
   { id: "relance-devis", href: "/outils/relance-devis", title: "Relance de devis sans réponse", text: "Le bon message au bon moment, mail, SMS et script d'appel.", topics: ["relance", "devis"] },

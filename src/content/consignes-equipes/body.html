@@ -1,0 +1,165 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + FORMULAIRE -->
+<section class="hero ce-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Consignes pour les équipes</span></nav>
+    <div class="ce-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Terrain</span>
+        <h1>Vos consignes, <span class="sq brand">comprises<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span> par toute l'équipe</h1>
+        <p class="lede">Collez une consigne de sécurité, une procédure ou une règle de chantier. L'outil la réécrit en français simplifié, phrases courtes et étapes numérotées, puis la traduit dans les langues de vos équipes. Affiche A4 par langue et version WhatsApp prêtes à partir.</p>
+        <ul class="ce-meta-list">
+          <li>Sans inscription</li>
+          <li>Rien n'est retiré : chiffres, interdictions, étapes</li>
+          <li>14 langues, dont l'arabe et l'ourdou de droite à gauche</li>
+        </ul>
+      </div>
+
+      <form class="ce-form" id="ce-form" novalidate>
+        <div class="ce-fh"><span class="k">La consigne</span><button type="button" class="ce-link" id="ce-example">Charger un exemple</button></div>
+        <div class="ce-row">
+          <label class="ce-l">
+            <span>Type</span>
+            <select id="ce-type">
+              <option value="securite">Consigne de sécurité</option>
+              <option value="procedure">Procédure de travail</option>
+              <option value="regles">Règle de vie du chantier</option>
+              <option value="info">Information à transmettre</option>
+              <option value="autre">Autre</option>
+            </select>
+          </label>
+          <label class="ce-l"><span>Chantier <small>facultatif</small></span><input id="ce-chantier" type="text" maxlength="80" placeholder="Résidence Les Oliviers"></label>
+        </div>
+        <label class="ce-l ce-notes-l">
+          <span class="vh">Consigne d'origine</span>
+          <textarea id="ce-consigne" rows="8" maxlength="6000" required placeholder="Collez la consigne telle qu'elle existe : note de service, extrait du PPSPS, mail du conducteur de travaux, règle affichée…"></textarea>
+          <small class="ce-count"><span id="ce-count">0</span> / 6 000</small>
+        </label>
+
+        <div class="ce-fh"><span class="k">Les langues de l'équipe <small>jusqu'à 5</small></span></div>
+        <div class="ce-langs" id="ce-langs" role="group" aria-label="Langues de traduction">
+          <label><input type="checkbox" value="pt" checked><span>Portugais</span></label>
+          <label><input type="checkbox" value="ro"><span>Roumain</span></label>
+          <label><input type="checkbox" value="ar"><span>Arabe</span></label>
+          <label><input type="checkbox" value="en"><span>Anglais</span></label>
+          <label><input type="checkbox" value="es"><span>Espagnol</span></label>
+          <label><input type="checkbox" value="pl"><span>Polonais</span></label>
+          <label><input type="checkbox" value="tr"><span>Turc</span></label>
+          <label><input type="checkbox" value="uk"><span>Ukrainien</span></label>
+          <label><input type="checkbox" value="sq"><span>Albanais</span></label>
+          <label><input type="checkbox" value="it"><span>Italien</span></label>
+          <label><input type="checkbox" value="bg"><span>Bulgare</span></label>
+          <label><input type="checkbox" value="ru"><span>Russe</span></label>
+          <label><input type="checkbox" value="bn"><span>Bengali</span></label>
+          <label><input type="checkbox" value="ur"><span>Ourdou</span></label>
+        </div>
+        <label class="ce-l"><span>Votre entreprise <small>facultatif, pour le pied de l'affiche</small></span><input id="ce-entreprise" type="text" maxlength="80" placeholder="Durand Construction" autocomplete="organization"></label>
+
+        <p class="ce-err" id="ce-err" role="alert" hidden></p>
+        <button class="btn btn-primary" id="ce-go" type="submit">Simplifier et traduire <span class="arw">→</span></button>
+        <p class="ce-note">La consigne est transmise au service de rédaction le temps de produire les versions, puis oubliée. Rien n'est enregistré par vision. Pour une consigne de sécurité, faites relire la traduction par un locuteur natif.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSULTAT -->
+<section id="resultat" class="ce-sec-out">
+  <div class="wrap">
+    <div class="ce-out" id="ce-out" aria-live="polite">
+      <div class="ce-empty">
+        <span class="blip" data-pose="look" data-color="brand"></span>
+        <p><b>Vos versions apparaîtront ici, sous le formulaire.</b><br>Le français simplifié, une affiche par langue, la version courte pour WhatsApp.</p>
+      </div>
+    </div>
+
+    <div class="ce-cta reveal">
+      <span class="blip ce-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Et si chaque consigne partait déjà traduite, dans la bonne langue, à la bonne équipe ?</h2>
+        <p>Chez nos clients, le briefing du matin, les consignes de sécurité et les changements de planning arrivent sur le téléphone de chacun, dans sa langue, sans que le chef de chantier y passe sa soirée. Deux minutes pour voir ce qui peut partir tout seul chez vous.</p>
+      </div>
+      <a class="btn btn-primary" href="/commencer">Mes 3 priorités <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="ce-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Faire comprendre une consigne sur un chantier multilingue</h2>
+      <p class="lede">Simplifier avant de traduire, les règles du français simplifié, les langues et l'affichage, ce que dit le Code du travail, et les limites de la traduction automatique.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-pourquoi">Simplifier avant de traduire</a></li>
+            <li><a href="#g-regles">Les règles du français simplifié sur un chantier</a></li>
+            <li><a href="#g-afficher">Langues, affichage, briefing</a></li>
+            <li><a href="#g-droit">Ce que dit le Code du travail</a></li>
+            <li><a href="#g-limites">Les limites de la traduction automatique</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-pourquoi">1. Simplifier avant de traduire</h3>
+        <p>Une note de service de quarante mots par phrase, avec ses « conformément aux dispositions de l'article » et ses « sous réserve de », n'est pas comprise par une bonne partie de l'équipe, francophone comprise. La traduire mot à mot ne change rien : on obtient la même phrase, aussi longue, dans une autre langue. Le premier travail est donc de réécrire la consigne en français simplifié, et c'est cette version que l'on traduit.</p>
+        <p>Ce passage par le français simplifié a un autre avantage : le chef de chantier, qui ne lit ni le roumain ni l'arabe, peut vérifier sur la version française que rien d'important n'a été perdu. C'est pour cela que l'outil affiche la version française sous chaque affiche traduite.</p>
+        <div class="callout"><b>Le test :</b> si la consigne ne tient pas en cinq étapes qui commencent chacune par un verbe, elle contient probablement deux consignes, ou une partie qui relève de l'explication et pas de l'action.</div>
+
+        <h3 id="g-regles">2. Les règles du français simplifié sur un chantier</h3>
+        <ul>
+          <li><b>Une consigne, un message.</b> Un titre qui dit l'action attendue, en moins de huit mots.</li>
+          <li><b>Des phrases de douze mots au plus,</b> une idée par phrase, au présent ou à l'impératif, en vouvoyant.</li>
+          <li><b>Un verbe d'action pour commencer chaque étape :</b> « Portez », « Vérifiez », « Arrêtez », « Appelez ».</li>
+          <li><b>Des chiffres en chiffres, avec l'unité :</b> 3 m, 10 min, 2 personnes. Pas de « au-delà de », mais « plus de ».</li>
+          <li><b>Pas de double négation,</b> pas de « sauf si », pas d'abréviation sans explication.</li>
+          <li><b>Les mots techniques restent</b> quand l'équipe les utilise tous les jours, harnais, longe, garde-corps, mais ils sont expliqués une fois.</li>
+          <li><b>Dire pourquoi, en une phrase,</b> et <b>dire quoi faire en cas de problème,</b> avec un nom et un numéro.</li>
+        </ul>
+
+        <h3 id="g-afficher">3. Langues, affichage, briefing</h3>
+        <p>Demandez à chacun sa langue de lecture, pas sa nationalité : un salarié peut parler français et lire plus facilement le portugais. Trois à quatre langues couvrent la plupart des équipes. L'affiche se pose là où la consigne s'applique, à l'entrée de la zone, près du poste, dans la base vie, pas seulement au panneau d'affichage du bungalow. Les pictogrammes normalisés, obligation en bleu, interdiction en rouge, danger en jaune, complètent le texte et sont compris de tous.</p>
+        <p>L'affiche ne remplace pas le briefing. Le quart d'heure sécurité du matin reste le moment où la consigne est dite, montrée, et où l'on fait reformuler par un membre de l'équipe dans sa langue. Une consigne comprise est une consigne que quelqu'un a pu répéter avec ses mots.</p>
+
+        <h3 id="g-droit">4. Ce que dit le Code du travail</h3>
+        <p>L'employeur doit organiser une formation pratique et appropriée à la sécurité pour chaque salarié, intérimaire et travailleur détaché compris, et s'assurer que les consignes de sécurité sont comprises. Une consigne affichée dans une langue que le salarié ne lit pas ne remplit pas cette obligation. Les documents de prévention, plan particulier de sécurité et de protection de la santé, plan de prévention, restent rédigés en français ; rien n'empêche d'en extraire les consignes essentielles et de les diffuser simplifiées et traduites. En cas d'accident, c'est la preuve de la compréhension effective qui compte : la feuille d'émargement du briefing, l'affiche traduite, le message envoyé dans la langue de chacun.</p>
+
+        <h3 id="g-limites">5. Les limites de la traduction automatique</h3>
+        <p>Sur une consigne simplifiée, la traduction automatique est fiable pour le sens général, les chiffres et l'ordre des étapes. Elle l'est moins sur les termes de métier, qui varient d'un pays à l'autre pour une même langue, et sur les tournures de politesse. Pour une consigne de sécurité, faites relire la traduction par un locuteur natif de l'équipe avant de l'afficher ; dix minutes suffisent, et c'est aussi une façon de l'impliquer. L'outil conserve le mot français entre parenthèses quand un terme technique est incertain, et liste dans ses remarques ce qu'il faut vérifier.</p>
+        <div class="callout"><b>Ce guide et l'outil donnent une méthode et un premier jet,</b> pas un conseil juridique ni une traduction certifiée. Le document original et le briefing oral font foi ; la relecture par un locuteur natif reste indispensable pour les consignes qui engagent la sécurité.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur les consignes traduites</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->

@@ -1,0 +1,175 @@
+<header>
+  <div class="wrap bar">
+    <a href="/" class="mark" aria-label="vision, accueil">visi<span class="blip eye" data-pose="eye" data-color="brand"></span>n</a>
+    <nav>
+      <a class="nl hide-m" href="/ia-btp">L'IA dans le BTP</a>
+      <a class="nl hide-m" href="/a-propos">À propos</a>
+      <a class="btn btn-primary" style="padding:11px 20px;font-size:14.5px" href="/commencer">Mes 3 priorités (2 min)</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO + RÉSUMÉ -->
+<section class="hero pg-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">›</span><a href="/outils">Outils gratuits</a><span aria-hidden="true">›</span><span aria-current="page">Planning de chantier</span></nav>
+    <div class="pg-hero-grid">
+      <div>
+        <span class="chip">Outil gratuit · Planning</span>
+        <h1>Le <span class="sq brand">planning<svg viewBox="0 0 300 22" preserveAspectRatio="none"><path d="M4 14 C 68 3, 148 20, 296 8"/></svg></span> de votre chantier, en Gantt</h1>
+        <p class="lede">Listez les tâches, leur durée en jours ouvrés et ce qui doit être fini avant. L'outil calcule les dates en sautant les week-ends et les jours fériés, trouve le chemin critique et dessine le Gantt. Image, Excel, impression.</p>
+        <ul class="pg-meta">
+          <li>Sans inscription</li>
+          <li>Chemin critique et marges calculés</li>
+          <li>Découpage en tâches proposé par l'IA, si vous voulez</li>
+        </ul>
+      </div>
+
+      <aside class="pg-sum" id="pg-sum" aria-live="polite">
+        <span class="k">Résumé du planning</span>
+        <div class="pg-end"><small>Fin prévue</small><b id="pg-end">—</b></div>
+        <ul class="pg-kpis">
+          <li><small>Jours ouvrés</small><b id="pg-wd">0</b></li>
+          <li><small>Jours calendaires</small><b id="pg-cd">0</b></li>
+          <li><small>Tâches</small><b id="pg-n">0</b></li>
+          <li><small>Critiques</small><b id="pg-crit">0</b></li>
+        </ul>
+        <div class="pg-critlist" id="pg-critlist"></div>
+        <p class="pg-warn" id="pg-warn" hidden></p>
+        <div class="pg-actions">
+          <button type="button" class="pg-btn" data-act="print">Imprimer / PDF</button>
+          <button type="button" class="pg-btn" data-act="png">Image du Gantt</button>
+          <button type="button" class="pg-btn" data-act="csv">Excel (.csv)</button>
+          <button type="button" class="pg-btn" data-act="text">Copier</button>
+          <button type="button" class="pg-btn ghost" data-act="reset">Réinitialiser</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- LE PLANNING -->
+<section id="planning" class="pg-sec">
+  <div class="wrap">
+    <div class="pg-grid">
+      <div class="pg-card pg-tasks-card">
+        <div class="pg-card-top">
+          <h2>Les tâches</h2>
+          <button type="button" class="pg-link" id="pg-example">Charger un exemple</button>
+        </div>
+        <div class="pg-head">
+          <label class="pg-l"><span>Chantier</span><input id="pg-nom" type="text" maxlength="80" placeholder="Rénovation salle de bain, villa Lefèvre"></label>
+          <label class="pg-l"><span>Début des travaux</span><input id="pg-start" type="date"></label>
+          <div class="pg-opts">
+            <label class="pg-chk"><input id="pg-sat" type="checkbox"><span>Samedi travaillé</span></label>
+            <label class="pg-chk"><input id="pg-hol" type="checkbox" checked><span>Exclure les jours fériés</span></label>
+          </div>
+        </div>
+        <p class="pg-help">Durées en jours ouvrés. « Après » : les numéros des tâches qui doivent être terminées avant, séparés par des virgules. Une durée de 0 crée un jalon.</p>
+        <table class="pg-table">
+          <thead><tr><th class="num">#</th><th>Tâche</th><th class="lot">Lot</th><th class="n">Durée</th><th class="dep">Après</th><th class="x"></th></tr></thead>
+          <tbody id="pg-rows"></tbody>
+        </table>
+        <div class="pg-card-foot"><button type="button" class="pg-add" id="pg-add">+ Ajouter une tâche</button></div>
+      </div>
+
+      <div class="pg-card pg-ai-card">
+        <div class="pg-card-top"><h2>Proposer les tâches</h2><span class="pg-tag">IA, facultatif</span></div>
+        <p class="pg-help">Décrivez les travaux en quelques phrases : l'outil propose un découpage avec des durées indicatives et des dépendances, à corriger ensuite dans le tableau.</p>
+        <textarea id="pg-desc" rows="5" maxlength="3000" placeholder="Rénovation complète d'une salle de bain de 6 m² à l'étage : dépose baignoire, douche à l'italienne, carrelage sol et murs, meuble vasque, WC, VMC. Deux personnes."></textarea>
+        <div class="pg-ai-foot">
+          <label class="pg-chk"><input id="pg-replace" type="checkbox" checked><span>Remplacer les tâches actuelles</span></label>
+          <button type="button" class="btn btn-primary pg-ai-go" id="pg-ai-go">Proposer les tâches <span class="arw">→</span></button>
+        </div>
+        <p class="pg-ai-status" id="pg-ai-status" hidden></p>
+      </div>
+    </div>
+
+    <div class="pg-gantt-card">
+      <div class="pg-card-top"><h2>Le Gantt</h2><div class="pg-legend" id="pg-legend"></div></div>
+      <div class="pg-gantt" id="pg-gantt"><p class="pg-empty">Ajoutez des tâches ou chargez l'exemple : le Gantt se dessine ici.</p></div>
+    </div>
+
+    <div class="pg-cta reveal">
+      <span class="blip pg-cta-blip" data-pose="roller" data-color="yellow"></span>
+      <div>
+        <h2>Le planning du chantier, c'est une chose. Savoir qui est où lundi, c'en est une autre.</h2>
+        <p>Le Gantt organise les tâches d'un chantier. Le planning d'affectation répartit vos équipes entre tous vos chantiers, semaine après semaine, et c'est celui que nous automatisons chez nos clients. Deux minutes pour voir ce qui peut se mettre en place chez vous.</p>
+      </div>
+      <a class="btn btn-primary" href="/cas/planning-chantier-btp">Voir le cas d'usage <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- LE GUIDE -->
+<section id="guide" class="pg-guide-sec">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Le guide</span>
+      <h2>Faire un planning de chantier qui tient</h2>
+      <p class="lede">Pourquoi un Gantt plutôt qu'une liste, comment découper en tâches, les dépendances et le chemin critique, les durées réalistes, et comment faire vivre le planning une fois le chantier lancé.</p>
+    </div>
+
+    <div class="guide">
+      <aside class="gtoc" aria-label="Sommaire du guide">
+        <div class="gtoc-in">
+          <span class="k">Sommaire</span>
+          <ol id="gtoc">
+            <li><a href="#g-pourquoi">Pourquoi un Gantt, et pas une liste</a></li>
+            <li><a href="#g-decouper">Découper le chantier en tâches</a></li>
+            <li><a href="#g-critique">Dépendances et chemin critique</a></li>
+            <li><a href="#g-durees">Des durées réalistes</a></li>
+            <li><a href="#g-vivre">Faire vivre le planning</a></li>
+          </ol>
+        </div>
+      </aside>
+
+      <article class="prose">
+        <h3 id="g-pourquoi">1. Pourquoi un Gantt, et pas une liste</h3>
+        <p>Une liste de tâches dit ce qu'il y a à faire. Elle ne dit pas quand le carreleur peut commencer, ni ce qui se passe si le plombier a deux jours de retard. Le Gantt met les tâches sur un calendrier, reliées par ce qui doit être fini avant quoi. On y voit les chevauchements possibles, les temps morts, la date de fin, et surtout les tâches dont le retard se répercute jusqu'à la livraison.</p>
+        <p>Pour un chantier de quelques semaines, un Gantt d'une dizaine de tâches suffit. Il tient sur une page, se montre au client, se transmet aux sous-traitants avec leurs dates, et sert de référence quand il faut arbitrer.</p>
+        <div class="callout"><b>Ce que l'outil ne fait pas :</b> répartir vos équipes entre plusieurs chantiers. C'est le planning d'affectation, qui se met à jour chaque semaine et que nous décrivons dans <a href="/cas/planning-chantier-btp">le cas d'usage dédié</a>.</div>
+
+        <h3 id="g-decouper">2. Découper le chantier en tâches</h3>
+        <ul>
+          <li><b>Une tâche, une équipe, un résultat vérifiable.</b> « Plomberie : réseaux et évacuations » plutôt que « plomberie ». Si deux corps d'état interviennent, ce sont deux tâches.</li>
+          <li><b>Les temps incompressibles sont des tâches.</b> Séchage de chape, délai de livraison des menuiseries, temps de prise : personne ne travaille, mais le calendrier avance et les tâches suivantes attendent.</li>
+          <li><b>Les jalons marquent les décisions et les contrôles.</b> Réception, levée des réserves, validation des échantillons : durée zéro, mais une date que tout le monde regarde.</li>
+          <li><b>Entre six et vingt tâches</b> pour un chantier courant. Au-delà, on perd la lisibilité ; en dessous, on ne voit plus les enchaînements.</li>
+        </ul>
+
+        <h3 id="g-critique">3. Dépendances et chemin critique</h3>
+        <p>Une dépendance dit « cette tâche commence quand celle-là est finie ». Le carrelage attend la chape sèche ; les sanitaires attendent le carrelage ; la peinture attend tout le monde. En reliant ainsi les tâches, l'outil calcule la date de début au plus tôt de chacune, puis la date de fin du chantier.</p>
+        <p>Le chemin critique est la suite de tâches dont la durée additionnée donne cette date de fin. Ces tâches n'ont aucune marge : un jour de retard sur l'une d'elles décale la livraison d'un jour. Les autres ont une marge, affichée dans le tableau, qui permet de les déplacer sans conséquence. En pratique, c'est sur le chemin critique qu'on met la meilleure équipe, qu'on sécurise les approvisionnements et qu'on vérifie l'avancement chaque jour.</p>
+        <div class="callout"><b>Attention aux dépendances inutiles.</b> Si l'électricien et le plombier peuvent travailler en même temps, ne les enchaînez pas : chaque dépendance inutile allonge le chantier sur le papier et cache des marges réelles.</div>
+
+        <h3 id="g-durees">4. Des durées réalistes</h3>
+        <ul>
+          <li><b>En jours ouvrés,</b> pour l'équipe réellement prévue. Quarante-cinq mètres carrés de carrelage, c'est quatre jours à un, deux jours et demi à deux.</li>
+          <li><b>Week-ends et jours fériés exclus.</b> L'outil les saute ; un chantier qui démarre le 28 avril ne finit pas où l'on croit.</li>
+          <li><b>Une marge explicite plutôt que des durées gonflées.</b> Ajoutez une tâche « aléas et intempéries » de quelques jours avant la réception, visible et négociable, au lieu de rallonger chaque tâche en cachette.</li>
+          <li><b>Les durées des sous-traitants viennent d'eux,</b> par écrit, avec leurs dates de disponibilité. Un planning imposé n'est pas un planning tenu.</li>
+        </ul>
+
+        <h3 id="g-vivre">5. Faire vivre le planning</h3>
+        <p>Un planning fait une fois et jamais mis à jour ment dès la deuxième semaine. Le réflexe utile : chaque vendredi, cocher ce qui est fini, décaler ce qui a glissé, regarder si le chemin critique a bougé, et renvoyer la version à jour aux intervenants de la semaine suivante. Quinze minutes. Les écarts entre prévu et réel, notés chantier après chantier, finissent par donner vos propres durées de référence, bien meilleures que n'importe quelle moyenne.</p>
+        <div class="callout"><b>Ce guide et l'outil donnent une méthode et un premier planning,</b> pas un engagement contractuel. Les durées proposées par l'IA sont indicatives : remplacez-les par les vôtres et par celles de vos sous-traitants.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="chip">Questions fréquentes</span>
+      <h2>Vos questions sur le planning de chantier</h2>
+    </div>
+    <div class="faq-wrap" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL_CTA -->
+
+<!-- FOOTER -->
