@@ -148,6 +148,8 @@ Puis notez la date dans votre suivi. Un projet reporté sans date de reprise est
 
 Ce message obtient souvent une réponse : soit le projet repart, soit vous apprenez pourquoi il est perdu. Les deux sont utiles.
 
+Pour obtenir ces messages déjà adaptés à votre dossier (type de client, montant, date d'envoi), utilisez notre outil gratuit de [relance de devis sans réponse](/outils/relance-devis/) : il propose le bon message au bon moment, en mail, en SMS ou en script d'appel.
+
 ### Et au téléphone ?
 
 Pour un projet important, un appel vaut souvent mieux que la deuxième relance écrite. Trois questions suffisent :
