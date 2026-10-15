@@ -513,6 +513,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 .post-callout>b{display:block;font-family:Gabarito;font-weight:700;font-size:19px;letter-spacing:-.02em;margin-bottom:8px}
 .post-callout p{margin:0}
 
+.post-article code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:1px 6px;overflow-wrap:anywhere}
+
 /* modèle de message (citation de plusieurs paragraphes) */
 .post-msg{margin-top:1.6em;padding:20px 24px;background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:6px 16px 16px 6px;font-size:16px;line-height:1.6}
 .post-msg p{margin:0}

@@ -26,7 +26,7 @@
  *   [Légende]                   emplacement de visuel à venir (légende affichée dessous)
  *   ![Légende](/blog/image.png) visuel (image dans public/), avec légende
  *   **[Texte →](booking)**      bouton ; "booking" ouvre la prise de rendez-vous
- *   **gras**, *italique*, [lien](url)
+ *   **gras**, *italique*, [lien](url), `nom-de-fichier`
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -91,6 +91,7 @@ const href = (url: string) => (url === "booking" ? '/contact" data-booking="' : 
 
 const inline = (s: string) =>
   esc(s)
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, u) => `<a href="${href(u)}">${t}</a>`)
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
     .replace(/(^|[\s(])\*([^*\s][^*]*?)\*(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>");
