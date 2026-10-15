@@ -4,7 +4,7 @@ seoTitle: Automatiser son reporting BTP sous Excel : la méthode
 description: Exports, nomenclature, règles, rapprochement des totaux, traitement des écarts : la méthode pour un reporting BTP mensuel sous Excel qui ne se refait plus à la main.
 tag: Pilotage
 topics: pilotage, facturation
-date: 2026-10-15
+date: 2026-10-14
 cover: /blog/automatiser-reporting-btp-excel/reporting-fin-de-mois.jpg
 coverAlt: Un bureau d'entreprise du bâtiment en fin de journée : un écran avec plusieurs tableurs ouverts, une pile de documents, et un chantier par la fenêtre.
 author: Julien Devoir

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Circuit d'une situation de travaux : aujourd'hui l'avancement est saisi trois fois (notes du conducteur, tableur du bureau, logiciel de facturation) ; dans le circuit cible, une seule fiche d'avancement alimente le calcul, les contrôles, la relecture et l'émission, ainsi que le suivi de marge et le reporting</title>
+  <rect width="1200" height="640" rx="28" fill="#FAF9F6"/>
+
+  <text x="48" y="66" font-size="14" font-weight="700" letter-spacing="2" fill="#5A4BFF">SUPPRIMER LA DOUBLE SAISIE</text>
+  <text x="48" y="100" font-size="26" font-weight="800" fill="#14151A">L'avancement saisi trois fois, ou une seule</text>
+  <text x="48" y="146" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#E5484D">AUJOURD'HUI · TROIS SAISIES</text>
+  <g transform="translate(48 160)">
+    <rect width="336" height="108" rx="16" fill="#FAF9F6" stroke="#6C6A66" stroke-width="2" stroke-dasharray="6 5"/>
+    <rect x="18" y="16" width="80" height="24" rx="12" fill="#FFE3E0"/><text x="58.0" y="32.5" font-size="12" font-weight="700" fill="#B3261E" text-anchor="middle">Saisie 1</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Notes du conducteur</text><text x="18" y="95" font-size="13" fill="#6C6A66">Appel ou message au bureau</text>
+  </g>
+  <g transform="translate(390 214)"><path d="M0 0 H30" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/><path d="M19 -10 L33 0 L19 10" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(430 160)">
+    <rect width="336" height="108" rx="16" fill="#FAF9F6" stroke="#6C6A66" stroke-width="2" stroke-dasharray="6 5"/>
+    <rect x="18" y="16" width="80" height="24" rx="12" fill="#FFE3E0"/><text x="58.0" y="32.5" font-size="12" font-weight="700" fill="#B3261E" text-anchor="middle">Saisie 2</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Tableur du bureau</text><text x="18" y="95" font-size="13" fill="#6C6A66">Cumuls recalculés chaque mois</text>
+  </g>
+  <g transform="translate(772 214)"><path d="M0 0 H30" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/><path d="M19 -10 L33 0 L19 10" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(812 160)">
+    <rect width="336" height="108" rx="16" fill="#FAF9F6" stroke="#6C6A66" stroke-width="2" stroke-dasharray="6 5"/>
+    <rect x="18" y="16" width="80" height="24" rx="12" fill="#FFE3E0"/><text x="58.0" y="32.5" font-size="12" font-weight="700" fill="#B3261E" text-anchor="middle">Saisie 3</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Logiciel de facturation</text><text x="18" y="95" font-size="13" fill="#6C6A66">Ressaisie avant émission</text>
+  </g>
+  <text x="48" y="318" font-size="11.5" font-weight="700" letter-spacing="1.3" fill="#5A4BFF">CIRCUIT CIBLE · UNE SEULE SAISIE</text>
+  <g transform="translate(48 332)">
+    <rect x="6" y="6" width="252" height="108" rx="16" fill="#EDEBFF"/>
+    <rect width="252" height="108" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="115" height="24" rx="12" fill="#E3F9F2"/><text x="75.5" y="32.5" font-size="12" font-weight="700" fill="#0E7C5F" text-anchor="middle">Saisie unique</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Fiche d'avancement</text><text x="18" y="95" font-size="13" fill="#6C6A66">Postes du marché pré-remplis</text>
+  </g>
+  <g transform="translate(304 386)"><path d="M0 0 H30" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/><path d="M19 -10 L33 0 L19 10" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(331 332)">
+    <rect x="6" y="6" width="252" height="108" rx="16" fill="#EDEBFF"/>
+    <rect width="252" height="108" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="101" height="24" rx="12" fill="#EDEBFF"/><text x="68.5" y="32.5" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Automatique</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Calcul et contrôles</text><text x="18" y="95" font-size="13" fill="#6C6A66">À partir du marché et de S-1</text>
+  </g>
+  <g transform="translate(587 386)"><path d="M0 0 H30" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/><path d="M19 -10 L33 0 L19 10" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(614 332)">
+    <rect x="6" y="6" width="252" height="108" rx="16" fill="#EDEBFF"/>
+    <rect width="252" height="108" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="73" height="24" rx="12" fill="#FFF1D0"/><text x="54.5" y="32.5" font-size="12" font-weight="700" fill="#8A5A00" text-anchor="middle">Humaine</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Relecture</text><text x="18" y="95" font-size="13" fill="#6C6A66">Par une personne, avant envoi</text>
+  </g>
+  <g transform="translate(870 386)"><path d="M0 0 H30" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round"/><path d="M19 -10 L33 0 L19 10" fill="none" stroke="#5A4BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(897 332)">
+    <rect x="6" y="6" width="252" height="108" rx="16" fill="#EDEBFF"/>
+    <rect width="252" height="108" rx="16" fill="#fff" stroke="#14151A" stroke-width="2"/>
+    <rect x="18" y="16" width="122" height="24" rx="12" fill="#EDEBFF"/><text x="79.0" y="32.5" font-size="12" font-weight="700" fill="#5A4BFF" text-anchor="middle">Sans ressaisie</text>
+    <text x="18" y="74" font-size="17" font-weight="800" fill="#14151A">Émission</text><text x="18" y="95" font-size="13" fill="#6C6A66">Vers l'outil de facturation</text>
+  </g>
+  <path d="M174 446 V492 H446" fill="none" stroke="#5A4BFF" stroke-width="2.5" stroke-dasharray="5 5"/>
+  <text x="460" y="497" font-size="13.5" font-weight="700" fill="#14151A">Les mêmes données d'avancement alimentent aussi</text>
+  <rect x="816" y="478" width="150" height="30" rx="15" fill="#EDEBFF" stroke="#14151A" stroke-width="1.5"/><text x="891" y="498" font-size="13" font-weight="700" fill="#14151A" text-anchor="middle">Suivi de marge</text>
+  <rect x="978" y="478" width="174" height="30" rx="15" fill="#EDEBFF" stroke="#14151A" stroke-width="1.5"/><text x="1065" y="498" font-size="13" font-weight="700" fill="#14151A" text-anchor="middle">Reporting mensuel</text>
+  <g transform="translate(48 566)">
+    <rect width="1104" height="48" rx="16" fill="#14151A"/>
+    <text x="552" y="30" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">Une seule saisie de l'avancement, sur le terrain : la facturation, la marge et le reporting partent des mêmes chiffres.</text>
+  </g>
+</svg>
